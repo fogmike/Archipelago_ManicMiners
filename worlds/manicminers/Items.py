@@ -65,11 +65,10 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     # "Level Access: LRR - Run The Gauntlet": ItemClassification.progression,
     # "Level Access: LRR - Search And Rescue": ItemClassification.progression,
     # "Level Access: LRR - Split Down The Middle": ItemClassification.progression,
-    # "Level Access: LRR - The Path To Power": ItemClassification.progression,
-    #Extra non-comma one for testing
-    "Level Access: LRR - The Path To Power": ItemClassification.progression
+    "Level Access: LRR - The Path To Power": ItemClassification.progression,
     # "Level Access: LRR - Water Lot Of Fun": ItemClassification.progression,
     # "Level Access: LRR - Water Works": ItemClassification.progression
+    "An Energy Crystal Has Been Found!": ItemClassification.filler
 }
 
 def get_random_filler_item_name(world: ManicMinersWorld) -> str:
