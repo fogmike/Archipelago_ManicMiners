@@ -7,7 +7,7 @@ if TYPE_CHECKING:
 
 
 class ManicMinersItem(Item):
-    game: str = "Manic Miners"
+    game = "Manic Miners"
 
 ITEM_NAME_TO_ID = {
     #Reserve 0XXX for base game, 1XXX for LRRR, 2XXX for LRRC, 3XXX for BAZ

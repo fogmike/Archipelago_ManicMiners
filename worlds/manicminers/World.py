@@ -11,7 +11,7 @@ class ManicMinersWorld(World):
     This APWorld allows Manic Miners to be combined with the Archipelago multiworld randomizer software, as you play through the campaign in a random order and with building or vehicle restrictions.
     """
     
-    game: str = "Manic Miners"
+    game = "Manic Miners"
     
     options_dataclass = ManicMiners_Options.ManicMinersOptions
     options: ManicMiners_Options.ManicMinersOptions

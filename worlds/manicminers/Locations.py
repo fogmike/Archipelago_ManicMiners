@@ -6,7 +6,7 @@ if TYPE_CHECKING:
     from .World import ManicMinersWorlds
 
 class ManicMinersLocation(Location):
-    game: str = "Manic Miners"
+    game = "Manic Miners"
     
 LOCATION_NAME_TO_ID = {
     #Reserve 0XXX for base game, 1XXX for LRRR, 2XXX for LRRC, 3XXX for BAZ
