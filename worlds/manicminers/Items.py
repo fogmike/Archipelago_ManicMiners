@@ -85,7 +85,8 @@ def create_all_items(world: ManicMinersWorld) -> None:
         # world.create_item("Level Access: LRR - Back To Basics"),
         # world.create_item("Level Access: LRR - Breathless"),
         # world.create_item("Level Access: LRR - Don't Panic"),
-        world.create_item("Level Access: LRR - Driller Night"),
+        #Take out driller night as we start with it
+        # world.create_item("Level Access: LRR - Driller Night"),
         # world.create_item("Level Access: LRR - Erode Works"),
         # world.create_item("Level Access: LRR - Explosive Action"),
         # world.create_item("Level Access: LRR - Fire And Water"),
@@ -108,7 +109,7 @@ def create_all_items(world: ManicMinersWorld) -> None:
         # world.create_item("Level Access: LRR - Water Lot Of Fun"),
         # world.create_item("Level Access: LRR - Water Works")
     ]
-        
+    
     number_of_items = len(itempool)
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))
     needed_number_of_filler_items = number_of_unfilled_locations - number_of_items
@@ -119,3 +120,5 @@ def create_all_items(world: ManicMinersWorld) -> None:
     #I'm pretty sure this is borked atm because we need to actually start with one level accessible! 
     #Therefore, TODO: Add/modify code to start with a [random?/selected?/optional?] level accessible
     
+    initial_access = world.create_item("Level Access: LRR - Driller Night")
+    world.push_precollected(initial_access)
