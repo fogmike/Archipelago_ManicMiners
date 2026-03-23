@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from Options import PerGameCommonOptions, Toggle
+from Options import PerGameCommonOptions, OptionGroup, Toggle
 
 class StartWithDrillerNight(Toggle):
     """
@@ -16,3 +16,9 @@ class StartWithDrillerNight(Toggle):
 class ManicMinersOptions(PerGameCommonOptions):
     start_with_driller_night: StartWithDrillerNight
 
+option_groups = [
+    OptionGroup(
+        "Gameplay Options",
+        [StartWithDrillerNight]
+    ),
+]
