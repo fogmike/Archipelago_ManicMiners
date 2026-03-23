@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from BaseClasses import Region
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:    
