@@ -38,3 +38,14 @@ class ManicMinersWorld(World):
         return Items.get_random_filler_item_name(self)
     
     #TODO: Do I need fill_slot_data?
+
+def launch_client(*args):
+    from .Client import launch
+    from worlds.LauncherComponents import launch as launch_component
+    launch_component(launch, name="Manic Miners Client", args=args)
+
+from worlds.LauncherComponents import Component, components, Type, launch as launch_component
+components.append(Component("Manic Miners Client", 
+                           game_name="Manic Miners", 
+                           func=launch_client, 
+                           component_type=Type.CLIENT))
