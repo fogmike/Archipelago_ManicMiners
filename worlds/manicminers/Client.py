@@ -1,4 +1,6 @@
 import asyncio
+import os
+import pathlib
 from typing import TYPE_CHECKING
 
 from CommonClient import CommonContext, ClientCommandProcessor, logger, get_base_parser, server_loop, gui_enabled
@@ -13,17 +15,53 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
         pass
         
     def _cmd_reset_installation(self):
-        # wipe and re-initialise Levels and Profile (expected initial behaviour)
-        pass
+        """ Wipe and re-initialise Levels and Profile. Needed for first setup."""
+        # wipe old installs
+        self.output(f"Cleaning any old Archipelago installs...")
+        cleanup_install(self)
+        # create level folder (will be populated later based on randomiser)
+        self.output(f"Creating empty Archipelago campaign directory...")
+        #TODO: better handling of rootdir
+        root_dir = "C:\\Users\\micha\\OneDrive\\Documents\\ManicMiners"
+        arch_level_dir = root_dir + "\\Levels\\Archipelago"
+        path = pathlib.Path(arch_level_dir)
+        path.mkdir()
+        # create empty profile .sav file (game copes fine with file being empty)
+        self.output(f"Creating Archipelago save profile...")
+        lad = os.getenv('LOCALAPPDATA')
+        save_location = lad + "\\ManicMiners\\Saved\\SaveGames\\Profiles\\Archipelago.sav"
+        path = pathlib.Path(save_location)
+        path.write_text("")
         
     def _cmd_clear_installation(self):
-        # wipe Archipelago data
-        pass
+        """ Wipe Archipelago data from local Manic Miners installation."""
+        cleanup_install(self)
 
+def cleanup_install(self):
+    #TODO: better handling of rootdir
+    root_dir = "C:\\Users\\micha\\OneDrive\\Documents\\ManicMiners"
+    arch_level_dir = root_dir + "\\Levels\\Archipelago"
+    path = pathlib.Path(arch_level_dir)
+    # delete Archipelago Levels
+    if (path.is_dir()):
+        self.output(f"Deleting Archipelago Campaign directory...")
+        for file in path.iterdir():
+            file.unlink()
+        path.rmdir()
+    else:
+        self.output(f"No Archipelago campaign directory found needing cleanup...")
+    # delete Archipelago profile
+    lad = os.getenv('LOCALAPPDATA')
+    save_location = lad + "\\ManicMiners\\Saved\\SaveGames\\Profiles\\Archipelago.sav"
+    path = pathlib.Path(save_location)
+    if (path.is_file()):
+        self.output(f"Deleting Archipelago save...")
+        path.unlink()
+    else: 
+        self.output(f"No Archipelago save found needing  cleanup...")   
 
-
-# TODO: Use TextClient implementation as base
 class ManicMinersContext(CommonContext):
+    command_processor = ManicMinersClientCommandProcessor
     game = "Manic Miners"
     items_handling = 0b111
     base_title = "Manic Miners Client"
