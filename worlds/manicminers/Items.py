@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+import pathlib
+import shutil
+
 from BaseClasses import Item, ItemClassification
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:    
@@ -122,3 +125,89 @@ def create_all_items(world: ManicMinersWorld) -> None:
     
     initial_access = world.create_item("Level Access: LRR - Driller Night")
     world.push_precollected(initial_access)
+
+def copy_level_into_archipelago(root_dir, item_id):
+    main_level_dir = root_dir + "\\ManicMiners\\Levels"
+    arch_level_dir = root_dir + "\\Levels\\Archipelago"
+    match item_id:
+        case 1:
+            source = "\\LRR\\abreathoffreshair.dat"
+            target = "\\LRR - A Breath Of Fresh Air.dat"
+        case 2:
+            source = "\\LRR\\airraiders.dat"
+            target = "\\LRR - Air Raiders.dat"
+        case 3:
+            source = "\\LRR\\backtobasics.dat"
+            target = "\\LRR - Back To Basics.dat"
+        case 4:
+            source = "\\LRR\\breathless.dat"
+            target = "\\LRR - Breathless.dat"
+        case 5:
+            source = "\\LRR\\dontpanic.dat"
+            target = "\\LRR - Don't Panic.dat"
+        case 6:
+            source = "\\LRR\\drillernight.dat"
+            target = "\\LRR - Driller Night.dat"
+        case 7:
+            source = "\\LRR\\erodeworks.dat"
+            target = "\\LRR - Erode Works.dat"
+        case 8:
+            source = "\\LRR\\explosiveaction.dat"
+            target = "\\LRR - Explosive Action.dat"
+        case 9:
+            source = "\\LRR\\fireandwater.dat"
+            target = "\\LRR - Fire And Water.dat"
+        case 10:
+            source = "\\LRR\\frozenfrenzy.dat"
+            target = "\\LRR - Frozen Frenzy.dat"
+        case 11:
+            source = "\\LRR\\hotstuff.dat"
+            target = "\\LRR - Hot Stuff.dat"
+        case 12:
+            source = "\\LRR\\icespy.dat"
+            target = "\\LRR - Ice Spy.dat"
+        case 13:
+            source = "\\LRR\\itsaholdup.dat"
+            target = "\\LRR - It's A Hold Up.dat"
+        case 14:
+            source = "\\LRR\\lakeoffire.dat"
+            target = "\\LRR - Lake Of Fire.dat"
+        case 15:
+            source = "\\LRR\\lavalaughter.dat"
+            target = "\\LRR - Lava Laughter.dat"
+        case 16:
+            source = "\\LRR\\oresome.dat"
+            target = "\\LRR - Oresome.dat"
+        case 17:
+            source = "\\LRR\\rockhard.dat"
+            target = "\\LRR - Rock Hard.dat"
+        case 18:
+            source = "\\LRR\\rockyhorror.dat"
+            target = "\\LRR - Rocky Horror.dat"
+        case 19:
+            source = "\\LRR\\rubbletrouble.dat"
+            target = "\\LRR - Rubble Trouble.dat"
+        case 20:
+            source = "\\LRR\\runthegauntlet.dat"
+            target = "\\LRR - Run The Gauntlet.dat"
+        case 21:
+            source = "\\LRR\\searchandrescue.dat"
+            target = "\\LRR - Search And Rescue.dat"
+        case 22:
+            source = "\\LRR\\splitdownthemiddle.dat"
+            target = "\\LRR - Split Down The Middle.dat"
+        case 23:
+            source = "\\LRR\\thepathtopower.dat"
+            target = "\\LRR - The Path To Power.dat"
+        case 24:
+            source = "\\LRR\\waterlotoffun.dat"
+            target = "\\LRR - Water Lot Of Fun.dat"
+        case 25:
+            source = "\\LRR\\waterworks.dat"
+            target = "\\LRR - Water Works.dat"
+        case _:
+            return False
+    source_path = pathlib.Path(main_level_dir + source)
+    target_path = pathlib.Path(arch_level_dir + target)
+    shutils.copy(source_path, target_path)
+    return True

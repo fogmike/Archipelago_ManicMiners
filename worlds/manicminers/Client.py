@@ -1,6 +1,9 @@
 import asyncio
 import os
 import pathlib
+
+from . import Items
+
 from typing import TYPE_CHECKING
 
 from CommonClient import CommonContext, ClientCommandProcessor, logger, get_base_parser, server_loop, gui_enabled
@@ -11,9 +14,15 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
         pass
     
     def _cmd_sync_levels(self):
-        # push relevant levels to Levels directory
-        pass
-        
+        """Update game-accessible levels based on received items."""
+        item: NetworkItem
+        self.output(f"Syncing Levels...")
+        #TODO: better handling of rootdir
+        root_dir = "C:\\Users\\micha\\OneDrive\\Documents\\ManicMiners"
+        for index, item in enumerate(self.ctx.items_received, 1):
+            copy_level_into_archipelago(root_dir, item.item)
+        self.output(f"...Done")
+
     def _cmd_reset_installation(self):
         """ Wipe and re-initialise Levels and Profile. Needed for first setup."""
         # wipe old installs
