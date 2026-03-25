@@ -25,7 +25,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
         root_dir = "C:\\Users\\micha\\OneDrive\\Documents\\ManicMiners"
         for index, item in enumerate(self.ctx.items_received, 1):
             Items.copy_level_into_archipelago(root_dir, item.item)
-        self.output(f"...Done")
+        self.output(f"...Done.")
 
     def _cmd_reset_installation(self):
         """ Wipe and re-initialise Levels and Profile. Needed for first setup.
@@ -73,7 +73,7 @@ def cleanup_install(self):
         self.output(f"Deleting Archipelago save...")
         path.unlink()
     else: 
-        self.output(f"No Archipelago save found needing  cleanup...")   
+        self.output(f"No Archipelago save found needing cleanup...")   
 
 class ManicMinersContext(CommonContext):
     command_processor = ManicMinersClientCommandProcessor
@@ -145,8 +145,8 @@ def launch(*launch_args):
     
     parser = get_base_parser(description="Manic Miners Client.")
     parser.add_argument("url", nargs="?", help="Archipelago connection url")
-    
     args = parser.parse_args(launch_args)
+
     colorama.just_fix_windows_console()
     asyncio.run(main(args))
     colorama.deinit()
