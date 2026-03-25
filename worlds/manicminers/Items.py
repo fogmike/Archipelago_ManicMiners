@@ -209,5 +209,5 @@ def copy_level_into_archipelago(root_dir, item_id):
             return False
     source_path = pathlib.Path(main_level_dir + source)
     target_path = pathlib.Path(arch_level_dir + target)
-    shutils.copy(source_path, target_path)
+    shutil.copy(source_path, target_path)
     return True

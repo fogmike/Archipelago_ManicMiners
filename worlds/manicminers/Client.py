@@ -20,7 +20,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
         #TODO: better handling of rootdir
         root_dir = "C:\\Users\\micha\\OneDrive\\Documents\\ManicMiners"
         for index, item in enumerate(self.ctx.items_received, 1):
-            copy_level_into_archipelago(root_dir, item.item)
+            Items.copy_level_into_archipelago(root_dir, item.item)
         self.output(f"...Done")
 
     def _cmd_reset_installation(self):
