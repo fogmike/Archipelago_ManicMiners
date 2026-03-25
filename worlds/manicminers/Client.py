@@ -24,7 +24,8 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
         self.output(f"...Done")
 
     def _cmd_reset_installation(self):
-        """ Wipe and re-initialise Levels and Profile. Needed for first setup."""
+        """ Wipe and re-initialise Levels and Profile. Needed for first setup.
+        WARNING: Will delete all Archipelago saved data."""
         # wipe old installs
         self.output(f"Cleaning any old Archipelago installs...")
         cleanup_install(self)
@@ -43,7 +44,8 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
         path.write_text("")
         
     def _cmd_clear_installation(self):
-        """ Wipe Archipelago data from local Manic Miners installation."""
+        """ Wipe Archipelago data from local Manic Miners installation.
+        WARNING: Will delete all Archipelago saved data."""
         cleanup_install(self)
 
 def cleanup_install(self):
