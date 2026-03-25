@@ -2,16 +2,20 @@ import asyncio
 import os
 import pathlib
 
-from . import Items
+from . import Items, Locations
 
 from typing import TYPE_CHECKING
 
 from CommonClient import CommonContext, ClientCommandProcessor, logger, get_base_parser, server_loop, gui_enabled
 
 class ManicMinersClientCommandProcessor(ClientCommandProcessor):
-    def _cmd_read_save_state(self):
-        # read the Archipelago.sav file and flush data to server
-        pass
+    async def _cmd_read_save_state(self):
+        """Read local profile save data and sync checked locations to server."""
+        self.output(f"Parsing Save File...")
+        location_ids = Locations.get_locations_from_save_data()
+        self.output(f"...Done. Sending Locations...")
+        await self.check_locations(location_ids)
+        self.output(f"...Done.")
     
     def _cmd_sync_levels(self):
         """Update game-accessible levels based on received items."""

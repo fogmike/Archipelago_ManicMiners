@@ -79,6 +79,37 @@ def parseLevelData(fullHex,initialOffset):
     
     return (levelName,clearTime,crystalCount,oreCount,killCountHigh,killCountLow,minersLost,cavernCount,offset)
 
+def parseAllLevels(hexString):
+    # Hex value for "ClearedLevelStats"
+    levelDataStartString = "436c65617265644c6576656c735374617473"
+    levelDataStartIndex = hexString.find(levelDataStartString)
+    # Offset from the above to first level data line
+    firstOffset = 174
+    
+    # Count levels based on occurrences of hex for "LowestClearTime"
+    overallLevelCount = hexString.count("4c6f77657374436c65617254696d65")
+    counter = overallLevelCount
+    offset = levelDataStartIndex + firstOffset
+    
+    levelDataList = []
+    
+    while (counter > 0):
+        levelData = parseLevelData(hexString,offset)
+        levelDataList.append(levelData)
+        offset = levelData[8]
+        counter -= 1
+    
+    return levelDataList
+
+def parseAllLevelsFromFilepath(filepath):
+    hexString = fileToHexString(filepath)
+    levelDataList = parseAllLevels(hexString)
+    return levelDataList
+
+#####################
+# Currently unused by Archipelago but could be handy to hold around for future features...
+#####################
+
 def printLevelData(levelData):
     print("Level Name: " + levelData[0])
     print("Lowest Clear Time: " + floatToClearTime(levelData[1]))

@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+import os
+from . import ParseSaveFile
+
 from BaseClasses import Location
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:    
@@ -124,4 +127,70 @@ def create_all_locations(world: ManicMinersWorld) -> None:
     # locations_lrr_waterworks = get_location_names_with_ids(["Clear: LRR - Water Works"])
     # region_lrr_waterworks.add_locations(locations_lrr_waterworks, ManicMinersLocation)
     
+def get_locations_from_save_data():
+    lad = os.getenv('LOCALAPPDATA')
+    save_path = lad + "\\ManicMiners\\Saved\\SaveGames\\Profiles\\Archipelago.sav"
+    levelDataList = ParseSaveFile.parseAllLevelsFromFilepath(save_path)
     
+    location_ids = []
+    for level in levelDataList:
+        location_id = location_id_from_level_name(level[0])
+        if (location_id != -1):
+            location_ids.append(location_id)
+    
+    return location_ids
+
+def location_id_from_level_name(level_name):
+    match level_name:
+        case "Archipelago/LRR - A Breath Of Fresh Air":
+            return 1
+        case "Archipelago/LRR - Air Raiders":
+            return 2
+        case "Archipelago/LRR - Back To Basics":
+            return 3
+        case "Archipelago/LRR - Breathless":
+            return 4
+        case "Archipelago/LRR - Don't Panic":
+            return 5
+        case "Archipelago/LRR - Driller Night":
+            return 6
+        case "Archipelago/LRR - Erode Works":
+            return 7
+        case "Archipelago/LRR - Explosive Action":
+            return 8
+        case "Archipelago/LRR - Fire And Water":
+            return 9
+        case "Archipelago/LRR - Frozen Frenzy":
+            return 10
+        case "Archipelago/LRR - Hot Stuff":
+            return 11
+        case "Archipelago/LRR - Ice Spy":
+            return 12
+        case "Archipelago/LRR - It's A Hold Up":
+            return 13
+        case "Archipelago/LRR - Lake Of Fire":
+            return 14
+        case "Archipelago/LRR - Lava Laughter":
+            return 15
+        case "Archipelago/LRR - Oresome":
+            return 16
+        case "Archipelago/LRR - Rock Hard":
+            return 17
+        case "Archipelago/LRR - Rocky Horror":
+            return 18
+        case "Archipelago/LRR - Rubble Trouble":
+            return 19
+        case "Archipelago/LRR - Run The Gauntlet":
+            return 20
+        case "Archipelago/LRR - Search And Rescue":
+            return 21
+        case "Archipelago/LRR - Split Down The Middle":
+            return 22
+        case "Archipelago/LRR - The Path To Power":
+            return 23
+        case "Archipelago/LRR - Water Lot Of Fun":
+            return 24
+        case "Archipelago/LRR - Water Works":
+            return 25
+        case _:
+            return -1
