@@ -79,6 +79,20 @@ class ManicMinersContext(CommonContext):
 
     async def disconnect(self, allow_autoreconnect: bool = False):
         await super().disconnect(allow_autoreconnect)
+    
+    def run_gui(self):
+        """Import kivy UI system and start running it as self.ui_task."""
+        # Needed to overwrite the base title
+        from kvui import GameManager
+
+        class ManicMinersManager(GameManager):
+            logging_pairs = [
+                ("Client", "Archipelago")
+            ]
+            base_title = "Archipelago Manic Miners Client"
+
+        self.ui = ManicMinersManager(self)
+        self.ui_task = asyncio.create_task(self.ui.async_run(), name="UI")
 
 
 def launch(*launch_args):
