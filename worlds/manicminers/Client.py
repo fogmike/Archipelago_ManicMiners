@@ -9,16 +9,6 @@ from typing import TYPE_CHECKING
 from CommonClient import CommonContext, ClientCommandProcessor, logger, get_base_parser, server_loop, gui_enabled
 
 class ManicMinersClientCommandProcessor(ClientCommandProcessor):
-    def _cmd_sync_levels(self):
-        """Update game-accessible levels based on received items."""
-        item: NetworkItem
-        self.output(f"Syncing Levels...")
-        #TODO: better handling of rootdir
-        root_dir = "C:\\Users\\micha\\OneDrive\\Documents\\ManicMiners"
-        for index, item in enumerate(self.ctx.items_received, 1):
-            Items.copy_level_into_archipelago(root_dir, item.item)
-        self.output(f"...Done.")
-
     def _cmd_reset_installation(self):
         """ Wipe and re-initialise Levels and Profile. Needed for first setup.
         WARNING: Will delete all Archipelago saved data."""
@@ -83,6 +73,9 @@ class ManicMinersContext(CommonContext):
         if cmd == "Connected":
             self.game = self.slot_info[self.slot].game
             self.save_watcher = asyncio.create_task(save_read_loop(self), name="save watcher")
+        
+        if cmd == "ReceivedItems":
+            sync_levels(self)
         # Rest of the incoming message handling goes here
 
     async def disconnect(self, allow_autoreconnect: bool = False):
@@ -107,6 +100,13 @@ async def save_read_loop(self):
         checked_location_ids = Locations.get_locations_from_save_data()
         locations = await self.check_locations(checked_location_ids)
         await asyncio.sleep(0.1)
+
+def sync_levels(self):
+    item: NetworkItem
+    #TODO: better handling of rootdir
+    root_dir = "C:\\Users\\micha\\OneDrive\\Documents\\ManicMiners"
+    for index, item in enumerate(self.items_received, 1):
+        Items.copy_level_into_archipelago(root_dir, item.item)
 
 def launch(*launch_args):
     """Launch the Manic Miners client."""
