@@ -9,14 +9,6 @@ from typing import TYPE_CHECKING
 from CommonClient import CommonContext, ClientCommandProcessor, logger, get_base_parser, server_loop, gui_enabled
 
 class ManicMinersClientCommandProcessor(ClientCommandProcessor):
-    async def _cmd_read_save_state(self):
-        """Read local profile save data and sync checked locations to server."""
-        self.output(f"Parsing Save File...")
-        location_ids = Locations.get_locations_from_save_data()
-        self.output(f"...Done. Sending Locations...")
-        await self.check_locations(location_ids)
-        self.output(f"...Done.")
-    
     def _cmd_sync_levels(self):
         """Update game-accessible levels based on received items."""
         item: NetworkItem
@@ -90,6 +82,7 @@ class ManicMinersContext(CommonContext):
     def on_package(self, cmd: str, args: dict):
         if cmd == "Connected":
             self.game = self.slot_info[self.slot].game
+            self.save_watcher = asyncio.create_task(save_read_loop(self), name="save watcher")
         # Rest of the incoming message handling goes here
 
     async def disconnect(self, allow_autoreconnect: bool = False):
@@ -109,6 +102,11 @@ class ManicMinersContext(CommonContext):
         self.ui = ManicMinersManager(self)
         self.ui_task = asyncio.create_task(self.ui.async_run(), name="UI")
 
+async def save_read_loop(self):
+    while not self.exit_event.is_set():
+        checked_location_ids = Locations.get_locations_from_save_data()
+        locations = await self.check_locations(checked_location_ids)
+        await asyncio.sleep(0.1)
 
 def launch(*launch_args):
     """Launch the Manic Miners client."""
