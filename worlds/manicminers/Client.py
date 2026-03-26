@@ -28,6 +28,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
         save_location = lad + "\\ManicMiners\\Saved\\SaveGames\\Profiles\\Archipelago.sav"
         path = pathlib.Path(save_location)
         path.write_text("")
+        self.output(f"Initialisation complete!")
         
     def _cmd_clear_installation(self):
         """ Wipe Archipelago data from local Manic Miners installation.
