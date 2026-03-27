@@ -74,6 +74,34 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "An Energy Crystal Has Been Found!": ItemClassification.filler
 }
 
+LEVEL_ACCESS_LRR_LIST = [
+    "Level Access: LRR - A Breath Of Fresh Air",
+    "Level Access: LRR - Air Raiders",
+    "Level Access: LRR - Back To Basics",
+    "Level Access: LRR - Breathless",
+    "Level Access: LRR - Don't Panic",
+    "Level Access: LRR - Driller Night",
+    "Level Access: LRR - Erode Works",
+    "Level Access: LRR - Explosive Action",
+    "Level Access: LRR - Fire And Water",
+    "Level Access: LRR - Frozen Frenzy",
+    "Level Access: LRR - Hot Stuff",
+    "Level Access: LRR - Ice Spy",
+    "Level Access: LRR - It's A Hold Up",
+    "Level Access: LRR - Lake Of Fire",
+    "Level Access: LRR - Lava Laughter",
+    "Level Access: LRR - Oresome",
+    "Level Access: LRR - Rock Hard",
+    "Level Access: LRR - Rocky Horror",
+    "Level Access: LRR - Rubble Trouble",
+    "Level Access: LRR - Run The Gauntlet",
+    "Level Access: LRR - Search And Rescue",
+    "Level Access: LRR - Split Down The Middle",
+    "Level Access: LRR - The Path To Power",
+    "Level Access: LRR - Water Lot Of Fun",
+    "Level Access: LRR - Water Works"
+]
+
 def get_random_filler_item_name(world: ManicMinersWorld) -> str:
     return "An Energy Crystal Has Been Found!"
     
@@ -85,35 +113,11 @@ def create_all_items(world: ManicMinersWorld) -> None:
     
     itempool_access: list[Item] = []
     
-    itempool_lrr_access: list[Item] = [
-        world.create_item("Level Access: LRR - A Breath Of Fresh Air"),
-        world.create_item("Level Access: LRR - Air Raiders"),
-        world.create_item("Level Access: LRR - Back To Basics"),
-        world.create_item("Level Access: LRR - Breathless"),
-        world.create_item("Level Access: LRR - Don't Panic"),
-        world.create_item("Level Access: LRR - Driller Night"),
-        world.create_item("Level Access: LRR - Erode Works"),
-        world.create_item("Level Access: LRR - Explosive Action"),
-        world.create_item("Level Access: LRR - Fire And Water"),
-        world.create_item("Level Access: LRR - Frozen Frenzy"),
-        world.create_item("Level Access: LRR - Hot Stuff"),
-        world.create_item("Level Access: LRR - Ice Spy"),
-        world.create_item("Level Access: LRR - It's A Hold Up"),
-        world.create_item("Level Access: LRR - Lake Of Fire"),
-        world.create_item("Level Access: LRR - Lava Laughter"),
-        world.create_item("Level Access: LRR - Oresome"),
-        world.create_item("Level Access: LRR - Rock Hard"),
-        world.create_item("Level Access: LRR - Rocky Horror"),
-        world.create_item("Level Access: LRR - Rubble Trouble"),
-        world.create_item("Level Access: LRR - Run The Gauntlet"),
-        world.create_item("Level Access: LRR - Search And Rescue"),
-        world.create_item("Level Access: LRR - Split Down The Middle"),
-        world.create_item("Level Access: LRR - The Path To Power"),
-        world.create_item("Level Access: LRR - Water Lot Of Fun"),
-        world.create_item("Level Access: LRR - Water Works")
-    ]
-    
     if world.options.campaign_selection_lrr:
+        
+        itempool_lrr_access = []
+        for item in LEVEL_ACCESS_LRR_LIST:
+            itempool_lrr_access.append(world.create_item(item))
         itempool_access += itempool_lrr_access
     
     initial_access_item_index = world.random.randint(0,len(itempool_access))
