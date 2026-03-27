@@ -70,7 +70,7 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "Level Access: LRR - Split Down The Middle": ItemClassification.progression,
     "Level Access: LRR - The Path To Power": ItemClassification.progression,
     "Level Access: LRR - Water Lot Of Fun": ItemClassification.progression,
-    "Level Access: LRR - Water Works": ItemClassification.progression
+    "Level Access: LRR - Water Works": ItemClassification.progression,
     "An Energy Crystal Has Been Found!": ItemClassification.filler
 }
 
@@ -82,36 +82,47 @@ def create_item_with_correct_classification(world: ManicMinersWorld, name: str) 
     return ManicMinersItem(name, classification, ITEM_NAME_TO_ID[name], world.player)
     
 def create_all_items(world: ManicMinersWorld) -> None:
-    itempool: list[Item] = [
-        # world.create_item("Level Access: LRR - A Breath Of Fresh Air"),
-        # world.create_item("Level Access: LRR - Air Raiders"),
-        # world.create_item("Level Access: LRR - Back To Basics"),
-        # world.create_item("Level Access: LRR - Breathless"),
-        # world.create_item("Level Access: LRR - Don't Panic"),
-        #Take out driller night as we start with it
-        # world.create_item("Level Access: LRR - Driller Night"),
-        # world.create_item("Level Access: LRR - Erode Works"),
-        # world.create_item("Level Access: LRR - Explosive Action"),
-        # world.create_item("Level Access: LRR - Fire And Water"),
-        # world.create_item("Level Access: LRR - Frozen Frenzy"),
-        # world.create_item("Level Access: LRR - Hot Stuff"),
-        # world.create_item("Level Access: LRR - Ice Spy"),
-        # world.create_item("Level Access: LRR - It's A Hold Up"),
-        # world.create_item("Level Access: LRR - Lake Of Fire"),
-        # world.create_item("Level Access: LRR - Lava Laughter"),
-        # world.create_item("Level Access: LRR - Oresome"),
-        # world.create_item("Level Access: LRR - Rock Hard"),
-        # world.create_item("Level Access: LRR - Rocky Horror"),
+    
+    itempool_access: list[Item] = []
+    
+    itempool_lrr_access: list[Item] = [
+        world.create_item("Level Access: LRR - A Breath Of Fresh Air"),
+        world.create_item("Level Access: LRR - Air Raiders"),
+        world.create_item("Level Access: LRR - Back To Basics"),
+        world.create_item("Level Access: LRR - Breathless"),
+        world.create_item("Level Access: LRR - Don't Panic"),
+        world.create_item("Level Access: LRR - Driller Night"),
+        world.create_item("Level Access: LRR - Erode Works"),
+        world.create_item("Level Access: LRR - Explosive Action"),
+        world.create_item("Level Access: LRR - Fire And Water"),
+        world.create_item("Level Access: LRR - Frozen Frenzy"),
+        world.create_item("Level Access: LRR - Hot Stuff"),
+        world.create_item("Level Access: LRR - Ice Spy"),
+        world.create_item("Level Access: LRR - It's A Hold Up"),
+        world.create_item("Level Access: LRR - Lake Of Fire"),
+        world.create_item("Level Access: LRR - Lava Laughter"),
+        world.create_item("Level Access: LRR - Oresome"),
+        world.create_item("Level Access: LRR - Rock Hard"),
+        world.create_item("Level Access: LRR - Rocky Horror"),
         world.create_item("Level Access: LRR - Rubble Trouble"),
-        # world.create_item("Level Access: LRR - Run The Gauntlet"),
-        # world.create_item("Level Access: LRR - Search And Rescue"),
-        # world.create_item("Level Access: LRR - Split Down The Middle"),
-        # world.create_item("Level Access: LRR - The Path To Power"),
-        #Extra non-comma one for testing
-        world.create_item("Level Access: LRR - The Path To Power")
-        # world.create_item("Level Access: LRR - Water Lot Of Fun"),
-        # world.create_item("Level Access: LRR - Water Works")
+        world.create_item("Level Access: LRR - Run The Gauntlet"),
+        world.create_item("Level Access: LRR - Search And Rescue"),
+        world.create_item("Level Access: LRR - Split Down The Middle"),
+        world.create_item("Level Access: LRR - The Path To Power"),
+        world.create_item("Level Access: LRR - Water Lot Of Fun"),
+        world.create_item("Level Access: LRR - Water Works")
     ]
+    
+    if world.options.campaign_selection_lrr:
+        itempool_access += itempool_lrr_access
+    
+    initial_access_item_index = world.random.randint(0,len(itempool_access))
+    initial_access_item = itempool_access[initial_access_item_index]
+    itempool_access.pop(initial_access_item_index)
+    
+    itempool: list[Item] = []
+    
+    itempool += itempool_access   
     
     number_of_items = len(itempool)
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))
@@ -120,11 +131,7 @@ def create_all_items(world: ManicMinersWorld) -> None:
     
     world.multiworld.itempool += itempool
     
-    #I'm pretty sure this is borked atm because we need to actually start with one level accessible! 
-    #Therefore, TODO: Add/modify code to start with a [random?/selected?/optional?] level accessible
-    
-    initial_access = world.create_item("Level Access: LRR - Driller Night")
-    world.push_precollected(initial_access)
+    world.push_precollected(initial_access_item)
 
 def copy_level_into_archipelago(root_dir, item_id):
     main_level_dir = root_dir + "\\ManicMiners\\Levels"

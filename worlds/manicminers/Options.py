@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from Options import PerGameCommonOptions, OptionGroup, Toggle, Choice, Range
+from Options import PerGameCommonOptions, OptionGroup, Toggle, DefaultOnToggle, Choice, Range
 
 class VictoryCondition(Choice):
     """
@@ -46,13 +46,12 @@ class TargetTimeDifficulty(Choice):
     
     default = 1
 
-class StartWithDrillerNight(Toggle):
+class CampaignSelectionLRR(DefaultOnToggle):
     """
-    Whether your first level is Driller Night.
-    If disabled, start level will be randomised.
+    Whether your game will include the main campaign levels."
     """
-    display_name = "Start With Driller Night?"
-    #TODO: Actually use this
+    
+    display_name = "Include 'Standard' Campaign Levels"
     
 #TODO: Rest of initially planned options
 
@@ -61,11 +60,15 @@ class ManicMinersOptions(PerGameCommonOptions):
     victory_condition: VictoryCondition
     target_level_count: TargetLevelCount
     target_time_difficulty: TargetTimeDifficulty
-    start_with_driller_night: StartWithDrillerNight
+    campaign_selection_lrr: CampaignSelectionLRR
 
 option_groups = [
     OptionGroup(
         "Gameplay Options",
         [StartWithDrillerNight]
+    ),
+    OptionGroup(
+        "Campaign Selection",
+        [CampaignSelectionLRR]
     ),
 ]
