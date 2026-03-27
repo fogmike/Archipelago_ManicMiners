@@ -1,3 +1,6 @@
+from collections.abc import Mapping
+from typing import Any
+
 from worlds.AutoWorld import World
 
 from . import Items, Locations, Regions, Rules
@@ -37,7 +40,10 @@ class ManicMinersWorld(World):
     def get_filler_item_name(self) -> str:
         return Items.get_random_filler_item_name(self)
     
-    #TODO: Do I need fill_slot_data?
+    def fill_slot_data(self) -> Mapping[str, Any]:
+        return self.options.as_dict(
+        "victory_condition", "target_level_count", "start_with_driller_night"
+        )
 
 def launch_client(*args):
     from .Client import launch

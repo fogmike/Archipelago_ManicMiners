@@ -1,6 +1,7 @@
 import asyncio
 import os
 import pathlib
+from NetUtils import ClientStatus
 
 from . import Items, Locations
 
@@ -73,6 +74,7 @@ class ManicMinersContext(CommonContext):
     def on_package(self, cmd: str, args: dict):
         if cmd == "Connected":
             self.game = self.slot_info[self.slot].game
+            self.slot_data = args.get("slot_data", {})
             self.save_watcher = asyncio.create_task(save_read_loop(self), name="save watcher")
         
         if cmd == "ReceivedItems":
@@ -101,7 +103,7 @@ async def save_read_loop(self):
         checked_location_ids = Locations.get_locations_from_save_data()
         locations = await self.check_locations(checked_location_ids)
         if not self.finished_game:
-            victory = Locations.check_for_victory()
+            victory = Locations.check_for_victory(self.slot_data)
             if victory:
                 await self.send_msgs([{"cmd": "StatusUpdate", "status": ClientStatus.CLIENT_GOAL}])
                 self.finished_game = True

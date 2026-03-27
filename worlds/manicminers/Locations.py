@@ -127,22 +127,25 @@ def create_all_locations(world: ManicMinersWorld) -> None:
     # locations_lrr_waterworks = get_location_names_with_ids(["Clear: LRR - Water Works"])
     # region_lrr_waterworks.add_locations(locations_lrr_waterworks, ManicMinersLocation)
 
-def check_for_victory():
+def check_for_victory(options):
     lad = os.getenv('LOCALAPPDATA')
     save_path = lad + "\\ManicMiners\\Saved\\SaveGames\\Profiles\\Archipelago.sav"
     levelDataList = ParseSaveFile.parseAllLevelsFromFilepath(save_path)
     
-    if world.options.victory_condition == "total_level_count":
+    if options["victory_condition"] == 0: # total_level_count
         level_count = 0
-        target_count = world.options.target_level_count
+        target_count = options["target_level_count"]
         for level in levelDataList:
             location_id = location_id_from_level_name(level[0])
             if (location_id != -1):
-                counter += 1
+                level_count += 1
         if level_count >= target_count:
             return True
         else:
             return False
+    
+    #shouldn't hit this, but to make sure we return something
+    return False
   
 def get_locations_from_save_data():
     lad = os.getenv('LOCALAPPDATA')
