@@ -6,18 +6,23 @@ class VictoryCondition(Choice):
     """
     What the victory condition for the overall game is. 
     Total Levels Cleared: You must clear X total levels to goal the game.
+    Individual Target Time: You must beat the target time on X levels in the campaign.
+    Total Target Time: You must clear all levels in the selected campaigns, and achieve an overall par. This means that a good time in one level can make up for a bad time in another. 
     """
     
     display_name = "Victory Condition"
     
     option_total_levels_cleared = 0
+    option_individual_target_time = 1
+    option_total_target_time = 2
     
     default = option_total_levels_cleared
 
 class TargetLevelCount(Range):
     """
-    How many levels must be cleared to goal the game. 
-    Has no effect if Victory Condition is not Total Levels Cleared.
+    If Victory Condition is set to Total Levels Cleared: How many levels must be cleared to goal the game. 
+    If Victory Condition is set to Individual Target Time: How many levels you need to beat the target time on to goal the game. 
+    Otherwise this setting has no effect. 
     """
     
     display_name = "Target Level Count"
@@ -26,6 +31,20 @@ class TargetLevelCount(Range):
     range_end = 25
     
     default = 3
+
+class TargetTimeDifficulty(Choice):
+    """
+    How difficult the target times are per level. 
+    """
+    
+    display_name = "Target Time Difficulty"
+    
+    option_easy = 0
+    option_medium = 1
+    option_hard = 2
+    option_rock_hard = 3
+    
+    default = 1
 
 class StartWithDrillerNight(Toggle):
     """
@@ -41,6 +60,7 @@ class StartWithDrillerNight(Toggle):
 class ManicMinersOptions(PerGameCommonOptions):
     victory_condition: VictoryCondition
     target_level_count: TargetLevelCount
+    target_time_difficulty: TargetTimeDifficulty
     start_with_driller_night: StartWithDrillerNight
 
 option_groups = [

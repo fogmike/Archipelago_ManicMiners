@@ -40,6 +40,119 @@ LOCATION_NAME_TO_ID = {
     "Clear: LRR - Water Works": 25
 }
 
+#TODO: Set times (and test for balance!)
+TARGET_CLEAR_TIME_EASY = {
+    "LRR - A Breath Of Fresh Air": 99999,
+    "LRR - Air Raiders": 99999,
+    "LRR - Back To Basics": 99999,
+    "LRR - Breathless": 99999,
+    "LRR - Don't Panic": 99999,
+    "LRR - Driller Night": 99999,
+    "LRR - Erode Works": 99999,
+    "LRR - Explosive Action": 99999,
+    "LRR - Fire And Water": 99999,
+    "LRR - Frozen Frenzy": 99999,
+    "LRR - Hot Stuff": 99999,
+    "LRR - Ice Spy": 99999,
+    "LRR - It's A Hold Up": 99999,
+    "LRR - Lake Of Fire": 99999,
+    "LRR - Lava Laughter": 99999,
+    "LRR - Oresome": 99999,
+    "LRR - Rock Hard": 99999,
+    "LRR - Rocky Horror": 99999,
+    "LRR - Rubble Trouble": 99999,
+    "LRR - Run The Gauntlet": 99999,
+    "LRR - Search And Rescue": 99999,
+    "LRR - Split Down The Middle": 99999,
+    "LRR - The Path To Power": 99999,
+    "LRR - Water Lot Of Fun": 99999,
+    "LRR - Water Works": 99999
+}
+
+TARGET_CLEAR_TIME_MEDIUM = {
+    "LRR - A Breath Of Fresh Air": 99999,
+    "LRR - Air Raiders": 99999,
+    "LRR - Back To Basics": 99999,
+    "LRR - Breathless": 99999,
+    "LRR - Don't Panic": 99999,
+    "LRR - Driller Night": 99999,
+    "LRR - Erode Works": 99999,
+    "LRR - Explosive Action": 99999,
+    "LRR - Fire And Water": 99999,
+    "LRR - Frozen Frenzy": 99999,
+    "LRR - Hot Stuff": 99999,
+    "LRR - Ice Spy": 99999,
+    "LRR - It's A Hold Up": 99999,
+    "LRR - Lake Of Fire": 99999,
+    "LRR - Lava Laughter": 99999,
+    "LRR - Oresome": 99999,
+    "LRR - Rock Hard": 99999,
+    "LRR - Rocky Horror": 99999,
+    "LRR - Rubble Trouble": 99999,
+    "LRR - Run The Gauntlet": 99999,
+    "LRR - Search And Rescue": 99999,
+    "LRR - Split Down The Middle": 99999,
+    "LRR - The Path To Power": 99999,
+    "LRR - Water Lot Of Fun": 99999,
+    "LRR - Water Works": 99999
+}
+
+TARGET_CLEAR_TIME_HARD = {
+    "LRR - A Breath Of Fresh Air": 99999,
+    "LRR - Air Raiders": 99999,
+    "LRR - Back To Basics": 99999,
+    "LRR - Breathless": 99999,
+    "LRR - Don't Panic": 99999,
+    "LRR - Driller Night": 99999,
+    "LRR - Erode Works": 99999,
+    "LRR - Explosive Action": 99999,
+    "LRR - Fire And Water": 99999,
+    "LRR - Frozen Frenzy": 99999,
+    "LRR - Hot Stuff": 99999,
+    "LRR - Ice Spy": 99999,
+    "LRR - It's A Hold Up": 99999,
+    "LRR - Lake Of Fire": 99999,
+    "LRR - Lava Laughter": 99999,
+    "LRR - Oresome": 99999,
+    "LRR - Rock Hard": 99999,
+    "LRR - Rocky Horror": 99999,
+    "LRR - Rubble Trouble": 99999,
+    "LRR - Run The Gauntlet": 99999,
+    "LRR - Search And Rescue": 99999,
+    "LRR - Split Down The Middle": 99999,
+    "LRR - The Path To Power": 99999,
+    "LRR - Water Lot Of Fun": 99999,
+    "LRR - Water Works": 99999
+}
+
+TARGET_CLEAR_TIME_ROCK_HARD = {
+    "LRR - A Breath Of Fresh Air": 99999,
+    "LRR - Air Raiders": 99999,
+    "LRR - Back To Basics": 99999,
+    "LRR - Breathless": 99999,
+    "LRR - Don't Panic": 99999,
+    "LRR - Driller Night": 99999,
+    "LRR - Erode Works": 99999,
+    "LRR - Explosive Action": 99999,
+    "LRR - Fire And Water": 99999,
+    "LRR - Frozen Frenzy": 99999,
+    "LRR - Hot Stuff": 99999,
+    "LRR - Ice Spy": 99999,
+    "LRR - It's A Hold Up": 99999,
+    "LRR - Lake Of Fire": 99999,
+    "LRR - Lava Laughter": 99999,
+    "LRR - Oresome": 99999,
+    "LRR - Rock Hard": 99999,
+    "LRR - Rocky Horror": 99999,
+    "LRR - Rubble Trouble": 99999,
+    "LRR - Run The Gauntlet": 99999,
+    "LRR - Search And Rescue": 99999,
+    "LRR - Split Down The Middle": 99999,
+    "LRR - The Path To Power": 99999,
+    "LRR - Water Lot Of Fun": 99999,
+    "LRR - Water Works": 99999
+}
+
 def get_location_names_with_ids(location_names: list[str]) -> dict[str, int | None]:
     return {location_name: LOCATION_NAME_TO_ID[location_name] for location_name in location_names}
 
@@ -140,6 +253,43 @@ def check_for_victory(options):
         else:
             return False
     
+    elif options["victory_condition"] == 1: # individual_target_time
+        beaten_time_count = 0
+        target_count = options["target_level_count"]
+        for level in levelDataList:
+            location_id = location_id_from_level_name(level[0])
+            if (location_id != -1):
+                target_time = get_target_time(level[0], options["target_time_difficulty"])
+                if level[1] < target_time:
+                    beaten_time_count += 1
+        if beaten_time_count >= target_count:
+            return True
+        else:
+            return False
+    
+    elif options["victory_condition"] == 2: # total_target_time
+        #TODO: work out better way to calculate this instead of being static values
+        total_time = 0
+        match options["target_time_difficulty"]:
+            case 0:
+                target_time = 99999
+            case 1:
+                target_time = 99999
+            case 2:
+                target_time = 99999
+            case 3:
+                target_time = 99999
+            case _:
+                target_time = -1
+        for level in levelDataList:
+            location_id = location_id_from_level_name(level[0])
+            if (location_id != -1):
+                total_time += level[1]
+        if total_time < target_time:
+            return True
+        else:
+            return False
+            
     #shouldn't hit this, but to make sure we return something
     return False
   
@@ -208,5 +358,18 @@ def location_id_from_level_name(level_name):
             return 24
         case "Archipelago/LRR - Water Works":
             return 25
+        case _:
+            return -1
+
+def get_target_time(level_name, difficulty):
+    match difficulty:
+        case 0: 
+            return TARGET_CLEAR_TIME_EASY[level_name]
+        case 1:
+            return TARGET_CLEAR_TIME_MEDIUM[level_name]
+        case 2:
+            return TARGET_CLEAR_TIME_HARD[level_name]
+        case 3:
+            return TARGET_CLEAR_TIME_ROCK_HARD[level_name]
         case _:
             return -1

@@ -42,7 +42,7 @@ class ManicMinersWorld(World):
     
     def fill_slot_data(self) -> Mapping[str, Any]:
         return self.options.as_dict(
-        "victory_condition", "target_level_count", "start_with_driller_night"
+        "victory_condition", "target_level_count", "target_time_difficulty", "start_with_driller_night"
         )
 
 def launch_client(*args):
