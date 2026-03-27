@@ -22,4 +22,4 @@ def set_all_location_rules(world: ManicMinersWorld) -> None:
         set_rule(goal_achievable, lambda state: state.has_from_list_unique(Items.LEVEL_ACCESS_LRR_LIST, world.player, world.options.target_level_count))
     
 def set_completion_condition(world: ManicMinersWorld) -> None:
-    world.multiworld.completion_condition[world.player] = lambda state: state.has("Goal Conditions Achievable", world.player)
+    world.multiworld.completion_condition[world.player] = lambda state: state.has("Victory", world.player)
