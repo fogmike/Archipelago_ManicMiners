@@ -64,10 +64,6 @@ class ManicMinersOptions(PerGameCommonOptions):
 
 option_groups = [
     OptionGroup(
-        "Gameplay Options",
-        [StartWithDrillerNight]
-    ),
-    OptionGroup(
         "Campaign Selection",
         [CampaignSelectionLRR]
     ),

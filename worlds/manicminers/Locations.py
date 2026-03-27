@@ -37,7 +37,7 @@ LOCATION_NAME_TO_ID = {
     "Clear: LRR - Split Down The Middle": 22,
     "Clear: LRR - The Path To Power": 23,
     "Clear: LRR - Water Lot Of Fun": 24,
-    "Clear: LRR - Water Works": 25
+    "Clear: LRR - Water Works": 25,
     "Beat Par Time: LRR - A Breath Of Fresh Air": 26,
     "Beat Par Time: LRR - Air Raiders": 27,
     "Beat Par Time: LRR - Back To Basics": 28,
