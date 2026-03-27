@@ -38,6 +38,31 @@ LOCATION_NAME_TO_ID = {
     "Clear: LRR - The Path To Power": 23,
     "Clear: LRR - Water Lot Of Fun": 24,
     "Clear: LRR - Water Works": 25
+    "Beat Par Time: LRR - A Breath Of Fresh Air": 26,
+    "Beat Par Time: LRR - Air Raiders": 27,
+    "Beat Par Time: LRR - Back To Basics": 28,
+    "Beat Par Time: LRR - Breathless": 29,
+    "Beat Par Time: LRR - Don't Panic": 30,
+    "Beat Par Time: LRR - Driller Night": 31,
+    "Beat Par Time: LRR - Erode Works": 32,
+    "Beat Par Time: LRR - Explosive Action": 33,
+    "Beat Par Time: LRR - Fire And Water": 34,
+    "Beat Par Time: LRR - Frozen Frenzy": 35,
+    "Beat Par Time: LRR - Hot Stuff": 36,
+    "Beat Par Time: LRR - Ice Spy": 37,
+    "Beat Par Time: LRR - It's A Hold Up": 38,
+    "Beat Par Time: LRR - Lake Of Fire": 39,
+    "Beat Par Time: LRR - Lava Laughter": 40,
+    "Beat Par Time: LRR - Oresome": 41,
+    "Beat Par Time: LRR - Rock Hard": 42,
+    "Beat Par Time: LRR - Rocky Horror": 43,
+    "Beat Par Time: LRR - Rubble Trouble": 44,
+    "Beat Par Time: LRR - Run The Gauntlet": 45,
+    "Beat Par Time: LRR - Search And Rescue": 46,
+    "Beat Par Time: LRR - Split Down The Middle": 47,
+    "Beat Par Time: LRR - The Path To Power": 48,
+    "Beat Par Time: LRR - Water Lot Of Fun": 49,
+    "Beat Par Time: LRR - Water Works": 50
 }
 
 #TODO: Set times (and test for balance!)
