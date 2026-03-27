@@ -100,6 +100,11 @@ async def save_read_loop(self):
     while not self.exit_event.is_set():
         checked_location_ids = Locations.get_locations_from_save_data()
         locations = await self.check_locations(checked_location_ids)
+        if not self.finished_game:
+            victory = Locations.check_for_victory()
+            if victory:
+                await self.send_msgs([{"cmd": "StatusUpdate", "status": ClientStatus.CLIENT_GOAL}])
+                self.finished_game = True
         await asyncio.sleep(0.1)
 
 def sync_levels(self):
