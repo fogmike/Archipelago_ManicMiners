@@ -1,9 +1,10 @@
 from __future__ import annotations
 
 import os
-from . import ParseSaveFile
+from . import ParseSaveFile, Items
 
 from BaseClasses import Location
+
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:    
     from .World import ManicMinersWorlds
@@ -181,9 +182,11 @@ TARGET_CLEAR_TIME_ROCK_HARD = {
 def get_location_names_with_ids(location_names: list[str]) -> dict[str, int | None]:
     return {location_name: LOCATION_NAME_TO_ID[location_name] for location_name in location_names}
 
-# Manic Miners doesn't really have anything that would constitute an event, so just jump straight to creating all    
 def create_all_locations(world: ManicMinersWorld) -> None:
-    region_menu = world.get_region("Menu")
+    create_regular_locations(world)
+    create_events(world)
+
+def create_regular_locations(world: ManicMinersWorld) -> None:
     
     if world.options.campaign_selection_lrr:
         region_lrr_abreathoffreshair = world.get_region("LRR - A Breath Of Fresh Air")
@@ -263,6 +266,9 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         locations_lrr_waterworks = get_location_names_with_ids(["Clear: LRR - Water Works"])
         region_lrr_waterworks.add_locations(locations_lrr_waterworks, ManicMinersLocation)
     
+def create_events(world: ManicMinersWorld) -> None:
+    region_menu = world.get_region("Menu")
+    region_menu.add_event("Goal Conditions Achievable", "Victory", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
 
 def check_for_victory(options):
     lad = os.getenv('LOCALAPPDATA')

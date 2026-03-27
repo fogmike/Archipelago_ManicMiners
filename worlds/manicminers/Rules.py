@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+from worlds.generic.Rules import set_rule
+from . import Items
+
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:    
     from .World import ManicMinersWorld
@@ -14,10 +17,9 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
     pass
 
 def set_all_location_rules(world: ManicMinersWorld) -> None:
-    # I believe this is N/A since all access rules set by entrance creation, but keeping this here for now in case
-    pass
+    goal_achievable = world.get_location("Goal Conditions Achievable")
+    if world.options.victory_condition == 0:
+        set_rule(goal_achievable, lambda state: state.has_from_list_unique(Items.LEVEL_ACCESS_LRR_LIST, world.player, world.options.target_level_count))
     
 def set_completion_condition(world: ManicMinersWorld) -> None:
-    #TODO: This needs changing/customising
-    #Currently the game is won when you find the access to Rubble Trouble
-    world.multiworld.completion_condition[world.player] = lambda state: state.has("Level Access: LRR - Rubble Trouble", world.player)
+    world.multiworld.completion_condition[world.player] = lambda state: state.has("Goal Conditions Achievable", world.player)
