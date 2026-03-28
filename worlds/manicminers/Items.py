@@ -114,15 +114,16 @@ def create_all_items(world: ManicMinersWorld) -> None:
     itempool_access: list[Item] = []
     
     if world.options.campaign_selection_lrr:
-        
         itempool_lrr_access = []
         for item in LEVEL_ACCESS_LRR_LIST:
             itempool_lrr_access.append(world.create_item(item))
         itempool_access += itempool_lrr_access
     
-    initial_access_item_index = world.random.randint(0,len(itempool_access))
-    initial_access_item = itempool_access[initial_access_item_index]
-    itempool_access.pop(initial_access_item_index)
+    initial_access_item_list = []
+    for i in range(world.options.available_levels_at_start):
+        initial_access_item_index = world.random.randint(0,len(itempool_access)-1)
+        initial_access_item_list.append(itempool_access[initial_access_item_index])
+        itempool_access.pop(initial_access_item_index)
     
     itempool: list[Item] = []
     
@@ -135,7 +136,8 @@ def create_all_items(world: ManicMinersWorld) -> None:
     
     world.multiworld.itempool += itempool
     
-    world.push_precollected(initial_access_item)
+    for item in initial_access_item_list:
+        world.push_precollected(item)
 
 def copy_level_into_archipelago(root_dir, item_id):
     main_level_dir = root_dir + "\\ManicMiners\\Levels"

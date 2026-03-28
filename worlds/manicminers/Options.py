@@ -32,6 +32,18 @@ class TargetLevelCount(Range):
     
     default = 3
 
+class AvailableLevelsAtStart(Range):
+    """
+    How many levels are available initially.
+    """
+    
+    display_name = "Available Levels At Start"
+    
+    range_start = 1
+    range_end = 25
+    
+    default = 1
+
 class TargetTimeDifficulty(Choice):
     """
     How difficult the target times are per level. 
@@ -59,6 +71,7 @@ class CampaignSelectionLRR(DefaultOnToggle):
 class ManicMinersOptions(PerGameCommonOptions):
     victory_condition: VictoryCondition
     target_level_count: TargetLevelCount
+    available_levels_at_start: AvailableLevelsAtStart
     target_time_difficulty: TargetTimeDifficulty
     campaign_selection_lrr: CampaignSelectionLRR
 
