@@ -265,6 +265,59 @@ def create_regular_locations(world: ManicMinersWorld) -> None:
         region_lrr_waterlotoffun.add_locations(locations_lrr_waterlotoffun, ManicMinersLocation)
         locations_lrr_waterworks = get_location_names_with_ids(["Clear: LRR - Water Works"])
         region_lrr_waterworks.add_locations(locations_lrr_waterworks, ManicMinersLocation)
+        
+        if world.options.target_times_are_checks:
+            locations_lrr_abreathoffreshair = get_location_names_with_ids(["Beat Par Time: LRR - A Breath Of Fresh Air"])
+            region_lrr_abreathoffreshair.add_locations(locations_lrr_abreathoffreshair, ManicMinersLocation)
+            locations_lrr_airraiders = get_location_names_with_ids(["Beat Par Time: LRR - Air Raiders"])
+            region_lrr_airraiders.add_locations(locations_lrr_airraiders, ManicMinersLocation)
+            locations_lrr_backtobasics = get_location_names_with_ids(["Beat Par Time: LRR - Back To Basics"])
+            region_lrr_backtobasics.add_locations(locations_lrr_backtobasics, ManicMinersLocation)
+            locations_lrr_breathless = get_location_names_with_ids(["Beat Par Time: LRR - Breathless"])
+            region_lrr_breathless.add_locations(locations_lrr_breathless, ManicMinersLocation)
+            locations_lrr_dontpanic = get_location_names_with_ids(["Beat Par Time: LRR - Don't Panic"])
+            region_lrr_dontpanic.add_locations(locations_lrr_dontpanic, ManicMinersLocation)
+            locations_lrr_drillernight = get_location_names_with_ids(["Beat Par Time: LRR - Driller Night"])
+            region_lrr_drillernight.add_locations(locations_lrr_drillernight, ManicMinersLocation)
+            locations_lrr_erodeworks = get_location_names_with_ids(["Beat Par Time: LRR - Erode Works"])
+            region_lrr_erodeworks.add_locations(locations_lrr_erodeworks, ManicMinersLocation)
+            locations_lrr_explosiveaction = get_location_names_with_ids(["Beat Par Time: LRR - Explosive Action"])
+            region_lrr_explosiveaction.add_locations(locations_lrr_explosiveaction, ManicMinersLocation)
+            locations_lrr_fireandwater = get_location_names_with_ids(["Beat Par Time: LRR - Fire And Water"])
+            region_lrr_fireandwater.add_locations(locations_lrr_fireandwater, ManicMinersLocation)
+            locations_lrr_frozenfrenzy = get_location_names_with_ids(["Beat Par Time: LRR - Frozen Frenzy"])
+            region_lrr_frozenfrenzy.add_locations(locations_lrr_frozenfrenzy, ManicMinersLocation)
+            locations_lrr_hotstuff = get_location_names_with_ids(["Beat Par Time: LRR - Hot Stuff"])
+            region_lrr_hotstuff.add_locations(locations_lrr_hotstuff, ManicMinersLocation)
+            locations_lrr_icespy = get_location_names_with_ids(["Beat Par Time: LRR - Ice Spy"])
+            region_lrr_icespy.add_locations(locations_lrr_icespy, ManicMinersLocation)
+            locations_lrr_itsaholdup = get_location_names_with_ids(["Beat Par Time: LRR - It's A Hold Up"])
+            region_lrr_itsaholdup.add_locations(locations_lrr_itsaholdup, ManicMinersLocation)
+            locations_lrr_lakeoffire = get_location_names_with_ids(["Beat Par Time: LRR - Lake Of Fire"])
+            region_lrr_lakeoffire.add_locations(locations_lrr_lakeoffire, ManicMinersLocation)
+            locations_lrr_lavalaughter = get_location_names_with_ids(["Beat Par Time: LRR - Lava Laughter"])
+            region_lrr_lavalaughter.add_locations(locations_lrr_lavalaughter, ManicMinersLocation)
+            locations_lrr_oresome = get_location_names_with_ids(["Beat Par Time: LRR - Oresome"])
+            region_lrr_oresome.add_locations(locations_lrr_oresome, ManicMinersLocation)
+            locations_lrr_rockhard = get_location_names_with_ids(["Beat Par Time: LRR - Rock Hard"])
+            region_lrr_rockhard.add_locations(locations_lrr_rockhard, ManicMinersLocation)
+            locations_lrr_rockyhorror = get_location_names_with_ids(["Beat Par Time: LRR - Rocky Horror"])
+            region_lrr_rockyhorror.add_locations(locations_lrr_rockyhorror, ManicMinersLocation)
+            locations_lrr_rubbletrouble = get_location_names_with_ids(["Beat Par Time: LRR - Rubble Trouble"])
+            region_lrr_rubbletrouble.add_locations(locations_lrr_rubbletrouble, ManicMinersLocation)
+            locations_lrr_runthegauntlet = get_location_names_with_ids(["Beat Par Time: LRR - Run The Gauntlet"])
+            region_lrr_runthegauntlet.add_locations(locations_lrr_runthegauntlet, ManicMinersLocation)
+            locations_lrr_searchandrescue = get_location_names_with_ids(["Beat Par Time: LRR - Search And Rescue"])
+            region_lrr_searchandrescue.add_locations(locations_lrr_searchandrescue, ManicMinersLocation)
+            locations_lrr_splitdownthemiddle = get_location_names_with_ids(["Beat Par Time: LRR - Split Down The Middle"])
+            region_lrr_splitdownthemiddle.add_locations(locations_lrr_splitdownthemiddle, ManicMinersLocation)
+            locations_lrr_thepathtopower = get_location_names_with_ids(["Beat Par Time: LRR - The Path To Power"])
+            region_lrr_thepathtopower.add_locations(locations_lrr_thepathtopower, ManicMinersLocation)
+            locations_lrr_waterlotoffun = get_location_names_with_ids(["Beat Par Time: LRR - Water Lot Of Fun"])
+            region_lrr_waterlotoffun.add_locations(locations_lrr_waterlotoffun, ManicMinersLocation)
+            locations_lrr_waterworks = get_location_names_with_ids(["Beat Par Time: LRR - Water Works"])
+            region_lrr_waterworks.add_locations(locations_lrr_waterworks, ManicMinersLocation)
+            
     
 def create_events(world: ManicMinersWorld) -> None:
     region_menu = world.get_region("Menu")
@@ -327,16 +380,26 @@ def check_for_victory(options):
     #shouldn't hit this, but to make sure we return something
     return False
   
-def get_locations_from_save_data():
+def get_locations_from_save_data(options):
     lad = os.getenv('LOCALAPPDATA')
     save_path = lad + "\\ManicMiners\\Saved\\SaveGames\\Profiles\\Archipelago.sav"
     levelDataList = ParseSaveFile.parseAllLevelsFromFilepath(save_path)
     
     location_ids = []
+    
     for level in levelDataList:
         location_id = location_id_from_level_name(level[0])
         if (location_id != -1):
             location_ids.append(location_id)
+    
+    if options["target_times_are_checks"] == 1:
+        for level in levelDataList:
+            location_id = location_id_from_level_name(level[0])
+            if (location_id != -1):
+                location_id += 25
+                target_time = get_target_time(level[0], options["target_time_difficulty"])
+                if level[1] < target_time:
+                    location_ids.append(location_id)
     
     return location_ids
 
@@ -396,6 +459,8 @@ def location_id_from_level_name(level_name):
             return -1
 
 def get_target_time(level_name, difficulty):
+    #Strip off leading "Archipelago/"
+    level_name = level_name[12:]
     match difficulty:
         case 0: 
             return TARGET_CLEAR_TIME_EASY[level_name]

@@ -44,6 +44,13 @@ class AvailableLevelsAtStart(Range):
     
     default = 1
 
+class TargetTimesAreChecks(Toggle):
+    """
+    Whether target times for levels are location checks."
+    """
+    
+    display_name = "Target Times Are Checks"
+
 class TargetTimeDifficulty(Choice):
     """
     How difficult the target times are per level. 
@@ -72,6 +79,7 @@ class ManicMinersOptions(PerGameCommonOptions):
     victory_condition: VictoryCondition
     target_level_count: TargetLevelCount
     available_levels_at_start: AvailableLevelsAtStart
+    target_times_are_checks: TargetTimesAreChecks
     target_time_difficulty: TargetTimeDifficulty
     campaign_selection_lrr: CampaignSelectionLRR
 

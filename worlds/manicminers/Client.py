@@ -43,7 +43,14 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
             self.output(f"Not connected to server!")
         else:
             def count_cleared_levels():
-                return len(Locations.get_locations_from_save_data())
+                all_locations = set(Locations.get_locations_from_save_data(self.ctx.slot_data))
+                clear_locations = set(range(1,26))
+                return len(all_locations & clear_locations)
+            
+            def count_beaten_par_time_levels():
+                all_locations = set(Locations.get_locations_from_save_data(self.ctx.slot_data))
+                par_time_locations = set(range(26,51))
+                return len(all_locations & par_time_locations)
             
             def count_available_levels():
                 root_dir = ManicMinersWorld.settings.manic_miners_install_dir
@@ -51,9 +58,31 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                 return len(os.listdir(arch_level_dir))
             
             if self.ctx.slot_data["victory_condition"] == 0:
-                self.output(f"Goal: Clear {self.ctx.slot_data["target_level_count"]} levels.")
-                self.output(f"Cleared {count_cleared_levels()} levels so far.")
-                self.output(f"{count_available_levels()} levels available.")
+                self.output(f"Goal: Clear {self.ctx.slot_data["target_level_count"]} levels")
+            elif self.ctx.slot_data["victory_condition"] == 1:
+                self.output(f"Goal: Beat par time on {self.ctx.slot_data["target_level_count"]} levels")
+ 
+            self.output(f"Levels available: {count_available_levels()}") 
+            self.output(f"Levels cleared: {count_cleared_levels()}")
+            
+            if ((self.ctx.slot_data["victory_condition"] == 1) or (self.ctx.slot_data["target_times_are_checks"] == 1)):
+                match self.ctx.slot_data["target_time_difficulty"]:
+                    case 0:
+                        time_difficulty = "Easy"
+                    case 1:
+                        time_difficulty = "Medium"
+                    case 2:
+                        time_difficulty = "Hard"
+                    case 3:
+                        time_difficulty = "Rock Hard"
+                    case _:
+                        time_difficulty = ""
+                self.output(f"Par times beaten: {count_beaten_par_time_levels()}")
+                self.output(f"Time difficulty: {time_difficulty}")
+            
+            if self.ctx.finished_game:
+                self.output(f"Goal complete! Great work, Cadet! We'll make a Manic Miner out of you yet!")
+
 
 def cleanup_install(self):
     root_dir = ManicMinersWorld.settings.manic_miners_install_dir
@@ -118,7 +147,7 @@ class ManicMinersContext(CommonContext):
 
 async def save_read_loop(self):
     while not self.exit_event.is_set():
-        checked_location_ids = Locations.get_locations_from_save_data()
+        checked_location_ids = Locations.get_locations_from_save_data(self.slot_data)
         locations = await self.check_locations(checked_location_ids)
         if not self.finished_game:
             victory = Locations.check_for_victory(self.slot_data)

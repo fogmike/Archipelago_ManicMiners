@@ -18,7 +18,7 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
 
 def set_all_location_rules(world: ManicMinersWorld) -> None:
     goal_achievable = world.get_location("Goal Conditions Achievable")
-    if world.options.victory_condition == 0:
+    if world.options.victory_condition == 0 or world.options.victory_condition == 1:
         set_rule(goal_achievable, lambda state: state.has_from_list_unique(Items.LEVEL_ACCESS_LRR_LIST, world.player, world.options.target_level_count))
     
 def set_completion_condition(world: ManicMinersWorld) -> None:
