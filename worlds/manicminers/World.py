@@ -1,11 +1,19 @@
 from collections.abc import Mapping
 from typing import Any
 
+import settings
+
 from worlds.AutoWorld import World
 
 from . import Items, Locations, Regions, Rules
 from . import Options as ManicMiners_Options
 
+class ManicMinersSettings(settings.Group):
+    class ManicMinersInstallDirectory(settings.UserFolderPath):
+        """The directory that contains your Manic Miners installation, i.e. the directory containing ManicMiners.exe and Levels."""
+        description = "Manic Miners Install Directory"
+    
+    manic_miners_install_dir: ManicMinersInstallDirectory = ManicMinersInstallDirectory("ManicMiners")
 
 class ManicMinersWorld(World):
     """
@@ -18,6 +26,8 @@ class ManicMinersWorld(World):
     
     options_dataclass = ManicMiners_Options.ManicMinersOptions
     options: ManicMiners_Options.ManicMinersOptions
+    
+    settings: ManicMinersSettings
     
     location_name_to_id = Locations.LOCATION_NAME_TO_ID
     item_name_to_id = Items.ITEM_NAME_TO_ID

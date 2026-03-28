@@ -3,7 +3,7 @@ import os
 import pathlib
 from NetUtils import ClientStatus
 
-from . import Items, Locations
+from . import Items, Locations, ManicMinersWorld
 
 from typing import TYPE_CHECKING
 
@@ -18,8 +18,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
         cleanup_install(self)
         # create level folder (will be populated later based on randomiser)
         self.output(f"Creating empty Archipelago campaign directory...")
-        #TODO: better handling of rootdir
-        root_dir = "C:\\Users\\micha\\OneDrive\\Documents\\ManicMiners"
+        root_dir = ManicMinersWorld.settings.manic_miners_install_dir
         arch_level_dir = root_dir + "\\Levels\\Archipelago"
         path = pathlib.Path(arch_level_dir)
         path.mkdir()
@@ -47,8 +46,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                 return len(Locations.get_locations_from_save_data())
             
             def count_available_levels():
-                #TODO: better handling of rootdir
-                root_dir = "C:\\Users\\micha\\OneDrive\\Documents\\ManicMiners"
+                root_dir = ManicMinersWorld.settings.manic_miners_install_dir
                 arch_level_dir = root_dir + "\\Levels\\Archipelago"
                 return len(os.listdir(arch_level_dir))
             
@@ -58,8 +56,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                 self.output(f"{count_available_levels()} levels available.")
 
 def cleanup_install(self):
-    #TODO: better handling of rootdir
-    root_dir = "C:\\Users\\micha\\OneDrive\\Documents\\ManicMiners"
+    root_dir = ManicMinersWorld.settings.manic_miners_install_dir
     arch_level_dir = root_dir + "\\Levels\\Archipelago"
     path = pathlib.Path(arch_level_dir)
     # delete Archipelago Levels
@@ -132,8 +129,7 @@ async def save_read_loop(self):
 
 def sync_levels(self):
     item: NetworkItem
-    #TODO: better handling of rootdir
-    root_dir = "C:\\Users\\micha\\OneDrive\\Documents\\ManicMiners"
+    root_dir = ManicMinersWorld.settings.manic_miners_install_dir
     for index, item in enumerate(self.items_received, 1):
         Items.copy_level_into_archipelago(root_dir, item.item)
 
