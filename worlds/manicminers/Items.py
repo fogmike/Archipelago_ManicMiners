@@ -41,7 +41,10 @@ ITEM_NAME_TO_ID = {
     "Level Access: LRR - The Path To Power": 23,
     "Level Access: LRR - Water Lot Of Fun": 24,
     "Level Access: LRR - Water Works": 25,
-    "An Energy Crystal Has Been Found!": 999
+    "An Energy Crystal Has Been Found!": 999,
+    "Good Work, Cadet!": 998,
+    "A Monster Has Appeared!": 997,
+    "Well Done!": 996
     
 }
 
@@ -71,7 +74,10 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "Level Access: LRR - The Path To Power": ItemClassification.progression,
     "Level Access: LRR - Water Lot Of Fun": ItemClassification.progression,
     "Level Access: LRR - Water Works": ItemClassification.progression,
-    "An Energy Crystal Has Been Found!": ItemClassification.filler
+    "An Energy Crystal Has Been Found!": ItemClassification.filler,
+    "Good Work, Cadet!": ItemClassification.filler,
+    "A Monster Has Appeared!": ItemClassification.filler,
+    "Well Done!": ItemClassification.filler
 }
 
 LEVEL_ACCESS_LRR_LIST = [
@@ -103,7 +109,9 @@ LEVEL_ACCESS_LRR_LIST = [
 ]
 
 def get_random_filler_item_name(world: ManicMinersWorld) -> str:
-    return "An Energy Crystal Has Been Found!"
+    filler_items = ["An Energy Crystal Has Been Found!", "Good Work, Cadet!", "A Monster Has Appeared!", "Well Done!"]
+    random_filler_item_index = world.random.randint(0,len(filler_items)-1)
+    return filler_items[random_filler_item_index]
     
 def create_item_with_correct_classification(world: ManicMinersWorld, name: str) -> ManicMinersItem:
     classification = DEFAULT_ITEM_CLASSIFICATIONS[name]
