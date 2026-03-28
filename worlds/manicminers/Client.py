@@ -41,13 +41,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
         """
         if not hasattr(self.ctx,"slot_data"):
             self.output(f"Not connected to server!")
-        else:
-            def get_ids_from_networkitems(items):
-                id_list = []
-                for item in items:
-                    id_list.append(item.item)
-                return id_list
-                
+        else:              
             def count_cleared_levels():
                 all_locations = set(get_ids_from_networkitems(self.ctx.locations_checked))
                 clear_locations = set(range(1,26))
@@ -192,6 +186,12 @@ def sync_levels(self):
     root_dir = ManicMinersWorld.settings.manic_miners_install_dir
     for index, item in enumerate(self.items_received, 1):
         Items.copy_level_into_archipelago(root_dir, item.item)
+
+def get_ids_from_networkitems(items):
+    id_list = []
+    for item in items:
+        id_list.append(item.item)
+    return id_list
 
 def launch(*launch_args):
     """Launch the Manic Miners client."""
