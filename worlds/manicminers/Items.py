@@ -42,6 +42,34 @@ ITEM_NAME_TO_ID = {
     "Level Access: LRR - Water Lot Of Fun": 24,
     "Level Access: LRR - Water Works": 25,
     
+    "Building Unlock: Tool Store": 899,
+    "Building Unlock: Teleport Pad": 898,
+    "Building Unlock: Docks": 897,
+    "Building Unlock: Canteen": 896,
+    "Building Unlock: Power Station": 895,
+    "Building Unlock: Support Station": 894,
+    "Building Unlock: Upgrade Station": 893,
+    "Building Unlock: Geological Center": 892,
+    "Building Unlock: Ore Refinery": 891,
+    "Building Unlock: Mining Laser": 890,
+    "Building Unlock: Super Teleport": 889,
+    
+    "Item Unlock: Electric Fence": 888,
+    "Item Unlock: Dynamite": 887,
+    
+    "Vehicle Unlock: Hover Scout": 886,
+    "Vehicle Unlock: Tunnel Scout": 885,
+    "Vehicle Unlock: Small Digger": 884,
+    "Vehicle Unlock: Small Transport Truck": 883,
+    "Vehicle Unlock: Small Mobile Laser Cutter": 882,
+    "Vehicle Unlock: Rapid Rider": 881,
+    "Vehicle Unlock: Cargo Carrier": 880,
+    "Vehicle Unlock: Loader Dozer": 879,
+    "Vehicle Unlock: Granite Grinder": 878,
+    "Vehicle Unlock: Large Mobile Laser Cutter": 877,
+    "Vehicle Unlock: Chrome Crusher": 876,
+    "Vehicle Unlock: Tunnel Transport": 875,
+    
     "An Energy Crystal Has Been Found!": 999,
     "Good Work, Cadet!": 998,
     "A Monster Has Appeared!": 997,
@@ -75,6 +103,34 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "Level Access: LRR - The Path To Power": ItemClassification.progression,
     "Level Access: LRR - Water Lot Of Fun": ItemClassification.progression,
     "Level Access: LRR - Water Works": ItemClassification.progression,
+    
+    "Building Unlock: Tool Store": ItemClassification.progression,
+    "Building Unlock: Teleport Pad": ItemClassification.progression,
+    "Building Unlock: Docks": ItemClassification.progression,
+    "Building Unlock: Canteen": ItemClassification.progression,
+    "Building Unlock: Power Station": ItemClassification.progression,
+    "Building Unlock: Support Station": ItemClassification.progression,
+    "Building Unlock: Upgrade Station": ItemClassification.progression,
+    "Building Unlock: Geological Center": ItemClassification.progression,
+    "Building Unlock: Ore Refinery": ItemClassification.progression,
+    "Building Unlock: Mining Laser": ItemClassification.progression,
+    "Building Unlock: Super Teleport": ItemClassification.progression,
+    
+    "Item Unlock: Electric Fence": ItemClassification.progression,
+    "Item Unlock: Dynamite": ItemClassification.progression,
+    
+    "Vehicle Unlock: Hover Scout": ItemClassification.progression,
+    "Vehicle Unlock: Tunnel Scout": ItemClassification.progression,
+    "Vehicle Unlock: Small Digger": ItemClassification.progression,
+    "Vehicle Unlock: Small Transport Truck": ItemClassification.progression,
+    "Vehicle Unlock: Small Mobile Laser Cutter": ItemClassification.progression,
+    "Vehicle Unlock: Rapid Rider": ItemClassification.progression,
+    "Vehicle Unlock: Cargo Carrier": ItemClassification.progression,
+    "Vehicle Unlock: Loader Dozer": ItemClassification.progression,
+    "Vehicle Unlock: Granite Grinder": ItemClassification.progression,
+    "Vehicle Unlock: Large Mobile Laser Cutter": ItemClassification.progression,
+    "Vehicle Unlock: Chrome Crusher": ItemClassification.progression,
+    "Vehicle Unlock: Tunnel Transport": ItemClassification.progression,
     
     "An Energy Crystal Has Been Found!": ItemClassification.filler,
     "Good Work, Cadet!": ItemClassification.filler,
@@ -110,6 +166,40 @@ LEVEL_ACCESS_LRR_LIST = [
     "Level Access: LRR - Water Works"
 ]
 
+BUILDING_UNLOCK_LIST = [
+    "Building Unlock: Tool Store",
+    "Building Unlock: Teleport Pad",
+    "Building Unlock: Docks",
+    "Building Unlock: Canteen",
+    "Building Unlock: Power Station",
+    "Building Unlock: Support Station",
+    "Building Unlock: Upgrade Station",
+    "Building Unlock: Geological Center",
+    "Building Unlock: Ore Refinery",
+    "Building Unlock: Mining Laser",
+    "Building Unlock: Super Teleport"
+]
+
+ITEM_UNLOCK_LIST = [
+    "Item Unlock: Electric Fence",
+    "Item Unlock: Dynamite"
+]
+
+VEHICLE_UNLOCK_LIST = [
+    "Vehicle Unlock: Hover Scout",
+    "Vehicle Unlock: Tunnel Scout",
+    "Vehicle Unlock: Small Digger",
+    "Vehicle Unlock: Small Transport Truck",
+    "Vehicle Unlock: Small Mobile Laser Cutter",
+    "Vehicle Unlock: Rapid Rider",
+    "Vehicle Unlock: Cargo Carrier",
+    "Vehicle Unlock: Loader Dozer",
+    "Vehicle Unlock: Granite Grinder",
+    "Vehicle Unlock: Large Mobile Laser Cutter",
+    "Vehicle Unlock: Chrome Crusher",
+    "Vehicle Unlock: Tunnel Transport"
+]
+
 FILLER_LIST = [
     "An Energy Crystal Has Been Found!",
     "Good Work, Cadet!",
@@ -127,6 +217,8 @@ def create_item_with_correct_classification(world: ManicMinersWorld, name: str) 
     
 def create_all_items(world: ManicMinersWorld) -> None:
     
+    itempool: list[Item] = []
+    
     itempool_access: list[Item] = []
     
     if world.options.campaign_selection_lrr:
@@ -141,19 +233,47 @@ def create_all_items(world: ManicMinersWorld) -> None:
         initial_access_item_list.append(itempool_access[initial_access_item_index])
         itempool_access.pop(initial_access_item_index)
     
-    itempool: list[Item] = []
-    
     itempool += itempool_access   
+    
+    itempool_buildings = []
+    for item in BUILDING_UNLOCK_LIST:
+        itempool_buildings.append(world.create_item(item))
+    
+    itempool_items = []
+    for item in ITEM_UNLOCK_LIST:
+        itempool_items.append(world.create_item(item))
+
+    itempool_vehicles = []
+    for item in VEHICLE_UNLOCK_LIST:
+        itempool_vehicles.append(world.create_item(item))        
     
     number_of_items = len(itempool)
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))
     needed_number_of_filler_items = number_of_unfilled_locations - number_of_items
     itempool += [world.create_filler() for _ in range(needed_number_of_filler_items)]
     
-    world.multiworld.itempool += itempool
-    
     for item in initial_access_item_list:
         world.push_precollected(item)
+    
+    if world.options.buildings_are_items:
+        itempool += itempool_buildings
+    else:
+        for item in itempool_buildings:
+            world.push_precollected(item)
+
+    if world.options.items_are_items:
+        itempool += itempool_items
+    else:
+        for item in itempool_items:
+            world.push_precollected(item)
+
+    if world.options.vehicles_are_items:
+        itempool += itempool_vehicles
+    else:
+        for item in itempool_vehicles:
+            world.push_precollected(item)
+    
+    world.multiworld.itempool += itempool
 
 def copy_level_into_archipelago(root_dir, item_id):
     main_level_dir = root_dir + "\\ManicMiners\\Levels"

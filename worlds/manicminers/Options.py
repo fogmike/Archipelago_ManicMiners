@@ -65,6 +65,27 @@ class TargetTimeDifficulty(Choice):
     
     default = 1
 
+class BuildingsAreItems(Toggle):
+    """
+    Whether Buildings must be found in the multiworld to be unlocked.
+    """
+    
+    display_name = "Buildings Are Items"
+
+class ItemsAreItems(Toggle):
+    """
+    Whether Items (Electric Fences and Dynamite) must be found in the multiworld to be unlocked.
+    """
+    
+    display_name = "Items Are Items"
+
+class VehiclesAreItems(Toggle):
+    """
+    Whether Vehicles must be found in the multiworld to be unlocked.
+    """
+    
+    display_name = "Vehicles Are Items"
+
 class CampaignSelectionLRR(DefaultOnToggle):
     """
     Whether your game will include the main campaign levels."
@@ -81,6 +102,9 @@ class ManicMinersOptions(PerGameCommonOptions):
     available_levels_at_start: AvailableLevelsAtStart
     target_times_are_checks: TargetTimesAreChecks
     target_time_difficulty: TargetTimeDifficulty
+    buildings_are_items: BuildingsAreItems
+    items_are_items: ItemsAreItems
+    vehicles_are_items: VehiclesAreItems
     campaign_selection_lrr: CampaignSelectionLRR
 
 option_groups = [
