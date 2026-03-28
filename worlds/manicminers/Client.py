@@ -11,7 +11,7 @@ from CommonClient import CommonContext, ClientCommandProcessor, logger, get_base
 
 class ManicMinersClientCommandProcessor(ClientCommandProcessor):
     def _cmd_reset_installation(self):
-        """ Wipe and re-initialise Levels and Profile. Needed for first setup.
+        """Wipe and re-initialise Levels and Profile. Needed for first setup.
         WARNING: Will delete all Archipelago saved data."""
         # wipe old installs
         self.output(f"Cleaning any old Archipelago installs...")
@@ -32,9 +32,30 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
         self.output(f"Initialisation complete!")
         
     def _cmd_clear_installation(self):
-        """ Wipe Archipelago data from local Manic Miners installation.
+        """Wipe Archipelago data from local Manic Miners installation.
         WARNING: Will delete all Archipelago saved data."""
         cleanup_install(self)
+    
+    def _cmd_mining_report(self):
+        """
+        Returns game information such as selected goal and levels cleared.
+        """
+        if not hasattr(self.ctx,"slot_data"):
+            self.output(f"Not connected to server!")
+        else:
+            def count_cleared_levels():
+                return len(Locations.get_locations_from_save_data())
+            
+            def count_available_levels():
+                #TODO: better handling of rootdir
+                root_dir = "C:\\Users\\micha\\OneDrive\\Documents\\ManicMiners"
+                arch_level_dir = root_dir + "\\Levels\\Archipelago"
+                return len(os.listdir(arch_level_dir))
+            
+            if self.ctx.slot_data["victory_condition"] == 0:
+                self.output(f"Goal: Clear {self.ctx.slot_data["target_level_count"]} levels.")
+                self.output(f"Cleared {count_cleared_levels()} levels so far.")
+                self.output(f"{count_available_levels()} levels available.")
 
 def cleanup_install(self):
     #TODO: better handling of rootdir
