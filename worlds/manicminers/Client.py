@@ -81,7 +81,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                 self.output(f"Time difficulty: {time_difficulty}")
             
             if self.ctx.finished_game:
-                self.output(f"Goal complete! Great work, Cadet! We'll make a Manic Miner out of you yet!")
+                self.output(f"Goal complete! Great work, Cadet. We'll make a Manic Miner out of you yet!")
 
 
 def cleanup_install(self):
