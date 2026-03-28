@@ -42,20 +42,42 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
         if not hasattr(self.ctx,"slot_data"):
             self.output(f"Not connected to server!")
         else:
+            def get_ids_from_networkitems(items):
+                id_list = []
+                for item in items:
+                    id_list.append(item.item)
+                return id_list
+                
             def count_cleared_levels():
-                all_locations = set(Locations.get_locations_from_save_data(self.ctx.slot_data))
+                all_locations = set(get_ids_from_networkitems(self.ctx.locations_checked))
                 clear_locations = set(range(1,26))
                 return len(all_locations & clear_locations)
             
             def count_beaten_par_time_levels():
-                all_locations = set(Locations.get_locations_from_save_data(self.ctx.slot_data))
+                all_locations = set(get_ids_from_networkitems(self.ctx.locations_checked))
                 par_time_locations = set(range(26,51))
                 return len(all_locations & par_time_locations)
             
             def count_available_levels():
-                root_dir = ManicMinersWorld.settings.manic_miners_install_dir
-                arch_level_dir = root_dir + "\\Levels\\Archipelago"
-                return len(os.listdir(arch_level_dir))
+                all_items = set(get_ids_from_networkitems(self.ctx.items_received))
+                level_items = set(range(1,26))
+                return len(all_items & level_items)
+            
+            def count_available_buildings():
+                all_items = set(get_ids_from_networkitems(self.ctx.items_received))
+                level_items = set(range(889,900))
+                return len(all_items & level_items)
+                
+            def count_available_items():
+                all_items = set(get_ids_from_networkitems(self.ctx.items_received))
+                level_items = set(range(887,889))
+                return len(all_items & level_items)
+                
+            def count_available_vehicles():
+                all_items = set(get_ids_from_networkitems(self.ctx.items_received))
+                level_items = set(range(875,887))
+                return len(all_items & level_items)
+                
             
             if self.ctx.slot_data["victory_condition"] == 0:
                 self.output(f"Goal: Clear {self.ctx.slot_data["target_level_count"]} levels")
@@ -80,6 +102,15 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                 self.output(f"Par times beaten: {count_beaten_par_time_levels()}")
                 self.output(f"Time difficulty: {time_difficulty}")
             
+            if self.ctx.slot_data["buildings_are_items"] == 1:
+                self.output(f"Buildings available: {count_available_buildings()}/11")
+                
+            if self.ctx.slot_data["items_are_items"] == 1:
+                self.output(f"Items available: {count_available_items()}/2")
+                
+            if self.ctx.slot_data["vehicles_are_items"] == 1:
+                self.output(f"Vehicles available: {count_available_vehicles()}/12")
+                
             if self.ctx.finished_game:
                 self.output(f"Goal complete! Great work, Cadet. We'll make a Manic Miner out of you yet!")
 
