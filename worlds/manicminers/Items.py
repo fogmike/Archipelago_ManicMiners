@@ -138,33 +138,38 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "Well Done!": ItemClassification.filler
 }
 
-LEVEL_ACCESS_LRR_LIST = [
-    "Level Access: LRR - A Breath Of Fresh Air",
+LEVEL_ACCESS_LRR_NOUNLOCK_LIST = [
     "Level Access: LRR - Air Raiders",
-    "Level Access: LRR - Back To Basics",
-    "Level Access: LRR - Breathless",
     "Level Access: LRR - Don't Panic",
     "Level Access: LRR - Driller Night",
+    "Level Access: LRR - It's A Hold Up",
+    "Level Access: LRR - Lake Of Fire",
+    "Level Access: LRR - Oresome",
+    "Level Access: LRR - Rubble Trouble",
+    "Level Access: LRR - Run The Gauntlet",
+    "Level Access: LRR - Split Down The Middle"
+]
+
+LEVEL_ACCESS_LRR_NEEDSUNLOCK_LIST = [
+    "Level Access: LRR - A Breath Of Fresh Air",
+    "Level Access: LRR - Back To Basics",
+    "Level Access: LRR - Breathless",
     "Level Access: LRR - Erode Works",
     "Level Access: LRR - Explosive Action",
     "Level Access: LRR - Fire And Water",
     "Level Access: LRR - Frozen Frenzy",
     "Level Access: LRR - Hot Stuff",
     "Level Access: LRR - Ice Spy",
-    "Level Access: LRR - It's A Hold Up",
-    "Level Access: LRR - Lake Of Fire",
     "Level Access: LRR - Lava Laughter",
-    "Level Access: LRR - Oresome",
     "Level Access: LRR - Rock Hard",
     "Level Access: LRR - Rocky Horror",
-    "Level Access: LRR - Rubble Trouble",
-    "Level Access: LRR - Run The Gauntlet",
     "Level Access: LRR - Search And Rescue",
-    "Level Access: LRR - Split Down The Middle",
     "Level Access: LRR - The Path To Power",
     "Level Access: LRR - Water Lot Of Fun",
     "Level Access: LRR - Water Works"
 ]
+
+LEVEL_ACCESS_LRR_LIST = LEVEL_ACCESS_LRR_NOUNLOCK_LIST + LEVEL_ACCESS_LRR_NEEDSUNLOCK_LIST
 
 BUILDING_UNLOCK_LIST = [
     "Building Unlock: Tool Store",
@@ -219,16 +224,34 @@ def create_all_items(world: ManicMinersWorld) -> None:
     
     itempool: list[Item] = []
     
-    itempool_access: list[Item] = []
-    
+    itempool_access = []
+    itempool_sphere1_access = []
+    itempool_sphere2plus_access = []
+ 
+    initial_access_item_list = []
+ 
     if world.options.campaign_selection_lrr:
         itempool_lrr_access = []
-        for item in LEVEL_ACCESS_LRR_LIST:
-            itempool_lrr_access.append(world.create_item(item))
-        itempool_access += itempool_lrr_access
+        itempool_lrr_sphere1_access = []
+        itempool_lrr_sphere2plus_access = []
+        for item in LEVEL_ACCESS_LRR_NOUNLOCK_LIST:
+            itempool_lrr_sphere1_access.append(world.create_item(item))
+        for item in LEVEL_ACCESS_LRR_NEEDSUNLOCK_LIST:
+            itempool_lrr_sphere2plus_access.append(world.create_item(item))
+        if world.options.buildings_are_items == 0 and world.options.items_are_items == 0 and world.options.vehicles_are_items == 0:
+            itempool_lrr_sphere1_access += itempool_lrr_sphere2plus_access
+            itempool_lrr_sphere2plus_access.clear()
+        
+        itempool_sphere1_access += itempool_lrr_sphere1_access
+        itempool_sphere2plus_access += itempool_lrr_sphere2plus_access
     
-    initial_access_item_list = []
-    for i in range(world.options.available_levels_at_start):
+    initial_access_item_index = world.random.randint(0,len(itempool_sphere1_access)-1)
+    initial_access_item_list.append(itempool_sphere1_access[initial_access_item_index])
+    itempool_sphere1_access.pop(initial_access_item_index)
+    
+    itempool_access = itempool_sphere1_access + itempool_sphere2plus_access
+    
+    for i in range(world.options.available_levels_at_start-1):
         initial_access_item_index = world.random.randint(0,len(itempool_access)-1)
         initial_access_item_list.append(itempool_access[initial_access_item_index])
         itempool_access.pop(initial_access_item_index)
