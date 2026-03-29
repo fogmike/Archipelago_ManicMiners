@@ -86,6 +86,15 @@ class VehiclesAreItems(Toggle):
     
     display_name = "Vehicles Are Items"
 
+class BreathingAlwaysInLogic(Toggle):
+    """
+    Whether the ability to build a Support Station is logically required for levels with limited air.
+    When enabled, some levels that can be comfortably beaten before the air runs out will remain out of logic. 
+    Has no effect if Buildings Are Items is disabled.
+    """
+    
+    display_name = "Breathing Always In Logic"
+
 class CampaignSelectionLRR(DefaultOnToggle):
     """
     Whether your game will include the main campaign levels."
@@ -105,6 +114,7 @@ class ManicMinersOptions(PerGameCommonOptions):
     buildings_are_items: BuildingsAreItems
     items_are_items: ItemsAreItems
     vehicles_are_items: VehiclesAreItems
+    breathing_always_in_logic: BreathingAlwaysInLogic
     campaign_selection_lrr: CampaignSelectionLRR
 
 option_groups = [
