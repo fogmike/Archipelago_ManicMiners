@@ -34,6 +34,46 @@ class ManicMinersWorld(World):
     
     origin_region_name = "Menu"
     
+    def generate_early(self) -> None:
+        # Fix some potentially fatal option combinations
+        
+        # Must have at least one campaign selected, default to LRR if all unticked
+        number_campaigns = 0
+        if self.options.campaign_selection_lrr:
+            number_campaigns += 1
+        
+        if number_campaigns == 0:
+            self.options.campaign_selection_lrr.value = 1
+            number_campaigns = 1
+        
+        # Can't start with more levels than there are levels
+        if self.options.available_levels_at_start > (number_campaigns * 25):
+            self.options.available_levels_at_start.value = number_campaigns * 25
+        
+        # Identify number of Locations
+        number_locations = 0
+        if self.options.target_times_are_checks:
+            locations_per_campaign = 50 # Clear Level + Beat Time
+        else:
+            locations_per_campaign = 25 # Clear Level Only
+        number_locations += number_campaigns * locations_per_campaign
+        
+        # Identify number of Items
+        number_items = 0
+        number_items += number_campaigns * 25 # Level Unlocks
+        if self.options.buildings_are_items:
+            number_items += 11 # Building Unlocks
+        if self.options.items_are_items:
+            number_items += 2 # Item Unlocks
+        if self.options.vehicles_are_items:
+            number_items += 12 # Vehicle Unlocks
+        number_items -= self.options.available_levels_at_start
+        
+        # Check we haven't got more Items than Locations, handle if so
+        item_location_diffcount = number_items - number_locations
+        if item_location_diffcount > 0:
+            self.options.available_levels_at_start.value += item_location_diffcount
+    
     def create_regions(self) -> None:
         Regions.create_and_connect_regions(self)
         Locations.create_all_locations(self)
