@@ -11,7 +11,7 @@
 
 - [Archipelago](https://github.com/ArchipelagoMW/Archipelago/releases/latest)
 - [Manic Miners](https://baraklava.itch.io/manic-miners)
-- The latest copy of manicminers.apworld from this repo
+- The latest copy of [manicminers.apworld](../manicminers.apworld) from this repo
 
 ## How to setup Manic Miners
 
