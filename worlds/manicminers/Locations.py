@@ -426,6 +426,7 @@ def check_for_victory(options):
     
     elif options["victory_condition"] == 2: # total_target_time
         total_time = 0
+        level_count = 0
         match options["target_time_difficulty"]:
             case 0:
                 target_time = TARGET_TOTAL_CLEAR_TIME_EASY
@@ -441,7 +442,8 @@ def check_for_victory(options):
             location_id = location_id_from_level_name(level[0])
             if (location_id != -1):
                 total_time += level[1]
-        if total_time < target_time:
+                level_count += 1
+        if total_time < target_time and level_count >= options["target_count"]:
             return True
         else:
             return False
