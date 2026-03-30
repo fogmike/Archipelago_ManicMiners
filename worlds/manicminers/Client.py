@@ -81,7 +81,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
             self.output(f"Levels available: {count_available_levels()}") 
             self.output(f"Levels cleared: {count_cleared_levels()}")
             
-            if ((self.ctx.slot_data["victory_condition"] == 1) or (self.ctx.slot_data["target_times_are_checks"] == 1)):
+            if ((self.ctx.slot_data["victory_condition"] in [1,2]) or (self.ctx.slot_data["target_times_are_checks"] == 1)):
                 match self.ctx.slot_data["target_time_difficulty"]:
                     case 0:
                         time_difficulty = "Easy"
@@ -93,8 +93,10 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                         time_difficulty = "Rock Hard"
                     case _:
                         time_difficulty = ""
-                self.output(f"Par times beaten: {count_beaten_par_time_levels()}")
                 self.output(f"Time difficulty: {time_difficulty}")
+                if self.ctx.slot_data["victory_condition"] == 1:
+                    self.output(f"Par times beaten: {count_beaten_par_time_levels()}")
+                self.output(f"Target details can be seen with the /check_watch command.")
             
             if self.ctx.slot_data["buildings_are_items"] == 1:
                 self.output(f"Buildings available: {count_available_buildings()}/11")
@@ -108,6 +110,46 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
             if self.ctx.finished_game:
                 self.output(f"Goal complete! Great work, Cadet. We'll make a Manic Miner out of you yet!")
 
+    def _cmd_check_watch(self):
+        """Returns target time details for campaigns/levels, if applicable."""
+ 
+        if not hasattr(self.ctx,"slot_data"):
+            self.output(f"Not connected to server!")
+        else:
+            need_time_details = False
+            if self.ctx.slot_data["victory_condition"] == 2:
+                need_time_details = True
+                match self.ctx.slot_data["target_time_difficulty"]:
+                    case 0:
+                        time_goal = Locations.TARGET_TOTAL_CLEAR_TIME_EASY
+                    case 1:
+                        time_goal = Locations.TARGET_TOTAL_CLEAR_TIME_MEDIUM
+                    case 2:
+                        time_goal = Locations.TARGET_TOTAL_CLEAR_TIME_HARD
+                    case 3:
+                        time_goal = Locations.TARGET_TOTAL_CLEAR_TIME_ROCK_HARD
+                    case _:
+                        time_goal = 99999
+                time_tuple = divmod(time_goal, 60)
+                self.output(f'Total Target Time: {time_tuple[0]:02d}:{time_tuple[1]:02d}')
+            if self.ctx.slot_data["victory_condition"] == 1 or self.ctx.slot_data["target_times_are_checks"] == 1:
+                need_time_details = True
+                match self.ctx.slot_data["target_time_difficulty"]:
+                    case 0:
+                        time_target_list = Locations.TARGET_CLEAR_TIME_EASY
+                    case 1:
+                        time_target_list = Locations.TARGET_CLEAR_TIME_MEDIUM
+                    case 2:
+                        time_target_list = Locations.TARGET_CLEAR_TIME_HARD
+                    case 3:
+                        time_target_list = Locations.TARGET_CLEAR_TIME_ROCK_HARD
+                    case _:
+                        time_target_list = []
+                for time_target in time_target_list:
+                    time_tuple = divmod(time_target_list[time_target], 60)
+                    self.output(f"Target time for '{time_target}' is {time_tuple[0]:02d}:{time_tuple[1]:02d}")
+            if need_time_details == False:
+                self.output(f"You don't need to check your watch for anything. Explore Planet U at your own leisure!")
 
 def cleanup_install(self):
     root_dir = ManicMinersWorld.settings.manic_miners_install_dir
