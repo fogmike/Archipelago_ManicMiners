@@ -31,7 +31,7 @@ class TargetLevelCount(Range):
     range_start = 1
     range_end = 25
     
-    default = 3
+    default = 25
 
 class AvailableLevelsAtStart(Range):
     """
@@ -44,9 +44,9 @@ class AvailableLevelsAtStart(Range):
     range_start = 1
     range_end = 25
     
-    default = 1
+    default = 2
 
-class TargetTimesAreChecks(Toggle):
+class TargetTimesAreChecks(DefaultOnToggle):
     """
     Whether target times for levels are location checks."
     """
@@ -67,21 +67,21 @@ class TargetTimeDifficulty(Choice):
     
     default = 1
 
-class BuildingsAreItems(Toggle):
+class BuildingsAreItems(DefaultOnToggle):
     """
     Whether Buildings must be found in the multiworld to be unlocked.
     """
     
     display_name = "Buildings Are Items"
 
-class ItemsAreItems(Toggle):
+class ItemsAreItems(DefaultOnToggle):
     """
     Whether Items (Electric Fences and Dynamite) must be found in the multiworld to be unlocked.
     """
     
     display_name = "Items Are Items"
 
-class VehiclesAreItems(Toggle):
+class VehiclesAreItems(DefaultOnToggle):
     """
     Whether Vehicles must be found in the multiworld to be unlocked.
     """
@@ -124,5 +124,21 @@ option_groups = [
     OptionGroup(
         "Campaign Selection",
         [CampaignSelectionLRR]
+    ),
+    OptionGroup(
+        "Levels",
+        [TargetLevelCount,AvailableLevelsAtStart]
+    ),
+    OptionGroup(
+        "Times",
+        [TargetTimesAreChecks,TargetTimeDifficulty]
+    ),
+    OptionGroup(
+        "Items",
+        [BuildingsAreItems,ItemsAreItems,VehiclesAreItems]
+    ),
+    OptionGroup(
+        "Logic",
+        [BreathingAlwaysInLogic]
     ),
 ]
