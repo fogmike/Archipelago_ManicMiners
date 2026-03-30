@@ -425,17 +425,16 @@ def check_for_victory(options):
             return False
     
     elif options["victory_condition"] == 2: # total_target_time
-        #TODO: work out better way to calculate this instead of being static values
         total_time = 0
         match options["target_time_difficulty"]:
             case 0:
-                target_time = 99999
+                target_time = TARGET_TOTAL_CLEAR_TIME_EASY
             case 1:
-                target_time = 99999
+                target_time = TARGET_TOTAL_CLEAR_TIME_MEDIUM
             case 2:
-                target_time = 99999
+                target_time = TARGET_TOTAL_CLEAR_TIME_HARD
             case 3:
-                target_time = 99999
+                target_time = TARGET_TOTAL_CLEAR_TIME_ROCK_HARD
             case _:
                 target_time = -1
         for level in levelDataList:
