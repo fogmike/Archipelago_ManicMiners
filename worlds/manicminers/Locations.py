@@ -365,7 +365,7 @@ def create_events(world: ManicMinersWorld) -> None:
         region_lrr_waterlotoffun = world.get_region("LRR - Water Lot Of Fun")
         region_lrr_waterworks = world.get_region("LRR - Water Works")
         
-        if world.options.victory_condition in [0,1]:
+        if world.options.victory_condition in [0,1,2]:
             region_lrr_abreathoffreshair.add_event("Completable: LRR - A Breath Of Fresh Air", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
             region_lrr_airraiders.add_event("Completable: LRR - Air Raiders", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
             region_lrr_backtobasics.add_event("Completable: LRR - Back To Basics", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
