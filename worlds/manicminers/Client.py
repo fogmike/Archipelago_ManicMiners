@@ -43,12 +43,12 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
             self.output(f"Not connected to server!")
         else:              
             def count_cleared_levels():
-                all_locations = set(get_ids_from_networkitems(self.ctx.locations_checked))
+                all_locations = set(self.ctx.checked_locations)
                 clear_locations = set(range(1,26))
                 return len(all_locations & clear_locations)
             
             def count_beaten_par_time_levels():
-                all_locations = set(get_ids_from_networkitems(self.ctx.locations_checked))
+                all_locations = set(self.ctx.checked_locations)
                 par_time_locations = set(range(26,51))
                 return len(all_locations & par_time_locations)
             
@@ -94,7 +94,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                     case _:
                         time_difficulty = ""
                 self.output(f"Time difficulty: {time_difficulty}")
-                if self.ctx.slot_data["victory_condition"] == 1:
+                if self.ctx.slot_data["victory_condition"] == 1 or self.ctx.slot_data["target_times_are_checks"] == 1:
                     self.output(f"Par times beaten: {count_beaten_par_time_levels()}")
                 self.output(f"Target details can be seen with the /check_watch command.")
             
