@@ -104,8 +104,11 @@ def launch_client(*args):
     from worlds.LauncherComponents import launch as launch_component
     launch_component(launch, name="Manic Miners Client", args=args)
 
-from worlds.LauncherComponents import Component, components, Type, launch as launch_component
+from worlds.LauncherComponents import Component, components, Type, launch as launch_component, icon_paths
 components.append(Component("Manic Miners Client", 
                            game_name="Manic Miners", 
                            func=launch_client, 
-                           component_type=Type.CLIENT))
+                           component_type=Type.CLIENT,
+                           icon="manic_miners_logo"))
+
+icon_paths["manic_miners_logo"] = f"ap:{__name__}/icons/manic_miners_logo.png"
