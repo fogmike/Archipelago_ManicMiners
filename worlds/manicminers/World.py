@@ -10,10 +10,15 @@ from . import Options as ManicMiners_Options
 
 class ManicMinersSettings(settings.Group):
     class ManicMinersInstallDirectory(settings.UserFolderPath):
-        """The directory that contains your Manic Miners installation, i.e. the directory containing ManicMiners.exe and Levels."""
+        """The directory that contains your Manic Miners installation, i.e. the directory containing ManicMiners.exe. Needed for base copy of the levels."""
         description = "Manic Miners Install Directory"
     
+    class ManicMinersLevelDirectory(settings.UserFolderPath):
+        """The directory that contains your Manic Miners custom levels, i.e. ..../YourUser/Documents/ManicMiners. Needed for inserting Archipelago's copy of the levels."""
+        description = "Manic Miners Level Directory"
+
     manic_miners_install_dir: ManicMinersInstallDirectory = ManicMinersInstallDirectory("ManicMiners")
+    manic_miners_level_dir: ManicMinersInstallDirectory = ManicMinersLevelDirectory("ManicMiners")
 
 class ManicMinersWorld(World):
     """

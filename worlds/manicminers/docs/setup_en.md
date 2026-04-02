@@ -33,11 +33,13 @@ Set up an Archipelago server using that YAML (and any others in the multiworld),
 
 From the Archipelago Launcher, open the Manic Miners Client, and run `/reset_installation`. **Warning: this will wipe any prior Archipelago save!**
 
-The very first time you do this, you will be prompted to select your Manic Miners installation folder. This is the top level directory you extracted your download of Manic Miners to - it should be the directory that contains both the `ManicMiners.exe` file and various folders including `Levels`. Once selected for the first time, you don't need to do this again. Should you ever need to change this setting, you can find it in your Archipelago `host.yaml`under `manicminers_options`.
+The very first time you do this, you will be prompted to select the folder that contains your Manic Miners custom Levels folder. This will be in your user's Documents, and you should select the '..../Documents/ManicMiners' folder (which will contain 'Levels'). Once selected for the first time, you don't need to do this again. Should you ever need to change this setting, you can find it in your Archipelago `host.yaml`under `manicminers_options`.
 
 ## How to connect to a running game
 
 From the Archipelago Launcher, open the Manic Miners Client. Connect using the URL and port of the server, and enter your Slot Name when prompted. **Warning: If you had a previous Archipelago save, and are starting a new game, make sure you have run `/reset_installation` first, else you will send a large number of checks you do not intend to!**
+
+The very first time you do this, you will be prompted to select the folder that contains your Manic Miners installation. This is the top level directory you extracted your download of Manic Miners to - it should be the directory that contains the `ManicMiners.exe` file. This too can be edited later in your host.yaml if you need. 
 
 Launch Manic Miners. Switch profiles to the 'Archipelago' profile. 
 

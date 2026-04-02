@@ -298,9 +298,9 @@ def create_all_items(world: ManicMinersWorld) -> None:
     
     world.multiworld.itempool += itempool
 
-def copy_level_into_archipelago(root_dir, item_id, all_items):
+def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items):
     main_level_dir = root_dir + "\\ManicMiners\\Levels"
-    arch_level_dir = root_dir + "\\Levels\\Archipelago"
+    arch_level_dir = arch_level_dir + "\\Levels\\Archipelago"
     match item_id:
         case 1:
             source = "\\LRR\\abreathoffreshair.dat"

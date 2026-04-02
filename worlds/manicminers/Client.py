@@ -18,8 +18,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
         cleanup_install(self)
         # create level folder (will be populated later based on randomiser)
         self.output(f"Creating empty Archipelago campaign directory...")
-        root_dir = ManicMinersWorld.settings.manic_miners_install_dir
-        arch_level_dir = root_dir + "\\Levels\\Archipelago"
+        arch_level_dir = ManicMinersWorld.settings.manic_miners_level_dir + "\\Levels\\Archipelago"
         path = pathlib.Path(arch_level_dir)
         path.mkdir()
         # create fresh profile .sav file (same bytearray as generated on a clean install)
@@ -153,8 +152,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                 self.output(f"You don't need to check your watch for anything. Explore Planet U at your own leisure!")
 
 def cleanup_install(self):
-    root_dir = ManicMinersWorld.settings.manic_miners_install_dir
-    arch_level_dir = root_dir + "\\Levels\\Archipelago"
+    arch_level_dir = ManicMinersWorld.settings.manic_miners_level_dir + "\\Levels\\Archipelago"
     path = pathlib.Path(arch_level_dir)
     # delete Archipelago Levels
     if (path.is_dir()):
@@ -227,8 +225,9 @@ async def save_read_loop(self):
 def sync_levels(self):
     item: NetworkItem
     root_dir = ManicMinersWorld.settings.manic_miners_install_dir
+    arch_level_dir = ManicMinersWorld.settings.manic_miners_level_dir
     for index, item in enumerate(self.items_received, 1):
-        Items.copy_level_into_archipelago(root_dir, item.item, get_ids_from_networkitems(self.items_received))
+        Items.copy_level_into_archipelago(root_dir, arch_level_dir, item.item, get_ids_from_networkitems(self.items_received))
 
 def get_ids_from_networkitems(items):
     id_list = []
