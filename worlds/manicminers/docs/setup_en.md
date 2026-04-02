@@ -1,6 +1,10 @@
 # Manic Miners Setup Guide
 
-## Overview
+### What is this? 
+
+This page details the installation and play instructions. For a more general overview and details, please see [here](en_ManicMiners.md).
+
+## Setup Overview
 
 - Download and install the required software
 - Set up an Archipelago room/server to connect to
@@ -39,7 +43,7 @@ The very first time you do this, you will be prompted to select the folder that 
 
 From the Archipelago Launcher, open the Manic Miners Client. Connect using the URL and port of the server, and enter your Slot Name when prompted. **Warning: If you had a previous Archipelago save, and are starting a new game, make sure you have run `/reset_installation` first, else you will send a large number of checks you do not intend to!**
 
-The very first time you do this, you will be prompted to select the folder that contains your Manic Miners installation. This is the top level directory you extracted your download of Manic Miners to - it should be the directory that contains the `ManicMiners.exe` file. This too can be edited later in your host.yaml if you need. 
+The very first time you do this, you will be prompted to select the folder that contains your Manic Miners installation. This is the top level directory you extracted your download of Manic Miners to - it should be the directory that contains the `ManicMiners.exe` file. This too can be edited later in your `host.yaml` if you need. 
 
 Launch Manic Miners. Switch profiles to the 'Archipelago' profile. 
 
