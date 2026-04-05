@@ -1300,6 +1300,172 @@ def location_id_from_level_name(level_name):
             return 24
         case "Archipelago/LRR - Water Works":
             return 25
+        case "Archipelago/LRRR - A Breath Of Fresh Air":
+            return 1001
+        case "Archipelago/LRRR - Air Raiders":
+            return 1002
+        case "Archipelago/LRRR - Back To Basics":
+            return 1003
+        case "Archipelago/LRRR - Breathless":
+            return 1004
+        case "Archipelago/LRRR - Don't Panic":
+            return 1005
+        case "Archipelago/LRRR - Driller Night":
+            return 1006
+        case "Archipelago/LRRR - Erode Works":
+            return 1007
+        case "Archipelago/LRRR - Explosive Action":
+            return 1008
+        case "Archipelago/LRRR - Fire And Water":
+            return 1009
+        case "Archipelago/LRRR - Frozen Frenzy":
+            return 1010
+        case "Archipelago/LRRR - Hot Stuff":
+            return 1011
+        case "Archipelago/LRRR - Ice Spy":
+            return 1012
+        case "Archipelago/LRRR - It's A Hold Up":
+            return 1013
+        case "Archipelago/LRRR - Lake Of Fire":
+            return 1014
+        case "Archipelago/LRRR - Lava Laughter":
+            return 1015
+        case "Archipelago/LRRR - Oresome":
+            return 1016
+        case "Archipelago/LRRR - Rock Hard":
+            return 1017
+        case "Archipelago/LRRR - Rocky Horror":
+            return 1018
+        case "Archipelago/LRRR - Rubble Trouble":
+            return 1019
+        case "Archipelago/LRRR - Run The Gauntlet":
+            return 1020
+        case "Archipelago/LRRR - Search And Rescue":
+            return 1021
+        case "Archipelago/LRRR - Split Down The Middle":
+            return 1022
+        case "Archipelago/LRRR - The Path To Power":
+            return 1023
+        case "Archipelago/LRRR - Water Lot Of Fun":
+            return 1024
+        case "Archipelago/LRRR - Water Works":
+            return 1025
+        case "Archipelago/LRRC - A Breath Of Fresh Air":
+            return 2001
+        case "Archipelago/LRRC - Air Raiders":
+            return 2002
+        case "Archipelago/LRRC - Back To Basics":
+            return 2003
+        case "Archipelago/LRRC - Breathless":
+            return 2004
+        case "Archipelago/LRRC - Don't Panic":
+            return 2005
+        case "Archipelago/LRRC - Driller Night":
+            return 2006
+        case "Archipelago/LRRC - Erode Works":
+            return 2007
+        case "Archipelago/LRRC - Explosive Action":
+            return 2008
+        case "Archipelago/LRRC - Fire And Water":
+            return 2009
+        case "Archipelago/LRRC - Frozen Frenzy":
+            return 2010
+        case "Archipelago/LRRC - Hot Stuff":
+            return 2011
+        case "Archipelago/LRRC - Ice Spy":
+            return 2012
+        case "Archipelago/LRRC - It's A Hold Up":
+            return 2013
+        case "Archipelago/LRRC - Lake Of Fire":
+            return 2014
+        case "Archipelago/LRRC - Lava Laughter":
+            return 2015
+        case "Archipelago/LRRC - Oresome":
+            return 2016
+        case "Archipelago/LRRC - Rock Hard":
+            return 2017
+        case "Archipelago/LRRC - Rocky Horror":
+            return 2018
+        case "Archipelago/LRRC - Rubble Trouble":
+            return 2019
+        case "Archipelago/LRRC - Run The Gauntlet":
+            return 2020
+        case "Archipelago/LRRC - Search And Rescue":
+            return 2021
+        case "Archipelago/LRRC - Split Down The Middle":
+            return 2022
+        case "Archipelago/LRRC - The Path To Power":
+            return 2023
+        case "Archipelago/LRRC - Water Lot Of Fun":
+            return 2024
+        case "Archipelago/LRRC - Water Works":
+            return 2025
+        case "Archipelago/BAZ - A Breath Of Fresh Air":
+            return 3001
+        case "Archipelago/BAZ - Air Raiders":
+            return 3002
+        case "Archipelago/BAZ - Back To Basics":
+            return 3003
+        case "Archipelago/BAZ - Breathless":
+            return 3004
+        case "Archipelago/BAZ - Cold Comfort":
+            return 3005
+        case "Archipelago/BAZ - Don't Panic":
+            return 3006
+        case "Archipelago/BAZ - Down In The Dirt":
+            return 3007
+        case "Archipelago/BAZ - Driller Night":
+            return 3008
+        case "Archipelago/BAZ - Erode Works":
+            return 3009
+        case "Archipelago/BAZ - Explosive Action":
+            return 3010
+        case "Archipelago/BAZ - Fire And Water":
+            return 3011
+        case "Archipelago/BAZ - Frozen Frenzy":
+            return 3012
+        case "Archipelago/BAZ - Hot Stuff":
+            return 3013
+        case "Archipelago/BAZ - Ice Spy":
+            return 3014
+        case "Archipelago/BAZ - It's A Hold Up":
+            return 3015
+        case "Archipelago/BAZ - Lake Of Fire":
+            return 3016
+        case "Archipelago/BAZ - Lava Laughter":
+            return 3017
+        case "Archipelago/BAZ - Mine Over Matter":
+            return 3018
+        case "Archipelago/BAZ - Molten Meltdown":
+            return 3019
+        case "Archipelago/BAZ - Oresome":
+            return 3020
+        case "Archipelago/BAZ - Recruitment":
+            return 3021
+        case "Archipelago/BAZ - Rock Hard":
+            return 3022
+        case "Archipelago/BAZ - Rocky Horror":
+            return 3023
+        case "Archipelago/BAZ - Rubble Trouble":
+            return 3024
+        case "Archipelago/BAZ - Run The Gauntlet":
+            return 3025
+        case "Archipelago/BAZ - Seamless":
+            return 3026
+        case "Archipelago/BAZ - Search And Rescue":
+            return 3027
+        case "Archipelago/BAZ - Slimey Simple":
+            return 3028
+        case "Archipelago/BAZ - Split Down The Middle":
+            return 3029
+        case "Archipelago/BAZ - The Rock Hard Life":
+            return 3030
+        case "Archipelago/BAZ - The Path To Power":
+            return 3031
+        case "Archipelago/BAZ - Water Lot Of Fun":
+            return 3032
+        case "Archipelago/BAZ - Water Works":
+            return 3033
         case _:
             return -1
 
