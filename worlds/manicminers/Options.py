@@ -29,7 +29,7 @@ class TargetLevelCount(Range):
     display_name = "Target Level Count"
     
     range_start = 1
-    range_end = 25
+    range_end = 108
     
     default = 25
 
@@ -42,7 +42,7 @@ class AvailableLevelsAtStart(Range):
     display_name = "Available Levels At Start"
     
     range_start = 1
-    range_end = 25
+    range_end = 108
     
     default = 2
 
@@ -99,13 +99,32 @@ class BreathingAlwaysInLogic(Toggle):
 
 class CampaignSelectionLRR(DefaultOnToggle):
     """
-    Whether your game will include the main campaign levels.
+    Whether your game will include the Standard campaign levels.
     If no campaigns are selected, this one will automatically enable.
     """
     
     display_name = "Include 'Standard' Campaign Levels"
     
-#TODO: Rest of initially planned options
+class CampaignSelectionLRRR(DefaultOnToggle):
+    """
+    Whether your game will include the Remastered campaign levels.
+    """
+    
+    display_name = "Include 'Remastered' Campaign Levels"
+
+class CampaignSelectionLRRC(DefaultOnToggle):
+    """
+    Whether your game will include the Classic campaign levels.
+    """
+    
+    display_name = "Include 'Classic' Campaign Levels"
+
+class CampaignSelectionBAZ(DefaultOnToggle):
+    """
+    Whether your game will include the Baz's Mod campaign levels.
+    """
+    
+    display_name = "Include 'Baz's Mod' Campaign Levels"
 
 @dataclass
 class ManicMinersOptions(PerGameCommonOptions):
@@ -119,11 +138,14 @@ class ManicMinersOptions(PerGameCommonOptions):
     vehicles_are_items: VehiclesAreItems
     breathing_always_in_logic: BreathingAlwaysInLogic
     campaign_selection_lrr: CampaignSelectionLRR
+    campaign_selection_lrrr: CampaignSelectionLRRR
+    campaign_selection_lrrc: CampaignSelectionLRRC
+    campaign_selection_baz: CampaignSelectionBAZ
 
 option_groups = [
     OptionGroup(
         "Campaign Selection",
-        [CampaignSelectionLRR]
+        [CampaignSelectionLRR,CampaignSelectionLRRR,CampaignSelectionLRRC,CampaignSelectionBAZ]
     ),
     OptionGroup(
         "Levels",
