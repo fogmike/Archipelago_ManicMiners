@@ -624,6 +624,255 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items):
         case 25:
             source = "\\LRR\\waterworks.dat"
             target = "\\LRR - Water Works.dat"
+        case 1001:
+            source = "\\LRRR\\abreathoffreshair.dat"
+            target = "\\LRRR - A Breath Of Fresh Air.dat"
+        case 1002:
+            source = "\\LRRR\\airraiders.dat"
+            target = "\\LRRR - Air Raiders.dat"
+        case 1003:
+            source = "\\LRRR\\backtobasics.dat"
+            target = "\\LRRR - Back To Basics.dat"
+        case 1004:
+            source = "\\LRRR\\breathless.dat"
+            target = "\\LRRR - Breathless.dat"
+        case 1005:
+            source = "\\LRRR\\dontpanic.dat"
+            target = "\\LRRR - Don't Panic.dat"
+        case 1006:
+            source = "\\LRRR\\drillernight.dat"
+            target = "\\LRRR - Driller Night.dat"
+        case 1007:
+            source = "\\LRRR\\erodeworks.dat"
+            target = "\\LRRR - Erode Works.dat"
+        case 1008:
+            source = "\\LRRR\\explosiveaction.dat"
+            target = "\\LRRR - Explosive Action.dat"
+        case 1009:
+            source = "\\LRRR\\fireandwater.dat"
+            target = "\\LRRR - Fire And Water.dat"
+        case 1010:
+            source = "\\LRRR\\frozenfrenzy.dat"
+            target = "\\LRRR - Frozen Frenzy.dat"
+        case 1011:
+            source = "\\LRRR\\hotstuff.dat"
+            target = "\\LRRR - Hot Stuff.dat"
+        case 1012:
+            source = "\\LRRR\\icespy.dat"
+            target = "\\LRRR - Ice Spy.dat"
+        case 1013:
+            source = "\\LRRR\\itsaholdup.dat"
+            target = "\\LRRR - It's A Hold Up.dat"
+        case 1014:
+            source = "\\LRRR\\lakeoffire.dat"
+            target = "\\LRRR - Lake Of Fire.dat"
+        case 1015:
+            source = "\\LRRR\\lavalaughter.dat"
+            target = "\\LRRR - Lava Laughter.dat"
+        case 1016:
+            source = "\\LRRR\\oresome.dat"
+            target = "\\LRRR - Oresome.dat"
+        case 1017:
+            source = "\\LRRR\\rockhard.dat"
+            target = "\\LRRR - Rock Hard.dat"
+        case 1018:
+            source = "\\LRRR\\rockyhorror.dat"
+            target = "\\LRRR - Rocky Horror.dat"
+        case 1019:
+            source = "\\LRRR\\rubbletrouble.dat"
+            target = "\\LRRR - Rubble Trouble.dat"
+        case 1020:
+            source = "\\LRRR\\runthegauntlet.dat"
+            target = "\\LRRR - Run The Gauntlet.dat"
+        case 1021:
+            source = "\\LRRR\\searchandrescue.dat"
+            target = "\\LRRR - Search And Rescue.dat"
+        case 1022:
+            source = "\\LRRR\\splitdownthemiddle.dat"
+            target = "\\LRRR - Split Down The Middle.dat"
+        case 1023:
+            source = "\\LRRR\\thepathtopower.dat"
+            target = "\\LRRR - The Path To Power.dat"
+        case 1024:
+            source = "\\LRRR\\waterlotoffun.dat"
+            target = "\\LRRR - Water Lot Of Fun.dat"
+        case 1025:
+            source = "\\LRRR\\waterworks.dat"
+            target = "\\LRRR - Water Works.dat"
+        case 2001:
+            source = "\\LRRC\\abreathoffreshair.dat"
+            target = "\\LRRC - A Breath Of Fresh Air.dat"
+        case 2002:
+            source = "\\LRRC\\airraiders.dat"
+            target = "\\LRRC - Air Raiders.dat"
+        case 2003:
+            source = "\\LRRC\\backtobasics.dat"
+            target = "\\LRRC - Back To Basics.dat"
+        case 2004:
+            source = "\\LRRC\\breathless.dat"
+            target = "\\LRRC - Breathless.dat"
+        case 2005:
+            source = "\\LRRC\\dontpanic.dat"
+            target = "\\LRRC - Don't Panic.dat"
+        case 2006:
+            source = "\\LRRC\\drillernight.dat"
+            target = "\\LRRC - Driller Night.dat"
+        case 2007:
+            source = "\\LRRC\\erodeworks.dat"
+            target = "\\LRRC - Erode Works.dat"
+        case 2008:
+            source = "\\LRRC\\explosiveaction.dat"
+            target = "\\LRRC - Explosive Action.dat"
+        case 2009:
+            source = "\\LRRC\\fireandwater.dat"
+            target = "\\LRRC - Fire And Water.dat"
+        case 2010:
+            source = "\\LRRC\\frozenfrenzy.dat"
+            target = "\\LRRC - Frozen Frenzy.dat"
+        case 2011:
+            source = "\\LRRC\\hotstuff.dat"
+            target = "\\LRRC - Hot Stuff.dat"
+        case 2012:
+            source = "\\LRRC\\icespy.dat"
+            target = "\\LRRC - Ice Spy.dat"
+        case 2013:
+            source = "\\LRRC\\itsaholdup.dat"
+            target = "\\LRRC - It's A Hold Up.dat"
+        case 2014:
+            source = "\\LRRC\\lakeoffire.dat"
+            target = "\\LRRC - Lake Of Fire.dat"
+        case 2015:
+            source = "\\LRRC\\lavalaughter.dat"
+            target = "\\LRRC - Lava Laughter.dat"
+        case 2016:
+            source = "\\LRRC\\oresome.dat"
+            target = "\\LRRC - Oresome.dat"
+        case 2017:
+            source = "\\LRRC\\rockhard.dat"
+            target = "\\LRRC - Rock Hard.dat"
+        case 2018:
+            source = "\\LRRC\\rockyhorror.dat"
+            target = "\\LRRC - Rocky Horror.dat"
+        case 2019:
+            source = "\\LRRC\\rubbletrouble.dat"
+            target = "\\LRRC - Rubble Trouble.dat"
+        case 2020:
+            source = "\\LRRC\\runthegauntlet.dat"
+            target = "\\LRRC - Run The Gauntlet.dat"
+        case 2021:
+            source = "\\LRRC\\searchandrescue.dat"
+            target = "\\LRRC - Search And Rescue.dat"
+        case 2022:
+            source = "\\LRRC\\splitdownthemiddle.dat"
+            target = "\\LRRC - Split Down The Middle.dat"
+        case 2023:
+            source = "\\LRRC\\thepathtopower.dat"
+            target = "\\LRRC - The Path To Power.dat"
+        case 2024:
+            source = "\\LRRC\\waterlotoffun.dat"
+            target = "\\LRRC - Water Lot Of Fun.dat"
+        case 2025:
+            source = "\\LRRC\\waterworks.dat"
+            target = "\\LRRC - Water Works.dat"
+        case 3001:
+            source = "\\BAZ\\abreathoffreshair.dat"
+            target = "\\BAZ - A Breath Of Fresh Air.dat"
+        case 3002:
+            source = "\\BAZ\\airraiders.dat"
+            target = "\\BAZ - Air Raiders.dat"
+        case 3003:
+            source = "\\BAZ\\backtobasics.dat"
+            target = "\\BAZ - Back To Basics.dat"
+        case 3004:
+            source = "\\BAZ\\breathless.dat"
+            target = "\\BAZ - Breathless.dat"
+        case 3005:
+            source = "\\BAZ\\coldcomfort.dat"
+            target = "\\BAZ - Cold Comfort.dat"
+        case 3006:
+            source = "\\BAZ\\dontpanic.dat"
+            target = "\\BAZ - Don't Panic.dat"
+        case 3007:
+            source = "\\BAZ\\downinthedirt.dat"
+            target = "\\BAZ - Down In The Dirt.dat"
+        case 3008:
+            source = "\\BAZ\\drillernight.dat"
+            target = "\\BAZ - Driller Night.dat"
+        case 3009:
+            source = "\\BAZ\\erodeworks.dat"
+            target = "\\BAZ - Erode Works.dat"
+        case 3010:
+            source = "\\BAZ\\explosiveaction.dat"
+            target = "\\BAZ - Explosive Action.dat"
+        case 3011:
+            source = "\\BAZ\\fireandwater.dat"
+            target = "\\BAZ - Fire And Water.dat"
+        case 3012:
+            source = "\\BAZ\\frozenfrenzy.dat"
+            target = "\\BAZ - Frozen Frenzy.dat"
+        case 3013:
+            source = "\\BAZ\\hotstuff.dat"
+            target = "\\BAZ - Hot Stuff.dat"
+        case 3014:
+            source = "\\BAZ\\icespy.dat"
+            target = "\\BAZ - Ice Spy.dat"
+        case 3015:
+            source = "\\BAZ\\itsaholdup.dat"
+            target = "\\BAZ - It's A Hold Up.dat"
+        case 3016:
+            source = "\\BAZ\\lakeoffire.dat"
+            target = "\\BAZ - Lake Of Fire.dat"
+        case 3017:
+            source = "\\BAZ\\lavalaughter.dat"
+            target = "\\BAZ - Lava Laughter.dat"
+        case 3018:
+            source = "\\BAZ\\mineovermatter.dat"
+            target = "\\BAZ - Mine Over Matter.dat"
+        case 3019:
+            source = "\\BAZ\\moltenmeltdown.dat"
+            target = "\\BAZ - Molten Meltdown.dat"
+        case 3020:
+            source = "\\BAZ\\oresome.dat"
+            target = "\\BAZ - Oresome.dat"
+        case 3021:
+            source = "\\BAZ\\recruitment.dat"
+            target = "\\BAZ - Recruitment.dat"
+        case 3022:
+            source = "\\BAZ\\rockhard.dat"
+            target = "\\BAZ - Rock Hard.dat"
+        case 3023:
+            source = "\\BAZ\\rockyhorror.dat"
+            target = "\\BAZ - Rocky Horror.dat"
+        case 3024:
+            source = "\\BAZ\\rubbletrouble.dat"
+            target = "\\BAZ - Rubble Trouble.dat"
+        case 3025:
+            source = "\\BAZ\\runthegauntlet.dat"
+            target = "\\BAZ - Run The Gauntlet.dat"
+        case 3026:
+            source = "\\BAZ\\seamless.dat"
+            target = "\\BAZ - Seamless.dat"
+        case 3027:
+            source = "\\BAZ\\searchandrescue.dat"
+            target = "\\BAZ - Search And Rescue.dat"
+        case 3028:
+            source = "\\BAZ\\slimeysimple.dat"
+            target = "\\BAZ - Slimey Simple.dat"
+        case 3029:
+            source = "\\BAZ\\splitdownthemiddle.dat"
+            target = "\\BAZ - Split Down The Middle.dat"
+        case 3030:
+            source = "\\BAZ\\thehardrocklife.dat"
+            target = "\\BAZ - The Hard Rock Life.dat"
+        case 3031:
+            source = "\\BAZ\\thepathtopower.dat"
+            target = "\\BAZ - The Path To Power.dat"
+        case 3032:
+            source = "\\BAZ\\waterlotoffun.dat"
+            target = "\\BAZ - Water Lot Of Fun.dat"
+        case 3033:
+            source = "\\BAZ\\waterworks.dat"
+            target = "\\BAZ - Water Works.dat"
         case _:
             return False
     source_path = pathlib.Path(main_level_dir + source)
