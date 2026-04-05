@@ -27,9 +27,9 @@ The current options are:
 
 ### What campaigns are supported?
 
-The 'Standard' campaign from Manic Miners is supported today. Support for the 'Remastered', 'Classic', and 'Baz's Mod' campaigns is planned for future updates. 
+All four campaigns from Manic Miners are supported: Standard, Remastered, Classic, and Baz's Mod. 
 
-Each campaign has 25 levels. 
+The first three campaigns each have 25 levels, while Baz's Mod has 33. 
 
 ### What items from Manic Miners are randomized? 
 
