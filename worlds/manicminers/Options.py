@@ -23,7 +23,7 @@ class TargetLevelCount(Range):
     If Victory Condition is set to Total Levels Cleared: How many levels must be cleared to goal the game. 
     If Victory Condition is set to Individual Target Time: How many levels you need to beat the target time on to goal the game. 
     Otherwise this setting has no effect. 
-    If a target number highger than total levels is given, target will cap at 'all levels'. 
+    If a target number higher than the number of total levels is given, target will cap at 'all levels'. 
     """
     
     display_name = "Target Level Count"
