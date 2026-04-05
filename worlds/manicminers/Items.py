@@ -343,6 +343,36 @@ LEVEL_ACCESS_LRR_NEEDSUNLOCK_LIST = [
 
 LEVEL_ACCESS_LRR_LIST = LEVEL_ACCESS_LRR_NOUNLOCK_LIST + LEVEL_ACCESS_LRR_NEEDSUNLOCK_LIST
 
+LEVEL_ACCESS_LRRR_NOUNLOCK_LIST = [
+
+]
+
+LEVEL_ACCESS_LRRR_NEEDSUNLOCK_LIST = [
+
+]
+
+LEVEL_ACCESS_LRRR_LIST = LEVEL_ACCESS_LRRR_NOUNLOCK_LIST + LEVEL_ACCESS_LRRR_NEEDSUNLOCK_LIST
+
+LEVEL_ACCESS_LRRC_NOUNLOCK_LIST = [
+
+]
+
+LEVEL_ACCESS_LRRC_NEEDSUNLOCK_LIST = [
+
+]
+
+LEVEL_ACCESS_LRRC_LIST = LEVEL_ACCESS_LRRC_NOUNLOCK_LIST + LEVEL_ACCESS_LRRC_NEEDSUNLOCK_LIST
+
+LEVEL_ACCESS_BAZ_NOUNLOCK_LIST = [
+
+]
+
+LEVEL_ACCESS_BAZ_NEEDSUNLOCK_LIST = [
+
+]
+
+LEVEL_ACCESS_BAZ_LIST = LEVEL_ACCESS_BAZ_NOUNLOCK_LIST + LEVEL_ACCESS_BAZ_NEEDSUNLOCK_LIST
+
 BUILDING_UNLOCK_LIST = [
     "Building Unlock: Tool Store",
     "Building Unlock: Teleport Pad",
@@ -416,6 +446,51 @@ def create_all_items(world: ManicMinersWorld) -> None:
         
         itempool_sphere1_access += itempool_lrr_sphere1_access
         itempool_sphere2plus_access += itempool_lrr_sphere2plus_access
+ 
+    if world.options.campaign_selection_lrrr:
+        itempool_lrrr_access = []
+        itempool_lrrr_sphere1_access = []
+        itempool_lrrr_sphere2plus_access = []
+        for item in LEVEL_ACCESS_LRRR_NOUNLOCK_LIST:
+            itempool_lrrr_sphere1_access.append(world.create_item(item))
+        for item in LEVEL_ACCESS_LRRR_NEEDSUNLOCK_LIST:
+            itempool_lrrr_sphere2plus_access.append(world.create_item(item))
+        if world.options.buildings_are_items == 0 and world.options.items_are_items == 0 and world.options.vehicles_are_items == 0:
+            itempool_lrrr_sphere1_access += itempool_lrrr_sphere2plus_access
+            itempool_lrrr_sphere2plus_access.clear()
+        
+        itempool_sphere1_access += itempool_lrrr_sphere1_access
+        itempool_sphere2plus_access += itempool_lrrr_sphere2plus_access
+ 
+    if world.options.campaign_selection_lrrc:
+        itempool_lrrc_access = []
+        itempool_lrrc_sphere1_access = []
+        itempool_lrrc_sphere2plus_access = []
+        for item in LEVEL_ACCESS_LRRC_NOUNLOCK_LIST:
+            itempool_lrrc_sphere1_access.append(world.create_item(item))
+        for item in LEVEL_ACCESS_LRRC_NEEDSUNLOCK_LIST:
+            itempool_lrrc_sphere2plus_access.append(world.create_item(item))
+        if world.options.buildings_are_items == 0 and world.options.items_are_items == 0 and world.options.vehicles_are_items == 0:
+            itempool_lrrc_sphere1_access += itempool_lrrc_sphere2plus_access
+            itempool_lrrc_sphere2plus_access.clear()
+        
+        itempool_sphere1_access += itempool_lrrc_sphere1_access
+        itempool_sphere2plus_access += itempool_lrrc_sphere2plus_access
+ 
+    if world.options.campaign_selection_baz:
+        itempool_baz_access = []
+        itempool_baz_sphere1_access = []
+        itempool_baz_sphere2plus_access = []
+        for item in LEVEL_ACCESS_BAZ_NOUNLOCK_LIST:
+            itempool_baz_sphere1_access.append(world.create_item(item))
+        for item in LEVEL_ACCESS_BAZ_NEEDSUNLOCK_LIST:
+            itempool_baz_sphere2plus_access.append(world.create_item(item))
+        if world.options.buildings_are_items == 0 and world.options.items_are_items == 0 and world.options.vehicles_are_items == 0:
+            itempool_baz_sphere1_access += itempool_baz_sphere2plus_access
+            itempool_baz_sphere2plus_access.clear()
+        
+        itempool_sphere1_access += itempool_baz_sphere1_access
+        itempool_sphere2plus_access += itempool_baz_sphere2plus_access
     
     initial_access_item_index = world.random.randint(0,len(itempool_sphere1_access)-1)
     initial_access_item_list.append(itempool_sphere1_access[initial_access_item_index])
