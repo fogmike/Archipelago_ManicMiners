@@ -443,6 +443,8 @@ def get_random_filler_item_name(world: ManicMinersWorld) -> str:
     
 def create_item_with_correct_classification(world: ManicMinersWorld, name: str) -> ManicMinersItem:
     classification = DEFAULT_ITEM_CLASSIFICATIONS[name]
+    if world.options.campaign_selection_lrrr && name == "Item Unlock: Electric Fence":
+        classification = ItemClassification.progression
     return ManicMinersItem(name, classification, ITEM_NAME_TO_ID[name], world.player)
     
 def create_all_items(world: ManicMinersWorld) -> None:
