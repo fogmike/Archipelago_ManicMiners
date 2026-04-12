@@ -69,6 +69,7 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
     entrance_lrr_waterlotoffun = world.get_entrance("Start Level - LRR - Water Lot Of Fun")
     entrance_lrr_waterworks = world.get_entrance("Start Level - LRR - Water Works")
     
+    #LRR
     add_rule(entrance_lrr_abreathoffreshair, can_breathe)
     # No requirements for Air Raiders
     add_rule(entrance_lrr_backtobasics, can_blast)
@@ -107,6 +108,48 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
     add_rule(entrance_lrr_waterworks, can_swim)
     if world.options.breathing_always_in_logic:
         add_rule(entrance_lrr_waterworks, can_breathe)
+    
+    #LRRC
+    add_rule(entrance_lrrc_abreathoffreshair, can_breathe)
+    # No requirements for Air Raiders
+    add_rule(entrance_lrrc_backtobasics, can_breathe)
+    add_rule(entrance_lrrc_breathless, can_blast)
+    if world.options.breathing_always_in_logic:
+        add_rule(entrance_lrrc_breathless, can_breathe)
+    # No requirements for Don't Panic
+    # No requirements for Driller Night
+    add_rule(entrance_lrrc_erodeworks, can_blast)
+    add_rule(entrance_lrrc_explosiveaction, can_blast)
+    add_rule(entrance_lrrc_explosiveaction, can_build_supportstation)
+    add_rule(entrance_lrrc_fireandwater, can_breathe)
+    add_rule(entrance_lrrc_fireandwater, can_swim)
+    add_rule(entrance_lrrc_frozenfrenzy, can_blast)
+    if world.options.breathing_always_in_logic:
+        add_rule(entrance_lrrc_frozenfrenzy, can_breathe)
+    add_rule(entrance_lrrc_hotstuff, can_breathe)
+    if world.options.breathing_always_in_logic:
+        add_rule(entrance_lrrc_icespy, can_breathe)
+    # No requirements for It's A Hold Up
+    # No requirements for Lake of Fire
+    if world.options.breathing_always_in_logic:
+        add_rule(entrance_lrrc_lavalaughter, can_breathe)
+    # No requirements for Oresome
+    add_rule(entrance_lrrc_rockhard, can_blast)
+    if world.options.breathing_always_in_logic:
+        add_rule(entrance_lrrc_rockhard, can_breathe)
+    if world.options.breathing_always_in_logic:
+        add_rule(entrance_lrrc_rockyhorror, can_breathe)
+    # No requirements for Rubble Trouble
+    # No requirements for Run The Gauntlet
+    add_rule(entrance_lrrc_searchandrescue, can_swim)
+    # No requirements for Split Down The Middle
+    add_rule(entrance_lrrc_thepathtopower, can_build_powerstation)
+    # Errr... This next line isn't valid code, but discord confirmed that add_rule() is OR not AND by default so tons of existing code is wrong, so just putting this for a record of the logic and will fix all before releasing
+    add_rule(entrance_lrrc_waterlotoffun, can_swim OR can_blast)
+    if world.options.breathing_always_in_logic:
+        add_rule(entrance_lrrc_waterlotoffun, can_breathe)
+    if world.options.breathing_always_in_logic:
+        add_rule(entrance_lrrc_waterworks, can_breathe)  
 
 def set_all_location_rules(world: ManicMinersWorld) -> None:
     goal_achievable = world.get_location("Goal Conditions Achievable")
