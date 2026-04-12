@@ -37,7 +37,9 @@ Set up an Archipelago server using that YAML (and any others in the multiworld),
 
 From the Archipelago Launcher, open the Manic Miners Client, and run `/reset_installation`. **Warning: this will wipe any prior Archipelago save!**
 
-The very first time you do this, you will be prompted to select the folder that contains your Manic Miners custom Levels folder. This will be in your user's Documents, and you should select the '..../Documents/ManicMiners' folder (which will contain 'Levels'). Once selected for the first time, you don't need to do this again. Should you ever need to change this setting, you can find it in your Archipelago `host.yaml`under `manicminers_options`.
+The very first time you do this, you will be prompted to select the folder that contains your Manic Miners custom Levels folder. This will be in your user's Documents, and you should select the '..../Documents/ManicMiners' folder (which will contain 'Levels'). If that folder doesn't exist, create it and the 'Levels' subfolder within it. Once selected for the first time, you don't need to do this again. Should you ever need to change this setting, you can find it in your Archipelago `host.yaml` under `manicminers_options`.
+
+*(If you aren't sure where to create or find the folder, try loading a custom level from the in-game level editor. This will create the folders if they don't already exist, as well as opening a file picker with its location already set to the Levels folder. You'll then select one folder above that for Archipelago.)*
 
 ## How to connect to a running game
 
