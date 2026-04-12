@@ -21,6 +21,8 @@ This page details the installation and play instructions. For a more general ove
 
 Follow the instructions on the game's website. For a fresh download, it is suggested to play a tutorial level to confirm the game runs without issue. 
 
+For a fresh download, also go into the Play Game -> Community Levels menu and click "Open community levels subfolder". This will pop open a File Explorer window to your Community Levels directory, and more importantly will create the directory if it doesn't exist. Make a note of the directory path but you can otherwise close the popup. 
+
 ## How to setup the initial Archipelago room
 
 (These instructions assume a certain familiarity with Archipelago - please see www.archipelago.gg for more specific details, if required.)
@@ -37,9 +39,9 @@ Set up an Archipelago server using that YAML (and any others in the multiworld),
 
 From the Archipelago Launcher, open the Manic Miners Client, and run `/reset_installation`. **Warning: this will wipe any prior Archipelago save!**
 
-The very first time you do this, you will be prompted to select the folder that contains your Manic Miners custom Levels folder. This will be in your user's Documents, and you should select the '..../Documents/ManicMiners' folder (which will contain 'Levels'). If that folder doesn't exist, create it and the 'Levels' subfolder within it. Once selected for the first time, you don't need to do this again. Should you ever need to change this setting, you can find it in your Archipelago `host.yaml` under `manicminers_options`.
+The very first time you do this, you will be prompted to select the folder that contains your Manic Miners custom Levels folder. This will be in your user's Documents, and you should select the '..../Documents/ManicMiners' folder (which will contain 'Levels'). Once selected for the first time, you don't need to do this again. Should you ever need to change this setting, you can find it in your Archipelago `host.yaml` under `manicminers_options`.
 
-*(If you aren't sure where to create or find the folder, try loading a custom level from the in-game level editor. This will create the folders if they don't already exist, as well as opening a file picker with its location already set to the Levels folder. You'll then select one folder above that for Archipelago.)*
+Similarly, you will be prompted to select the folder that contains your Manic Miners save profiles. This will be in your LOCALAPPDATA or equivalent, and will be of the form '..../ManicMiners/Saved/SaveGames/Profiles/'. Once selected for the first time, you don't need to do this again. Should you ever need to change this setting, you can find it in your Archipelago `host.yaml` under `manicminers_options`.
 
 ## How to connect to a running game
 
@@ -49,7 +51,7 @@ The very first time you do this, you will be prompted to select the folder that 
 
 Launch Manic Miners. Switch profiles to the 'Archipelago' profile. 
 
-You will find unlocked levels under Play -> Community Levels. They will all start with 'Archipelago/' (you can search for 'Archipelago' in the filter if you're having trouble finding them). 
+You will find unlocked levels under Play Game -> Community Levels. They will all start with 'Archipelago/' (you can search for 'Archipelago' in the filter if you're having trouble finding them). 
 
 Provided the Manic Miners Client is running and connected, new levels and unlocks will become available as soon as they're received. If you were already in the Community Levels menu, you may need to exit to Main Menu and re-enter. Building/Item/Vehicle unlocks will not modify a level mid-play, but will take effect the next time the level is loaded. 
 
