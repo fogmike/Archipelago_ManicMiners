@@ -1,8 +1,9 @@
 from __future__ import annotations
 
 from worlds.generic.Rules import set_rule, add_rule
-import rule_builder
+from rule_builder.rules import Has, HasAll, HasAny, OptionFilter, Filtered
 from . import Items
+from . import Options as ManicMiners_Options
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:    
@@ -22,8 +23,7 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
     rule_can_build_mininglaser = Has("Building Unlock: Mining Laser") & rule_can_build_supportstation
     rule_can_build_superteleport = Has("Building Unlock: Super Teleport") & rule_can_build_supportstation
     rule_can_breathe = rule_can_build_supportstation
-    filter_can_always_breathe = [OptionFilter(BreathingAlwaysInLogic, 1)]
-    rule_can_always_breathe = rule_can_breathe & filter_can_always_breathe
+    rule_can_always_breathe = Filtered(rule_can_breathe, options = [OptionFilter(ManicMiners_Options.BreathingAlwaysInLogic, 1)], filtered_resolution = True)
     rule_can_fly = (rule_can_build_teleportpad & Has("Vehicle Unlock: Tunnel Scout")) | (rule_can_build_superteleport & Has("Vehicle Unlock: Tunnel Transport"))
     rule_can_swim = rule_can_fly | (rule_can_build_docks & HasAny("Vehicle Unlock: Cargo Carrier","Vehicle Unlock: Rapid Rider"))
     rule_can_blast = Has("Item Unlock: Dynamite") | rule_can_build_mininglaser | (rule_can_build_supportstation & HasAny("Vehicle Unlock: Small Digger","Vehicle Unlock: Small Mobile Laser Cutter")) | (rule_can_build_superteleport & HasAny("Vehicle Unlock: Granite Grinder","Vehicle Unlock: Large Mobile Laser Cutter","Vehicle Unlock: Chrome Crusher"))
