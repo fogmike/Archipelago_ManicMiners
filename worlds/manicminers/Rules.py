@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from worlds.generic.Rules import set_rule, add_rule
+import rule_builder
 from . import Items
 
 from typing import TYPE_CHECKING
@@ -13,36 +14,20 @@ def set_all_rules(world: ManicMinersWorld) -> None:
     set_completion_condition(world)
     
 def set_all_entrance_rules(world: ManicMinersWorld) -> None:
-    def can_fly(state: CollectionState):
-        return (can_build_teleportpad(state) and state.has("Vehicle Unlock: Tunnel Scout", world.player)) or (can_build_superteleport(state) and state.has("Vehicle Unlock: Tunnel Transport", world.player))
-        
-    def can_swim(state: CollectionState):
-        return (state.has_any(["Vehicle Unlock: Cargo Carrier","Vehicle Unlock: Rapid Rider"], world.player) and can_build_docks(state)) or can_fly(state)
     
-    def can_blast(state: CollectionState):
-        return state.has("Item Unlock: Dynamite", world.player) or can_build_mininglaser(state) or (can_build_teleportpad(state) and state.has_any(["Vehicle Unlock: Small Digger","Vehicle Unlock: Small Mobile Laser Cutter"], world.player)) or (can_build_superteleport(state) and state.has_any(["Vehicle Unlock: Granite Grinder","Vehicle Unlock: Large Mobile Laser Cutter","Vehicle Unlock: Chrome Crusher"], world.player))
-        
-    def can_breathe(state: CollectionState):
-        return can_build_supportstation(state)
+    rule_can_build_teleportpad = HasAll("Building Unlock: Teleport Pad", "Building Unlock: Power Station")
+    rule_can_build_powerstation = rule_can_build_teleportpad
+    rule_can_build_docks = Has("Building Unlock: Docks") & rule_can_build_powerstation
+    rule_can_build_supportstation = Has("Building Unlock: Support Station") & rule_can_build_powerstation
+    rule_can_build_mininglaser = Has("Building Unlock: Mining Laser") & rule_can_build_supportstation
+    rule_can_build_superteleport = Has("Building Unlock: Super Teleport") & rule_can_build_supportstation
+    rule_can_breathe = rule_can_build_supportstation
+    filter_can_always_breathe = [OptionFilter(BreathingAlwaysInLogic, 1)]
+    rule_can_always_breathe = rule_can_breathe & filter_can_always_breathe
+    rule_can_fly = (rule_can_build_teleportpad & Has("Vehicle Unlock: Tunnel Scout")) | (rule_can_build_superteleport & Has("Vehicle Unlock: Tunnel Transport"))
+    rule_can_swim = rule_can_fly | (rule_can_build_docks & HasAny("Vehicle Unlock: Cargo Carrier","Vehicle Unlock: Rapid Rider"))
+    rule_can_blast = Has("Item Unlock: Dynamite") | rule_can_build_mininglaser | (rule_can_build_supportstation & HasAny("Vehicle Unlock: Small Digger","Vehicle Unlock: Small Mobile Laser Cutter")) | (rule_can_build_superteleport & HasAny("Vehicle Unlock: Granite Grinder","Vehicle Unlock: Large Mobile Laser Cutter","Vehicle Unlock: Chrome Crusher"))
 
-    def can_build_teleportpad(state: CollectionState):
-        return state.has_all(["Building Unlock: Teleport Pad","Building Unlock: Power Station"], world.player)
-    
-    def can_build_docks(state: CollectionState):
-        return state.has("Building Unlock: Docks", world.player) and can_build_powerstation(state)
-    
-    def can_build_powerstation(state: CollectionState):
-        return state.has_all(["Building Unlock: Teleport Pad","Building Unlock: Power Station"], world.player)
-    
-    def can_build_supportstation(state: CollectionState):
-        return state.has("Building Unlock: Support Station", world.player) and can_build_powerstation(state)
-        
-    def can_build_mininglaser(state: CollectionState):
-        return state.has("Building Unlock: Mining Laser", world.player) and can_build_supportstation(state)
-    
-    def can_build_superteleport(state: CollectionState):
-        return state.has("Building Unlock: Super Teleport", world.player) and can_build_supportstation(state)
-    
     entrance_lrr_abreathoffreshair = world.get_entrance("Start Level - LRR - A Breath Of Fresh Air")
     entrance_lrr_airraiders = world.get_entrance("Start Level - LRR - Air Raiders")
     entrance_lrr_backtobasics = world.get_entrance("Start Level - LRR - Back To Basics")
@@ -69,44 +54,31 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
     entrance_lrr_waterlotoffun = world.get_entrance("Start Level - LRR - Water Lot Of Fun")
     entrance_lrr_waterworks = world.get_entrance("Start Level - LRR - Water Works")
     
-    add_rule(entrance_lrr_abreathoffreshair, can_breathe)
-    # No requirements for Air Raiders
-    add_rule(entrance_lrr_backtobasics, can_blast)
-    add_rule(entrance_lrr_backtobasics, can_breathe)
-    add_rule(entrance_lrr_breathless, can_blast)
-    if world.options.breathing_always_in_logic:
-        add_rule(entrance_lrr_breathless, can_breathe)
-    # No requirements for Don't Panic
-    # No requirements for Driller Night
-    add_rule(entrance_lrr_erodeworks, can_blast)
-    add_rule(entrance_lrr_explosiveaction, can_blast)
-    add_rule(entrance_lrr_explosiveaction, can_build_supportstation)
-    add_rule(entrance_lrr_fireandwater, can_breathe)
-    add_rule(entrance_lrr_fireandwater, can_swim)
-    add_rule(entrance_lrr_frozenfrenzy, can_blast)
-    if world.options.breathing_always_in_logic:
-        add_rule(entrance_lrr_frozenfrenzy, can_breathe)
-    add_rule(entrance_lrr_hotstuff, can_breathe)
-    add_rule(entrance_lrr_icespy, can_breathe)
-    # No requirements for It's A Hold Up
-    # No requirements for Lake of Fire
-    add_rule(entrance_lrr_lavalaughter, can_breathe)
-    # No requirements for Oresome
-    add_rule(entrance_lrr_rockhard, can_blast)
-    if world.options.breathing_always_in_logic:
-        add_rule(entrance_lrr_rockhard, can_breathe)
-    add_rule(entrance_lrr_rockyhorror, can_breathe)
-    # No requirements for Rubble Trouble
-    # No requirements for Run The Gauntlet
-    add_rule(entrance_lrr_searchandrescue, can_swim)
-    # No requirements for Split Down The Middle
-    add_rule(entrance_lrr_thepathtopower, can_build_powerstation)
-    add_rule(entrance_lrr_waterlotoffun, can_swim)
-    if world.options.breathing_always_in_logic:
-        add_rule(entrance_lrr_waterlotoffun, can_breathe)
-    add_rule(entrance_lrr_waterworks, can_swim)
-    if world.options.breathing_always_in_logic:
-        add_rule(entrance_lrr_waterworks, can_breathe)
+    world.set_rule(entrance_lrr_abreathoffreshair, (rule_can_breathe & Has("Level Access: LRR - A Breath Of Fresh Air")))
+    world.set_rule(entrance_lrr_airraiders, Has("Level Access: LRR - Air Raiders"))
+    world.set_rule(entrance_lrr_backtobasics, (rule_can_blast & rule_can_breathe & Has("Level Access: LRR - Back To Basics")))
+    world.set_rule(entrance_lrr_breathless, (rule_can_blast & Has("Level Access: LRR - Breathless") & rule_can_always_breathe))
+    world.set_rule(entrance_lrr_dontpanic, Has("Level Access: LRR - Don't Panic"))
+    world.set_rule(entrance_lrr_drillernight, Has("Level Access: LRR - Driller Night"))
+    world.set_rule(entrance_lrr_erodeworks, (rule_can_blast & Has("Level Access: LRR - Erode Works")))
+    world.set_rule(entrance_lrr_explosiveaction, (rule_can_blast & rule_can_build_supportstation & Has("Level Access: LRR - Explosive Action")))
+    world.set_rule(entrance_lrr_fireandwater, (rule_can_breathe & rule_can_swim & Has("Level Access: LRR - Fire And Water")))
+    world.set_rule(entrance_lrr_frozenfrenzy, (rule_can_blast & Has("Level Access: LRR - Frozen Frenzy") & rule_can_always_breathe))
+    world.set_rule(entrance_lrr_hotstuff, (rule_can_breathe & Has("Level Access: LRR - Hot Stuff")))
+    world.set_rule(entrance_lrr_icespy, (rule_can_breathe & Has("Level Access: LRR - Ice Spy")))
+    world.set_rule(entrance_lrr_itsaholdup, Has("Level Access: LRR - It's A Hold Up"))
+    world.set_rule(entrance_lrr_lakeoffire, Has("Level Access: LRR - Lake Of Fire"))
+    world.set_rule(entrance_lrr_lavalaughter, (rule_can_breathe & Has("Level Access: LRR - Lava Laughter")))
+    world.set_rule(entrance_lrr_oresome, Has("Level Access: LRR - Oresome"))
+    world.set_rule(entrance_lrr_rockhard, (rule_can_blast & Has("Level Access: LRR - Rock Hard") & rule_can_always_breathe))
+    world.set_rule(entrance_lrr_rockyhorror, (rule_can_breathe & Has("Level Access: LRR - Rocky Horror")))
+    world.set_rule(entrance_lrr_rubbletrouble, Has("Level Access: LRR - Rubble Trouble"))
+    world.set_rule(entrance_lrr_runthegauntlet, Has("Level Access: LRR - Run The Gauntlet"))
+    world.set_rule(entrance_lrr_searchandrescue, (rule_can_swim & Has("Level Access: LRR - Search And Rescue")))
+    world.set_rule(entrance_lrr_splitdownthemiddle, Has("Level Access: LRR - Split Down The Middle"))
+    world.set_rule(entrance_lrr_thepathtopower, (rule_can_build_powerstation & Has("Level Access: LRR - The Path To Power")))
+    world.set_rule(entrance_lrr_waterlotoffun, (rule_can_swim & Has("Level Access: LRR - Water Lot Of Fun") & rule_can_always_breathe))
+    world.set_rule(entrance_lrr_waterworks, (rule_can_swim & Has("Level Access: LRR - Water Works") & rule_can_always_breathe))
 
 def set_all_location_rules(world: ManicMinersWorld) -> None:
     goal_achievable = world.get_location("Goal Conditions Achievable")
