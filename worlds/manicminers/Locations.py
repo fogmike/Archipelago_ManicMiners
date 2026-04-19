@@ -7,7 +7,7 @@ from BaseClasses import Location
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:    
-    from .World import ManicMinersWorlds
+    from .World import ManicMinersWorld
 
 class ManicMinersLocation(Location):
     game = "Manic Miners"
@@ -1168,8 +1168,7 @@ def create_events(world: ManicMinersWorld) -> None:
         
 
 def check_for_victory(options):
-    lad = os.getenv('LOCALAPPDATA')
-    save_path = lad + "\\ManicMiners\\Saved\\SaveGames\\Profiles\\Archipelago.sav"
+    save_path = ManicMinersWorld.settings.manic_miners_save_dir + "\\Archipelago.sav"
     levelDataList = ParseSaveFile.parseAllLevelsFromFilepath(save_path)
     
     if options["victory_condition"] == 0: # total_level_count
@@ -1226,8 +1225,7 @@ def check_for_victory(options):
     return False
   
 def get_locations_from_save_data(options):
-    lad = os.getenv('LOCALAPPDATA')
-    save_path = lad + "\\ManicMiners\\Saved\\SaveGames\\Profiles\\Archipelago.sav"
+    save_path = ManicMinersWorld.settings.manic_miners_save_dir + "\\Archipelago.sav"
     levelDataList = ParseSaveFile.parseAllLevelsFromFilepath(save_path)
     
     location_ids = []

@@ -26,7 +26,10 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
     rule_can_always_breathe = Filtered(rule_can_breathe, options = [OptionFilter(ManicMiners_Options.BreathingAlwaysInLogic, 1)], filtered_resolution = True)
     rule_can_fly = (rule_can_build_teleportpad & Has("Vehicle Unlock: Tunnel Scout")) | (rule_can_build_superteleport & Has("Vehicle Unlock: Tunnel Transport"))
     rule_can_swim = rule_can_fly | (rule_can_build_docks & HasAny("Vehicle Unlock: Cargo Carrier","Vehicle Unlock: Rapid Rider"))
-    rule_can_blast = Has("Item Unlock: Dynamite") | rule_can_build_mininglaser | (rule_can_build_supportstation & HasAny("Vehicle Unlock: Small Digger","Vehicle Unlock: Small Mobile Laser Cutter")) | (rule_can_build_superteleport & HasAny("Vehicle Unlock: Granite Grinder","Vehicle Unlock: Large Mobile Laser Cutter","Vehicle Unlock: Chrome Crusher"))
+    rule_can_vehicle_lase = (Has("Vehicle Unlock: Small Mobile Laser Cutter") & rule_can_build_supportstation) | (HasAny("Vehicle Unlock: Chrome Crusher","Vehicle Unlock: Large Mobile Laser Cutter") & rule_can_build_superteleport)
+    rule_can_lase = rule_can_vehicle_lase | rule_can_build_mininglaser
+    rule_can_flying_lase = rule_can_vehicle_lase & Has("Vehicle Unlock: Tunnel Transport") & rule_can_build_superteleport
+    rule_can_blast = Has("Item Unlock: Dynamite") | rule_can_lase | (rule_can_build_supportstation & Has("Vehicle Unlock: Small Digger")) | (rule_can_build_superteleport & Has("Vehicle Unlock: Granite Grinder"))
 
     entrance_lrr_abreathoffreshair = world.get_entrance("Start Level - LRR - A Breath Of Fresh Air")
     entrance_lrr_airraiders = world.get_entrance("Start Level - LRR - Air Raiders")

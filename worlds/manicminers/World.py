@@ -16,9 +16,14 @@ class ManicMinersSettings(settings.Group):
     class ManicMinersLevelDirectory(settings.UserFolderPath):
         """The directory that contains your Manic Miners custom levels, i.e. ..../YourUser/Documents/ManicMiners. Needed for inserting Archipelago's copy of the levels."""
         description = "Manic Miners Level Directory"
+    
+    class ManicMinersSaveDirectory(settings.UserFolderPath):
+        """The directory that contains your Manic Miners profile save files, i.e. on Windows %LOCALAPPDATA%/ManicMiners/Saved/SaveGames/Profiles/"""
+        description = "Manic Miners Save Directory"
 
     manic_miners_install_dir: ManicMinersInstallDirectory = ManicMinersInstallDirectory("ManicMiners")
-    manic_miners_level_dir: ManicMinersInstallDirectory = ManicMinersLevelDirectory("ManicMiners")
+    manic_miners_level_dir: ManicMinersLevelDirectory = ManicMinersLevelDirectory("ManicMiners")
+    manic_miners_save_dir: ManicMinersSaveDirectory = ManicMinersSaveDirectory("ManicMiners")
 
 class ManicMinersWorld(World):
     """
