@@ -46,17 +46,17 @@ class AvailableLevelsAtStart(Range):
     
     default = 2
 
-class TargetTimesAreChecks(DefaultOnToggle):
+class TargetTimesAreLocations(DefaultOnToggle):
     """
-    Whether target times for levels are location checks."
+    Whether target times for levels are Locations."
     """
     
-    display_name = "Target Times Are Checks"
+    display_name = "Target Times Are Locations"
 
 class TargetTimeDifficulty(Choice):
     """
     How difficult the target times are per level. 
-    Caution is strongly advised when using Rock Hard targets in a multiplayer sync - they are very difficult. 
+    Caution is strongly advised when using Rock Hard targets in a multiplayer game - they are very difficult. 
     """
     
     display_name = "Target Time Difficulty"
@@ -147,7 +147,7 @@ class ManicMinersOptions(PerGameCommonOptions):
     victory_condition: VictoryCondition
     target_level_count: TargetLevelCount
     available_levels_at_start: AvailableLevelsAtStart
-    target_times_are_checks: TargetTimesAreChecks
+    target_times_are_locations: TargetTimesAreLocations
     target_time_difficulty: TargetTimeDifficulty
     buildings_are_items: BuildingsAreItems
     items_are_items: ItemsAreItems
@@ -172,7 +172,7 @@ option_groups = [
     ),
     OptionGroup(
         "Times",
-        [TargetTimesAreChecks,TargetTimeDifficulty]
+        [TargetTimesAreLocations,TargetTimeDifficulty]
     ),
     OptionGroup(
         "Items",

@@ -1132,7 +1132,7 @@ def create_regular_locations(world: ManicMinersWorld) -> None:
             locations_lrr_waterworks_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Water Works"])
             region_lrr_waterworks.add_locations(locations_lrr_waterworks_bonus2, ManicMinersLocation)            
         
-        if world.options.target_times_are_checks:
+        if world.options.target_times_are_locations:
             locations_lrr_abreathoffreshair = get_location_names_with_ids(["Beat Par Time: LRR - A Breath Of Fresh Air"])
             region_lrr_abreathoffreshair.add_locations(locations_lrr_abreathoffreshair, ManicMinersLocation)
             locations_lrr_airraiders = get_location_names_with_ids(["Beat Par Time: LRR - Air Raiders"])
@@ -1376,7 +1376,7 @@ def create_regular_locations(world: ManicMinersWorld) -> None:
         locations_lrrr_waterworks = get_location_names_with_ids(["Clear: LRRR - Water Works"])
         region_lrrr_waterworks.add_locations(locations_lrrr_waterworks, ManicMinersLocation)
         
-        if world.options.target_times_are_checks:
+        if world.options.target_times_are_locations:
             locations_lrrr_abreathoffreshair = get_location_names_with_ids(["Beat Par Time: LRRR - A Breath Of Fresh Air"])
             region_lrrr_abreathoffreshair.add_locations(locations_lrrr_abreathoffreshair, ManicMinersLocation)
             locations_lrrr_airraiders = get_location_names_with_ids(["Beat Par Time: LRRR - Air Raiders"])
@@ -1620,7 +1620,7 @@ def create_regular_locations(world: ManicMinersWorld) -> None:
         locations_lrrc_waterworks = get_location_names_with_ids(["Clear: LRRC - Water Works"])
         region_lrrc_waterworks.add_locations(locations_lrrc_waterworks, ManicMinersLocation)
         
-        if world.options.target_times_are_checks:
+        if world.options.target_times_are_locations:
             locations_lrrc_abreathoffreshair = get_location_names_with_ids(["Beat Par Time: LRRC - A Breath Of Fresh Air"])
             region_lrrc_abreathoffreshair.add_locations(locations_lrrc_abreathoffreshair, ManicMinersLocation)
             locations_lrrc_airraiders = get_location_names_with_ids(["Beat Par Time: LRRC - Air Raiders"])
@@ -1774,7 +1774,7 @@ def create_regular_locations(world: ManicMinersWorld) -> None:
         # locations_baz_waterworks = get_location_names_with_ids(["Clear: BAZ - Water Works"])
         # region_baz_waterworks.add_locations(locations_baz_waterworks, ManicMinersLocation)
         
-        # if world.options.target_times_are_checks:
+        # if world.options.target_times_are_locations:
             # locations_baz_abreathoffreshair = get_location_names_with_ids(["Beat Par Time: BAZ - A Breath Of Fresh Air"])
             # region_baz_abreathoffreshair.add_locations(locations_baz_abreathoffreshair, ManicMinersLocation)
             # locations_baz_airraiders = get_location_names_with_ids(["Beat Par Time: BAZ - Air Raiders"])
@@ -2175,7 +2175,7 @@ def get_locations_from_save_data(options,save_path):
         if (location_id != -1):
             location_ids.append(location_id)
             if options["bonus_clear_locations"] == 1:
-                # generic solution that allows up to 10 checks for any level
+                # generic solution that allows up to 10 locations for any level
                 location_ids.append(location_id + 1)
                 location_ids.append(location_id + 2)
                 location_ids.append(location_id + 3)
@@ -2186,7 +2186,7 @@ def get_locations_from_save_data(options,save_path):
                 location_ids.append(location_id + 8)
                 location_ids.append(location_id + 9)
     
-    if options["target_times_are_checks"] == 1:
+    if options["target_times_are_locations"] == 1:
         for level in levelDataList:
             location_id = location_id_from_level_name(level[0])
             if (location_id != -1):
