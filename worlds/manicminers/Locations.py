@@ -252,7 +252,7 @@ TARGET_CLEAR_TIME_EASY = {
     "LRR - Fire And Water": 1200, # 20:00
     "LRR - Frozen Frenzy": 840, # 14:00
     "LRR - Hot Stuff": 1200, # 20:00
-    "LRR - Ice Spy": 1080, # 18:00
+    "LRR - Ice Spy": 1800, # 30:00
     "LRR - It's A Hold Up": 600, # 10:00
     "LRR - Lake Of Fire": 1200, # 20:00
     "LRR - Lava Laughter": 900, # 15:00
@@ -382,7 +382,7 @@ TARGET_CLEAR_TIME_MEDIUM = {
     "LRR - Fire And Water": 780, # 13:00
     "LRR - Frozen Frenzy": 540, # 09:00
     "LRR - Hot Stuff": 900, # 15:00
-    "LRR - Ice Spy": 720, # 12:00
+    "LRR - Ice Spy": 1080, # 18:00
     "LRR - It's A Hold Up": 360, # 06:00
     "LRR - Lake Of Fire": 900, # 15:00
     "LRR - Lava Laughter": 600, # 10:00
@@ -512,7 +512,7 @@ TARGET_CLEAR_TIME_HARD = {
     "LRR - Fire And Water": 540, # 09:00
     "LRR - Frozen Frenzy": 360, # 06:00
     "LRR - Hot Stuff": 570, # 09:30
-    "LRR - Ice Spy": 480, # 08:00
+    "LRR - Ice Spy": 720, # 12:00
     "LRR - It's A Hold Up": 240, # 04:00
     "LRR - Lake Of Fire": 480, # 08:00
     "LRR - Lava Laughter": 450, # 07:30

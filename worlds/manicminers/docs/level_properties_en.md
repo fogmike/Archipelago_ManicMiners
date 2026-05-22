@@ -14,7 +14,7 @@ Times given are par times in the four difficulties.
 | Fire and Water        | 20m           | 13m             | 9m            | 7m 30s             |
 | Frozen Frenzy         | 14m           | 9m              | 6m            | 5m                 |
 | Hot Stuff             | 20m           | 15m             | 9m 30s        | 8m 30s             |
-| Ice Spy               | 18m           | 12m             | 8m            | 7m                 |
+| Ice Spy               | 30m           | 18m             | 12m           | 7m                 |
 | It's A Hold Up        | 10m           | 6m              | 4m            | 3m 30s             |
 | Lake Of Fire          | 20m           | 15m             | 8m            | 5m 30s             |
 | Lava Laughter         | 15m           | 10m             | 7m 30s        | 6m                 |
