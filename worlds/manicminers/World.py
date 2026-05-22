@@ -71,7 +71,7 @@ class ManicMinersWorld(World):
         
         # Identify number of Locations
         number_locations = number_levels
-        if self.options.target_times_are_checks:
+        if self.options.target_times_are_locations:
             number_locations += number_levels
         
         # Identify number of Items
@@ -116,8 +116,8 @@ class ManicMinersWorld(World):
     
     def fill_slot_data(self) -> Mapping[str, Any]:
         return self.options.as_dict(
-        # "victory_condition", "target_level_count", "target_times_are_checks", "target_time_difficulty", "buildings_are_items", "items_are_items", "vehicles_are_items", "campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc", "campaign_selection_baz"
-        "victory_condition", "target_level_count", "target_times_are_checks", "target_time_difficulty", "buildings_are_items", "items_are_items", "vehicles_are_items", "bonus_clear_locations","campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc"
+        # "victory_condition", "target_level_count", "target_times_are_locations", "target_time_difficulty", "buildings_are_items", "items_are_items", "vehicles_are_items", "campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc", "campaign_selection_baz"
+        "victory_condition", "target_level_count", "target_times_are_locations", "target_time_difficulty", "buildings_are_items", "items_are_items", "vehicles_are_items", "bonus_clear_locations","campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc"
         )
 
 def launch_client(*args):

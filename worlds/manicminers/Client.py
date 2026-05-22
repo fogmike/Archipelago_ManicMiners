@@ -180,7 +180,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
             self.output(f"Levels cleared (in Archipelago): {count_cleared_levels_ap()}")
             self.output(f"Levels cleared (in local state): {count_cleared_levels_local()}")
             
-            if ((self.ctx.slot_data["victory_condition"] in [1,2]) or (self.ctx.slot_data["target_times_are_checks"] == 1)):
+            if ((self.ctx.slot_data["victory_condition"] in [1,2]) or (self.ctx.slot_data["target_times_are_locations"] == 1)):
                 match self.ctx.slot_data["target_time_difficulty"]:
                     case 0:
                         time_difficulty = "Easy"
@@ -193,7 +193,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                     case _:
                         time_difficulty = ""
                 self.output(f"Time difficulty: {time_difficulty}")
-                if self.ctx.slot_data["victory_condition"] == 1 or self.ctx.slot_data["target_times_are_checks"] == 1:
+                if self.ctx.slot_data["victory_condition"] == 1 or self.ctx.slot_data["target_times_are_locations"] == 1:
                     self.output(f"Par times beaten: {count_beaten_par_time_levels()}")
             
             if self.ctx.slot_data["buildings_are_items"] == 1:
@@ -241,7 +241,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
         if not hasattr(self.ctx,"slot_data"):
             self.output(f"Not connected to server!")
         else:
-            if self.ctx.slot_data["victory_condition"] == 1 or self.ctx.slot_data["target_times_are_checks"] == 1:
+            if self.ctx.slot_data["victory_condition"] == 1 or self.ctx.slot_data["target_times_are_locations"] == 1:
                 match self.ctx.slot_data["target_time_difficulty"]:
                     case 0:
                         time_target_list = Locations.TARGET_CLEAR_TIME_EASY
