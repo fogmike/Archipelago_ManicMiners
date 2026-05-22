@@ -14,230 +14,401 @@ class ManicMinersLocation(Location):
     game = "Manic Miners"
     
 LOCATION_NAME_TO_ID = {
-    #Reserve 0XXX for base game, 1XXX for LRRR, 2XXX for LRRC, 3XXX for BAZ
-    "Clear: LRR - A Breath Of Fresh Air": 1,
-    "Clear: LRR - Air Raiders": 2,
-    "Clear: LRR - Back To Basics": 3,
-    "Clear: LRR - Breathless": 4,
-    "Clear: LRR - Don't Panic": 5,
-    "Clear: LRR - Driller Night": 6,
-    "Clear: LRR - Erode Works": 7,
-    "Clear: LRR - Explosive Action": 8,
-    "Clear: LRR - Fire And Water": 9,
-    "Clear: LRR - Frozen Frenzy": 10,
-    "Clear: LRR - Hot Stuff": 11,
-    "Clear: LRR - Ice Spy": 12,
-    "Clear: LRR - It's A Hold Up": 13,
-    "Clear: LRR - Lake Of Fire": 14,
-    "Clear: LRR - Lava Laughter": 15,
-    "Clear: LRR - Oresome": 16,
-    "Clear: LRR - Rock Hard": 17,
-    "Clear: LRR - Rocky Horror": 18,
-    "Clear: LRR - Rubble Trouble": 19,
-    "Clear: LRR - Run The Gauntlet": 20,
-    "Clear: LRR - Search And Rescue": 21,
-    "Clear: LRR - Split Down The Middle": 22,
-    "Clear: LRR - The Path To Power": 23,
-    "Clear: LRR - Water Lot Of Fun": 24,
-    "Clear: LRR - Water Works": 25,
+    #Reserve 0XXXX for base game, 1XXXX for LRRR, 2XXXX for LRRC, 3XXXX for BAZ
+    "Clear: LRR - A Breath Of Fresh Air": 10,
+    "Clear: LRR - Air Raiders": 20,
+    "Clear: LRR - Back To Basics": 30,
+    "Clear: LRR - Breathless": 40,
+    "Clear: LRR - Don't Panic": 50,
+    "Clear: LRR - Driller Night": 60,
+    "Clear: LRR - Erode Works": 70,
+    "Clear: LRR - Explosive Action": 80,
+    "Clear: LRR - Fire And Water": 90,
+    "Clear: LRR - Frozen Frenzy": 100,
+    "Clear: LRR - Hot Stuff": 110,
+    "Clear: LRR - Ice Spy": 120,
+    "Clear: LRR - It's A Hold Up": 130,
+    "Clear: LRR - Lake Of Fire": 140,
+    "Clear: LRR - Lava Laughter": 150,
+    "Clear: LRR - Oresome": 160,
+    "Clear: LRR - Rock Hard": 170,
+    "Clear: LRR - Rocky Horror": 180,
+    "Clear: LRR - Rubble Trouble": 190,
+    "Clear: LRR - Run The Gauntlet": 200,
+    "Clear: LRR - Search And Rescue": 210,
+    "Clear: LRR - Split Down The Middle": 220,
+    "Clear: LRR - The Path To Power": 230,
+    "Clear: LRR - Water Lot Of Fun": 240,
+    "Clear: LRR - Water Works": 250,
+
+    "Bonus Clear 1: LRR - A Breath Of Fresh Air": 11,
+    "Bonus Clear 1: LRR - Air Raiders": 21,
+    "Bonus Clear 2: LRR - Air Raiders": 22,
+    "Bonus Clear 3: LRR - Air Raiders": 23,
+    "Bonus Clear 1: LRR - Back To Basics": 31,
+    "Bonus Clear 2: LRR - Back To Basics": 32,
+    "Bonus Clear 3: LRR - Back To Basics": 33,
+    "Bonus Clear 4: LRR - Back To Basics": 34,
+    "Bonus Clear 1: LRR - Breathless": 41,
+    "Bonus Clear 2: LRR - Breathless": 42,
+    "Bonus Clear 1: LRR - Don't Panic": 51,
+    "Bonus Clear 2: LRR - Don't Panic": 52,
+    "Bonus Clear 3: LRR - Don't Panic": 53,
+    "Bonus Clear 1: LRR - Driller Night": 61,
+    "Bonus Clear 1: LRR - Erode Works": 71,
+    "Bonus Clear 2: LRR - Erode Works": 72,
+    "Bonus Clear 1: LRR - Explosive Action": 81,
+    "Bonus Clear 1: LRR - Fire And Water": 91,
+    "Bonus Clear 2: LRR - Fire And Water": 92,
+    "Bonus Clear 3: LRR - Fire And Water": 93,
+    "Bonus Clear 1: LRR - Frozen Frenzy": 101,
+    "Bonus Clear 2: LRR - Frozen Frenzy": 102,
+    "Bonus Clear 1: LRR - Hot Stuff": 111,
+    "Bonus Clear 2: LRR - Hot Stuff": 112,
+    "Bonus Clear 3: LRR - Hot Stuff": 113,
+    "Bonus Clear 4: LRR - Hot Stuff": 114,
+    "Bonus Clear 1: LRR - Ice Spy": 121,
+    "Bonus Clear 2: LRR - Ice Spy": 122,
+    "Bonus Clear 3: LRR - Ice Spy": 123,
+    "Bonus Clear 1: LRR - It's A Hold Up": 131,
+    "Bonus Clear 1: LRR - Lake Of Fire": 141,
+    "Bonus Clear 2: LRR - Lake Of Fire": 142,
+    "Bonus Clear 3: LRR - Lake Of Fire": 143,
+    "Bonus Clear 1: LRR - Lava Laughter": 151,
+    "Bonus Clear 2: LRR - Lava Laughter": 152,
+    "Bonus Clear 3: LRR - Lava Laughter": 153,
+    "Bonus Clear 1: LRR - Oresome": 161,
+    "Bonus Clear 2: LRR - Oresome": 162,
+    "Bonus Clear 3: LRR - Oresome": 163,
+    "Bonus Clear 1: LRR - Rock Hard": 171,
+    "Bonus Clear 2: LRR - Rock Hard": 172,
+    "Bonus Clear 1: LRR - Rocky Horror": 181,
+    "Bonus Clear 2: LRR - Rocky Horror": 182,
+    "Bonus Clear 3: LRR - Rocky Horror": 183,
+    "Bonus Clear 4: LRR - Rocky Horror": 184,
+    "Bonus Clear 1: LRR - Rubble Trouble": 191,
+    "Bonus Clear 1: LRR - Run The Gauntlet": 201,
+    "Bonus Clear 1: LRR - Search And Rescue": 211,
+    "Bonus Clear 2: LRR - Search And Rescue": 212,
+    "Bonus Clear 1: LRR - Split Down The Middle": 221,
+    "Bonus Clear 2: LRR - Split Down The Middle": 222,
+    "Bonus Clear 1: LRR - The Path To Power": 231,
+    "Bonus Clear 1: LRR - Water Lot Of Fun": 241,
+    "Bonus Clear 2: LRR - Water Lot Of Fun": 242,
+    "Bonus Clear 1: LRR - Water Works": 251,
+    "Bonus Clear 2: LRR - Water Works": 252,
+   
+    "Beat Par Time: LRR - A Breath Of Fresh Air": 1010,
+    "Beat Par Time: LRR - Air Raiders": 1020,
+    "Beat Par Time: LRR - Back To Basics": 1030,
+    "Beat Par Time: LRR - Breathless": 1040,
+    "Beat Par Time: LRR - Don't Panic": 1050,
+    "Beat Par Time: LRR - Driller Night": 1060,
+    "Beat Par Time: LRR - Erode Works": 1070,
+    "Beat Par Time: LRR - Explosive Action": 1080,
+    "Beat Par Time: LRR - Fire And Water": 1090,
+    "Beat Par Time: LRR - Frozen Frenzy": 1100,
+    "Beat Par Time: LRR - Hot Stuff": 1110,
+    "Beat Par Time: LRR - Ice Spy": 1120,
+    "Beat Par Time: LRR - It's A Hold Up": 1130,
+    "Beat Par Time: LRR - Lake Of Fire": 1140,
+    "Beat Par Time: LRR - Lava Laughter": 1150,
+    "Beat Par Time: LRR - Oresome": 1160,
+    "Beat Par Time: LRR - Rock Hard": 1170,
+    "Beat Par Time: LRR - Rocky Horror": 1180,
+    "Beat Par Time: LRR - Rubble Trouble": 1190,
+    "Beat Par Time: LRR - Run The Gauntlet": 1200,
+    "Beat Par Time: LRR - Search And Rescue": 1210,
+    "Beat Par Time: LRR - Split Down The Middle": 1220,
+    "Beat Par Time: LRR - The Path To Power": 1230,
+    "Beat Par Time: LRR - Water Lot Of Fun": 1240,
+    "Beat Par Time: LRR - Water Works": 1250,
     
-    "Beat Par Time: LRR - A Breath Of Fresh Air": 101,
-    "Beat Par Time: LRR - Air Raiders": 102,
-    "Beat Par Time: LRR - Back To Basics": 103,
-    "Beat Par Time: LRR - Breathless": 104,
-    "Beat Par Time: LRR - Don't Panic": 105,
-    "Beat Par Time: LRR - Driller Night": 106,
-    "Beat Par Time: LRR - Erode Works": 107,
-    "Beat Par Time: LRR - Explosive Action": 108,
-    "Beat Par Time: LRR - Fire And Water": 109,
-    "Beat Par Time: LRR - Frozen Frenzy": 110,
-    "Beat Par Time: LRR - Hot Stuff": 111,
-    "Beat Par Time: LRR - Ice Spy": 112,
-    "Beat Par Time: LRR - It's A Hold Up": 113,
-    "Beat Par Time: LRR - Lake Of Fire": 114,
-    "Beat Par Time: LRR - Lava Laughter": 115,
-    "Beat Par Time: LRR - Oresome": 116,
-    "Beat Par Time: LRR - Rock Hard": 117,
-    "Beat Par Time: LRR - Rocky Horror": 118,
-    "Beat Par Time: LRR - Rubble Trouble": 119,
-    "Beat Par Time: LRR - Run The Gauntlet": 120,
-    "Beat Par Time: LRR - Search And Rescue": 121,
-    "Beat Par Time: LRR - Split Down The Middle": 122,
-    "Beat Par Time: LRR - The Path To Power": 123,
-    "Beat Par Time: LRR - Water Lot Of Fun": 124,
-    "Beat Par Time: LRR - Water Works": 125,
+    "Clear: LRRR - A Breath Of Fresh Air": 10010,
+    "Clear: LRRR - Air Raiders": 10020,
+    "Clear: LRRR - Back To Basics": 10030,
+    "Clear: LRRR - Breathless": 10040,
+    "Clear: LRRR - Don't Panic": 10050,
+    "Clear: LRRR - Driller Night": 10060,
+    "Clear: LRRR - Erode Works": 10070,
+    "Clear: LRRR - Explosive Action": 10080,
+    "Clear: LRRR - Fire And Water": 10090,
+    "Clear: LRRR - Frozen Frenzy": 10100,
+    "Clear: LRRR - Hot Stuff": 10110,
+    "Clear: LRRR - Ice Spy": 10120,
+    "Clear: LRRR - It's A Hold Up": 10130,
+    "Clear: LRRR - Lake Of Fire": 10140,
+    "Clear: LRRR - Lava Laughter": 10150,
+    "Clear: LRRR - Oresome": 10160,
+    "Clear: LRRR - Rock Hard": 10170,
+    "Clear: LRRR - Rocky Horror": 10180,
+    "Clear: LRRR - Rubble Trouble": 10190,
+    "Clear: LRRR - Run The Gauntlet": 10200,
+    "Clear: LRRR - Search And Rescue": 10210,
+    "Clear: LRRR - Split Down The Middle": 10220,
+    "Clear: LRRR - The Path To Power": 10230,
+    "Clear: LRRR - Water Lot Of Fun": 10240,
+    "Clear: LRRR - Water Works": 10250,
+
+    "Bonus Clear 1: LRRR - A Breath Of Fresh Air": 1011,
+    "Bonus Clear 1: LRRR - Air Raiders": 10021,
+    "Bonus Clear 2: LRRR - Air Raiders": 10022,
+    "Bonus Clear 3: LRRR - Air Raiders": 10023,
+    "Bonus Clear 1: LRRR - Back To Basics": 10031,
+    "Bonus Clear 2: LRRR - Back To Basics": 10032,
+    "Bonus Clear 3: LRRR - Back To Basics": 10033,
+    "Bonus Clear 4: LRRR - Back To Basics": 10034,
+    "Bonus Clear 1: LRRR - Breathless": 10041,
+    "Bonus Clear 2: LRRR - Breathless": 10042,
+    "Bonus Clear 1: LRRR - Don't Panic": 10051,
+    "Bonus Clear 2: LRRR - Don't Panic": 10052,
+    "Bonus Clear 3: LRRR - Don't Panic": 10053,
+    "Bonus Clear 1: LRRR - Driller Night": 10061,
+    "Bonus Clear 1: LRRR - Erode Works": 10071,
+    "Bonus Clear 2: LRRR - Erode Works": 10072,
+    "Bonus Clear 1: LRRR - Explosive Action": 10081,
+    "Bonus Clear 1: LRRR - Fire And Water": 10091,
+    "Bonus Clear 2: LRRR - Fire And Water": 10092,
+    "Bonus Clear 3: LRRR - Fire And Water": 10093,
+    "Bonus Clear 1: LRRR - Frozen Frenzy": 10101,
+    "Bonus Clear 2: LRRR - Frozen Frenzy": 10102,
+    "Bonus Clear 1: LRRR - Hot Stuff": 10111,
+    "Bonus Clear 2: LRRR - Hot Stuff": 10112,
+    "Bonus Clear 3: LRRR - Hot Stuff": 10113,
+    "Bonus Clear 4: LRRR - Hot Stuff": 10114,
+    "Bonus Clear 1: LRRR - Ice Spy": 10121,
+    "Bonus Clear 2: LRRR - Ice Spy": 10122,
+    "Bonus Clear 3: LRRR - Ice Spy": 10123,
+    "Bonus Clear 1: LRRR - It's A Hold Up": 10131,
+    "Bonus Clear 1: LRRR - Lake Of Fire": 10141,
+    "Bonus Clear 2: LRRR - Lake Of Fire": 10142,
+    "Bonus Clear 3: LRRR - Lake Of Fire": 10143,
+    "Bonus Clear 1: LRRR - Lava Laughter": 10151,
+    "Bonus Clear 2: LRRR - Lava Laughter": 10152,
+    "Bonus Clear 3: LRRR - Lava Laughter": 10153,
+    "Bonus Clear 1: LRRR - Oresome": 10161,
+    "Bonus Clear 2: LRRR - Oresome": 10162,
+    "Bonus Clear 3: LRRR - Oresome": 10163,
+    "Bonus Clear 1: LRRR - Rock Hard": 10171,
+    "Bonus Clear 2: LRRR - Rock Hard": 10172,
+    "Bonus Clear 1: LRRR - Rocky Horror": 10181,
+    "Bonus Clear 2: LRRR - Rocky Horror": 10182,
+    "Bonus Clear 3: LRRR - Rocky Horror": 10183,
+    "Bonus Clear 4: LRRR - Rocky Horror": 10184,
+    "Bonus Clear 1: LRRR - Rubble Trouble": 10191,
+    "Bonus Clear 1: LRRR - Run The Gauntlet": 10201,
+    "Bonus Clear 1: LRRR - Search And Rescue": 10211,
+    "Bonus Clear 2: LRRR - Search And Rescue": 10212,
+    "Bonus Clear 1: LRRR - Split Down The Middle": 10221,
+    "Bonus Clear 2: LRRR - Split Down The Middle": 10222,
+    "Bonus Clear 1: LRRR - The Path To Power": 10231,
+    "Bonus Clear 1: LRRR - Water Lot Of Fun": 10241,
+    "Bonus Clear 2: LRRR - Water Lot Of Fun": 10242,
+    "Bonus Clear 1: LRRR - Water Works": 10251,
+    "Bonus Clear 2: LRRR - Water Works": 10252,
     
-    "Clear: LRRR - A Breath Of Fresh Air": 1001,
-    "Clear: LRRR - Air Raiders": 1002,
-    "Clear: LRRR - Back To Basics": 1003,
-    "Clear: LRRR - Breathless": 1004,
-    "Clear: LRRR - Don't Panic": 1005,
-    "Clear: LRRR - Driller Night": 1006,
-    "Clear: LRRR - Erode Works": 1007,
-    "Clear: LRRR - Explosive Action": 1008,
-    "Clear: LRRR - Fire And Water": 1009,
-    "Clear: LRRR - Frozen Frenzy": 1010,
-    "Clear: LRRR - Hot Stuff": 1011,
-    "Clear: LRRR - Ice Spy": 1012,
-    "Clear: LRRR - It's A Hold Up": 1013,
-    "Clear: LRRR - Lake Of Fire": 1014,
-    "Clear: LRRR - Lava Laughter": 1015,
-    "Clear: LRRR - Oresome": 1016,
-    "Clear: LRRR - Rock Hard": 1017,
-    "Clear: LRRR - Rocky Horror": 1018,
-    "Clear: LRRR - Rubble Trouble": 1019,
-    "Clear: LRRR - Run The Gauntlet": 1020,
-    "Clear: LRRR - Search And Rescue": 1021,
-    "Clear: LRRR - Split Down The Middle": 1022,
-    "Clear: LRRR - The Path To Power": 1023,
-    "Clear: LRRR - Water Lot Of Fun": 1024,
-    "Clear: LRRR - Water Works": 1025,
+    "Beat Par Time: LRRR - A Breath Of Fresh Air": 11010,
+    "Beat Par Time: LRRR - Air Raiders": 11020,
+    "Beat Par Time: LRRR - Back To Basics": 11030,
+    "Beat Par Time: LRRR - Breathless": 11040,
+    "Beat Par Time: LRRR - Don't Panic": 11050,
+    "Beat Par Time: LRRR - Driller Night": 11060,
+    "Beat Par Time: LRRR - Erode Works": 11070,
+    "Beat Par Time: LRRR - Explosive Action": 11080,
+    "Beat Par Time: LRRR - Fire And Water": 11090,
+    "Beat Par Time: LRRR - Frozen Frenzy": 11100,
+    "Beat Par Time: LRRR - Hot Stuff": 11110,
+    "Beat Par Time: LRRR - Ice Spy": 11120,
+    "Beat Par Time: LRRR - It's A Hold Up": 11130,
+    "Beat Par Time: LRRR - Lake Of Fire": 11140,
+    "Beat Par Time: LRRR - Lava Laughter": 11150,
+    "Beat Par Time: LRRR - Oresome": 11160,
+    "Beat Par Time: LRRR - Rock Hard": 11170,
+    "Beat Par Time: LRRR - Rocky Horror": 11180,
+    "Beat Par Time: LRRR - Rubble Trouble": 11190,
+    "Beat Par Time: LRRR - Run The Gauntlet": 11200,
+    "Beat Par Time: LRRR - Search And Rescue": 11210,
+    "Beat Par Time: LRRR - Split Down The Middle": 11220,
+    "Beat Par Time: LRRR - The Path To Power": 11230,
+    "Beat Par Time: LRRR - Water Lot Of Fun": 11240,
+    "Beat Par Time: LRRR - Water Works": 11250,
     
-    "Beat Par Time: LRRR - A Breath Of Fresh Air": 1101,
-    "Beat Par Time: LRRR - Air Raiders": 1102,
-    "Beat Par Time: LRRR - Back To Basics": 1103,
-    "Beat Par Time: LRRR - Breathless": 1104,
-    "Beat Par Time: LRRR - Don't Panic": 1105,
-    "Beat Par Time: LRRR - Driller Night": 1106,
-    "Beat Par Time: LRRR - Erode Works": 1107,
-    "Beat Par Time: LRRR - Explosive Action": 1108,
-    "Beat Par Time: LRRR - Fire And Water": 1109,
-    "Beat Par Time: LRRR - Frozen Frenzy": 1110,
-    "Beat Par Time: LRRR - Hot Stuff": 1111,
-    "Beat Par Time: LRRR - Ice Spy": 1112,
-    "Beat Par Time: LRRR - It's A Hold Up": 1113,
-    "Beat Par Time: LRRR - Lake Of Fire": 1114,
-    "Beat Par Time: LRRR - Lava Laughter": 1115,
-    "Beat Par Time: LRRR - Oresome": 1116,
-    "Beat Par Time: LRRR - Rock Hard": 1117,
-    "Beat Par Time: LRRR - Rocky Horror": 1118,
-    "Beat Par Time: LRRR - Rubble Trouble": 1119,
-    "Beat Par Time: LRRR - Run The Gauntlet": 1120,
-    "Beat Par Time: LRRR - Search And Rescue": 1121,
-    "Beat Par Time: LRRR - Split Down The Middle": 1122,
-    "Beat Par Time: LRRR - The Path To Power": 1123,
-    "Beat Par Time: LRRR - Water Lot Of Fun": 1124,
-    "Beat Par Time: LRRR - Water Works": 1125,
+    "Clear: LRRC - A Breath Of Fresh Air": 20010,
+    "Clear: LRRC - Air Raiders": 20020,
+    "Clear: LRRC - Back To Basics": 20030,
+    "Clear: LRRC - Breathless": 20040,
+    "Clear: LRRC - Don't Panic": 20050,
+    "Clear: LRRC - Driller Night": 20060,
+    "Clear: LRRC - Erode Works": 20070,
+    "Clear: LRRC - Explosive Action": 20080,
+    "Clear: LRRC - Fire And Water": 20090,
+    "Clear: LRRC - Frozen Frenzy": 20100,
+    "Clear: LRRC - Hot Stuff": 20110,
+    "Clear: LRRC - Ice Spy": 20120,
+    "Clear: LRRC - It's A Hold Up": 20130,
+    "Clear: LRRC - Lake Of Fire": 20140,
+    "Clear: LRRC - Lava Laughter": 20150,
+    "Clear: LRRC - Oresome": 20160,
+    "Clear: LRRC - Rock Hard": 20170,
+    "Clear: LRRC - Rocky Horror": 20180,
+    "Clear: LRRC - Rubble Trouble": 20190,
+    "Clear: LRRC - Run The Gauntlet": 20200,
+    "Clear: LRRC - Search And Rescue": 20210,
+    "Clear: LRRC - Split Down The Middle": 20220,
+    "Clear: LRRC - The Path To Power": 20230,
+    "Clear: LRRC - Water Lot Of Fun": 20240,
+    "Clear: LRRC - Water Works": 20250,
+
+    "Bonus Clear 1: LRRC - A Breath Of Fresh Air": 2011,
+    "Bonus Clear 1: LRRC - Air Raiders": 20021,
+    "Bonus Clear 2: LRRC - Air Raiders": 20022,
+    "Bonus Clear 3: LRRC - Air Raiders": 20023,
+    "Bonus Clear 1: LRRC - Back To Basics": 20031,
+    "Bonus Clear 2: LRRC - Back To Basics": 20032,
+    "Bonus Clear 3: LRRC - Back To Basics": 20033,
+    "Bonus Clear 4: LRRC - Back To Basics": 20034,
+    "Bonus Clear 1: LRRC - Breathless": 20041,
+    "Bonus Clear 2: LRRC - Breathless": 20042,
+    "Bonus Clear 1: LRRC - Don't Panic": 20051,
+    "Bonus Clear 2: LRRC - Don't Panic": 20052,
+    "Bonus Clear 3: LRRC - Don't Panic": 20053,
+    "Bonus Clear 1: LRRC - Driller Night": 20061,
+    "Bonus Clear 1: LRRC - Erode Works": 20071,
+    "Bonus Clear 2: LRRC - Erode Works": 20072,
+    "Bonus Clear 1: LRRC - Explosive Action": 20081,
+    "Bonus Clear 1: LRRC - Fire And Water": 20091,
+    "Bonus Clear 2: LRRC - Fire And Water": 20092,
+    "Bonus Clear 3: LRRC - Fire And Water": 20093,
+    "Bonus Clear 1: LRRC - Frozen Frenzy": 20101,
+    "Bonus Clear 2: LRRC - Frozen Frenzy": 20102,
+    "Bonus Clear 1: LRRC - Hot Stuff": 20111,
+    "Bonus Clear 2: LRRC - Hot Stuff": 20112,
+    "Bonus Clear 3: LRRC - Hot Stuff": 20113,
+    "Bonus Clear 4: LRRC - Hot Stuff": 20114,
+    "Bonus Clear 1: LRRC - Ice Spy": 20121,
+    "Bonus Clear 2: LRRC - Ice Spy": 20122,
+    "Bonus Clear 3: LRRC - Ice Spy": 20123,
+    "Bonus Clear 1: LRRC - It's A Hold Up": 20131,
+    "Bonus Clear 1: LRRC - Lake Of Fire": 20141,
+    "Bonus Clear 2: LRRC - Lake Of Fire": 20142,
+    "Bonus Clear 3: LRRC - Lake Of Fire": 20143,
+    "Bonus Clear 1: LRRC - Lava Laughter": 20151,
+    "Bonus Clear 2: LRRC - Lava Laughter": 20152,
+    "Bonus Clear 3: LRRC - Lava Laughter": 20153,
+    "Bonus Clear 1: LRRC - Oresome": 20161,
+    "Bonus Clear 2: LRRC - Oresome": 20162,
+    "Bonus Clear 3: LRRC - Oresome": 20163,
+    "Bonus Clear 1: LRRC - Rock Hard": 20171,
+    "Bonus Clear 2: LRRC - Rock Hard": 20172,
+    "Bonus Clear 1: LRRC - Rocky Horror": 20181,
+    "Bonus Clear 2: LRRC - Rocky Horror": 20182,
+    "Bonus Clear 3: LRRC - Rocky Horror": 20183,
+    "Bonus Clear 4: LRRC - Rocky Horror": 20184,
+    "Bonus Clear 1: LRRC - Rubble Trouble": 20191,
+    "Bonus Clear 1: LRRC - Run The Gauntlet": 20201,
+    "Bonus Clear 1: LRRC - Search And Rescue": 20211,
+    "Bonus Clear 2: LRRC - Search And Rescue": 20212,
+    "Bonus Clear 1: LRRC - Split Down The Middle": 20221,
+    "Bonus Clear 2: LRRC - Split Down The Middle": 20222,
+    "Bonus Clear 1: LRRC - The Path To Power": 20231,
+    "Bonus Clear 1: LRRC - Water Lot Of Fun": 20241,
+    "Bonus Clear 2: LRRC - Water Lot Of Fun": 20242,
+    "Bonus Clear 1: LRRC - Water Works": 20251,
+    "Bonus Clear 2: LRRC - Water Works": 20252,
+     
+    "Beat Par Time: LRRC - A Breath Of Fresh Air": 21010,
+    "Beat Par Time: LRRC - Air Raiders": 21020,
+    "Beat Par Time: LRRC - Back To Basics": 21030,
+    "Beat Par Time: LRRC - Breathless": 21040,
+    "Beat Par Time: LRRC - Don't Panic": 21050,
+    "Beat Par Time: LRRC - Driller Night": 21060,
+    "Beat Par Time: LRRC - Erode Works": 21070,
+    "Beat Par Time: LRRC - Explosive Action": 21080,
+    "Beat Par Time: LRRC - Fire And Water": 21090,
+    "Beat Par Time: LRRC - Frozen Frenzy": 21100,
+    "Beat Par Time: LRRC - Hot Stuff": 21110,
+    "Beat Par Time: LRRC - Ice Spy": 21120,
+    "Beat Par Time: LRRC - It's A Hold Up": 21130,
+    "Beat Par Time: LRRC - Lake Of Fire": 21140,
+    "Beat Par Time: LRRC - Lava Laughter": 21150,
+    "Beat Par Time: LRRC - Oresome": 21160,
+    "Beat Par Time: LRRC - Rock Hard": 21170,
+    "Beat Par Time: LRRC - Rocky Horror": 21180,
+    "Beat Par Time: LRRC - Rubble Trouble": 21190,
+    "Beat Par Time: LRRC - Run The Gauntlet": 21200,
+    "Beat Par Time: LRRC - Search And Rescue": 21210,
+    "Beat Par Time: LRRC - Split Down The Middle": 21220,
+    "Beat Par Time: LRRC - The Path To Power": 21230,
+    "Beat Par Time: LRRC - Water Lot Of Fun": 21240,
+    "Beat Par Time: LRRC - Water Works": 21250,
+
+    "Clear: BAZ - A Breath Of Fresh Air": 30010,
+    "Clear: BAZ - Air Raiders": 30020,
+    "Clear: BAZ - Back To Basics": 30030,
+    "Clear: BAZ - Breathless": 30040,
+    "Clear: BAZ - Cold Comfort": 30050,
+    "Clear: BAZ - Don't Panic": 30060,
+    "Clear: BAZ - Down In The Dirt": 30070,
+    "Clear: BAZ - Driller Night": 30080,
+    "Clear: BAZ - Erode Works": 30090,
+    "Clear: BAZ - Explosive Action": 30100,
+    "Clear: BAZ - Fire And Water": 30110,
+    "Clear: BAZ - Frozen Frenzy": 30120,
+    "Clear: BAZ - Hot Stuff": 30130,
+    "Clear: BAZ - Ice Spy": 30140,
+    "Clear: BAZ - It's A Hold Up": 30150,
+    "Clear: BAZ - Lake Of Fire": 30160,
+    "Clear: BAZ - Lava Laughter": 30170,
+    "Clear: BAZ - Mine Over Matter": 30180,
+    "Clear: BAZ - Molten Meltdown": 30190,
+    "Clear: BAZ - Oresome": 30200,
+    "Clear: BAZ - Recruitment": 30210,
+    "Clear: BAZ - Rock Hard": 30220,
+    "Clear: BAZ - Rocky Horror": 30230,
+    "Clear: BAZ - Rubble Trouble": 30240,
+    "Clear: BAZ - Run The Gauntlet": 30250,
+    "Clear: BAZ - Seamless": 30260,
+    "Clear: BAZ - Search And Rescue": 30270,
+    "Clear: BAZ - Slimey Simple": 30280,
+    "Clear: BAZ - Split Down The Middle": 30290,
+    "Clear: BAZ - The Hard Rock Life": 30300,
+    "Clear: BAZ - The Path To Power": 30310,
+    "Clear: BAZ - Water Lot Of Fun": 30320,
+    "Clear: BAZ - Water Works": 30330,
     
-    "Clear: LRRC - A Breath Of Fresh Air": 2001,
-    "Clear: LRRC - Air Raiders": 2002,
-    "Clear: LRRC - Back To Basics": 2003,
-    "Clear: LRRC - Breathless": 2004,
-    "Clear: LRRC - Don't Panic": 2005,
-    "Clear: LRRC - Driller Night": 2006,
-    "Clear: LRRC - Erode Works": 2007,
-    "Clear: LRRC - Explosive Action": 2008,
-    "Clear: LRRC - Fire And Water": 2009,
-    "Clear: LRRC - Frozen Frenzy": 2010,
-    "Clear: LRRC - Hot Stuff": 2011,
-    "Clear: LRRC - Ice Spy": 2012,
-    "Clear: LRRC - It's A Hold Up": 2013,
-    "Clear: LRRC - Lake Of Fire": 2014,
-    "Clear: LRRC - Lava Laughter": 2015,
-    "Clear: LRRC - Oresome": 2016,
-    "Clear: LRRC - Rock Hard": 2017,
-    "Clear: LRRC - Rocky Horror": 2018,
-    "Clear: LRRC - Rubble Trouble": 2019,
-    "Clear: LRRC - Run The Gauntlet": 2020,
-    "Clear: LRRC - Search And Rescue": 2021,
-    "Clear: LRRC - Split Down The Middle": 2022,
-    "Clear: LRRC - The Path To Power": 2023,
-    "Clear: LRRC - Water Lot Of Fun": 2024,
-    "Clear: LRRC - Water Works": 2025,
-    
-    "Beat Par Time: LRRC - A Breath Of Fresh Air": 2101,
-    "Beat Par Time: LRRC - Air Raiders": 2102,
-    "Beat Par Time: LRRC - Back To Basics": 2103,
-    "Beat Par Time: LRRC - Breathless": 2104,
-    "Beat Par Time: LRRC - Don't Panic": 2105,
-    "Beat Par Time: LRRC - Driller Night": 2106,
-    "Beat Par Time: LRRC - Erode Works": 2107,
-    "Beat Par Time: LRRC - Explosive Action": 2108,
-    "Beat Par Time: LRRC - Fire And Water": 2109,
-    "Beat Par Time: LRRC - Frozen Frenzy": 2110,
-    "Beat Par Time: LRRC - Hot Stuff": 2111,
-    "Beat Par Time: LRRC - Ice Spy": 2112,
-    "Beat Par Time: LRRC - It's A Hold Up": 2113,
-    "Beat Par Time: LRRC - Lake Of Fire": 2114,
-    "Beat Par Time: LRRC - Lava Laughter": 2115,
-    "Beat Par Time: LRRC - Oresome": 2116,
-    "Beat Par Time: LRRC - Rock Hard": 2117,
-    "Beat Par Time: LRRC - Rocky Horror": 2118,
-    "Beat Par Time: LRRC - Rubble Trouble": 2119,
-    "Beat Par Time: LRRC - Run The Gauntlet": 2120,
-    "Beat Par Time: LRRC - Search And Rescue": 2121,
-    "Beat Par Time: LRRC - Split Down The Middle": 2122,
-    "Beat Par Time: LRRC - The Path To Power": 2123,
-    "Beat Par Time: LRRC - Water Lot Of Fun": 2124,
-    "Beat Par Time: LRRC - Water Works": 2125,
-    
-    "Clear: BAZ - A Breath Of Fresh Air": 3001,
-    "Clear: BAZ - Air Raiders": 3002,
-    "Clear: BAZ - Back To Basics": 3003,
-    "Clear: BAZ - Breathless": 3004,
-    "Clear: BAZ - Cold Comfort": 3005,
-    "Clear: BAZ - Don't Panic": 3006,
-    "Clear: BAZ - Down In The Dirt": 3007,
-    "Clear: BAZ - Driller Night": 3008,
-    "Clear: BAZ - Erode Works": 3009,
-    "Clear: BAZ - Explosive Action": 3010,
-    "Clear: BAZ - Fire And Water": 3011,
-    "Clear: BAZ - Frozen Frenzy": 3012,
-    "Clear: BAZ - Hot Stuff": 3013,
-    "Clear: BAZ - Ice Spy": 3014,
-    "Clear: BAZ - It's A Hold Up": 3015,
-    "Clear: BAZ - Lake Of Fire": 3016,
-    "Clear: BAZ - Lava Laughter": 3017,
-    "Clear: BAZ - Mine Over Matter": 3018,
-    "Clear: BAZ - Molten Meltdown": 3019,
-    "Clear: BAZ - Oresome": 3020,
-    "Clear: BAZ - Recruitment": 3021,
-    "Clear: BAZ - Rock Hard": 3022,
-    "Clear: BAZ - Rocky Horror": 3023,
-    "Clear: BAZ - Rubble Trouble": 3024,
-    "Clear: BAZ - Run The Gauntlet": 3025,
-    "Clear: BAZ - Seamless": 3026,
-    "Clear: BAZ - Search And Rescue": 3027,
-    "Clear: BAZ - Slimey Simple": 3028,
-    "Clear: BAZ - Split Down The Middle": 3029,
-    "Clear: BAZ - The Hard Rock Life": 3030,
-    "Clear: BAZ - The Path To Power": 3031,
-    "Clear: BAZ - Water Lot Of Fun": 3032,
-    "Clear: BAZ - Water Works": 3033,
-    
-    "Beat Par Time: BAZ - A Breath Of Fresh Air": 3101,
-    "Beat Par Time: BAZ - Air Raiders": 3102,
-    "Beat Par Time: BAZ - Back To Basics": 3103,
-    "Beat Par Time: BAZ - Breathless": 3104,
-    "Beat Par Time: BAZ - Cold Comfort": 3105,
-    "Beat Par Time: BAZ - Don't Panic": 3106,
-    "Beat Par Time: BAZ - Down In The Dirt": 3107,
-    "Beat Par Time: BAZ - Driller Night": 3108,
-    "Beat Par Time: BAZ - Erode Works": 3109,
-    "Beat Par Time: BAZ - Explosive Action": 3110,
-    "Beat Par Time: BAZ - Fire And Water": 3111,
-    "Beat Par Time: BAZ - Frozen Frenzy": 3112,
-    "Beat Par Time: BAZ - Hot Stuff": 3113,
-    "Beat Par Time: BAZ - Ice Spy": 3114,
-    "Beat Par Time: BAZ - It's A Hold Up": 3115,
-    "Beat Par Time: BAZ - Lake Of Fire": 3116,
-    "Beat Par Time: BAZ - Lava Laughter": 3117,
-    "Beat Par Time: BAZ - Mine Over Matter": 3118,
-    "Beat Par Time: BAZ - Molten Meltdown": 3119,
-    "Beat Par Time: BAZ - Oresome": 3120,
-    "Beat Par Time: BAZ - Recruitment": 3121,
-    "Beat Par Time: BAZ - Rock Hard": 3122,
-    "Beat Par Time: BAZ - Rocky Horror": 3123,
-    "Beat Par Time: BAZ - Rubble Trouble": 3124,
-    "Beat Par Time: BAZ - Run The Gauntlet": 3125,
-    "Beat Par Time: BAZ - Seamless": 3126,
-    "Beat Par Time: BAZ - Search And Rescue": 3127,
-    "Beat Par Time: BAZ - Slimey Simple": 3128,
-    "Beat Par Time: BAZ - Split Down The Middle": 3129,
-    "Beat Par Time: BAZ - The Hard Rock Life": 3130,
-    "Beat Par Time: BAZ - The Path To Power": 3131,
-    "Beat Par Time: BAZ - Water Lot Of Fun": 3132,
-    "Beat Par Time: BAZ - Water Works": 3133
+    "Beat Par Time: BAZ - A Breath Of Fresh Air": 31010,
+    "Beat Par Time: BAZ - Air Raiders": 31020,
+    "Beat Par Time: BAZ - Back To Basics": 31030,
+    "Beat Par Time: BAZ - Breathless": 31040,
+    "Beat Par Time: BAZ - Cold Comfort": 31050,
+    "Beat Par Time: BAZ - Don't Panic": 31060,
+    "Beat Par Time: BAZ - Down In The Dirt": 31070,
+    "Beat Par Time: BAZ - Driller Night": 31080,
+    "Beat Par Time: BAZ - Erode Works": 31090,
+    "Beat Par Time: BAZ - Explosive Action": 31100,
+    "Beat Par Time: BAZ - Fire And Water": 31110,
+    "Beat Par Time: BAZ - Frozen Frenzy": 31120,
+    "Beat Par Time: BAZ - Hot Stuff": 31130,
+    "Beat Par Time: BAZ - Ice Spy": 31140,
+    "Beat Par Time: BAZ - It's A Hold Up": 31150,
+    "Beat Par Time: BAZ - Lake Of Fire": 31160,
+    "Beat Par Time: BAZ - Lava Laughter": 31170,
+    "Beat Par Time: BAZ - Mine Over Matter": 31180,
+    "Beat Par Time: BAZ - Molten Meltdown": 31190,
+    "Beat Par Time: BAZ - Oresome": 31200,
+    "Beat Par Time: BAZ - Recruitment": 31210,
+    "Beat Par Time: BAZ - Rock Hard": 31220,
+    "Beat Par Time: BAZ - Rocky Horror": 31230,
+    "Beat Par Time: BAZ - Rubble Trouble": 31240,
+    "Beat Par Time: BAZ - Run The Gauntlet": 31250,
+    "Beat Par Time: BAZ - Seamless": 31260,
+    "Beat Par Time: BAZ - Search And Rescue": 31270,
+    "Beat Par Time: BAZ - Slimey Simple": 31280,
+    "Beat Par Time: BAZ - Split Down The Middle": 31290,
+    "Beat Par Time: BAZ - The Hard Rock Life": 31300,
+    "Beat Par Time: BAZ - The Path To Power": 31310,
+    "Beat Par Time: BAZ - Water Lot Of Fun": 31320,
+    "Beat Par Time: BAZ - Water Works": 31330
 }
 
 TARGET_CLEAR_TIME_EASY = {
@@ -847,6 +1018,120 @@ def create_regular_locations(world: ManicMinersWorld) -> None:
         locations_lrr_waterworks = get_location_names_with_ids(["Clear: LRR - Water Works"])
         region_lrr_waterworks.add_locations(locations_lrr_waterworks, ManicMinersLocation)
         
+        if world.options.bonus_clear_locations:
+            locations_lrr_abreathoffreshair_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - A Breath Of Fresh Air"])
+            region_lrr_abreathoffreshair.add_locations(locations_lrr_abreathoffreshair_bonus1, ManicMinersLocation)
+            locations_lrr_airraiders_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Air Raiders"])
+            region_lrr_airraiders.add_locations(locations_lrr_airraiders_bonus1, ManicMinersLocation)
+            locations_lrr_airraiders_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Air Raiders"])
+            region_lrr_airraiders.add_locations(locations_lrr_airraiders_bonus2, ManicMinersLocation)
+            locations_lrr_airraiders_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRR - Air Raiders"])
+            region_lrr_airraiders.add_locations(locations_lrr_airraiders_bonus3, ManicMinersLocation)
+            locations_lrr_backtobasics_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Back To Basics"])
+            region_lrr_backtobasics.add_locations(locations_lrr_backtobasics_bonus1, ManicMinersLocation)
+            locations_lrr_backtobasics_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Back To Basics"])
+            region_lrr_backtobasics.add_locations(locations_lrr_backtobasics_bonus2, ManicMinersLocation)
+            locations_lrr_backtobasics_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRR - Back To Basics"])
+            region_lrr_backtobasics.add_locations(locations_lrr_backtobasics_bonus3, ManicMinersLocation)
+            locations_lrr_backtobasics_bonus4 = get_location_names_with_ids(["Bonus Clear 4: LRR - Back To Basics"])
+            region_lrr_backtobasics.add_locations(locations_lrr_backtobasics_bonus4, ManicMinersLocation)
+            locations_lrr_breathless_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Breathless"])
+            region_lrr_breathless.add_locations(locations_lrr_breathless_bonus1, ManicMinersLocation)
+            locations_lrr_breathless_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Breathless"])
+            region_lrr_breathless.add_locations(locations_lrr_breathless_bonus2, ManicMinersLocation)
+            locations_lrr_dontpanic_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Don't Panic"])
+            region_lrr_dontpanic.add_locations(locations_lrr_dontpanic_bonus1, ManicMinersLocation)
+            locations_lrr_dontpanic_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Don't Panic"])
+            region_lrr_dontpanic.add_locations(locations_lrr_dontpanic_bonus2, ManicMinersLocation)
+            locations_lrr_dontpanic_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRR - Don't Panic"])
+            region_lrr_dontpanic.add_locations(locations_lrr_dontpanic_bonus3, ManicMinersLocation)
+            locations_lrr_drillernight_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Driller Night"])
+            region_lrr_drillernight.add_locations(locations_lrr_drillernight_bonus1, ManicMinersLocation)
+            locations_lrr_erodeworks_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Erode Works"])
+            region_lrr_erodeworks.add_locations(locations_lrr_erodeworks_bonus1, ManicMinersLocation)
+            locations_lrr_erodeworks_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Erode Works"])
+            region_lrr_erodeworks.add_locations(locations_lrr_erodeworks_bonus2, ManicMinersLocation)
+            locations_lrr_explosiveaction_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Explosive Action"])
+            region_lrr_explosiveaction.add_locations(locations_lrr_explosiveaction_bonus1, ManicMinersLocation)
+            locations_lrr_fireandwater_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Fire And Water"])
+            region_lrr_fireandwater.add_locations(locations_lrr_fireandwater_bonus1, ManicMinersLocation)
+            locations_lrr_fireandwater_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Fire And Water"])
+            region_lrr_fireandwater.add_locations(locations_lrr_fireandwater_bonus2, ManicMinersLocation)
+            locations_lrr_fireandwater_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRR - Fire And Water"])
+            region_lrr_fireandwater.add_locations(locations_lrr_fireandwater_bonus3, ManicMinersLocation)
+            locations_lrr_frozenfrenzy_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Frozen Frenzy"])
+            region_lrr_frozenfrenzy.add_locations(locations_lrr_frozenfrenzy_bonus1, ManicMinersLocation)
+            locations_lrr_frozenfrenzy_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Frozen Frenzy"])
+            region_lrr_frozenfrenzy.add_locations(locations_lrr_frozenfrenzy_bonus2, ManicMinersLocation)
+            locations_lrr_hotstuff_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Hot Stuff"])
+            region_lrr_hotstuff.add_locations(locations_lrr_hotstuff_bonus1, ManicMinersLocation)
+            locations_lrr_hotstuff_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Hot Stuff"])
+            region_lrr_hotstuff.add_locations(locations_lrr_hotstuff_bonus2, ManicMinersLocation)
+            locations_lrr_hotstuff_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRR - Hot Stuff"])
+            region_lrr_hotstuff.add_locations(locations_lrr_hotstuff_bonus3, ManicMinersLocation)
+            locations_lrr_hotstuff_bonus4 = get_location_names_with_ids(["Bonus Clear 4: LRR - Hot Stuff"])
+            region_lrr_hotstuff.add_locations(locations_lrr_hotstuff_bonus4, ManicMinersLocation)
+            locations_lrr_icespy_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Ice Spy"])
+            region_lrr_icespy.add_locations(locations_lrr_icespy_bonus1, ManicMinersLocation)
+            locations_lrr_icespy_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Ice Spy"])
+            region_lrr_icespy.add_locations(locations_lrr_icespy_bonus2, ManicMinersLocation)
+            locations_lrr_icespy_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRR - Ice Spy"])
+            region_lrr_icespy.add_locations(locations_lrr_icespy_bonus3, ManicMinersLocation)
+            locations_lrr_itsaholdup_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - It's A Hold Up"])
+            region_lrr_itsaholdup.add_locations(locations_lrr_itsaholdup_bonus1, ManicMinersLocation)
+            locations_lrr_lakeoffire_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Lake Of Fire"])
+            region_lrr_lakeoffire.add_locations(locations_lrr_lakeoffire_bonus1, ManicMinersLocation)
+            locations_lrr_lakeoffire_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Lake Of Fire"])
+            region_lrr_lakeoffire.add_locations(locations_lrr_lakeoffire_bonus2, ManicMinersLocation)
+            locations_lrr_lakeoffire_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRR - Lake Of Fire"])
+            region_lrr_lakeoffire.add_locations(locations_lrr_lakeoffire_bonus3, ManicMinersLocation)
+            locations_lrr_lavalaughter_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Lava Laughter"])
+            region_lrr_lavalaughter.add_locations(locations_lrr_lavalaughter_bonus1, ManicMinersLocation)
+            locations_lrr_lavalaughter_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Lava Laughter"])
+            region_lrr_lavalaughter.add_locations(locations_lrr_lavalaughter_bonus2, ManicMinersLocation)
+            locations_lrr_lavalaughter_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRR - Lava Laughter"])
+            region_lrr_lavalaughter.add_locations(locations_lrr_lavalaughter_bonus3, ManicMinersLocation)
+            locations_lrr_oresome_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Oresome"])
+            region_lrr_oresome.add_locations(locations_lrr_oresome_bonus1, ManicMinersLocation)
+            locations_lrr_oresome_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Oresome"])
+            region_lrr_oresome.add_locations(locations_lrr_oresome_bonus2, ManicMinersLocation)
+            locations_lrr_oresome_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRR - Oresome"])
+            region_lrr_oresome.add_locations(locations_lrr_oresome_bonus3, ManicMinersLocation)
+            locations_lrr_rockhard_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Rock Hard"])
+            region_lrr_rockhard.add_locations(locations_lrr_rockhard_bonus1, ManicMinersLocation)
+            locations_lrr_rockhard_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Rock Hard"])
+            region_lrr_rockhard.add_locations(locations_lrr_rockhard_bonus2, ManicMinersLocation)
+            locations_lrr_rockyhorror_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Rocky Horror"])
+            region_lrr_rockyhorror.add_locations(locations_lrr_rockyhorror_bonus1, ManicMinersLocation)
+            locations_lrr_rockyhorror_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Rocky Horror"])
+            region_lrr_rockyhorror.add_locations(locations_lrr_rockyhorror_bonus2, ManicMinersLocation)
+            locations_lrr_rockyhorror_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRR - Rocky Horror"])
+            region_lrr_rockyhorror.add_locations(locations_lrr_rockyhorror_bonus3, ManicMinersLocation)
+            locations_lrr_rockyhorror_bonus4 = get_location_names_with_ids(["Bonus Clear 4: LRR - Rocky Horror"])
+            region_lrr_rockyhorror.add_locations(locations_lrr_rockyhorror_bonus4, ManicMinersLocation)
+            locations_lrr_rubbletrouble_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Rubble Trouble"])
+            region_lrr_rubbletrouble.add_locations(locations_lrr_rubbletrouble_bonus1, ManicMinersLocation)
+            locations_lrr_runthegauntlet_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Run The Gauntlet"])
+            region_lrr_runthegauntlet.add_locations(locations_lrr_runthegauntlet_bonus1, ManicMinersLocation)
+            locations_lrr_searchandrescue_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Search And Rescue"])
+            region_lrr_searchandrescue.add_locations(locations_lrr_searchandrescue_bonus1, ManicMinersLocation)
+            locations_lrr_searchandrescue_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Search And Rescue"])
+            region_lrr_searchandrescue.add_locations(locations_lrr_searchandrescue_bonus2, ManicMinersLocation)
+            locations_lrr_splitdownthemiddle_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Split Down The Middle"])
+            region_lrr_splitdownthemiddle.add_locations(locations_lrr_splitdownthemiddle_bonus1, ManicMinersLocation)
+            locations_lrr_splitdownthemiddle_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Split Down The Middle"])
+            region_lrr_splitdownthemiddle.add_locations(locations_lrr_splitdownthemiddle_bonus2, ManicMinersLocation)
+            locations_lrr_thepathtopower_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - The Path To Power"])
+            region_lrr_thepathtopower.add_locations(locations_lrr_thepathtopower_bonus1, ManicMinersLocation)
+            locations_lrr_waterlotoffun_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Water Lot Of Fun"])
+            region_lrr_waterlotoffun.add_locations(locations_lrr_waterlotoffun_bonus1, ManicMinersLocation)
+            locations_lrr_waterlotoffun_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Water Lot Of Fun"])
+            region_lrr_waterlotoffun.add_locations(locations_lrr_waterlotoffun_bonus2, ManicMinersLocation)
+            locations_lrr_waterworks_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRR - Water Works"])
+            region_lrr_waterworks.add_locations(locations_lrr_waterworks_bonus1, ManicMinersLocation)            
+            locations_lrr_waterworks_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRR - Water Works"])
+            region_lrr_waterworks.add_locations(locations_lrr_waterworks_bonus2, ManicMinersLocation)            
+        
         if world.options.target_times_are_checks:
             locations_lrr_abreathoffreshair = get_location_names_with_ids(["Beat Par Time: LRR - A Breath Of Fresh Air"])
             region_lrr_abreathoffreshair.add_locations(locations_lrr_abreathoffreshair, ManicMinersLocation)
@@ -925,6 +1210,120 @@ def create_regular_locations(world: ManicMinersWorld) -> None:
         region_lrrr_thepathtopower = world.get_region("LRRR - The Path To Power")
         region_lrrr_waterlotoffun = world.get_region("LRRR - Water Lot Of Fun")
         region_lrrr_waterworks = world.get_region("LRRR - Water Works")
+
+        if world.options.bonus_clear_locations:
+            locations_lrrr_abreathoffreshair_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - A Breath Of Fresh Air"])
+            region_lrrr_abreathoffreshair.add_locations(locations_lrrr_abreathoffreshair_bonus1, ManicMinersLocation)
+            locations_lrrr_airraiders_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Air Raiders"])
+            region_lrrr_airraiders.add_locations(locations_lrrr_airraiders_bonus1, ManicMinersLocation)
+            locations_lrrr_airraiders_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Air Raiders"])
+            region_lrrr_airraiders.add_locations(locations_lrrr_airraiders_bonus2, ManicMinersLocation)
+            locations_lrrr_airraiders_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRR - Air Raiders"])
+            region_lrrr_airraiders.add_locations(locations_lrrr_airraiders_bonus3, ManicMinersLocation)
+            locations_lrrr_backtobasics_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Back To Basics"])
+            region_lrrr_backtobasics.add_locations(locations_lrrr_backtobasics_bonus1, ManicMinersLocation)
+            locations_lrrr_backtobasics_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Back To Basics"])
+            region_lrrr_backtobasics.add_locations(locations_lrrr_backtobasics_bonus2, ManicMinersLocation)
+            locations_lrrr_backtobasics_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRR - Back To Basics"])
+            region_lrrr_backtobasics.add_locations(locations_lrrr_backtobasics_bonus3, ManicMinersLocation)
+            locations_lrrr_backtobasics_bonus4 = get_location_names_with_ids(["Bonus Clear 4: LRRR - Back To Basics"])
+            region_lrrr_backtobasics.add_locations(locations_lrrr_backtobasics_bonus4, ManicMinersLocation)
+            locations_lrrr_breathless_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Breathless"])
+            region_lrrr_breathless.add_locations(locations_lrrr_breathless_bonus1, ManicMinersLocation)
+            locations_lrrr_breathless_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Breathless"])
+            region_lrrr_breathless.add_locations(locations_lrrr_breathless_bonus2, ManicMinersLocation)
+            locations_lrrr_dontpanic_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Don't Panic"])
+            region_lrrr_dontpanic.add_locations(locations_lrrr_dontpanic_bonus1, ManicMinersLocation)
+            locations_lrrr_dontpanic_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Don't Panic"])
+            region_lrrr_dontpanic.add_locations(locations_lrrr_dontpanic_bonus2, ManicMinersLocation)
+            locations_lrrr_dontpanic_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRR - Don't Panic"])
+            region_lrrr_dontpanic.add_locations(locations_lrrr_dontpanic_bonus3, ManicMinersLocation)
+            locations_lrrr_drillernight_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Driller Night"])
+            region_lrrr_drillernight.add_locations(locations_lrrr_drillernight_bonus1, ManicMinersLocation)
+            locations_lrrr_erodeworks_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Erode Works"])
+            region_lrrr_erodeworks.add_locations(locations_lrrr_erodeworks_bonus1, ManicMinersLocation)
+            locations_lrrr_erodeworks_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Erode Works"])
+            region_lrrr_erodeworks.add_locations(locations_lrrr_erodeworks_bonus2, ManicMinersLocation)
+            locations_lrrr_explosiveaction_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Explosive Action"])
+            region_lrrr_explosiveaction.add_locations(locations_lrrr_explosiveaction_bonus1, ManicMinersLocation)
+            locations_lrrr_fireandwater_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Fire And Water"])
+            region_lrrr_fireandwater.add_locations(locations_lrrr_fireandwater_bonus1, ManicMinersLocation)
+            locations_lrrr_fireandwater_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Fire And Water"])
+            region_lrrr_fireandwater.add_locations(locations_lrrr_fireandwater_bonus2, ManicMinersLocation)
+            locations_lrrr_fireandwater_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRR - Fire And Water"])
+            region_lrrr_fireandwater.add_locations(locations_lrrr_fireandwater_bonus3, ManicMinersLocation)
+            locations_lrrr_frozenfrenzy_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Frozen Frenzy"])
+            region_lrrr_frozenfrenzy.add_locations(locations_lrrr_frozenfrenzy_bonus1, ManicMinersLocation)
+            locations_lrrr_frozenfrenzy_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Frozen Frenzy"])
+            region_lrrr_frozenfrenzy.add_locations(locations_lrrr_frozenfrenzy_bonus2, ManicMinersLocation)
+            locations_lrrr_hotstuff_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Hot Stuff"])
+            region_lrrr_hotstuff.add_locations(locations_lrrr_hotstuff_bonus1, ManicMinersLocation)
+            locations_lrrr_hotstuff_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Hot Stuff"])
+            region_lrrr_hotstuff.add_locations(locations_lrrr_hotstuff_bonus2, ManicMinersLocation)
+            locations_lrrr_hotstuff_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRR - Hot Stuff"])
+            region_lrrr_hotstuff.add_locations(locations_lrrr_hotstuff_bonus3, ManicMinersLocation)
+            locations_lrrr_hotstuff_bonus4 = get_location_names_with_ids(["Bonus Clear 4: LRRR - Hot Stuff"])
+            region_lrrr_hotstuff.add_locations(locations_lrrr_hotstuff_bonus4, ManicMinersLocation)
+            locations_lrrr_icespy_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Ice Spy"])
+            region_lrrr_icespy.add_locations(locations_lrrr_icespy_bonus1, ManicMinersLocation)
+            locations_lrrr_icespy_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Ice Spy"])
+            region_lrrr_icespy.add_locations(locations_lrrr_icespy_bonus2, ManicMinersLocation)
+            locations_lrrr_icespy_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRR - Ice Spy"])
+            region_lrrr_icespy.add_locations(locations_lrrr_icespy_bonus3, ManicMinersLocation)
+            locations_lrrr_itsaholdup_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - It's A Hold Up"])
+            region_lrrr_itsaholdup.add_locations(locations_lrrr_itsaholdup_bonus1, ManicMinersLocation)
+            locations_lrrr_lakeoffire_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Lake Of Fire"])
+            region_lrrr_lakeoffire.add_locations(locations_lrrr_lakeoffire_bonus1, ManicMinersLocation)
+            locations_lrrr_lakeoffire_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Lake Of Fire"])
+            region_lrrr_lakeoffire.add_locations(locations_lrrr_lakeoffire_bonus2, ManicMinersLocation)
+            locations_lrrr_lakeoffire_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRR - Lake Of Fire"])
+            region_lrrr_lakeoffire.add_locations(locations_lrrr_lakeoffire_bonus3, ManicMinersLocation)
+            locations_lrrr_lavalaughter_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Lava Laughter"])
+            region_lrrr_lavalaughter.add_locations(locations_lrrr_lavalaughter_bonus1, ManicMinersLocation)
+            locations_lrrr_lavalaughter_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Lava Laughter"])
+            region_lrrr_lavalaughter.add_locations(locations_lrrr_lavalaughter_bonus2, ManicMinersLocation)
+            locations_lrrr_lavalaughter_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRR - Lava Laughter"])
+            region_lrrr_lavalaughter.add_locations(locations_lrrr_lavalaughter_bonus3, ManicMinersLocation)
+            locations_lrrr_oresome_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Oresome"])
+            region_lrrr_oresome.add_locations(locations_lrrr_oresome_bonus1, ManicMinersLocation)
+            locations_lrrr_oresome_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Oresome"])
+            region_lrrr_oresome.add_locations(locations_lrrr_oresome_bonus2, ManicMinersLocation)
+            locations_lrrr_oresome_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRR - Oresome"])
+            region_lrrr_oresome.add_locations(locations_lrrr_oresome_bonus3, ManicMinersLocation)
+            locations_lrrr_rockhard_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Rock Hard"])
+            region_lrrr_rockhard.add_locations(locations_lrrr_rockhard_bonus1, ManicMinersLocation)
+            locations_lrrr_rockhard_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Rock Hard"])
+            region_lrrr_rockhard.add_locations(locations_lrrr_rockhard_bonus2, ManicMinersLocation)
+            locations_lrrr_rockyhorror_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Rocky Horror"])
+            region_lrrr_rockyhorror.add_locations(locations_lrrr_rockyhorror_bonus1, ManicMinersLocation)
+            locations_lrrr_rockyhorror_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Rocky Horror"])
+            region_lrrr_rockyhorror.add_locations(locations_lrrr_rockyhorror_bonus2, ManicMinersLocation)
+            locations_lrrr_rockyhorror_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRR - Rocky Horror"])
+            region_lrrr_rockyhorror.add_locations(locations_lrrr_rockyhorror_bonus3, ManicMinersLocation)
+            locations_lrrr_rockyhorror_bonus4 = get_location_names_with_ids(["Bonus Clear 4: LRRR - Rocky Horror"])
+            region_lrrr_rockyhorror.add_locations(locations_lrrr_rockyhorror_bonus4, ManicMinersLocation)
+            locations_lrrr_rubbletrouble_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Rubble Trouble"])
+            region_lrrr_rubbletrouble.add_locations(locations_lrrr_rubbletrouble_bonus1, ManicMinersLocation)
+            locations_lrrr_runthegauntlet_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Run The Gauntlet"])
+            region_lrrr_runthegauntlet.add_locations(locations_lrrr_runthegauntlet_bonus1, ManicMinersLocation)
+            locations_lrrr_searchandrescue_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Search And Rescue"])
+            region_lrrr_searchandrescue.add_locations(locations_lrrr_searchandrescue_bonus1, ManicMinersLocation)
+            locations_lrrr_searchandrescue_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Search And Rescue"])
+            region_lrrr_searchandrescue.add_locations(locations_lrrr_searchandrescue_bonus2, ManicMinersLocation)
+            locations_lrrr_splitdownthemiddle_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Split Down The Middle"])
+            region_lrrr_splitdownthemiddle.add_locations(locations_lrrr_splitdownthemiddle_bonus1, ManicMinersLocation)
+            locations_lrrr_splitdownthemiddle_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Split Down The Middle"])
+            region_lrrr_splitdownthemiddle.add_locations(locations_lrrr_splitdownthemiddle_bonus2, ManicMinersLocation)
+            locations_lrrr_thepathtopower_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - The Path To Power"])
+            region_lrrr_thepathtopower.add_locations(locations_lrrr_thepathtopower_bonus1, ManicMinersLocation)
+            locations_lrrr_waterlotoffun_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Water Lot Of Fun"])
+            region_lrrr_waterlotoffun.add_locations(locations_lrrr_waterlotoffun_bonus1, ManicMinersLocation)
+            locations_lrrr_waterlotoffun_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Water Lot Of Fun"])
+            region_lrrr_waterlotoffun.add_locations(locations_lrrr_waterlotoffun_bonus2, ManicMinersLocation)
+            locations_lrrr_waterworks_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRR - Water Works"])
+            region_lrrr_waterworks.add_locations(locations_lrrr_waterworks_bonus1, ManicMinersLocation)            
+            locations_lrrr_waterworks_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRR - Water Works"])
+            region_lrrr_waterworks.add_locations(locations_lrrr_waterworks_bonus2, ManicMinersLocation)   
         
         locations_lrrr_abreathoffreshair = get_location_names_with_ids(["Clear: LRRR - A Breath Of Fresh Air"])
         region_lrrr_abreathoffreshair.add_locations(locations_lrrr_abreathoffreshair, ManicMinersLocation)
@@ -1055,6 +1454,120 @@ def create_regular_locations(world: ManicMinersWorld) -> None:
         region_lrrc_thepathtopower = world.get_region("LRRC - The Path To Power")
         region_lrrc_waterlotoffun = world.get_region("LRRC - Water Lot Of Fun")
         region_lrrc_waterworks = world.get_region("LRRC - Water Works")
+
+        if world.options.bonus_clear_locations:
+            locations_lrrc_abreathoffreshair_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - A Breath Of Fresh Air"])
+            region_lrrc_abreathoffreshair.add_locations(locations_lrrc_abreathoffreshair_bonus1, ManicMinersLocation)
+            locations_lrrc_airraiders_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Air Raiders"])
+            region_lrrc_airraiders.add_locations(locations_lrrc_airraiders_bonus1, ManicMinersLocation)
+            locations_lrrc_airraiders_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Air Raiders"])
+            region_lrrc_airraiders.add_locations(locations_lrrc_airraiders_bonus2, ManicMinersLocation)
+            locations_lrrc_airraiders_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRC - Air Raiders"])
+            region_lrrc_airraiders.add_locations(locations_lrrc_airraiders_bonus3, ManicMinersLocation)
+            locations_lrrc_backtobasics_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Back To Basics"])
+            region_lrrc_backtobasics.add_locations(locations_lrrc_backtobasics_bonus1, ManicMinersLocation)
+            locations_lrrc_backtobasics_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Back To Basics"])
+            region_lrrc_backtobasics.add_locations(locations_lrrc_backtobasics_bonus2, ManicMinersLocation)
+            locations_lrrc_backtobasics_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRC - Back To Basics"])
+            region_lrrc_backtobasics.add_locations(locations_lrrc_backtobasics_bonus3, ManicMinersLocation)
+            locations_lrrc_backtobasics_bonus4 = get_location_names_with_ids(["Bonus Clear 4: LRRC - Back To Basics"])
+            region_lrrc_backtobasics.add_locations(locations_lrrc_backtobasics_bonus4, ManicMinersLocation)
+            locations_lrrc_breathless_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Breathless"])
+            region_lrrc_breathless.add_locations(locations_lrrc_breathless_bonus1, ManicMinersLocation)
+            locations_lrrc_breathless_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Breathless"])
+            region_lrrc_breathless.add_locations(locations_lrrc_breathless_bonus2, ManicMinersLocation)
+            locations_lrrc_dontpanic_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Don't Panic"])
+            region_lrrc_dontpanic.add_locations(locations_lrrc_dontpanic_bonus1, ManicMinersLocation)
+            locations_lrrc_dontpanic_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Don't Panic"])
+            region_lrrc_dontpanic.add_locations(locations_lrrc_dontpanic_bonus2, ManicMinersLocation)
+            locations_lrrc_dontpanic_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRC - Don't Panic"])
+            region_lrrc_dontpanic.add_locations(locations_lrrc_dontpanic_bonus3, ManicMinersLocation)
+            locations_lrrc_drillernight_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Driller Night"])
+            region_lrrc_drillernight.add_locations(locations_lrrc_drillernight_bonus1, ManicMinersLocation)
+            locations_lrrc_erodeworks_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Erode Works"])
+            region_lrrc_erodeworks.add_locations(locations_lrrc_erodeworks_bonus1, ManicMinersLocation)
+            locations_lrrc_erodeworks_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Erode Works"])
+            region_lrrc_erodeworks.add_locations(locations_lrrc_erodeworks_bonus2, ManicMinersLocation)
+            locations_lrrc_explosiveaction_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Explosive Action"])
+            region_lrrc_explosiveaction.add_locations(locations_lrrc_explosiveaction_bonus1, ManicMinersLocation)
+            locations_lrrc_fireandwater_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Fire And Water"])
+            region_lrrc_fireandwater.add_locations(locations_lrrc_fireandwater_bonus1, ManicMinersLocation)
+            locations_lrrc_fireandwater_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Fire And Water"])
+            region_lrrc_fireandwater.add_locations(locations_lrrc_fireandwater_bonus2, ManicMinersLocation)
+            locations_lrrc_fireandwater_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRC - Fire And Water"])
+            region_lrrc_fireandwater.add_locations(locations_lrrc_fireandwater_bonus3, ManicMinersLocation)
+            locations_lrrc_frozenfrenzy_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Frozen Frenzy"])
+            region_lrrc_frozenfrenzy.add_locations(locations_lrrc_frozenfrenzy_bonus1, ManicMinersLocation)
+            locations_lrrc_frozenfrenzy_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Frozen Frenzy"])
+            region_lrrc_frozenfrenzy.add_locations(locations_lrrc_frozenfrenzy_bonus2, ManicMinersLocation)
+            locations_lrrc_hotstuff_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Hot Stuff"])
+            region_lrrc_hotstuff.add_locations(locations_lrrc_hotstuff_bonus1, ManicMinersLocation)
+            locations_lrrc_hotstuff_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Hot Stuff"])
+            region_lrrc_hotstuff.add_locations(locations_lrrc_hotstuff_bonus2, ManicMinersLocation)
+            locations_lrrc_hotstuff_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRC - Hot Stuff"])
+            region_lrrc_hotstuff.add_locations(locations_lrrc_hotstuff_bonus3, ManicMinersLocation)
+            locations_lrrc_hotstuff_bonus4 = get_location_names_with_ids(["Bonus Clear 4: LRRC - Hot Stuff"])
+            region_lrrc_hotstuff.add_locations(locations_lrrc_hotstuff_bonus4, ManicMinersLocation)
+            locations_lrrc_icespy_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Ice Spy"])
+            region_lrrc_icespy.add_locations(locations_lrrc_icespy_bonus1, ManicMinersLocation)
+            locations_lrrc_icespy_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Ice Spy"])
+            region_lrrc_icespy.add_locations(locations_lrrc_icespy_bonus2, ManicMinersLocation)
+            locations_lrrc_icespy_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRC - Ice Spy"])
+            region_lrrc_icespy.add_locations(locations_lrrc_icespy_bonus3, ManicMinersLocation)
+            locations_lrrc_itsaholdup_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - It's A Hold Up"])
+            region_lrrc_itsaholdup.add_locations(locations_lrrc_itsaholdup_bonus1, ManicMinersLocation)
+            locations_lrrc_lakeoffire_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Lake Of Fire"])
+            region_lrrc_lakeoffire.add_locations(locations_lrrc_lakeoffire_bonus1, ManicMinersLocation)
+            locations_lrrc_lakeoffire_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Lake Of Fire"])
+            region_lrrc_lakeoffire.add_locations(locations_lrrc_lakeoffire_bonus2, ManicMinersLocation)
+            locations_lrrc_lakeoffire_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRC - Lake Of Fire"])
+            region_lrrc_lakeoffire.add_locations(locations_lrrc_lakeoffire_bonus3, ManicMinersLocation)
+            locations_lrrc_lavalaughter_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Lava Laughter"])
+            region_lrrc_lavalaughter.add_locations(locations_lrrc_lavalaughter_bonus1, ManicMinersLocation)
+            locations_lrrc_lavalaughter_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Lava Laughter"])
+            region_lrrc_lavalaughter.add_locations(locations_lrrc_lavalaughter_bonus2, ManicMinersLocation)
+            locations_lrrc_lavalaughter_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRC - Lava Laughter"])
+            region_lrrc_lavalaughter.add_locations(locations_lrrc_lavalaughter_bonus3, ManicMinersLocation)
+            locations_lrrc_oresome_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Oresome"])
+            region_lrrc_oresome.add_locations(locations_lrrc_oresome_bonus1, ManicMinersLocation)
+            locations_lrrc_oresome_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Oresome"])
+            region_lrrc_oresome.add_locations(locations_lrrc_oresome_bonus2, ManicMinersLocation)
+            locations_lrrc_oresome_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRC - Oresome"])
+            region_lrrc_oresome.add_locations(locations_lrrc_oresome_bonus3, ManicMinersLocation)
+            locations_lrrc_rockhard_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Rock Hard"])
+            region_lrrc_rockhard.add_locations(locations_lrrc_rockhard_bonus1, ManicMinersLocation)
+            locations_lrrc_rockhard_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Rock Hard"])
+            region_lrrc_rockhard.add_locations(locations_lrrc_rockhard_bonus2, ManicMinersLocation)
+            locations_lrrc_rockyhorror_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Rocky Horror"])
+            region_lrrc_rockyhorror.add_locations(locations_lrrc_rockyhorror_bonus1, ManicMinersLocation)
+            locations_lrrc_rockyhorror_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Rocky Horror"])
+            region_lrrc_rockyhorror.add_locations(locations_lrrc_rockyhorror_bonus2, ManicMinersLocation)
+            locations_lrrc_rockyhorror_bonus3 = get_location_names_with_ids(["Bonus Clear 3: LRRC - Rocky Horror"])
+            region_lrrc_rockyhorror.add_locations(locations_lrrc_rockyhorror_bonus3, ManicMinersLocation)
+            locations_lrrc_rockyhorror_bonus4 = get_location_names_with_ids(["Bonus Clear 4: LRRC - Rocky Horror"])
+            region_lrrc_rockyhorror.add_locations(locations_lrrc_rockyhorror_bonus4, ManicMinersLocation)
+            locations_lrrc_rubbletrouble_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Rubble Trouble"])
+            region_lrrc_rubbletrouble.add_locations(locations_lrrc_rubbletrouble_bonus1, ManicMinersLocation)
+            locations_lrrc_runthegauntlet_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Run The Gauntlet"])
+            region_lrrc_runthegauntlet.add_locations(locations_lrrc_runthegauntlet_bonus1, ManicMinersLocation)
+            locations_lrrc_searchandrescue_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Search And Rescue"])
+            region_lrrc_searchandrescue.add_locations(locations_lrrc_searchandrescue_bonus1, ManicMinersLocation)
+            locations_lrrc_searchandrescue_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Search And Rescue"])
+            region_lrrc_searchandrescue.add_locations(locations_lrrc_searchandrescue_bonus2, ManicMinersLocation)
+            locations_lrrc_splitdownthemiddle_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Split Down The Middle"])
+            region_lrrc_splitdownthemiddle.add_locations(locations_lrrc_splitdownthemiddle_bonus1, ManicMinersLocation)
+            locations_lrrc_splitdownthemiddle_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Split Down The Middle"])
+            region_lrrc_splitdownthemiddle.add_locations(locations_lrrc_splitdownthemiddle_bonus2, ManicMinersLocation)
+            locations_lrrc_thepathtopower_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - The Path To Power"])
+            region_lrrc_thepathtopower.add_locations(locations_lrrc_thepathtopower_bonus1, ManicMinersLocation)
+            locations_lrrc_waterlotoffun_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Water Lot Of Fun"])
+            region_lrrc_waterlotoffun.add_locations(locations_lrrc_waterlotoffun_bonus1, ManicMinersLocation)
+            locations_lrrc_waterlotoffun_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Water Lot Of Fun"])
+            region_lrrc_waterlotoffun.add_locations(locations_lrrc_waterlotoffun_bonus2, ManicMinersLocation)
+            locations_lrrc_waterworks_bonus1 = get_location_names_with_ids(["Bonus Clear 1: LRRC - Water Works"])
+            region_lrrc_waterworks.add_locations(locations_lrrc_waterworks_bonus1, ManicMinersLocation)            
+            locations_lrrc_waterworks_bonus2 = get_location_names_with_ids(["Bonus Clear 2: LRRC - Water Works"])
+            region_lrrc_waterworks.add_locations(locations_lrrc_waterworks_bonus2, ManicMinersLocation)   
         
         locations_lrrc_abreathoffreshair = get_location_names_with_ids(["Clear: LRRC - A Breath Of Fresh Air"])
         region_lrrc_abreathoffreshair.add_locations(locations_lrrc_abreathoffreshair, ManicMinersLocation)
@@ -1661,12 +2174,23 @@ def get_locations_from_save_data(options,save_path):
         location_id = location_id_from_level_name(level[0])
         if (location_id != -1):
             location_ids.append(location_id)
+            if options["bonus_clear_locations"] == 1:
+                # generic solution that allows up to 10 checks for any level
+                location_ids.append(location_id + 1)
+                location_ids.append(location_id + 2)
+                location_ids.append(location_id + 3)
+                location_ids.append(location_id + 4)
+                location_ids.append(location_id + 5)
+                location_ids.append(location_id + 6)
+                location_ids.append(location_id + 7)
+                location_ids.append(location_id + 8)
+                location_ids.append(location_id + 9)
     
     if options["target_times_are_checks"] == 1:
         for level in levelDataList:
             location_id = location_id_from_level_name(level[0])
             if (location_id != -1):
-                location_id += 100
+                location_id += 1000
                 target_time = get_target_time(level[0], options["target_time_difficulty"])
                 if level[1] < target_time:
                     location_ids.append(location_id)
@@ -1676,221 +2200,221 @@ def get_locations_from_save_data(options,save_path):
 def location_id_from_level_name(level_name):
     match level_name:
         case "Archipelago/LRR - A Breath Of Fresh Air":
-            return 1
-        case "Archipelago/LRR - Air Raiders":
-            return 2
-        case "Archipelago/LRR - Back To Basics":
-            return 3
-        case "Archipelago/LRR - Breathless":
-            return 4
-        case "Archipelago/LRR - Don't Panic":
-            return 5
-        case "Archipelago/LRR - Driller Night":
-            return 6
-        case "Archipelago/LRR - Erode Works":
-            return 7
-        case "Archipelago/LRR - Explosive Action":
-            return 8
-        case "Archipelago/LRR - Fire And Water":
-            return 9
-        case "Archipelago/LRR - Frozen Frenzy":
             return 10
-        case "Archipelago/LRR - Hot Stuff":
-            return 11
-        case "Archipelago/LRR - Ice Spy":
-            return 12
-        case "Archipelago/LRR - It's A Hold Up":
-            return 13
-        case "Archipelago/LRR - Lake Of Fire":
-            return 14
-        case "Archipelago/LRR - Lava Laughter":
-            return 15
-        case "Archipelago/LRR - Oresome":
-            return 16
-        case "Archipelago/LRR - Rock Hard":
-            return 17
-        case "Archipelago/LRR - Rocky Horror":
-            return 18
-        case "Archipelago/LRR - Rubble Trouble":
-            return 19
-        case "Archipelago/LRR - Run The Gauntlet":
+        case "Archipelago/LRR - Air Raiders":
             return 20
+        case "Archipelago/LRR - Back To Basics":
+            return 30
+        case "Archipelago/LRR - Breathless":
+            return 40
+        case "Archipelago/LRR - Don't Panic":
+            return 50
+        case "Archipelago/LRR - Driller Night":
+            return 60
+        case "Archipelago/LRR - Erode Works":
+            return 70
+        case "Archipelago/LRR - Explosive Action":
+            return 80
+        case "Archipelago/LRR - Fire And Water":
+            return 90
+        case "Archipelago/LRR - Frozen Frenzy":
+            return 100
+        case "Archipelago/LRR - Hot Stuff":
+            return 110
+        case "Archipelago/LRR - Ice Spy":
+            return 120
+        case "Archipelago/LRR - It's A Hold Up":
+            return 130
+        case "Archipelago/LRR - Lake Of Fire":
+            return 140
+        case "Archipelago/LRR - Lava Laughter":
+            return 150
+        case "Archipelago/LRR - Oresome":
+            return 160
+        case "Archipelago/LRR - Rock Hard":
+            return 170
+        case "Archipelago/LRR - Rocky Horror":
+            return 180
+        case "Archipelago/LRR - Rubble Trouble":
+            return 190
+        case "Archipelago/LRR - Run The Gauntlet":
+            return 200
         case "Archipelago/LRR - Search And Rescue":
-            return 21
+            return 210
         case "Archipelago/LRR - Split Down The Middle":
-            return 22
+            return 220
         case "Archipelago/LRR - The Path To Power":
-            return 23
+            return 230
         case "Archipelago/LRR - Water Lot Of Fun":
-            return 24
+            return 240
         case "Archipelago/LRR - Water Works":
-            return 25
+            return 250
         case "Archipelago/LRRR - A Breath Of Fresh Air":
-            return 1001
+            return 10010
         case "Archipelago/LRRR - Air Raiders":
-            return 1002
+            return 10020
         case "Archipelago/LRRR - Back To Basics":
-            return 1003
+            return 10030
         case "Archipelago/LRRR - Breathless":
-            return 1004
+            return 10040
         case "Archipelago/LRRR - Don't Panic":
-            return 1005
+            return 10050
         case "Archipelago/LRRR - Driller Night":
-            return 1006
+            return 10060
         case "Archipelago/LRRR - Erode Works":
-            return 1007
+            return 10070
         case "Archipelago/LRRR - Explosive Action":
-            return 1008
+            return 10080
         case "Archipelago/LRRR - Fire And Water":
-            return 1009
+            return 10090
         case "Archipelago/LRRR - Frozen Frenzy":
-            return 1010
+            return 10100
         case "Archipelago/LRRR - Hot Stuff":
-            return 1011
+            return 10110
         case "Archipelago/LRRR - Ice Spy":
-            return 1012
+            return 10120
         case "Archipelago/LRRR - It's A Hold Up":
-            return 1013
+            return 10130
         case "Archipelago/LRRR - Lake Of Fire":
-            return 1014
+            return 10140
         case "Archipelago/LRRR - Lava Laughter":
-            return 1015
+            return 10150
         case "Archipelago/LRRR - Oresome":
-            return 1016
+            return 10160
         case "Archipelago/LRRR - Rock Hard":
-            return 1017
+            return 10170
         case "Archipelago/LRRR - Rocky Horror":
-            return 1018
+            return 10180
         case "Archipelago/LRRR - Rubble Trouble":
-            return 1019
+            return 10190
         case "Archipelago/LRRR - Run The Gauntlet":
-            return 1020
+            return 10200
         case "Archipelago/LRRR - Search And Rescue":
-            return 1021
+            return 10210
         case "Archipelago/LRRR - Split Down The Middle":
-            return 1022
+            return 10220
         case "Archipelago/LRRR - The Path To Power":
-            return 1023
+            return 10230
         case "Archipelago/LRRR - Water Lot Of Fun":
-            return 1024
+            return 10240
         case "Archipelago/LRRR - Water Works":
-            return 1025
+            return 10250
         case "Archipelago/LRRC - A Breath Of Fresh Air":
-            return 2001
+            return 20010
         case "Archipelago/LRRC - Air Raiders":
-            return 2002
+            return 20020
         case "Archipelago/LRRC - Back To Basics":
-            return 2003
+            return 20030
         case "Archipelago/LRRC - Breathless":
-            return 2004
+            return 20040
         case "Archipelago/LRRC - Don't Panic":
-            return 2005
+            return 20050
         case "Archipelago/LRRC - Driller Night":
-            return 2006
+            return 20060
         case "Archipelago/LRRC - Erode Works":
-            return 2007
+            return 20070
         case "Archipelago/LRRC - Explosive Action":
-            return 2008
+            return 20080
         case "Archipelago/LRRC - Fire And Water":
-            return 2009
+            return 20090
         case "Archipelago/LRRC - Frozen Frenzy":
-            return 2010
+            return 20100
         case "Archipelago/LRRC - Hot Stuff":
-            return 2011
+            return 20110
         case "Archipelago/LRRC - Ice Spy":
-            return 2012
+            return 20120
         case "Archipelago/LRRC - It's A Hold Up":
-            return 2013
+            return 20130
         case "Archipelago/LRRC - Lake Of Fire":
-            return 2014
+            return 20140
         case "Archipelago/LRRC - Lava Laughter":
-            return 2015
+            return 20150
         case "Archipelago/LRRC - Oresome":
-            return 2016
+            return 20160
         case "Archipelago/LRRC - Rock Hard":
-            return 2017
+            return 20170
         case "Archipelago/LRRC - Rocky Horror":
-            return 2018
+            return 20180
         case "Archipelago/LRRC - Rubble Trouble":
-            return 2019
+            return 20190
         case "Archipelago/LRRC - Run The Gauntlet":
-            return 2020
+            return 20200
         case "Archipelago/LRRC - Search And Rescue":
-            return 2021
+            return 20210
         case "Archipelago/LRRC - Split Down The Middle":
-            return 2022
+            return 20220
         case "Archipelago/LRRC - The Path To Power":
-            return 2023
+            return 20230
         case "Archipelago/LRRC - Water Lot Of Fun":
-            return 2024
+            return 20240
         case "Archipelago/LRRC - Water Works":
-            return 2025
+            return 20250
         case "Archipelago/BAZ - A Breath Of Fresh Air":
-            return 3001
+            return 30010
         case "Archipelago/BAZ - Air Raiders":
-            return 3002
+            return 30020
         case "Archipelago/BAZ - Back To Basics":
-            return 3003
+            return 30030
         case "Archipelago/BAZ - Breathless":
-            return 3004
+            return 30040
         case "Archipelago/BAZ - Cold Comfort":
-            return 3005
+            return 30050
         case "Archipelago/BAZ - Don't Panic":
-            return 3006
+            return 30060
         case "Archipelago/BAZ - Down In The Dirt":
-            return 3007
+            return 30070
         case "Archipelago/BAZ - Driller Night":
-            return 3008
+            return 30080
         case "Archipelago/BAZ - Erode Works":
-            return 3009
+            return 30090
         case "Archipelago/BAZ - Explosive Action":
-            return 3010
+            return 30100
         case "Archipelago/BAZ - Fire And Water":
-            return 3011
+            return 30110
         case "Archipelago/BAZ - Frozen Frenzy":
-            return 3012
+            return 30120
         case "Archipelago/BAZ - Hot Stuff":
-            return 3013
+            return 30130
         case "Archipelago/BAZ - Ice Spy":
-            return 3014
+            return 30140
         case "Archipelago/BAZ - It's A Hold Up":
-            return 3015
+            return 30150
         case "Archipelago/BAZ - Lake Of Fire":
-            return 3016
+            return 30160
         case "Archipelago/BAZ - Lava Laughter":
-            return 3017
+            return 30170
         case "Archipelago/BAZ - Mine Over Matter":
-            return 3018
+            return 30180
         case "Archipelago/BAZ - Molten Meltdown":
-            return 3019
+            return 30190
         case "Archipelago/BAZ - Oresome":
-            return 3020
+            return 30200
         case "Archipelago/BAZ - Recruitment":
-            return 3021
+            return 30210
         case "Archipelago/BAZ - Rock Hard":
-            return 3022
+            return 30220
         case "Archipelago/BAZ - Rocky Horror":
-            return 3023
+            return 30230
         case "Archipelago/BAZ - Rubble Trouble":
-            return 3024
+            return 30240
         case "Archipelago/BAZ - Run The Gauntlet":
-            return 3025
+            return 30250
         case "Archipelago/BAZ - Seamless":
-            return 3026
+            return 30260
         case "Archipelago/BAZ - Search And Rescue":
-            return 3027
+            return 30270
         case "Archipelago/BAZ - Slimey Simple":
-            return 3028
+            return 30280
         case "Archipelago/BAZ - Split Down The Middle":
-            return 3029
+            return 30290
         case "Archipelago/BAZ - The Hard Rock Life":
-            return 3030
+            return 30300
         case "Archipelago/BAZ - The Path To Power":
-            return 3031
+            return 30310
         case "Archipelago/BAZ - Water Lot Of Fun":
-            return 3032
+            return 30320
         case "Archipelago/BAZ - Water Works":
-            return 3033
+            return 30330
         case _:
             return -1
 

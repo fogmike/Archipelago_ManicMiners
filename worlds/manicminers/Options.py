@@ -106,7 +106,12 @@ class FasterBlastingAlwaysInLogic(DefaultOnToggle):
     
     display_name = "Breathing Always In Logic"
 
-
+class BonusClearLocations(Toggle):
+    """
+    When enabled, clearing a level will award 2-5 Locations instead of 1. Harder levels are worth more.
+    """
+    
+    display_name = "Enable Bonus Locations For Clearing Levels"
 
 class CampaignSelectionLRR(DefaultOnToggle):
     """
@@ -149,6 +154,7 @@ class ManicMinersOptions(PerGameCommonOptions):
     vehicles_are_items: VehiclesAreItems
     breathing_always_in_logic: BreathingAlwaysInLogic
     faster_blasting_always_in_logic: FasterBlastingAlwaysInLogic
+    bonus_clear_locations: BonusClearLocations
     campaign_selection_lrr: CampaignSelectionLRR
     campaign_selection_lrrr: CampaignSelectionLRRR
     campaign_selection_lrrc: CampaignSelectionLRRC
