@@ -264,7 +264,7 @@ TARGET_CLEAR_TIME_EASY = {
     "LRR - Search And Rescue": 660, # 11:00
     "LRR - Split Down The Middle": 720, # 12:00
     "LRR - The Path To Power": 600, # 10:00
-    "LRR - Water Lot Of Fun": 960, # 16:00
+    "LRR - Water Lot Of Fun": 3600, # 60:00
     "LRR - Water Works": 840, # 14:00
     
     "LRRR - A Breath Of Fresh Air": 1800, # 30:00
@@ -394,7 +394,7 @@ TARGET_CLEAR_TIME_MEDIUM = {
     "LRR - Search And Rescue": 420, # 07:00
     "LRR - Split Down The Middle": 480, # 08:00
     "LRR - The Path To Power": 420, # 07:00
-    "LRR - Water Lot Of Fun": 660, # 11:00
+    "LRR - Water Lot Of Fun": 2700, # 45:00
     "LRR - Water Works": 540, # 09:00
     
     "LRRR - A Breath Of Fresh Air": 1200, # 20:00
@@ -524,7 +524,7 @@ TARGET_CLEAR_TIME_HARD = {
     "LRR - Search And Rescue": 270, # 04:30
     "LRR - Split Down The Middle": 300, # 05:00
     "LRR - The Path To Power": 240, # 04:00
-    "LRR - Water Lot Of Fun": 420, # 07:00
+    "LRR - Water Lot Of Fun": 2100, # 35:00
     "LRR - Water Works": 360, # 06:00
     
     "LRRR - A Breath Of Fresh Air": 840, # 14:00
@@ -654,7 +654,7 @@ TARGET_CLEAR_TIME_ROCK_HARD = {
     "LRR - Search And Rescue": 210, # 03:30
     "LRR - Split Down The Middle": 240, # 04:00
     "LRR - The Path To Power": 180, # 03:00
-    "LRR - Water Lot Of Fun": 360, # 06:00
+    "LRR - Water Lot Of Fun": 1500, # 25:00
     "LRR - Water Works": 300, # 05:00
     
     "LRRR - A Breath Of Fresh Air": 660, # 11:00

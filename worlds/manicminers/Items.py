@@ -277,7 +277,7 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "Level Access: BAZ - Water Lot Of Fun": ItemClassification.progression,
     "Level Access: BAZ - Water Works": ItemClassification.progression,
     
-    "Building Unlock: Tool Store": ItemClassification.useful,
+    "Building Unlock: Tool Store": ItemClassification.progression,
     "Building Unlock: Teleport Pad": ItemClassification.progression,
     "Building Unlock: Docks": ItemClassification.progression,
     "Building Unlock: Canteen": ItemClassification.useful,
@@ -500,8 +500,6 @@ def create_item_with_correct_classification(world: ManicMinersWorld, name: str) 
     classification = DEFAULT_ITEM_CLASSIFICATIONS[name]
     if world.options.campaign_selection_lrrr:
         if name == "Item Unlock: Electric Fence":
-            classification = ItemClassification.progression
-        if name == "Building Unlock: Tool Store":
             classification = ItemClassification.progression
         if name == "Building Unlock: Geological Center":
             classification = ItemClassification.progression

@@ -26,7 +26,7 @@ Times given are par times in the four difficulties.
 | Search And Rescue     | 11m           | 7m              | 4m 30s        | 3m 30s             |
 | Split Down The Middle | 12m           | 8m              | 5m            | 4m                 |
 | The Path To Power     | 10m           | 7m              | 4m            | 3m                 |
-| Water Lot Of Fun      | 16m           | 11m             | 7m            | 6m                 |
+| Water Lot Of Fun      | 60m           | 45m             | 35m           | 25m                |
 | Water Works           | 14m           | 9m              | 6m            | 5m                 |
 
 # Remastered campaign
