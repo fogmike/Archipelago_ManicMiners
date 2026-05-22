@@ -295,7 +295,7 @@ TARGET_CLEAR_TIME_EASY = {
     
     "LRRC - A Breath Of Fresh Air": 720, # 12:00
     "LRRC - Air Raiders": 2400, # 40:00
-    "LRRC - Back To Basics": 2700, # 45:00
+    "LRRC - Back To Basics": 4500, # 75:00
     "LRRC - Breathless": 900, # 15:00
     "LRRC - Don't Panic": 720, # 12:00
     "LRRC - Driller Night": 300, # 05:00
@@ -425,7 +425,7 @@ TARGET_CLEAR_TIME_MEDIUM = {
     
     "LRRC - A Breath Of Fresh Air": 450, # 07:30
     "LRRC - Air Raiders": 1380, # 23:00
-    "LRRC - Back To Basics": 1620, # 27:00
+    "LRRC - Back To Basics": 2400, # 40:00
     "LRRC - Breathless": 600, # 10:00
     "LRRC - Don't Panic": 480, # 08:00
     "LRRC - Driller Night": 180, # 03:00
@@ -685,7 +685,7 @@ TARGET_CLEAR_TIME_ROCK_HARD = {
     
     "LRRC - A Breath Of Fresh Air": 240, # 04:00
     "LRRC - Air Raiders": 720, # 12:00
-    "LRRC - Back To Basics": 900, # 15:00
+    "LRRC - Back To Basics": 840, # 14:00
     "LRRC - Breathless": 180, # 03:00
     "LRRC - Don't Panic": 240, # 04:00
     "LRRC - Driller Night": 60, # 01:00

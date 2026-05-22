@@ -63,7 +63,7 @@ Times given are par times in the four difficulties.
 | :-------------------- | :------------ | :-------------- | :------------ | :----------------- |
 | A Breath of Fresh Air | 12m           | 7m 30s          | 5m            | 4m                 |
 | Air Raiders           | 40m           | 23m             | 15m           | 12m                |
-| Back to Basics        | 45m           | 27m             | 18m           | 15m                |
+| Back to Basics        | 1h 15m        | 40m             | 18m           | 14m                |
 | Breathless            | 15m           | 10m             | 4m            | 3m                 |
 | Don't Panic           | 12m           | 8m              | 5m            | 4m                 |
 | Driller Night         | 5m            | 3m              | 1m 30s        | 1m                 |
