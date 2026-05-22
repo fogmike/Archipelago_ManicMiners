@@ -51,18 +51,21 @@ def parseLevelData(fullHex,initialOffset):
     offset += 8
     
     # HighestCreatureKillCount:
+    # NB: Stat exists but game does not actually populate it!
     offset += 108
     killCountHighHex = fullHex[offset:offset+8]
     killCountHigh = hexToInt(killCountHighHex)
     offset += 8
     
     # LowestCreatureKillCount:
+    # NB: Stat exists but game does not actually populate it!
     offset += 106
     killCountLowHex = fullHex[offset:offset+8]
     killCountLow = hexToInt(killCountLowHex)
     offset += 8
     
     # LowestMinersLost:
+    # NB: Stat exists but game does not actually populate it!
     offset += 92
     minersLostHex = fullHex[offset:offset+8]
     minersLost = hexToInt(minersLostHex)
