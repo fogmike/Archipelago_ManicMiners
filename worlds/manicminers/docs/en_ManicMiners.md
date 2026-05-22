@@ -51,6 +51,10 @@ Additionally, you can configure clearing a level's par time to be an item, regar
 
 The default settings are to clear all 25 levels in the Standard campaign, with all possible items locked, par time targets, and target times set to Medium. 
 
+#### What are the target times?
+
+The target times for all levels can be viewed [here](./level_properties_en.md).
+
 ## Additional commands
 
 The Manic Miners client comes with some extra commands on top of the regular Archipelago Text Client:

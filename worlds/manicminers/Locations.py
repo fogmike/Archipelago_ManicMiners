@@ -237,7 +237,7 @@ LOCATION_NAME_TO_ID = {
     "Beat Par Time: BAZ - The Hard Rock Life": 3130,
     "Beat Par Time: BAZ - The Path To Power": 3131,
     "Beat Par Time: BAZ - Water Lot Of Fun": 3132,
-    "Beat Par Time: BAZ - Water Works": 3133   
+    "Beat Par Time: BAZ - Water Works": 3133
 }
 
 TARGET_CLEAR_TIME_EASY = {
@@ -288,7 +288,7 @@ TARGET_CLEAR_TIME_EASY = {
     "LRRR - Rubble Trouble": 1500, # 25:00
     "LRRR - Run The Gauntlet": 1200, # 20:00
     "LRRR - Search And Rescue": 1800, # 30:00
-    "LRRR - Split Down The Middle": 2400, # 40:00 
+    "LRRR - Split Down The Middle": 2400, # 40:00
     "LRRR - The Path To Power": 1500, # 25:00
     "LRRR - Water Lot Of Fun": 1500, # 25:00
     "LRRR - Water Works": 3000, # 50:00
@@ -371,7 +371,7 @@ for level in TARGET_CLEAR_TIME_EASY:
             TARGET_TOTAL_CLEAR_TIME_BAZ_EASY += TARGET_CLEAR_TIME_EASY[level]
 
 TARGET_CLEAR_TIME_MEDIUM = {
-    "LRR - A Breath Of Fresh Air": 540, # 8:00
+    "LRR - A Breath Of Fresh Air": 540, # 08:00
     "LRR - Air Raiders": 1500, # 25:00
     "LRR - Back To Basics": 1800, # 30:00
     "LRR - Breathless": 420, # 07:00
@@ -418,12 +418,12 @@ TARGET_CLEAR_TIME_MEDIUM = {
     "LRRR - Rubble Trouble": 1080, # 18:00
     "LRRR - Run The Gauntlet": 900, # 15:00
     "LRRR - Search And Rescue": 1380, # 23:00
-    "LRRR - Split Down The Middle": 1800, # 30:00 
+    "LRRR - Split Down The Middle": 1800, # 30:00
     "LRRR - The Path To Power": 1080, # 18:00
     "LRRR - Water Lot Of Fun": 1080, # 18:00
     "LRRR - Water Works": 2280, # 38:00
     
-    "LRRC - A Breath Of Fresh Air": 450, # 7:30
+    "LRRC - A Breath Of Fresh Air": 450, # 07:30
     "LRRC - Air Raiders": 1380, # 23:00
     "LRRC - Back To Basics": 1620, # 27:00
     "LRRC - Breathless": 600, # 10:00
@@ -501,7 +501,7 @@ for level in TARGET_CLEAR_TIME_MEDIUM:
             TARGET_TOTAL_CLEAR_TIME_BAZ_MEDIUM += TARGET_CLEAR_TIME_MEDIUM[level]
     
 TARGET_CLEAR_TIME_HARD = {
-    "LRR - A Breath Of Fresh Air": 300, # 5:00
+    "LRR - A Breath Of Fresh Air": 300, # 05:00
     "LRR - Air Raiders": 1080, # 18:00
     "LRR - Back To Basics": 1200, # 20:00
     "LRR - Breathless": 210, # 03:30
@@ -548,12 +548,12 @@ TARGET_CLEAR_TIME_HARD = {
     "LRRR - Rubble Trouble": 660, # 11:00
     "LRRR - Run The Gauntlet": 600, # 10:00
     "LRRR - Search And Rescue": 900, # 15:00
-    "LRRR - Split Down The Middle": 1200, # 20:00 
+    "LRRR - Split Down The Middle": 1200, # 20:00
     "LRRR - The Path To Power": 660, # 11:00
     "LRRR - Water Lot Of Fun": 660, # 11:00
     "LRRR - Water Works": 1500, # 25:00
     
-    "LRRC - A Breath Of Fresh Air": 300, # 5:00
+    "LRRC - A Breath Of Fresh Air": 300, # 05:00
     "LRRC - Air Raiders": 900, # 15:00
     "LRRC - Back To Basics": 1080, # 18:00
     "LRRC - Breathless": 240, # 04:00
@@ -632,7 +632,7 @@ for level in TARGET_CLEAR_TIME_HARD:
 
 TARGET_CLEAR_TIME_ROCK_HARD = {
     "LRR - A Breath Of Fresh Air": 240, # 04:00
-    "LRR - Air Raiders": 900, # 15:00 
+    "LRR - Air Raiders": 900, # 15:00
     "LRR - Back To Basics": 1020, # 17:00
     "LRR - Breathless": 150, # 02:30
     "LRR - Don't Panic": 270, # 04:30
@@ -678,12 +678,12 @@ TARGET_CLEAR_TIME_ROCK_HARD = {
     "LRRR - Rubble Trouble": 480, # 08:00
     "LRRR - Run The Gauntlet": 420, # 07:00
     "LRRR - Search And Rescue": 600, # 10:00
-    "LRRR - Split Down The Middle": 780, # 13:00 
+    "LRRR - Split Down The Middle": 780, # 13:00
     "LRRR - The Path To Power": 480, # 08:00
     "LRRR - Water Lot Of Fun": 480, # 08:00
     "LRRR - Water Works": 1140, # 19:00
     
-    "LRRC - A Breath Of Fresh Air": 240, # 4:00
+    "LRRC - A Breath Of Fresh Air": 240, # 04:00
     "LRRC - Air Raiders": 720, # 12:00
     "LRRC - Back To Basics": 900, # 15:00
     "LRRC - Breathless": 180, # 03:00
