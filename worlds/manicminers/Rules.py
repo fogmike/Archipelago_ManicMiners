@@ -185,7 +185,7 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
     world.set_rule(entrance_lrrc_abreathoffreshair, (rule_can_breathe & Has("Level Access: LRRC - A Breath Of Fresh Air")))
     world.set_rule(entrance_lrrc_airraiders, Has("Level Access: LRRC - Air Raiders"))
     world.set_rule(entrance_lrrc_backtobasics, (rule_can_breathe & Has("Level Access: LRRC - Back To Basics")))
-    world.set_rule(entrance_lrrc_breathless, (rule_can_blast & Has("Level Access: LRRC - Breathless") & rule_can_always_breathe))
+    world.set_rule(entrance_lrrc_breathless, ((Has("Item Unlock: Dynamite") | rule_can_build_smalldigger | rule_can_build_granitegrinder | rule_can_build_mininglaser | rule_can_build_smlc) & Has("Level Access: LRRC - Breathless") & rule_can_always_breathe))
     world.set_rule(entrance_lrrc_dontpanic, Has("Level Access: LRRC - Don't Panic"))
     world.set_rule(entrance_lrrc_drillernight, Has("Level Access: LRRC - Driller Night"))
     world.set_rule(entrance_lrrc_erodeworks, (rule_can_blast & Has("Level Access: LRRC - Erode Works")))
