@@ -171,8 +171,8 @@ option_groups = [
         [TargetLevelCount,AvailableLevelsAtStart]
     ),
     OptionGroup(
-        "Times",
-        [TargetTimesAreLocations,TargetTimeDifficulty]
+        "Locations",
+        [TargetTimesAreLocations,TargetTimeDifficulty,BonusClearLocations]
     ),
     OptionGroup(
         "Items",
