@@ -160,7 +160,9 @@ ITEM_NAME_TO_ID = {
     "An Energy Crystal Has Been Found!": 999,
     "Good Work, Cadet!": 998,
     "A Monster Has Appeared!": 997,
-    "Well Done!": 996
+    "Well Done!": 996,
+    
+    "Increased Starting Ore": 950
     
 }
 
@@ -308,7 +310,9 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "An Energy Crystal Has Been Found!": ItemClassification.filler,
     "Good Work, Cadet!": ItemClassification.filler,
     "A Monster Has Appeared!": ItemClassification.filler,
-    "Well Done!": ItemClassification.filler
+    "Well Done!": ItemClassification.filler,
+    
+    "Increased Starting Ore": ItemClassification.filler
 }
 
 LEVEL_ACCESS_LRR_NOUNLOCK_LIST = [
@@ -489,7 +493,8 @@ FILLER_LIST = [
     "An Energy Crystal Has Been Found!",
     "Good Work, Cadet!",
     "A Monster Has Appeared!",
-    "Well Done!"
+    "Well Done!",
+    "Increased Starting Ore"
 ]
 
 def get_random_filler_item_name(world: ManicMinersWorld) -> str:
@@ -1040,6 +1045,10 @@ def update_disabled_unlocks(filepath, all_items):
         archipelago_section = archipelago_section + "disable:ChromeCrusher;\n"
     if 875 not in all_items:
         archipelago_section = archipelago_section + "disable:TunnelTransport;\n"
+    
+    bonus_ore = all_items.count(950)
+    archipelago_section = archipelago_section + "ore+=" + str(bonus_ore) + ";\n"
+    
 
     archipelago_section = archipelago_section + "\n}\n"
 

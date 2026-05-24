@@ -39,7 +39,7 @@ Additionally, you can configure Buildings, Items, and/or Vehicles to be locked u
 
 #### Filler items
 
-Depending on your chosen settings, you may have many more locations than items. In these cases, filler items are added to the pool, which take the form of motivational messages like "Good work, Cadet!" or "An Energy Crystal Has Been Found!". These items do absolutely nothing. 
+Depending on your chosen settings, you may have many more locations than items. In these cases, filler items are added to the pool, which take the form of motivational messages like "Good work, Cadet!" or "An Energy Crystal Has Been Found!". Any items ending in "!" do absolutely nothing. You may also get marginal bonuses to your starting ore. 
 
 ### Where can I find items in Manic Miners? 
 
