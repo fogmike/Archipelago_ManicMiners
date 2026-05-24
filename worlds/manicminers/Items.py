@@ -526,7 +526,6 @@ def create_all_items(world: ManicMinersWorld) -> None:
     initial_access_item_list = []
  
     if world.options.campaign_selection_lrr:
-        itempool_lrr_access = []
         itempool_lrr_sphere1_access = []
         itempool_lrr_sphere2plus_access = []
         for item in LEVEL_ACCESS_LRR_NOUNLOCK_LIST:
@@ -541,7 +540,6 @@ def create_all_items(world: ManicMinersWorld) -> None:
         itempool_sphere2plus_access += itempool_lrr_sphere2plus_access
  
     if world.options.campaign_selection_lrrr:
-        itempool_lrrr_access = []
         itempool_lrrr_sphere1_access = []
         itempool_lrrr_sphere2plus_access = []
         for item in LEVEL_ACCESS_LRRR_NOUNLOCK_LIST:
@@ -556,7 +554,6 @@ def create_all_items(world: ManicMinersWorld) -> None:
         itempool_sphere2plus_access += itempool_lrrr_sphere2plus_access
  
     if world.options.campaign_selection_lrrc:
-        itempool_lrrc_access = []
         itempool_lrrc_sphere1_access = []
         itempool_lrrc_sphere2plus_access = []
         for item in LEVEL_ACCESS_LRRC_NOUNLOCK_LIST:
@@ -571,7 +568,6 @@ def create_all_items(world: ManicMinersWorld) -> None:
         itempool_sphere2plus_access += itempool_lrrc_sphere2plus_access
  
     # if world.options.campaign_selection_baz:
-        # itempool_baz_access = []
         # itempool_baz_sphere1_access = []
         # itempool_baz_sphere2plus_access = []
         # for item in LEVEL_ACCESS_BAZ_NOUNLOCK_LIST:
