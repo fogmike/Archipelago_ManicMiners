@@ -104,7 +104,7 @@ class FasterBlastingAlwaysInLogic(DefaultOnToggle):
     When this setting is enabled, any time that the Small Digger or SMLC is required by logic, so is the Upgrade Station. 
     """
     
-    display_name = "Breathing Always In Logic"
+    display_name = "Faster Blasting Always In Logic"
 
 class BonusClearLocations(Toggle):
     """
