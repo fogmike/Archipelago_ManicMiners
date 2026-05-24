@@ -190,7 +190,7 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
     world.set_rule(entrance_lrrc_drillernight, Has("Level Access: LRRC - Driller Night"))
     world.set_rule(entrance_lrrc_erodeworks, (rule_can_blast & Has("Level Access: LRRC - Erode Works")))
     world.set_rule(entrance_lrrc_explosiveaction, ((rule_can_build_smalldigger | rule_can_build_mininglaser | Has("Item Unlock: Dynamite")) & rule_can_build_supportstation & Has("Level Access: LRRC - Explosive Action")))
-    world.set_rule(entrance_lrrc_fireandwater, (rule_can_breathe & rule_can_swim & Has("Level Access: LRRC - Fire And Water")))
+    world.set_rule(entrance_lrrc_fireandwater, (rule_can_breathe & rule_can_swim & (rule_can_build_toolstore | rule_can_build_tunneltransport) & Has("Level Access: LRRC - Fire And Water")))
     world.set_rule(entrance_lrrc_frozenfrenzy, (rule_can_blast & Has("Level Access: LRRC - Frozen Frenzy") & rule_can_always_breathe))
     world.set_rule(entrance_lrrc_hotstuff, (rule_can_breathe & Has("Level Access: LRRC - Hot Stuff")))
     world.set_rule(entrance_lrrc_icespy, (Has("Level Access: LRRC - Ice Spy") & rule_can_always_breathe))
