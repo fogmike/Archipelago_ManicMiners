@@ -140,7 +140,7 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
     world.set_rule(entrance_lrrr_frozenfrenzy, (rule_can_breathe & rule_can_blast & (rule_can_flydrill | rule_can_build_rapidrider) & Has("Level Access: LRRR - Frozen Frenzy")))
     world.set_rule(entrance_lrrr_hotstuff, (rule_can_breathe & rule_can_build_toolstore & rule_can_fly & Has("Level Access: LRRR - Hot Stuff")))
     world.set_rule(entrance_lrrr_icespy, (rule_can_breathe & Has("Level Access: LRRR - Ice Spy")))
-    world.set_rule(entrance_lrrr_itsaholdup, (rule_can_build_orerefinery & (rule_can_lase | rule_can_swim | rule_can_jump) & Has("Level Access: LRRR - It's A Hold Up")))
+    world.set_rule(entrance_lrrr_itsaholdup, (rule_can_build_orerefinery & (rule_can_lase | rule_can_swim | rule_can_jump | Has("Item Unlock: Dynamite")) & Has("Level Access: LRRR - It's A Hold Up")))
     world.set_rule(entrance_lrrr_lakeoffire, (rule_can_breathe & rule_can_flying_lase & Has("Level Access: LRRR - Lake Of Fire")))
     world.set_rule(entrance_lrrr_lavalaughter, (rule_can_breathe & Has("Level Access: LRRR - Lava Laughter")))
     world.set_rule(entrance_lrrr_oresome, (rule_can_breathe & Has("Level Access: LRRR - Oresome")))
