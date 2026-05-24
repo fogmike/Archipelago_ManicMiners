@@ -48,31 +48,43 @@ class ManicMinersWorld(World):
         # Fix some potentially fatal option combinations
         
         # Must have at least one campaign selected, default to LRR if all unticked
+        if ((self.options.campaign_selection_lrr == 0) & (self.options.campaign_selection_lrrr == 0) & (self.options.campaign_selection_lrrc == 0)):
+            self.options.campaign_selection_lrr.value = 1
+        
+        # Identify number of levels and locations
         number_levels = 0
+        number_locations = 0
+        
         if self.options.campaign_selection_lrr:
             number_levels += 25
+            number_locations += 25
+            if self.options.bonus_clear_locations:
+                number_locations += 56
         
         if self.options.campaign_selection_lrrr:
             number_levels += 25
+            number_locations += 25
+            if self.options.bonus_clear_locations:
+                number_locations += 56
 
         if self.options.campaign_selection_lrrc:
             number_levels += 25
+            number_locations += 25
+            if self.options.bonus_clear_locations:
+                number_locations += 56
 
         # if self.options.campaign_selection_baz:
-            # number_levels += 33          
-        
-        if number_levels == 0:
-            self.options.campaign_selection_lrr.value = 1
-            number_levels = 25
+            # number_levels += 33
+            # number_locations += 33
+            # if self.options.bonus_clear_locations:
+                # number_locations += ???
+
+        if self.options.target_times_are_locations:
+            number_locations += number_levels
         
         # Can't start with more levels than there are levels
         if self.options.available_levels_at_start > (number_levels):
             self.options.available_levels_at_start.value = number_levels
-        
-        # Identify number of Locations
-        number_locations = number_levels
-        if self.options.target_times_are_locations:
-            number_locations += number_levels
         
         # Identify number of Items
         number_items = 0
@@ -88,7 +100,7 @@ class ManicMinersWorld(World):
         # Check we haven't got more Items than Locations, handle if so
         item_location_diffcount = number_items - number_locations
         if item_location_diffcount > 0:
-            self.options.available_levels_at_start.value += item_location_diffcount
+            self.options.bonus_clear_locations.value = 1
         
         # If Victory Condition is Total Clear Time, set target level count to all of them
         if self.options.victory_condition == 2:
