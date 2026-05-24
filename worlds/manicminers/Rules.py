@@ -148,7 +148,7 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
     world.set_rule(entrance_lrrr_rockyhorror, (rule_can_breathe & rule_can_build_toolstore & rule_can_build_canteen & Has("Vehicle Unlock: Small Transport Truck") & Has("Level Access: LRRR - Rocky Horror")))
     world.set_rule(entrance_lrrr_rubbletrouble, (Has("Building Unlock: Tool Store") & Has("Level Access: LRRR - Rubble Trouble")))
     world.set_rule(entrance_lrrr_runthegauntlet, Has("Level Access: LRRR - Run The Gauntlet"))
-    world.set_rule(entrance_lrrr_searchandrescue, (rule_can_build_rapidrider | (rule_can_build_tunnelscout & rule_can_build_upgradestation) | (rule_can_build_smlc & rule_can_build_cargocarrier)) & Has("Level Access: LRRR - Search And Rescue")))
+    world.set_rule(entrance_lrrr_searchandrescue, (rule_can_build_rapidrider | (rule_can_build_tunnelscout & rule_can_build_upgradestation) | (rule_can_build_smlc & rule_can_build_cargocarrier)) & Has("Level Access: LRRR - Search And Rescue"))
     world.set_rule(entrance_lrrr_splitdownthemiddle, (Has("Item Unlock: Dynamite") & Has("Level Access: LRRR - Split Down The Middle")))
     world.set_rule(entrance_lrrr_thepathtopower, (rule_can_build_powerstation & Has("Item Unlock: Electric Fence") & Has("Level Access: LRRR - The Path To Power")))
     world.set_rule(entrance_lrrr_waterlotoffun, (rule_can_build_docks & (rule_can_build_rapidrider | rule_can_build_tunnelscout) & Has("Item Unlock: Dynamite") & Has("Building Unlock: Tool Store") & Has("Level Access: LRRR - Water Lot Of Fun") & rule_can_always_breathe))
