@@ -144,7 +144,9 @@ class CampaignSelectionLRRC(Toggle):
 
 class NoDuplicateLevels(Toggle):
     """
-    If this is enabled, instead of all selected levels, you will have only one of each, selected randomly from the enabled campaigns. For example, you will have a random Driller Night, but only one.
+    If this is enabled, instead of all selected levels, you will have only one of each, selected randomly from the enabled campaigns. 
+    For example, you will have a random Rocky Horror, but only one.
+    You are guaranteed to start with Driller Night. 
     """
     
     display_name = "No Duplicate Levels"
