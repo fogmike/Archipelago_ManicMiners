@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from Options import PerGameCommonOptions, OptionGroup, Toggle, DefaultOnToggle, Choice, Range
+from Options import PerGameCommonOptions, OptionGroup, Toggle, DefaultOnToggle, Choice, Range, Visibility
 
 class VictoryCondition(Choice):
     """
@@ -142,6 +142,167 @@ class CampaignSelectionLRRC(Toggle):
     
     # display_name = "Include 'Baz's Mod' Campaign Levels"
 
+class NoDuplicateLevels(Toggle):
+    """
+    If this is enabled, instead of all selected levels, you will have only one of each, selected randomly from the enabled campaigns. For example, you will have a random Driller Night, but only one.
+    """
+    
+    display_name = "No Duplicate Levels"
+
+# Individual hidden options for each level
+class LevelSelectionLRRABreathOfFreshAir(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRAirRaiders(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRBackToBasics(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRBreathless(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRDontPanic(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRDrillerNight(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRErodeWorks(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRExplosiveAction(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRFireAndWater(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRFrozenFrenzy(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRHotStuff(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRIceSpy(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRItsAHoldUp(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRLakeOfFire(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRLavaLaughter(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRROresome(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRockHard(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRockyHorror(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRubbleTrouble(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRunTheGauntlet(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRSearchAndRescue(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRSplitDownTheMiddle(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRThePathToPower(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRWaterLotOfFun(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRWaterWorks(Toggle):
+    visibility = Visibility.none
+
+class LevelSelectionLRRRABreathOfFreshAir(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRAirRaiders(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRBackToBasics(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRBreathless(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRDontPanic(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRDrillerNight(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRErodeWorks(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRExplosiveAction(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRFireAndWater(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRFrozenFrenzy(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRHotStuff(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRIceSpy(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRItsAHoldUp(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRLakeOfFire(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRLavaLaughter(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRROresome(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRRockHard(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRRockyHorror(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRRubbleTrouble(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRRunTheGauntlet(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRSearchAndRescue(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRSplitDownTheMiddle(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRThePathToPower(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRWaterLotOfFun(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRRWaterWorks(Toggle):
+    visibility = Visibility.none
+
+class LevelSelectionLRRCABreathOfFreshAir(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCAirRaiders(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCBackToBasics(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCBreathless(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCDontPanic(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCDrillerNight(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCErodeWorks(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCExplosiveAction(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCFireAndWater(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCFrozenFrenzy(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCHotStuff(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCIceSpy(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCItsAHoldUp(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCLakeOfFire(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCLavaLaughter(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCOresome(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCRockHard(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCRockyHorror(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCRubbleTrouble(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCRunTheGauntlet(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCSearchAndRescue(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCSplitDownTheMiddle(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCThePathToPower(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCWaterLotOfFun(Toggle):
+    visibility = Visibility.none
+class LevelSelectionLRRCWaterWorks(Toggle):
+    visibility = Visibility.none
+
 @dataclass
 class ManicMinersOptions(PerGameCommonOptions):
     victory_condition: VictoryCondition
@@ -159,12 +320,91 @@ class ManicMinersOptions(PerGameCommonOptions):
     campaign_selection_lrrr: CampaignSelectionLRRR
     campaign_selection_lrrc: CampaignSelectionLRRC
     # campaign_selection_baz: CampaignSelectionBAZ
+    no_duplicate_levels: NoDuplicateLevels
+
+    level_selection_lrr_abreathoffreshair: LevelSelectionLRRABreathOfFreshAir
+    level_selection_lrr_airraiders: LevelSelectionLRRAirRaiders
+    level_selection_lrr_backtobasics: LevelSelectionLRRBackToBasics
+    level_selection_lrr_breathless: LevelSelectionLRRBreathless
+    level_selection_lrr_dontpanic: LevelSelectionLRRDontPanic
+    level_selection_lrr_drillernight: LevelSelectionLRRDrillerNight
+    level_selection_lrr_erodeworks: LevelSelectionLRRErodeWorks
+    level_selection_lrr_explosiveaction: LevelSelectionLRRExplosiveAction
+    level_selection_lrr_fireandwater: LevelSelectionLRRFireAndWater
+    level_selection_lrr_frozenfrenzy: LevelSelectionLRRFrozenFrenzy
+    level_selection_lrr_hotstuff: LevelSelectionLRRHotStuff
+    level_selection_lrr_icespy: LevelSelectionLRRIceSpy
+    level_selection_lrr_itsaholdup: LevelSelectionLRRItsAHoldUp
+    level_selection_lrr_lakeoffire: LevelSelectionLRRLakeOfFire
+    level_selection_lrr_lavalaughter: LevelSelectionLRRLavaLaughter
+    level_selection_lrr_oresome: LevelSelectionLRROresome
+    level_selection_lrr_rockhard: LevelSelectionLRRRockHard
+    level_selection_lrr_rockyhorror: LevelSelectionLRRRockyHorror
+    level_selection_lrr_rubbletrouble: LevelSelectionLRRRubbleTrouble
+    level_selection_lrr_runthegauntlet: LevelSelectionLRRRunTheGauntlet
+    level_selection_lrr_searchandrescue: LevelSelectionLRRSearchAndRescue
+    level_selection_lrr_splitdownthemiddle: LevelSelectionLRRSplitDownTheMiddle
+    level_selection_lrr_thepathtopower: LevelSelectionLRRThePathToPower
+    level_selection_lrr_waterlotoffun: LevelSelectionLRRWaterLotOfFun
+    level_selection_lrr_waterworks: LevelSelectionLRRWaterWorks
+
+    level_selection_lrrr_abreathoffreshair: LevelSelectionLRRRABreathOfFreshAir
+    level_selection_lrrr_airraiders: LevelSelectionLRRRAirRaiders
+    level_selection_lrrr_backtobasics: LevelSelectionLRRRBackToBasics
+    level_selection_lrrr_breathless: LevelSelectionLRRRBreathless
+    level_selection_lrrr_dontpanic: LevelSelectionLRRRDontPanic
+    level_selection_lrrr_drillernight: LevelSelectionLRRRDrillerNight
+    level_selection_lrrr_erodeworks: LevelSelectionLRRRErodeWorks
+    level_selection_lrrr_explosiveaction: LevelSelectionLRRRExplosiveAction
+    level_selection_lrrr_fireandwater: LevelSelectionLRRRFireAndWater
+    level_selection_lrrr_frozenfrenzy: LevelSelectionLRRRFrozenFrenzy
+    level_selection_lrrr_hotstuff: LevelSelectionLRRRHotStuff
+    level_selection_lrrr_icespy: LevelSelectionLRRRIceSpy
+    level_selection_lrrr_itsaholdup: LevelSelectionLRRRItsAHoldUp
+    level_selection_lrrr_lakeoffire: LevelSelectionLRRRLakeOfFire
+    level_selection_lrrr_lavalaughter: LevelSelectionLRRRLavaLaughter
+    level_selection_lrrr_oresome: LevelSelectionLRRROresome
+    level_selection_lrrr_rockhard: LevelSelectionLRRRRockHard
+    level_selection_lrrr_rockyhorror: LevelSelectionLRRRRockyHorror
+    level_selection_lrrr_rubbletrouble: LevelSelectionLRRRRubbleTrouble
+    level_selection_lrrr_runthegauntlet: LevelSelectionLRRRRunTheGauntlet
+    level_selection_lrrr_searchandrescue: LevelSelectionLRRRSearchAndRescue
+    level_selection_lrrr_splitdownthemiddle: LevelSelectionLRRRSplitDownTheMiddle
+    level_selection_lrrr_thepathtopower: LevelSelectionLRRRThePathToPower
+    level_selection_lrrr_waterlotoffun: LevelSelectionLRRRWaterLotOfFun
+    level_selection_lrrr_waterworks: LevelSelectionLRRRWaterWorks
+    
+    level_selection_lrrc_abreathoffreshair: LevelSelectionLRRCABreathOfFreshAir
+    level_selection_lrrc_airraiders: LevelSelectionLRRCAirRaiders
+    level_selection_lrrc_backtobasics: LevelSelectionLRRCBackToBasics
+    level_selection_lrrc_breathless: LevelSelectionLRRCBreathless
+    level_selection_lrrc_dontpanic: LevelSelectionLRRCDontPanic
+    level_selection_lrrc_drillernight: LevelSelectionLRRCDrillerNight
+    level_selection_lrrc_erodeworks: LevelSelectionLRRCErodeWorks
+    level_selection_lrrc_explosiveaction: LevelSelectionLRRCExplosiveAction
+    level_selection_lrrc_fireandwater: LevelSelectionLRRCFireAndWater
+    level_selection_lrrc_frozenfrenzy: LevelSelectionLRRCFrozenFrenzy
+    level_selection_lrrc_hotstuff: LevelSelectionLRRCHotStuff
+    level_selection_lrrc_icespy: LevelSelectionLRRCIceSpy
+    level_selection_lrrc_itsaholdup: LevelSelectionLRRCItsAHoldUp
+    level_selection_lrrc_lakeoffire: LevelSelectionLRRCLakeOfFire
+    level_selection_lrrc_lavalaughter: LevelSelectionLRRCLavaLaughter
+    level_selection_lrrc_oresome: LevelSelectionLRRCOresome
+    level_selection_lrrc_rockhard: LevelSelectionLRRCRockHard
+    level_selection_lrrc_rockyhorror: LevelSelectionLRRCRockyHorror
+    level_selection_lrrc_rubbletrouble: LevelSelectionLRRCRubbleTrouble
+    level_selection_lrrc_runthegauntlet: LevelSelectionLRRCRunTheGauntlet
+    level_selection_lrrc_searchandrescue: LevelSelectionLRRCSearchAndRescue
+    level_selection_lrrc_splitdownthemiddle: LevelSelectionLRRCSplitDownTheMiddle
+    level_selection_lrrc_thepathtopower: LevelSelectionLRRCThePathToPower
+    level_selection_lrrc_waterlotoffun: LevelSelectionLRRCWaterLotOfFun
+    level_selection_lrrc_waterworks: LevelSelectionLRRCWaterWorks
 
 option_groups = [
     OptionGroup(
         "Campaign Selection",
         # [CampaignSelectionLRR,CampaignSelectionLRRR,CampaignSelectionLRRC,CampaignSelectionBAZ]
-        [CampaignSelectionLRR,CampaignSelectionLRRR,CampaignSelectionLRRC]
+        [CampaignSelectionLRR,CampaignSelectionLRRR,CampaignSelectionLRRC,NoDuplicateLevels]
     ),
     OptionGroup(
         "Levels",

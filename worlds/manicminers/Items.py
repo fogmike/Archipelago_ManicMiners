@@ -529,73 +529,235 @@ def create_all_items(world: ManicMinersWorld) -> None:
     itempool_sphere2plus_access = []
  
     initial_access_item_list = []
- 
-    if world.options.campaign_selection_lrr:
-        itempool_lrr_sphere1_access = []
-        itempool_lrr_sphere2plus_access = []
-        for item in LEVEL_ACCESS_LRR_NOUNLOCK_LIST:
-            itempool_lrr_sphere1_access.append(world.create_item(item))
-        for item in LEVEL_ACCESS_LRR_NEEDSUNLOCK_LIST:
-            itempool_lrr_sphere2plus_access.append(world.create_item(item))
-        if world.options.buildings_are_items == 0 and world.options.items_are_items == 0 and world.options.vehicles_are_items == 0:
-            itempool_lrr_sphere1_access += itempool_lrr_sphere2plus_access
-            itempool_lrr_sphere2plus_access.clear()
-        
-        itempool_sphere1_access += itempool_lrr_sphere1_access
-        itempool_sphere2plus_access += itempool_lrr_sphere2plus_access
- 
-    if world.options.campaign_selection_lrrr:
-        itempool_lrrr_sphere1_access = []
-        itempool_lrrr_sphere2plus_access = []
-        for item in LEVEL_ACCESS_LRRR_NOUNLOCK_LIST:
-            itempool_lrrr_sphere1_access.append(world.create_item(item))
-        for item in LEVEL_ACCESS_LRRR_NEEDSUNLOCK_LIST:
-            itempool_lrrr_sphere2plus_access.append(world.create_item(item))
-        if world.options.buildings_are_items == 0 and world.options.items_are_items == 0 and world.options.vehicles_are_items == 0:
-            itempool_lrrr_sphere1_access += itempool_lrrr_sphere2plus_access
-            itempool_lrrr_sphere2plus_access.clear()
-        
-        itempool_sphere1_access += itempool_lrrr_sphere1_access
-        itempool_sphere2plus_access += itempool_lrrr_sphere2plus_access
- 
-    if world.options.campaign_selection_lrrc:
-        itempool_lrrc_sphere1_access = []
-        itempool_lrrc_sphere2plus_access = []
-        for item in LEVEL_ACCESS_LRRC_NOUNLOCK_LIST:
-            itempool_lrrc_sphere1_access.append(world.create_item(item))
-        for item in LEVEL_ACCESS_LRRC_NEEDSUNLOCK_LIST:
-            itempool_lrrc_sphere2plus_access.append(world.create_item(item))
-        if world.options.buildings_are_items == 0 and world.options.items_are_items == 0 and world.options.vehicles_are_items == 0:
-            itempool_lrrc_sphere1_access += itempool_lrrc_sphere2plus_access
-            itempool_lrrc_sphere2plus_access.clear()
-        
-        itempool_sphere1_access += itempool_lrrc_sphere1_access
-        itempool_sphere2plus_access += itempool_lrrc_sphere2plus_access
- 
-    # if world.options.campaign_selection_baz:
-        # itempool_baz_sphere1_access = []
-        # itempool_baz_sphere2plus_access = []
-        # for item in LEVEL_ACCESS_BAZ_NOUNLOCK_LIST:
-            # itempool_baz_sphere1_access.append(world.create_item(item))
-        # for item in LEVEL_ACCESS_BAZ_NEEDSUNLOCK_LIST:
-            # itempool_baz_sphere2plus_access.append(world.create_item(item))
-        # if world.options.buildings_are_items == 0 and world.options.items_are_items == 0 and world.options.vehicles_are_items == 0:
-            # itempool_baz_sphere1_access += itempool_baz_sphere2plus_access
-            # itempool_baz_sphere2plus_access.clear()
-        
-        # itempool_sphere1_access += itempool_baz_sphere1_access
-        # itempool_sphere2plus_access += itempool_baz_sphere2plus_access
     
-    initial_access_item_index = world.random.randint(0,len(itempool_sphere1_access)-1)
-    initial_access_item_list.append(itempool_sphere1_access[initial_access_item_index])
-    itempool_sphere1_access.pop(initial_access_item_index)
+    if world.options.no_duplicate_levels == 0:
+
+        if world.options.campaign_selection_lrr:
+            itempool_lrr_sphere1_access = []
+            itempool_lrr_sphere2plus_access = []
+            for item in LEVEL_ACCESS_LRR_NOUNLOCK_LIST:
+                itempool_lrr_sphere1_access.append(world.create_item(item))
+            for item in LEVEL_ACCESS_LRR_NEEDSUNLOCK_LIST:
+                itempool_lrr_sphere2plus_access.append(world.create_item(item))
+            if world.options.buildings_are_items == 0 and world.options.items_are_items == 0 and world.options.vehicles_are_items == 0:
+                itempool_lrr_sphere1_access += itempool_lrr_sphere2plus_access
+                itempool_lrr_sphere2plus_access.clear()
+            
+            itempool_sphere1_access += itempool_lrr_sphere1_access
+            itempool_sphere2plus_access += itempool_lrr_sphere2plus_access
+     
+        if world.options.campaign_selection_lrrr:
+            itempool_lrrr_sphere1_access = []
+            itempool_lrrr_sphere2plus_access = []
+            for item in LEVEL_ACCESS_LRRR_NOUNLOCK_LIST:
+                itempool_lrrr_sphere1_access.append(world.create_item(item))
+            for item in LEVEL_ACCESS_LRRR_NEEDSUNLOCK_LIST:
+                itempool_lrrr_sphere2plus_access.append(world.create_item(item))
+            if world.options.buildings_are_items == 0 and world.options.items_are_items == 0 and world.options.vehicles_are_items == 0:
+                itempool_lrrr_sphere1_access += itempool_lrrr_sphere2plus_access
+                itempool_lrrr_sphere2plus_access.clear()
+            
+            itempool_sphere1_access += itempool_lrrr_sphere1_access
+            itempool_sphere2plus_access += itempool_lrrr_sphere2plus_access
+     
+        if world.options.campaign_selection_lrrc:
+            itempool_lrrc_sphere1_access = []
+            itempool_lrrc_sphere2plus_access = []
+            for item in LEVEL_ACCESS_LRRC_NOUNLOCK_LIST:
+                itempool_lrrc_sphere1_access.append(world.create_item(item))
+            for item in LEVEL_ACCESS_LRRC_NEEDSUNLOCK_LIST:
+                itempool_lrrc_sphere2plus_access.append(world.create_item(item))
+            if world.options.buildings_are_items == 0 and world.options.items_are_items == 0 and world.options.vehicles_are_items == 0:
+                itempool_lrrc_sphere1_access += itempool_lrrc_sphere2plus_access
+                itempool_lrrc_sphere2plus_access.clear()
+            
+            itempool_sphere1_access += itempool_lrrc_sphere1_access
+            itempool_sphere2plus_access += itempool_lrrc_sphere2plus_access
+     
+        # if world.options.campaign_selection_baz:
+            # itempool_baz_sphere1_access = []
+            # itempool_baz_sphere2plus_access = []
+            # for item in LEVEL_ACCESS_BAZ_NOUNLOCK_LIST:
+                # itempool_baz_sphere1_access.append(world.create_item(item))
+            # for item in LEVEL_ACCESS_BAZ_NEEDSUNLOCK_LIST:
+                # itempool_baz_sphere2plus_access.append(world.create_item(item))
+            # if world.options.buildings_are_items == 0 and world.options.items_are_items == 0 and world.options.vehicles_are_items == 0:
+                # itempool_baz_sphere1_access += itempool_baz_sphere2plus_access
+                # itempool_baz_sphere2plus_access.clear()
+            
+            # itempool_sphere1_access += itempool_baz_sphere1_access
+            # itempool_sphere2plus_access += itempool_baz_sphere2plus_access
+        
+        initial_access_item_index = world.random.randint(0,len(itempool_sphere1_access)-1)
+        initial_access_item_list.append(itempool_sphere1_access[initial_access_item_index])
+        itempool_sphere1_access.pop(initial_access_item_index)
+        
+        itempool_access = itempool_sphere1_access + itempool_sphere2plus_access
+        
+        for i in range(world.options.available_levels_at_start-1):
+            initial_access_item_index = world.random.randint(0,len(itempool_access)-1)
+            initial_access_item_list.append(itempool_access[initial_access_item_index])
+            itempool_access.pop(initial_access_item_index)
     
-    itempool_access = itempool_sphere1_access + itempool_sphere2plus_access
-    
-    for i in range(world.options.available_levels_at_start-1):
-        initial_access_item_index = world.random.randint(0,len(itempool_access)-1)
-        initial_access_item_list.append(itempool_access[initial_access_item_index])
-        itempool_access.pop(initial_access_item_index)
+    else:
+
+        if world.options.level_selection_lrr_abreathoffreshair:
+            itempool_access.append(world.create_item("Level Access: LRR - A Breath Of Fresh Air"))
+        if world.options.level_selection_lrr_airraiders:
+            itempool_access.append(world.create_item("Level Access: LRR - Air Raiders"))
+        if world.options.level_selection_lrr_backtobasics:
+            itempool_access.append(world.create_item("Level Access: LRR - Back To Basics"))
+        if world.options.level_selection_lrr_breathless:
+            itempool_access.append(world.create_item("Level Access: LRR - Breathless"))
+        if world.options.level_selection_lrr_dontpanic:
+            itempool_access.append(world.create_item("Level Access: LRR - Don't Panic"))
+        if world.options.level_selection_lrr_drillernight:
+            initial_access_item_list.append(world.create_item("Level Access: LRR - Driller Night"))
+        if world.options.level_selection_lrr_erodeworks:
+            itempool_access.append(world.create_item("Level Access: LRR - Erode Works"))
+        if world.options.level_selection_lrr_explosiveaction:
+            itempool_access.append(world.create_item("Level Access: LRR - Explosive Action"))
+        if world.options.level_selection_lrr_fireandwater:
+            itempool_access.append(world.create_item("Level Access: LRR - Fire And Water"))
+        if world.options.level_selection_lrr_frozenfrenzy:
+            itempool_access.append(world.create_item("Level Access: LRR - Frozen Frenzy"))
+        if world.options.level_selection_lrr_hotstuff:
+            itempool_access.append(world.create_item("Level Access: LRR - Hot Stuff"))
+        if world.options.level_selection_lrr_icespy:
+            itempool_access.append(world.create_item("Level Access: LRR - Ice Spy"))
+        if world.options.level_selection_lrr_itsaholdup:
+            itempool_access.append(world.create_item("Level Access: LRR - It's A Hold Up"))
+        if world.options.level_selection_lrr_lakeoffire:
+            itempool_access.append(world.create_item("Level Access: LRR - Lake Of Fire"))
+        if world.options.level_selection_lrr_lavalaughter:
+            itempool_access.append(world.create_item("Level Access: LRR - Lava Laughter"))
+        if world.options.level_selection_lrr_oresome:
+            itempool_access.append(world.create_item("Level Access: LRR - Oresome"))
+        if world.options.level_selection_lrr_rockhard:
+            itempool_access.append(world.create_item("Level Access: LRR - Rock Hard"))
+        if world.options.level_selection_lrr_rockyhorror:
+            itempool_access.append(world.create_item("Level Access: LRR - Rocky Horror"))
+        if world.options.level_selection_lrr_rubbletrouble:
+            itempool_access.append(world.create_item("Level Access: LRR - Rubble Trouble"))
+        if world.options.level_selection_lrr_runthegauntlet:
+            itempool_access.append(world.create_item("Level Access: LRR - Run The Gauntlet"))
+        if world.options.level_selection_lrr_searchandrescue:
+            itempool_access.append(world.create_item("Level Access: LRR - Search And Rescue"))
+        if world.options.level_selection_lrr_splitdownthemiddle:
+            itempool_access.append(world.create_item("Level Access: LRR - Split Down The Middle"))
+        if world.options.level_selection_lrr_thepathtopower:
+            itempool_access.append(world.create_item("Level Access: LRR - The Path To Power"))
+        if world.options.level_selection_lrr_waterlotoffun:
+            itempool_access.append(world.create_item("Level Access: LRR - Water Lot Of Fun"))
+        if world.options.level_selection_lrr_waterworks:
+            itempool_access.append(world.create_item("Level Access: LRR - Water Works"))
+
+        if world.options.level_selection_lrrr_abreathoffreshair:
+            itempool_access.append(world.create_item("Level Access: LRRR - A Breath Of Fresh Air"))
+        if world.options.level_selection_lrrr_airraiders:
+            itempool_access.append(world.create_item("Level Access: LRRR - Air Raiders"))
+        if world.options.level_selection_lrrr_backtobasics:
+            itempool_access.append(world.create_item("Level Access: LRRR - Back To Basics"))
+        if world.options.level_selection_lrrr_breathless:
+            itempool_access.append(world.create_item("Level Access: LRRR - Breathless"))
+        if world.options.level_selection_lrrr_dontpanic:
+            itempool_access.append(world.create_item("Level Access: LRRR - Don't Panic"))
+        if world.options.level_selection_lrrr_drillernight:
+            initial_access_item_list.append(world.create_item("Level Access: LRRR - Driller Night"))
+        if world.options.level_selection_lrrr_erodeworks:
+            itempool_access.append(world.create_item("Level Access: LRRR - Erode Works"))
+        if world.options.level_selection_lrrr_explosiveaction:
+            itempool_access.append(world.create_item("Level Access: LRRR - Explosive Action"))
+        if world.options.level_selection_lrrr_fireandwater:
+            itempool_access.append(world.create_item("Level Access: LRRR - Fire And Water"))
+        if world.options.level_selection_lrrr_frozenfrenzy:
+            itempool_access.append(world.create_item("Level Access: LRRR - Frozen Frenzy"))
+        if world.options.level_selection_lrrr_hotstuff:
+            itempool_access.append(world.create_item("Level Access: LRRR - Hot Stuff"))
+        if world.options.level_selection_lrrr_icespy:
+            itempool_access.append(world.create_item("Level Access: LRRR - Ice Spy"))
+        if world.options.level_selection_lrrr_itsaholdup:
+            itempool_access.append(world.create_item("Level Access: LRRR - It's A Hold Up"))
+        if world.options.level_selection_lrrr_lakeoffire:
+            itempool_access.append(world.create_item("Level Access: LRRR - Lake Of Fire"))
+        if world.options.level_selection_lrrr_lavalaughter:
+            itempool_access.append(world.create_item("Level Access: LRRR - Lava Laughter"))
+        if world.options.level_selection_lrrr_oresome:
+            itempool_access.append(world.create_item("Level Access: LRRR - Oresome"))
+        if world.options.level_selection_lrrr_rockhard:
+            itempool_access.append(world.create_item("Level Access: LRRR - Rock Hard"))
+        if world.options.level_selection_lrrr_rockyhorror:
+            itempool_access.append(world.create_item("Level Access: LRRR - Rocky Horror"))
+        if world.options.level_selection_lrrr_rubbletrouble:
+            itempool_access.append(world.create_item("Level Access: LRRR - Rubble Trouble"))
+        if world.options.level_selection_lrrr_runthegauntlet:
+            itempool_access.append(world.create_item("Level Access: LRRR - Run The Gauntlet"))
+        if world.options.level_selection_lrrr_searchandrescue:
+            itempool_access.append(world.create_item("Level Access: LRRR - Search And Rescue"))
+        if world.options.level_selection_lrrr_splitdownthemiddle:
+            itempool_access.append(world.create_item("Level Access: LRRR - Split Down The Middle"))
+        if world.options.level_selection_lrrr_thepathtopower:
+            itempool_access.append(world.create_item("Level Access: LRRR - The Path To Power"))
+        if world.options.level_selection_lrrr_waterlotoffun:
+            itempool_access.append(world.create_item("Level Access: LRRR - Water Lot Of Fun"))
+        if world.options.level_selection_lrrr_waterworks:
+            itempool_access.append(world.create_item("Level Access: LRRR - Water Works"))
+
+        if world.options.level_selection_lrrc_abreathoffreshair:
+            itempool_access.append(world.create_item("Level Access: LRRC - A Breath Of Fresh Air"))
+        if world.options.level_selection_lrrc_airraiders:
+            itempool_access.append(world.create_item("Level Access: LRRC - Air Raiders"))
+        if world.options.level_selection_lrrc_backtobasics:
+            itempool_access.append(world.create_item("Level Access: LRRC - Back To Basics"))
+        if world.options.level_selection_lrrc_breathless:
+            itempool_access.append(world.create_item("Level Access: LRRC - Breathless"))
+        if world.options.level_selection_lrrc_dontpanic:
+            itempool_access.append(world.create_item("Level Access: LRRC - Don't Panic"))
+        if world.options.level_selection_lrrc_drillernight:
+            initial_access_item_list.append(world.create_item("Level Access: LRRC - Driller Night"))
+        if world.options.level_selection_lrrc_erodeworks:
+            itempool_access.append(world.create_item("Level Access: LRRC - Erode Works"))
+        if world.options.level_selection_lrrc_explosiveaction:
+            itempool_access.append(world.create_item("Level Access: LRRC - Explosive Action"))
+        if world.options.level_selection_lrrc_fireandwater:
+            itempool_access.append(world.create_item("Level Access: LRRC - Fire And Water"))
+        if world.options.level_selection_lrrc_frozenfrenzy:
+            itempool_access.append(world.create_item("Level Access: LRRC - Frozen Frenzy"))
+        if world.options.level_selection_lrrc_hotstuff:
+            itempool_access.append(world.create_item("Level Access: LRRC - Hot Stuff"))
+        if world.options.level_selection_lrrc_icespy:
+            itempool_access.append(world.create_item("Level Access: LRRC - Ice Spy"))
+        if world.options.level_selection_lrrc_itsaholdup:
+            itempool_access.append(world.create_item("Level Access: LRRC - It's A Hold Up"))
+        if world.options.level_selection_lrrc_lakeoffire:
+            itempool_access.append(world.create_item("Level Access: LRRC - Lake Of Fire"))
+        if world.options.level_selection_lrrc_lavalaughter:
+            itempool_access.append(world.create_item("Level Access: LRRC - Lava Laughter"))
+        if world.options.level_selection_lrrc_oresome:
+            itempool_access.append(world.create_item("Level Access: LRRC - Oresome"))
+        if world.options.level_selection_lrrc_rockhard:
+            itempool_access.append(world.create_item("Level Access: LRRC - Rock Hard"))
+        if world.options.level_selection_lrrc_rockyhorror:
+            itempool_access.append(world.create_item("Level Access: LRRC - Rocky Horror"))
+        if world.options.level_selection_lrrc_rubbletrouble:
+            itempool_access.append(world.create_item("Level Access: LRRC - Rubble Trouble"))
+        if world.options.level_selection_lrrc_runthegauntlet:
+            itempool_access.append(world.create_item("Level Access: LRRC - Run The Gauntlet"))
+        if world.options.level_selection_lrrc_searchandrescue:
+            itempool_access.append(world.create_item("Level Access: LRRC - Search And Rescue"))
+        if world.options.level_selection_lrrc_splitdownthemiddle:
+            itempool_access.append(world.create_item("Level Access: LRRC - Split Down The Middle"))
+        if world.options.level_selection_lrrc_thepathtopower:
+            itempool_access.append(world.create_item("Level Access: LRRC - The Path To Power"))
+        if world.options.level_selection_lrrc_waterlotoffun:
+            itempool_access.append(world.create_item("Level Access: LRRC - Water Lot Of Fun"))
+        if world.options.level_selection_lrrc_waterworks:
+            itempool_access.append(world.create_item("Level Access: LRRC - Water Works"))
+        
+        for i in range(world.options.available_levels_at_start-1):
+            initial_access_item_index = world.random.randint(0,len(itempool_access)-1)
+            initial_access_item_list.append(itempool_access[initial_access_item_index])
+            itempool_access.pop(initial_access_item_index)        
     
     itempool += itempool_access   
     

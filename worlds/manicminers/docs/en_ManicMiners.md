@@ -53,6 +53,10 @@ Optionally, based on your chosen settings:
 
 The default settings are to clear all 25 levels in the Standard campaign, with all possible items locked, par time targets, and target times set to Medium. 
 
+Players familiar with Manic Miners may prefer to enable all campaigns and the No Duplicate Levels setting, which will still do a full run of 25 levels, but will randomly select each one.
+
+Running every campaign fully selected, if the goal is set high to match, can take a long time. 
+
 #### What are the target times?
 
 The target times for all levels can be viewed [here](./level_properties_en.md).
