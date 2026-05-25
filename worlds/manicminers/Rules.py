@@ -199,7 +199,7 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
     world.set_rule(entrance_lrrc_lavalaughter, (Has("Level Access: LRRC - Lava Laughter") & rule_can_always_breathe))
     world.set_rule(entrance_lrrc_oresome, Has("Level Access: LRRC - Oresome"))
     world.set_rule(entrance_lrrc_rockhard, (rule_can_blast & Has("Level Access: LRRC - Rock Hard") & rule_can_always_breathe))
-    world.set_rule(entrance_lrrc_rockyhorror, (rule_can_breathe & Has("Level Access: LRR - Rocky Horror")))
+    world.set_rule(entrance_lrrc_rockyhorror, (rule_can_breathe & Has("Level Access: LRRC - Rocky Horror")))
     world.set_rule(entrance_lrrc_rubbletrouble, Has("Level Access: LRRC - Rubble Trouble"))
     world.set_rule(entrance_lrrc_runthegauntlet, Has("Level Access: LRRC - Run The Gauntlet"))
     world.set_rule(entrance_lrrc_searchandrescue, (rule_can_swim & Has("Level Access: LRRC - Search And Rescue")))
