@@ -205,7 +205,7 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
     world.set_rule(entrance_lrrc_searchandrescue, (rule_can_swim & Has("Level Access: LRRC - Search And Rescue")))
     world.set_rule(entrance_lrrc_splitdownthemiddle, Has("Level Access: LRRC - Split Down The Middle"))
     world.set_rule(entrance_lrrc_thepathtopower, (rule_can_build_powerstation & Has("Level Access: LRRC - The Path To Power")))
-    world.set_rule(entrance_lrrc_waterlotoffun, ((rule_can_swim | rule_can_blast) & Has("Level Access: LRRC - Water Lot Of Fun") & rule_can_always_breathe))
+    world.set_rule(entrance_lrrc_waterlotoffun, ((rule_can_build_smalldigger | rule_can_build_mininglaser | rule_can_build_smlc | Has("Item Unlock: Dynamite") | rule_can_build_cargocarrier | rule_can_build_rapidrider | rule_can_build_tunnelscout) & Has("Level Access: LRRC - Water Lot Of Fun") & rule_can_always_breathe))
     world.set_rule(entrance_lrrc_waterworks, (Has("Level Access: LRRC - Water Works") & rule_can_always_breathe))
     
     #BAZ
