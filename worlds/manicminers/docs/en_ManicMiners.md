@@ -35,7 +35,9 @@ The first three campaigns each have 25 levels, while Baz's Mod has 33.
 
 Each level is initially locked, with Level Access items available to find. Therefore levels will also become available in a random order. 
 
-Additionally, you can configure Buildings, Items, and/or Vehicles to be locked until discoverable. 
+You can configure Buildings, Items, and/or Vehicles to be locked until discoverable. This is the recommended way to play.
+
+You can optionally add one bonus starting Small Transport Truck to the pool. 
 
 #### Filler items
 
@@ -55,7 +57,7 @@ The default settings are to clear all 25 levels in the Standard campaign, with a
 
 Players familiar with Manic Miners may prefer to enable all campaigns and the No Duplicate Levels setting, which will still do a full run of 25 levels, but will randomly select each one.
 
-Running every campaign fully selected, if the goal is set high to match, can take a long time. 
+Note: running with every campaign fully selected and a matching high target level goal, can take a long time. 
 
 #### What are the target times?
 

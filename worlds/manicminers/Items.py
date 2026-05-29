@@ -162,7 +162,8 @@ ITEM_NAME_TO_ID = {
     "A Monster Has Appeared!": 997,
     "Well Done!": 996,
     
-    "Increased Starting Ore": 950
+    "Increased Starting Ore": 950,    
+    "Chief's Favourite Truck": 949
     
 }
 
@@ -312,7 +313,8 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "A Monster Has Appeared!": ItemClassification.filler,
     "Well Done!": ItemClassification.filler,
     
-    "Increased Starting Ore": ItemClassification.filler
+    "Increased Starting Ore": ItemClassification.filler,    
+    "Chief's Favourite Truck": ItemClassification.useful
 }
 
 LEVEL_ACCESS_LRR_NOUNLOCK_LIST = [
@@ -793,6 +795,9 @@ def create_all_items(world: ManicMinersWorld) -> None:
     else:
         for item in itempool_vehicles:
             world.push_precollected(item)
+            
+    if world.options.bonus_truck:
+        itempool += world.create_item("Chief's Favourite Truck")
     
     number_of_items = len(itempool)
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))
@@ -1210,12 +1215,31 @@ def update_disabled_unlocks(filepath, all_items):
     
     bonus_ore = all_items.count(950)
     archipelago_section = archipelago_section + "ore+=" + str(bonus_ore) + ";\n"
-    
 
     archipelago_section = archipelago_section + "\n}\n"
 
     new_file_contents = original_file_beginning + archipelago_section
+    
+    if 949 in all_items:
+        buildings_section_start = new_file_contents.find("buildings{")
+        buildings_section_end = new_file_contents.find("}",buildings_section_start)+1
+        buildings_section = new_file_contents[buildings_section_start:buildings_section_end]
 
+        toolstore_section_start = buildings_section.find("BuildingToolStore_C")
+        toolstore_section_end = buildings_section.find("Building",toolstore_section_start+1)-1
+        if toolstore_section_end == 0:
+            toolstore_section_end = buildings_section.find("}")
+        toolstore_section = buildings_section[toolstore_section_start:toolstore_section_end]
+
+        toolstore_translation = toolstore_section[toolstore_section.find("Translation:"):toolstore_section.find("Rotation:")]
+
+        vehicle_spawn_line = "\nVehicleSmallTransportTruck_C," + toolstore_translation + "Rotation: P=0.000000 Y=0.000000 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000,Essential=true"
+       
+        vehicles_section_start = new_file_contents.find("vehicles{")+9
+
+        temp = new_file_contents[:vehicles_section_start] + vehicle_spawn_line + new_file_contents[vehicles_section_start:]
+        new_file_contents = temp
+    
     with open(filepath,'w') as file:
         file.write(new_file_contents)
         file.close()

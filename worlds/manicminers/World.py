@@ -416,7 +416,11 @@ class ManicMinersWorld(World):
         # Check we haven't got more Items than Locations, handle if so
         item_location_diffcount = number_items - number_locations
         if item_location_diffcount > 0:
-            self.options.bonus_clear_locations.value = 1
+            if self.options.bonus_clear_locations == 1:
+                #handling the case where bonus truck throws off numbers by one
+                self.options.available_levels_at_start.value +=1
+            else:
+                self.options.bonus_clear_locations.value = 1
         
         # If Victory Condition is Total Clear Time, set target level count to all of them
         if self.options.victory_condition == 2:

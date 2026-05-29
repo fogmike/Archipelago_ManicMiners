@@ -89,6 +89,13 @@ class VehiclesAreItems(DefaultOnToggle):
     
     display_name = "Vehicles Are Items"
 
+class BonusTruck(Toggle):
+    """
+    Whether to include a bonus starting Small Transport Truck in the Item pool."
+    """
+    
+    display_name = "Chief's Favourite Truck"
+
 class BreathingAlwaysInLogic(Toggle):
     """
     Whether the ability to build a Support Station is logically required for all levels with limited air.
@@ -315,6 +322,7 @@ class ManicMinersOptions(PerGameCommonOptions):
     buildings_are_items: BuildingsAreItems
     items_are_items: ItemsAreItems
     vehicles_are_items: VehiclesAreItems
+    bonus_truck: BonusTruck
     breathing_always_in_logic: BreathingAlwaysInLogic
     faster_blasting_always_in_logic: FasterBlastingAlwaysInLogic
     bonus_clear_locations: BonusClearLocations
@@ -418,7 +426,7 @@ option_groups = [
     ),
     OptionGroup(
         "Items",
-        [BuildingsAreItems,ItemsAreItems,VehiclesAreItems]
+        [BuildingsAreItems,ItemsAreItems,VehiclesAreItems,BonusTruck]
     ),
     OptionGroup(
         "Logic",
