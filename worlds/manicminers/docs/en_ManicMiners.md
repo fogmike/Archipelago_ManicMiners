@@ -50,6 +50,12 @@ Clearing a level is always worth an item.
 Optionally, based on your chosen settings:
  - Clearing a level is worth more than one item. The harder the level, the more items. 
  - Clearing a level's par time earns an item.  
+ - Getting a sufficient percentage of the total possible crystals in a level earns an item. 
+
+Notes:
+ - A level's clear time is fixed upon objective completion, while crystal counts are fixed on level exit. This means you can use the 'Keep Playing' button to continue in your crystal hunts, and use the 'Exit mission' button in the objectives bar to finish when ready. Save file data is not written, and thus locations not sent to the server, until the mission is closed. 
+ - Crystals inside vehicles or buildings are already counted - no need to teleport up things at the end to 'regain' their crystals. You can view the total crystal count in-game by toggling the view in the resource box by clicking on the total-crystals icon. 
+ - The '100%' value for crystals isn't necessarily the actual 100% value in the level. There are certain cases where some crystals have been 'written off', like the central cache in LRRR - Lava Laughter. 
 
 ### Any recommended settings? 
 
