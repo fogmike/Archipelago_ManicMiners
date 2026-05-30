@@ -29,7 +29,7 @@ The number of locations column shows how many Locations are achieved by clearing
 | Split Down The Middle | 12m           | 8m              | 5m            | 4m                 | 3                     |
 | The Path To Power     | 10m           | 7m              | 4m            | 3m                 | 2                     |
 | Water Lot Of Fun      | 60m           | 45m             | 35m           | 25m                | 3                     |
-| Water Works           | 14m           | 9m              | 6m            | 5m                 | 3                     |
+| Water Works           | 30m           | 18m             | 13m           | 11m                | 3                     |
 
 # Remastered campaign
 | Level                 | Easy Par Time | Medium Par Time | Hard Par Time | Rock Hard Par Time | Locations incl. Bonus |
