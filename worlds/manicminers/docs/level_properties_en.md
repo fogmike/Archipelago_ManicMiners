@@ -8,7 +8,7 @@ The number of locations column shows how many Locations are achieved by clearing
 | A Breath of Fresh Air | 15m           | 8m              | 5m            | 4m                 | 2                     |
 | Air Raiders           | 40m           | 25m             | 18m           | 15m                | 4                     |
 | Back to Basics        | 45m           | 30m             | 20m           | 17m                | 5                     |
-| Breathless            | 15m           | 7m              | 3m 30s        | 2m 30s             | 3                     |
+| Breathless            | 25m           | 15m             | 9m            | 7m 30s             | 3                     |
 | Don't Panic           | 10m           | 7m              | 5m            | 4m 30s             | 4                     |
 | Driller Night         | 5m            | 2m              | 1m 30s        | 1m                 | 2                     |
 | Erode Works           | 15m           | 10m             | 6m 30s        | 5m                 | 3                     |

@@ -415,7 +415,7 @@ TARGET_CLEAR_TIME_EASY = {
     "LRR - A Breath Of Fresh Air": 900, # 15:00
     "LRR - Air Raiders": 2400, # 40:00
     "LRR - Back To Basics": 2700, # 45:00
-    "LRR - Breathless": 900, # 15:00
+    "LRR - Breathless": 1500, # 25:00
     "LRR - Don't Panic": 600, # 10:00
     "LRR - Driller Night": 300, # 05:00
     "LRR - Erode Works": 900, # 15:00
@@ -545,7 +545,7 @@ TARGET_CLEAR_TIME_MEDIUM = {
     "LRR - A Breath Of Fresh Air": 540, # 08:00
     "LRR - Air Raiders": 1500, # 25:00
     "LRR - Back To Basics": 1800, # 30:00
-    "LRR - Breathless": 420, # 07:00
+    "LRR - Breathless": 900, # 15:00
     "LRR - Don't Panic": 420, # 07:00
     "LRR - Driller Night": 120, # 02:00
     "LRR - Erode Works": 600, # 10:00
@@ -675,7 +675,7 @@ TARGET_CLEAR_TIME_HARD = {
     "LRR - A Breath Of Fresh Air": 300, # 05:00
     "LRR - Air Raiders": 1080, # 18:00
     "LRR - Back To Basics": 1200, # 20:00
-    "LRR - Breathless": 210, # 03:30
+    "LRR - Breathless": 540, # 09:00
     "LRR - Don't Panic": 300, # 05:00
     "LRR - Driller Night": 90, # 01:30
     "LRR - Erode Works": 390, # 06:30
@@ -805,7 +805,7 @@ TARGET_CLEAR_TIME_ROCK_HARD = {
     "LRR - A Breath Of Fresh Air": 240, # 04:00
     "LRR - Air Raiders": 900, # 15:00
     "LRR - Back To Basics": 1020, # 17:00
-    "LRR - Breathless": 150, # 02:30
+    "LRR - Breathless": 450, # 07:30
     "LRR - Don't Panic": 270, # 04:30
     "LRR - Driller Night": 60, # 01:00
     "LRR - Erode Works": 300, # 05:00
