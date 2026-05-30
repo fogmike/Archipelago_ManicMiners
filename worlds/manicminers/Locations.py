@@ -496,7 +496,7 @@ TARGET_CLEAR_TIME_EASY = {
     "LRR - Breathless": 1500, # 25:00
     "LRR - Don't Panic": 600, # 10:00
     "LRR - Driller Night": 300, # 05:00
-    "LRR - Erode Works": 900, # 15:00
+    "LRR - Erode Works": 1800, # 30:00
     "LRR - Explosive Action": 720, # 12:00
     "LRR - Fire And Water": 1200, # 20:00
     "LRR - Frozen Frenzy": 840, # 14:00
@@ -626,7 +626,7 @@ TARGET_CLEAR_TIME_MEDIUM = {
     "LRR - Breathless": 900, # 15:00
     "LRR - Don't Panic": 420, # 07:00
     "LRR - Driller Night": 120, # 02:00
-    "LRR - Erode Works": 600, # 10:00
+    "LRR - Erode Works": 1200, # 20:00
     "LRR - Explosive Action": 420, # 07:00
     "LRR - Fire And Water": 780, # 13:00
     "LRR - Frozen Frenzy": 540, # 09:00
@@ -756,7 +756,7 @@ TARGET_CLEAR_TIME_HARD = {
     "LRR - Breathless": 540, # 09:00
     "LRR - Don't Panic": 300, # 05:00
     "LRR - Driller Night": 90, # 01:30
-    "LRR - Erode Works": 390, # 06:30
+    "LRR - Erode Works": 780, # 13:00
     "LRR - Explosive Action": 210, # 03:30
     "LRR - Fire And Water": 540, # 09:00
     "LRR - Frozen Frenzy": 360, # 06:00
@@ -886,7 +886,7 @@ TARGET_CLEAR_TIME_ROCK_HARD = {
     "LRR - Breathless": 450, # 07:30
     "LRR - Don't Panic": 270, # 04:30
     "LRR - Driller Night": 60, # 01:00
-    "LRR - Erode Works": 300, # 05:00
+    "LRR - Erode Works": 600, # 10:00
     "LRR - Explosive Action": 150, # 02:30
     "LRR - Fire And Water": 450, # 07:30
     "LRR - Frozen Frenzy": 600, # 05:00

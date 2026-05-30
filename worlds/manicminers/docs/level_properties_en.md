@@ -11,7 +11,7 @@ The number of locations column shows how many Locations are achieved by clearing
 | Breathless            | 25m           | 15m             | 9m            | 7m 30s             | 3                     |
 | Don't Panic           | 10m           | 7m              | 5m            | 4m 30s             | 4                     |
 | Driller Night         | 5m            | 2m              | 1m 30s        | 1m                 | 2                     |
-| Erode Works           | 15m           | 10m             | 6m 30s        | 5m                 | 3                     |
+| Erode Works           | 30m           | 20m             | 13m           | 10m                | 3                     |
 | Explosive Action      | 12m           | 7m              | 3m 30s        | 2m 30s             | 2                     |
 | Fire and Water        | 20m           | 13m             | 9m            | 7m 30s             | 4                     |
 | Frozen Frenzy         | 14m           | 9m              | 6m            | 5m                 | 3                     |
