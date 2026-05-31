@@ -68,6 +68,24 @@ class TargetTimeDifficulty(Choice):
     
     default = 1
 
+class CrystalTargetsAreLocations(Toggle):
+    """
+    Whether target crystal counts for levels are Locations. 
+    """
+    
+    display_name = "Crystal Targets Are Locations"
+
+class CrystalTargetPercentage(Range):
+    """
+    The percentage of the total possible crystals required to clear the extra Location.
+    Has no effect if Crystal Targets Are Locations is disabled.
+    """
+    
+    range_start = 50
+    range_end = 95
+    
+    display_name = "Crystal target Percentage"
+
 class BuildingsAreItems(DefaultOnToggle):
     """
     Whether Buildings must be found in the multiworld to be unlocked.
@@ -319,6 +337,8 @@ class ManicMinersOptions(PerGameCommonOptions):
     available_levels_at_start: AvailableLevelsAtStart
     target_times_are_locations: TargetTimesAreLocations
     target_time_difficulty: TargetTimeDifficulty
+    crystal_targets_are_locations: CrystalTargetsAreLocations
+    crystal_target_percentage: CrystalTargetPercentage
     buildings_are_items: BuildingsAreItems
     items_are_items: ItemsAreItems
     vehicles_are_items: VehiclesAreItems
@@ -422,7 +442,7 @@ option_groups = [
     ),
     OptionGroup(
         "Locations",
-        [TargetTimesAreLocations,TargetTimeDifficulty,BonusClearLocations]
+        [TargetTimesAreLocations,TargetTimeDifficulty,CrystalTargetsAreLocations,CrystalTargetPercentage,BonusClearLocations]
     ),
     OptionGroup(
         "Items",
