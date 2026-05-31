@@ -281,11 +281,11 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "Level Access: BAZ - Water Works": ItemClassification.progression,
     
     "Building Unlock: Tool Store": ItemClassification.progression,
-    "Building Unlock: Teleport Pad": ItemClassification.progression,
+    "Building Unlock: Teleport Pad": (ItemClassification.progression | ItemClassification.useful), # On SS critical path so same logic as SS
     "Building Unlock: Docks": ItemClassification.progression,
     "Building Unlock: Canteen": ItemClassification.useful,
-    "Building Unlock: Power Station": ItemClassification.progression,
-    "Building Unlock: Support Station": ItemClassification.progression,
+    "Building Unlock: Power Station": (ItemClassification.progression | ItemClassification.useful), # On SS critical path so same logic as SS
+    "Building Unlock: Support Station": (ItemClassification.progression | ItemClassification.useful), # Since SS gates so much, like breathing and every non-dynamite blast option, it's worth marking as a prog-useful item
     "Building Unlock: Upgrade Station": ItemClassification.useful,
     "Building Unlock: Geological Center": ItemClassification.useful,
     "Building Unlock: Ore Refinery": ItemClassification.useful,
