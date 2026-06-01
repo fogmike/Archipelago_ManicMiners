@@ -2683,6 +2683,15 @@ def get_locations_from_save_data(options,save_path):
                 target_time = get_target_time(level[0], options["target_time_difficulty"])
                 if level[1] < target_time:
                     location_ids.append(location_id)
+
+    if options["crystal_targets_are_locations"] == 1:
+        for level in levelDataList:
+            location_id = location_id_from_level_name(level[0])
+            if (location_id != -1):
+                location_id += 2000
+                target_crystal_count = get_target_crystal_count(level[0], options["crystal_target_percentage"])
+                if level[2] >= target_crystal_count:
+                    location_ids.append(location_id)
     
     return location_ids
 
@@ -2921,3 +2930,10 @@ def get_target_time(level_name, difficulty):
             return TARGET_CLEAR_TIME_ROCK_HARD[level_name]
         case _:
             return -1
+
+def get_target_crystal_count(level_name, percentage):
+    #Strip off leading "Archipelago/"
+    level_name = level_name[12:]
+    full_crystal_count = TARGET_CRYSTAL_COUNT[level_name]
+    target_crystal_count = (full_crystal_count * percentage) // 100
+    return target_crystal_count
