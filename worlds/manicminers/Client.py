@@ -69,6 +69,11 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                 all_locations = set(self.ctx.checked_locations)
                 par_time_locations = set(range(101,126)) | set(range(1101,1126)) | set(range(2101,2126)) | set(range(3101,3134))
                 return len(all_locations & par_time_locations)
+                
+            def count_beaten_crystal_target_levels():
+                all_locations = set(self.ctx.checked_locations)
+                crystal_target_locations = set(range(2000,3000)) | set(range(12000,13000)) | set(range(22000,23000)) | set(range(32000,33000))
+                return len(all_locations & crystal_target_locations)
             
             def count_available_levels():
                 all_items = set(get_ids_from_networkitems(self.ctx.items_received))
@@ -195,6 +200,9 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                 self.output(f"Time difficulty: {time_difficulty}")
                 if self.ctx.slot_data["victory_condition"] == 1 or self.ctx.slot_data["target_times_are_locations"] == 1:
                     self.output(f"Par times beaten: {count_beaten_par_time_levels()}")
+            
+            if (self.ctx.slot_data["crystal_targets_are_locations"] == 1):
+                self.output(f"Crystal targets met: {count_beaten_crystal_target_levels()}")
             
             if self.ctx.slot_data["buildings_are_items"] == 1:
                 self.output(f"Buildings available: {count_available_buildings()}/11")
