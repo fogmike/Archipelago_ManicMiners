@@ -176,7 +176,7 @@ LOCATION_NAME_TO_ID = {
     "Clear: LRRR - Water Lot Of Fun": 10240,
     "Clear: LRRR - Water Works": 10250,
 
-    "Bonus Clear 1: LRRR - A Breath Of Fresh Air": 1011,
+    "Bonus Clear 1: LRRR - A Breath Of Fresh Air": 10011,
     "Bonus Clear 1: LRRR - Air Raiders": 10021,
     "Bonus Clear 2: LRRR - Air Raiders": 10022,
     "Bonus Clear 3: LRRR - Air Raiders": 10023,
@@ -311,7 +311,7 @@ LOCATION_NAME_TO_ID = {
     "Clear: LRRC - Water Lot Of Fun": 20240,
     "Clear: LRRC - Water Works": 20250,
 
-    "Bonus Clear 1: LRRC - A Breath Of Fresh Air": 2011,
+    "Bonus Clear 1: LRRC - A Breath Of Fresh Air": 20011,
     "Bonus Clear 1: LRRC - Air Raiders": 20021,
     "Bonus Clear 2: LRRC - Air Raiders": 20022,
     "Bonus Clear 3: LRRC - Air Raiders": 20023,
