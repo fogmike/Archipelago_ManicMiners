@@ -278,6 +278,36 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                 self.output(f"Overall time targets can be seen in /chiefs_report.")
             else:
                 self.output(f"You don't need to check your watch for anything. Explore Planet U at your own leisure!")
+    
+    def _cmd_power_levels(self):
+        """Returns crystal target details for campaigns/levels, if applicable."""
+        
+        if not hasattr(self.ctx,"slot_data"):
+            self.output(f"Not connected to server!")
+        else:
+            if self.ctx.slot_data["crystal_targets_are_locations"] == 1:
+                item_names = []
+                location_names = []
+                for item in get_ids_from_networkitems(self.ctx.items_received):
+                    item_name = list(Items.ITEM_NAME_TO_ID.keys())[list(Items.ITEM_NAME_TO_ID.values()).index(item)]
+                    if item_name[:13] == "Level Access:":
+                        item_names.append(item_name[14:])
+                for location in  self.ctx.missing_locations:
+                    location_name = list(Locations.LOCATION_NAME_TO_ID.keys())[list(Locations.LOCATION_NAME_TO_ID.values()).index(location)]
+                    if location_name[:15] == "Crystal Target:":
+                        location_names.append(location_name[16:])
+                intersection = list(set(item_names) & set(location_names))
+                intersection.sort()
+                number_levels = len(intersection)
+                if number_levels == 0:
+                    self.output(f"You have no available crystal targets that you haven't met!")
+                else:
+                    self.output(f"The following {len(intersection)} crystal targets are available, but not cleared.")
+                    self.output(f"(They may not yet be clearable with your current unlocks.)")
+                    for level_name in intersection:
+                        self.output(f"{level_name}")
+            else:
+                self.output(f"Power levels are stable, you don't need to go beyond the regular level targets!")
 
 def cleanup_install(self):
     arch_level_dir = ManicMinersWorld.settings.manic_miners_level_dir + "\\Levels\\Archipelago"
