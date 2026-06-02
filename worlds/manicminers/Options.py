@@ -80,11 +80,13 @@ class CrystalTargetPercentage(Range):
     The percentage of the total possible crystals required to clear the extra Location.
     Has no effect if Crystal Targets Are Locations is disabled.
     """
-    
+ 
+    display_name = "Crystal Target Percentage"
+ 
     range_start = 50
     range_end = 95
     
-    display_name = "Crystal target Percentage"
+    default = 85
 
 class BuildingsAreItems(DefaultOnToggle):
     """
