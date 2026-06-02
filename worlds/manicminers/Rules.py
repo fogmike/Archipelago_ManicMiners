@@ -44,6 +44,7 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
     rule_can_lase = rule_can_vehicle_lase | rule_can_build_mininglaser
     rule_can_flying_lase = rule_can_vehicle_lase & rule_can_build_tunneltransport
     rule_can_flydrill = (rule_can_build_tunnelscout & rule_can_build_upgradestation) | rule_can_flying_lase
+    rule_can_swimdrill = (rule_can_flydrill | rule_can_build_rapidrider)
     rule_can_blast = Has("Item Unlock: Dynamite") | rule_can_lase | rule_can_build_smalldigger | rule_can_build_granitegrinder
 
     #LRR
@@ -137,7 +138,7 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
     world.set_rule(entrance_lrrr_erodeworks, (Has("Item Unlock: Dynamite") & Has("Level Access: LRRR - Erode Works")))
     world.set_rule(entrance_lrrr_explosiveaction, (rule_can_swim & rule_can_build_supportstation & Has("Level Access: LRRR - Explosive Action")))
     world.set_rule(entrance_lrrr_fireandwater, (rule_can_breathe & (rule_can_build_rapidrider | rule_can_fly) & Has("Level Access: LRRR - Fire And Water")))
-    world.set_rule(entrance_lrrr_frozenfrenzy, (rule_can_breathe & rule_can_blast & (rule_can_flydrill | rule_can_build_rapidrider) & Has("Level Access: LRRR - Frozen Frenzy")))
+    world.set_rule(entrance_lrrr_frozenfrenzy, (rule_can_breathe & rule_can_blast & rule_can_swimdrill & Has("Level Access: LRRR - Frozen Frenzy")))
     world.set_rule(entrance_lrrr_hotstuff, (rule_can_breathe & rule_can_build_toolstore & rule_can_fly & Has("Level Access: LRRR - Hot Stuff")))
     world.set_rule(entrance_lrrr_icespy, (rule_can_breathe & Has("Level Access: LRRR - Ice Spy")))
     world.set_rule(entrance_lrrr_itsaholdup, (rule_can_build_orerefinery & (rule_can_lase | rule_can_swim | rule_can_jump | Has("Item Unlock: Dynamite")) & Has("Level Access: LRRR - It's A Hold Up")))
