@@ -10,11 +10,10 @@ if TYPE_CHECKING:
     from .World import ManicMinersWorld
 
 def set_all_rules(world: ManicMinersWorld) -> None:
-    set_all_entrance_rules(world)
-    set_all_location_rules(world)
+    set_all_entrance_and_location_rules(world)
     set_completion_condition(world)
     
-def set_all_entrance_rules(world: ManicMinersWorld) -> None:
+def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     
     rule_can_build_toolstore = Has("Building Unlock: Tool Store")
     rule_can_build_teleportpad = HasAll("Building Unlock: Teleport Pad", "Building Unlock: Power Station")
@@ -413,10 +412,9 @@ def set_all_entrance_rules(world: ManicMinersWorld) -> None:
     # world.set_rule(entrance_baz_waterlotoffun, Has("Level Access: BAZ - Water Lot Of Fun"))
     # world.set_rule(entrance_baz_waterworks, Has("Level Access: BAZ - Water Works"))
 
-def set_all_location_rules(world: ManicMinersWorld) -> None:
     goal_achievable = world.get_location("Goal Conditions Achievable")
     if world.options.victory_condition in [0,1]:
-        set_rule(goal_achievable, lambda state: state.has("Level Completed", world.player, world.options.target_level_count))
+        world.set_rule(goal_achievable, Has("Level Completed", world.options.target_level_count.value))
     
 def set_completion_condition(world: ManicMinersWorld) -> None:
-    world.multiworld.completion_condition[world.player] = lambda state: state.has("Victory", world.player)
+    world.set_completion_rule(Has("Victory"))
