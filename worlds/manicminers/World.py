@@ -421,10 +421,6 @@ class ManicMinersWorld(World):
                 self.options.available_levels_at_start.value +=1
             else:
                 self.options.bonus_clear_locations.value = 1
-        
-        # If Victory Condition is Total Clear Time, set target level count to all of them
-        if self.options.victory_condition == 2:
-            self.options.target_level_count.value = number_levels
 
         # If more levels are required than are available, reduce number required
         elif self.options.target_level_count > number_levels:

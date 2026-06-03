@@ -2415,7 +2415,7 @@ def create_events(world: ManicMinersWorld) -> None:
     region_lrrc_waterlotoffun = world.get_region("LRRC - Water Lot Of Fun")
     region_lrrc_waterworks = world.get_region("LRRC - Water Works")
     
-    if world.options.victory_condition in [0,1,2]:
+    if world.options.victory_condition in [0,1]:
         if world.options.level_selection_lrr_abreathoffreshair:
             region_lrr_abreathoffreshair.add_event("Completable: LRR - A Breath Of Fresh Air", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         if world.options.level_selection_lrr_airraiders:
@@ -2598,59 +2598,6 @@ def check_for_victory(options,save_path):
         else:
             return False
     
-    elif options["victory_condition"] == 2: # total_target_time
-        total_time = 0
-        level_count = 0
-        target_time = 0
-        match options["target_time_difficulty"]:
-            case 0:
-                if options["campaign_selection_lrr"]:
-                    target_time += TARGET_TOTAL_CLEAR_TIME_LRR_EASY
-                if options["campaign_selection_lrrr"]:
-                    target_time += TARGET_TOTAL_CLEAR_TIME_LRRR_EASY
-                if options["campaign_selection_lrrc"]:
-                    target_time += TARGET_TOTAL_CLEAR_TIME_LRRC_EASY
-                # if options["campaign_selection_baz"]:
-                    # target_time += TARGET_TOTAL_CLEAR_TIME_BAZ_EASY
-            case 1:
-                if options["campaign_selection_lrr"]:
-                    target_time += TARGET_TOTAL_CLEAR_TIME_LRR_MEDIUM
-                if options["campaign_selection_lrrr"]:
-                    target_time += TARGET_TOTAL_CLEAR_TIME_LRRR_MEDIUM
-                if options["campaign_selection_lrrc"]:
-                    target_time += TARGET_TOTAL_CLEAR_TIME_LRRC_MEDIUM
-                # if options["campaign_selection_baz"]:
-                    # target_time += TARGET_TOTAL_CLEAR_TIME_BAZ_MEDIUM
-            case 2:
-                if options["campaign_selection_lrr"]:
-                    target_time += TARGET_TOTAL_CLEAR_TIME_LRR_HARD
-                if options["campaign_selection_lrrr"]:
-                    target_time += TARGET_TOTAL_CLEAR_TIME_LRRR_HARD
-                if options["campaign_selection_lrrc"]:
-                    target_time += TARGET_TOTAL_CLEAR_TIME_LRRC_HARD
-                # if options["campaign_selection_baz"]:
-                    # target_time += TARGET_TOTAL_CLEAR_TIME_BAZ_HARD
-            case 3:
-                if options["campaign_selection_lrr"]:
-                    target_time += TARGET_TOTAL_CLEAR_TIME_LRR_ROCK_HARD
-                if options["campaign_selection_lrrr"]:
-                    target_time += TARGET_TOTAL_CLEAR_TIME_LRRR_ROCK_HARD
-                if options["campaign_selection_lrrc"]:
-                    target_time += TARGET_TOTAL_CLEAR_TIME_LRRC_ROCK_HARD
-                # if options["campaign_selection_baz"]:
-                    # target_time += TARGET_TOTAL_CLEAR_TIME_BAZ_ROCK_HARD
-            case _:
-                target_time = -1
-        for level in levelDataList:
-            location_id = location_id_from_level_name(level[0])
-            if (location_id != -1):
-                total_time += level[1]
-                level_count += 1
-        if total_time < target_time and level_count >= options["target_count"]:
-            return True
-        else:
-            return False
-            
     #shouldn't hit this, but to make sure we return something
     return False
   

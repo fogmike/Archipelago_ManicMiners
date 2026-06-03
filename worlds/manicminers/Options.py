@@ -7,14 +7,12 @@ class VictoryCondition(Choice):
     What the victory condition for the overall game is. 
     Total Levels Cleared: You must clear X total levels to goal the game.
     Individual Target Time: You must beat the target time on X levels in the campaign.
-    Total Target Time: You must clear all levels in the selected campaigns, and achieve an overall par. This means that a good time in one level can make up for a bad time in another. 
     """
     
     display_name = "Victory Condition"
     
     option_total_levels_cleared = 0
     option_individual_target_time = 1
-    option_total_target_time = 2
     
     default = option_total_levels_cleared
 
