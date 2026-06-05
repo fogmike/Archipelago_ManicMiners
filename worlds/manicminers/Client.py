@@ -65,13 +65,35 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                 clear_locations = set(range(0,1000,10)) | set(range(10000,11000,10)) | set(range(20000,21000,10)) | set(range(30000,31000,10))
                 return len(all_locations & clear_locations)
                 
-            def count_beaten_par_time_levels():
+            def count_beaten_par_time_levels_ap():
                 all_locations = set(self.ctx.checked_locations)
                 par_time_locations = set(range(1000,2000)) | set(range(11000,12000)) | set(range(21000,22000)) | set(range(31000,32000))
                 return len(all_locations & par_time_locations)
                 
-            def count_beaten_crystal_target_levels():
+            def count_beaten_par_time_levels_local():
+                if platform.system() == "Windows":
+                    lad = os.getenv('LOCALAPPDATA')
+                    save_path = lad + "\\ManicMiners\\Saved\\SaveGames\\Profiles\\Archipelago.sav"
+                else:
+                    save_dir = ManicMinersWorld.settings.manic_miners_save_dir
+                    save_path = save_dir + "/Archipelago.sav"
+                all_locations = set(Locations.get_locations_from_save_data(self.ctx.slot_data,save_path))
+                par_time_locations = set(range(1000,2000)) | set(range(11000,12000)) | set(range(21000,22000)) | set(range(31000,32000))
+                return len(all_locations & par_time_locations)
+                
+            def count_beaten_crystal_target_levels_ap():
                 all_locations = set(self.ctx.checked_locations)
+                crystal_target_locations = set(range(2000,3000)) | set(range(12000,13000)) | set(range(22000,23000)) | set(range(32000,33000))
+                return len(all_locations & crystal_target_locations)
+                                
+            def count_beaten_crystal_target_levels_local():
+                if platform.system() == "Windows":
+                    lad = os.getenv('LOCALAPPDATA')
+                    save_path = lad + "\\ManicMiners\\Saved\\SaveGames\\Profiles\\Archipelago.sav"
+                else:
+                    save_dir = ManicMinersWorld.settings.manic_miners_save_dir
+                    save_path = save_dir + "/Archipelago.sav"
+                all_locations = set(Locations.get_locations_from_save_data(self.ctx.slot_data,save_path))
                 crystal_target_locations = set(range(2000,3000)) | set(range(12000,13000)) | set(range(22000,23000)) | set(range(32000,33000))
                 return len(all_locations & crystal_target_locations)
             
@@ -131,11 +153,16 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
             if self.ctx.slot_data["victory_condition"] == 0:
                 self.output(f"Goal: Clear {self.ctx.slot_data["target_level_count"]} levels")
             elif self.ctx.slot_data["victory_condition"] == 1:
-                self.output(f"Goal: Beat par time on {self.ctx.slot_data["target_level_count"]} levels")            
+                self.output(f"Goal: Beat par time on {self.ctx.slot_data["target_level_count"]} levels")
+            elif self.ctx.slot_data["victory_condition"] == 2:
+                self.output(f"Goal: Beat crystal targets on {self.ctx.slot_data["target_level_count"]} levels")
  
             self.output(f"Levels available: {count_available_levels()}/{count_total_levels()}") 
-            self.output(f"Levels cleared (in Archipelago): {count_cleared_levels_ap()}")
-            self.output(f"Levels cleared (in local state): {count_cleared_levels_local()}")
+            if self.ctx.slot_data["victory_condition"] == 0:
+                self.output(f"Levels cleared (in Archipelago): {count_cleared_levels_ap()}")
+                self.output(f"Levels cleared (in local state): {count_cleared_levels_local()}")
+            else:
+                self.output(f"Levels cleared: {count_cleared_levels_ap()}")
             
             if ((self.ctx.slot_data["victory_condition"] == 1) or (self.ctx.slot_data["target_times_are_locations"] == 1)):
                 match self.ctx.slot_data["target_time_difficulty"]:
@@ -150,11 +177,17 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                     case _:
                         time_difficulty = ""
                 self.output(f"Time difficulty: {time_difficulty}")
-                if self.ctx.slot_data["victory_condition"] == 1 or self.ctx.slot_data["target_times_are_locations"] == 1:
-                    self.output(f"Par times beaten: {count_beaten_par_time_levels()}")
+            if self.ctx.slot_data["victory_condition"] == 1:
+                self.output(f"Par times beaten (in Archipelago): {count_beaten_par_time_levels_ap()}")
+                self.output(f"Par times beaten (in local state): {count_beaten_par_time_levels_local()}")
+            elif self.ctx.slot_data["target_times_are_locations"] == 1:
+               self.output(f"Par times beaten: {count_beaten_par_time_levels_ap()}")
             
-            if (self.ctx.slot_data["crystal_targets_are_locations"] == 1):
-                self.output(f"Crystal targets met: {count_beaten_crystal_target_levels()}")
+            if self.ctx.slot_data["victory_condition"] == 2:           
+                self.output(f"Crystal targets met (in Archipelago): {count_beaten_crystal_target_levels_ap()}")
+                self.output(f"Crystal targets met (in local state): {count_beaten_crystal_target_levels_local()}")
+            elif (self.ctx.slot_data["crystal_targets_are_locations"] == 1):
+                self.output(f"Crystal targets met: {count_beaten_crystal_target_levels_ap()}")
             
             if self.ctx.slot_data["buildings_are_items"] == 1:
                 self.output(f"Buildings available: {count_available_buildings()}/11")
