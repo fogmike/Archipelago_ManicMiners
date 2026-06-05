@@ -8,6 +8,7 @@ class VictoryCondition(Choice):
     Clear X Levels: You must clear X total levels to goal the game.
     Beat X Par Times: You must beat the target time on X total levels.
     Beat X Crystal Targets: You must beat the crystal target on X total levels.
+    Coordinate Hunt: You must find X "Transporter Coordinates" items to gain access to Rocky Horror, which you must then clear to win the game. 
     """
     
     display_name = "Victory Condition"
@@ -15,8 +16,16 @@ class VictoryCondition(Choice):
     option_clear_x_levels = 0
     option_beat_x_par_times = 1
     option_beat_x_crystal_targets = 2
+    option_coordinate_hunt = 3
     
     default = option_clear_x_levels
+
+class LockedCoordinates(DefaultOnToggle):
+    """
+    Only relevant if Victory Condition is set to "Coordinate Hunt". 
+    If true, then clearing each level unlocks one "Transporter Coordinates" item. 
+    If false, then the "Transporter Coordinates" can be anywhere in the multiworld.
+    """
 
 class TargetLevelCount(Range):
     """
@@ -334,6 +343,7 @@ class LevelSelectionLRRCWaterWorks(Toggle):
 @dataclass
 class ManicMinersOptions(PerGameCommonOptions):
     victory_condition: VictoryCondition
+    locked_coordinates: LockedCoordinates
     target_level_count: TargetLevelCount
     available_levels_at_start: AvailableLevelsAtStart
     target_times_are_locations: TargetTimesAreLocations
@@ -438,8 +448,8 @@ option_groups = [
         [CampaignSelectionLRR,CampaignSelectionLRRR,CampaignSelectionLRRC,NoDuplicateLevels]
     ),
     OptionGroup(
-        "Levels",
-        [TargetLevelCount,AvailableLevelsAtStart]
+        "Goal",
+        [VictoryCondition,LockedCoordinates,TargetLevelCount]
     ),
     OptionGroup(
         "Locations",
@@ -447,7 +457,7 @@ option_groups = [
     ),
     OptionGroup(
         "Items",
-        [BuildingsAreItems,ItemsAreItems,VehiclesAreItems,BonusTruck]
+        [AvailableLevelsAtStart,BuildingsAreItems,ItemsAreItems,VehiclesAreItems,BonusTruck]
     ),
     OptionGroup(
         "Logic",
