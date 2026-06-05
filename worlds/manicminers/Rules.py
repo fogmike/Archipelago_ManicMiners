@@ -425,8 +425,12 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(location_crystals_lrrc_waterworks, rule_can_swim)
 
     goal_achievable = world.get_location("Goal Conditions Achievable")
-    if world.options.victory_condition in [0,1]:
+    if world.options.victory_condition == 0:
         world.set_rule(goal_achievable, Has("Level Completed", world.options.target_level_count.value))
+    elif world.options.victory_condition == 1:
+        world.set_rule(goal_achievable, Has("Par Time Beaten", world.options.target_level_count.value))
+    elif world.options.victory_condition == 2:
+        world.set_rule(goal_achievable, Has("Crystal Target Beaten", world.options.target_level_count.value))
     
 def set_completion_condition(world: ManicMinersWorld) -> None:
     world.set_completion_rule(Has("Victory"))
