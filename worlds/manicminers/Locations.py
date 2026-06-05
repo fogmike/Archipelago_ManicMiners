@@ -1274,7 +1274,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_airraiders = get_location_names_with_ids(["Beat Par Time: LRR - Air Raiders"])
             region_lrr_airraiders.add_locations(locations_lrr_airraiders, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_airraiders = get_location_names_with_ids(["Crystal Target: LRR - Air Raiders"])
             region_lrr_airraiders.add_locations(locations_lrr_airraiders, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1298,7 +1298,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_backtobasics = get_location_names_with_ids(["Beat Par Time: LRR - Back To Basics"])
             region_lrr_backtobasics.add_locations(locations_lrr_backtobasics, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_backtobasics = get_location_names_with_ids(["Crystal Target: LRR - Back To Basics"])
             region_lrr_backtobasics.add_locations(locations_lrr_backtobasics, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1318,7 +1318,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_breathless = get_location_names_with_ids(["Beat Par Time: LRR - Breathless"])
             region_lrr_breathless.add_locations(locations_lrr_breathless, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_breathless = get_location_names_with_ids(["Crystal Target: LRR - Breathless"])
             region_lrr_breathless.add_locations(locations_lrr_breathless, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1340,7 +1340,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_dontpanic = get_location_names_with_ids(["Beat Par Time: LRR - Don't Panic"])
             region_lrr_dontpanic.add_locations(locations_lrr_dontpanic, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_dontpanic = get_location_names_with_ids(["Crystal Target: LRR - Don't Panic"])
             region_lrr_dontpanic.add_locations(locations_lrr_dontpanic, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1358,7 +1358,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_drillernight = get_location_names_with_ids(["Beat Par Time: LRR - Driller Night"])
             region_lrr_drillernight.add_locations(locations_lrr_drillernight, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_drillernight = get_location_names_with_ids(["Crystal Target: LRR - Driller Night"])
             region_lrr_drillernight.add_locations(locations_lrr_drillernight, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1378,7 +1378,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_erodeworks = get_location_names_with_ids(["Beat Par Time: LRR - Erode Works"])
             region_lrr_erodeworks.add_locations(locations_lrr_erodeworks, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_erodeworks = get_location_names_with_ids(["Crystal Target: LRR - Erode Works"])
             region_lrr_erodeworks.add_locations(locations_lrr_erodeworks, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1396,7 +1396,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_explosiveaction = get_location_names_with_ids(["Beat Par Time: LRR - Explosive Action"])
             region_lrr_explosiveaction.add_locations(locations_lrr_explosiveaction, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_explosiveaction = get_location_names_with_ids(["Crystal Target: LRR - Explosive Action"])
             region_lrr_explosiveaction.add_locations(locations_lrr_explosiveaction, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1418,7 +1418,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_fireandwater = get_location_names_with_ids(["Beat Par Time: LRR - Fire And Water"])
             region_lrr_fireandwater.add_locations(locations_lrr_fireandwater, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_fireandwater = get_location_names_with_ids(["Crystal Target: LRR - Fire And Water"])
             region_lrr_fireandwater.add_locations(locations_lrr_fireandwater, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1438,7 +1438,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_frozenfrenzy = get_location_names_with_ids(["Beat Par Time: LRR - Frozen Frenzy"])
             region_lrr_frozenfrenzy.add_locations(locations_lrr_frozenfrenzy, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_frozenfrenzy = get_location_names_with_ids(["Crystal Target: LRR - Frozen Frenzy"])
             region_lrr_frozenfrenzy.add_locations(locations_lrr_frozenfrenzy, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1462,7 +1462,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_hotstuff = get_location_names_with_ids(["Beat Par Time: LRR - Hot Stuff"])
             region_lrr_hotstuff.add_locations(locations_lrr_hotstuff, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_hotstuff = get_location_names_with_ids(["Crystal Target: LRR - Hot Stuff"])
             region_lrr_hotstuff.add_locations(locations_lrr_hotstuff, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1484,7 +1484,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_icespy = get_location_names_with_ids(["Beat Par Time: LRR - Ice Spy"])
             region_lrr_icespy.add_locations(locations_lrr_icespy, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_icespy = get_location_names_with_ids(["Crystal Target: LRR - Ice Spy"])
             region_lrr_icespy.add_locations(locations_lrr_icespy, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1502,7 +1502,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_itsaholdup = get_location_names_with_ids(["Beat Par Time: LRR - It's A Hold Up"])
             region_lrr_itsaholdup.add_locations(locations_lrr_itsaholdup, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_itsaholdup = get_location_names_with_ids(["Crystal Target: LRR - It's A Hold Up"])
             region_lrr_itsaholdup.add_locations(locations_lrr_itsaholdup, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1524,7 +1524,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_lakeoffire = get_location_names_with_ids(["Beat Par Time: LRR - Lake Of Fire"])
             region_lrr_lakeoffire.add_locations(locations_lrr_lakeoffire, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_lakeoffire = get_location_names_with_ids(["Crystal Target: LRR - Lake Of Fire"])
             region_lrr_lakeoffire.add_locations(locations_lrr_lakeoffire, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1546,7 +1546,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_lavalaughter = get_location_names_with_ids(["Beat Par Time: LRR - Lava Laughter"])
             region_lrr_lavalaughter.add_locations(locations_lrr_lavalaughter, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_lavalaughter = get_location_names_with_ids(["Crystal Target: LRR - Lava Laughter"])
             region_lrr_lavalaughter.add_locations(locations_lrr_lavalaughter, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1568,7 +1568,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_oresome = get_location_names_with_ids(["Beat Par Time: LRR - Oresome"])
             region_lrr_oresome.add_locations(locations_lrr_oresome, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_oresome = get_location_names_with_ids(["Crystal Target: LRR - Oresome"])
             region_lrr_oresome.add_locations(locations_lrr_oresome, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1588,7 +1588,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_rockhard = get_location_names_with_ids(["Beat Par Time: LRR - Rock Hard"])
             region_lrr_rockhard.add_locations(locations_lrr_rockhard, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_rockhard = get_location_names_with_ids(["Crystal Target: LRR - Rock Hard"])
             region_lrr_rockhard.add_locations(locations_lrr_rockhard, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1612,7 +1612,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_rockyhorror = get_location_names_with_ids(["Beat Par Time: LRR - Rocky Horror"])
             region_lrr_rockyhorror.add_locations(locations_lrr_rockyhorror, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_rockyhorror = get_location_names_with_ids(["Crystal Target: LRR - Rocky Horror"])
             region_lrr_rockyhorror.add_locations(locations_lrr_rockyhorror, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1630,7 +1630,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_rubbletrouble = get_location_names_with_ids(["Beat Par Time: LRR - Rubble Trouble"])
             region_lrr_rubbletrouble.add_locations(locations_lrr_rubbletrouble, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_rubbletrouble = get_location_names_with_ids(["Crystal Target: LRR - Rubble Trouble"])
             region_lrr_rubbletrouble.add_locations(locations_lrr_rubbletrouble, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1648,7 +1648,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_runthegauntlet = get_location_names_with_ids(["Beat Par Time: LRR - Run The Gauntlet"])
             region_lrr_runthegauntlet.add_locations(locations_lrr_runthegauntlet, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_runthegauntlet = get_location_names_with_ids(["Crystal Target: LRR - Run The Gauntlet"])
             region_lrr_runthegauntlet.add_locations(locations_lrr_runthegauntlet, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1668,7 +1668,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_searchandrescue = get_location_names_with_ids(["Beat Par Time: LRR - Search And Rescue"])
             region_lrr_searchandrescue.add_locations(locations_lrr_searchandrescue, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_searchandrescue = get_location_names_with_ids(["Crystal Target: LRR - Search And Rescue"])
             region_lrr_searchandrescue.add_locations(locations_lrr_searchandrescue, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1688,7 +1688,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_splitdownthemiddle = get_location_names_with_ids(["Beat Par Time: LRR - Split Down The Middle"])
             region_lrr_splitdownthemiddle.add_locations(locations_lrr_splitdownthemiddle, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_splitdownthemiddle = get_location_names_with_ids(["Crystal Target: LRR - Split Down The Middle"])
             region_lrr_splitdownthemiddle.add_locations(locations_lrr_splitdownthemiddle, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1706,7 +1706,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_thepathtopower = get_location_names_with_ids(["Beat Par Time: LRR - The Path To Power"])
             region_lrr_thepathtopower.add_locations(locations_lrr_thepathtopower, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_thepathtopower = get_location_names_with_ids(["Crystal Target: LRR - The Path To Power"])
             region_lrr_thepathtopower.add_locations(locations_lrr_thepathtopower, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1726,7 +1726,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_waterlotoffun = get_location_names_with_ids(["Beat Par Time: LRR - Water Lot Of Fun"])
             region_lrr_waterlotoffun.add_locations(locations_lrr_waterlotoffun, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_waterlotoffun = get_location_names_with_ids(["Crystal Target: LRR - Water Lot Of Fun"])
             region_lrr_waterlotoffun.add_locations(locations_lrr_waterlotoffun, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1746,7 +1746,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrr_waterworks = get_location_names_with_ids(["Beat Par Time: LRR - Water Works"])
             region_lrr_waterworks.add_locations(locations_lrr_waterworks, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrr_waterworks = get_location_names_with_ids(["Crystal Target: LRR - Water Works"])
             region_lrr_waterworks.add_locations(locations_lrr_waterworks, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1787,7 +1787,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_airraiders = get_location_names_with_ids(["Beat Par Time: LRRR - Air Raiders"])
             region_lrrr_airraiders.add_locations(locations_lrrr_airraiders, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_airraiders = get_location_names_with_ids(["Crystal Target: LRRR - Air Raiders"])
             region_lrrr_airraiders.add_locations(locations_lrrr_airraiders, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1811,7 +1811,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_backtobasics = get_location_names_with_ids(["Beat Par Time: LRRR - Back To Basics"])
             region_lrrr_backtobasics.add_locations(locations_lrrr_backtobasics, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_backtobasics = get_location_names_with_ids(["Crystal Target: LRRR - Back To Basics"])
             region_lrrr_backtobasics.add_locations(locations_lrrr_backtobasics, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1831,7 +1831,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_breathless = get_location_names_with_ids(["Beat Par Time: LRRR - Breathless"])
             region_lrrr_breathless.add_locations(locations_lrrr_breathless, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_breathless = get_location_names_with_ids(["Crystal Target: LRRR - Breathless"])
             region_lrrr_breathless.add_locations(locations_lrrr_breathless, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1853,7 +1853,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_dontpanic = get_location_names_with_ids(["Beat Par Time: LRRR - Don't Panic"])
             region_lrrr_dontpanic.add_locations(locations_lrrr_dontpanic, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_dontpanic = get_location_names_with_ids(["Crystal Target: LRRR - Don't Panic"])
             region_lrrr_dontpanic.add_locations(locations_lrrr_dontpanic, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1871,7 +1871,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_drillernight = get_location_names_with_ids(["Beat Par Time: LRRR - Driller Night"])
             region_lrrr_drillernight.add_locations(locations_lrrr_drillernight, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_drillernight = get_location_names_with_ids(["Crystal Target: LRRR - Driller Night"])
             region_lrrr_drillernight.add_locations(locations_lrrr_drillernight, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1891,7 +1891,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_erodeworks = get_location_names_with_ids(["Beat Par Time: LRRR - Erode Works"])
             region_lrrr_erodeworks.add_locations(locations_lrrr_erodeworks, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_erodeworks = get_location_names_with_ids(["Crystal Target: LRRR - Erode Works"])
             region_lrrr_erodeworks.add_locations(locations_lrrr_erodeworks, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1909,7 +1909,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_explosiveaction = get_location_names_with_ids(["Beat Par Time: LRRR - Explosive Action"])
             region_lrrr_explosiveaction.add_locations(locations_lrrr_explosiveaction, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_explosiveaction = get_location_names_with_ids(["Crystal Target: LRRR - Explosive Action"])
             region_lrrr_explosiveaction.add_locations(locations_lrrr_explosiveaction, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1931,7 +1931,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_fireandwater = get_location_names_with_ids(["Beat Par Time: LRRR - Fire And Water"])
             region_lrrr_fireandwater.add_locations(locations_lrrr_fireandwater, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_fireandwater = get_location_names_with_ids(["Crystal Target: LRRR - Fire And Water"])
             region_lrrr_fireandwater.add_locations(locations_lrrr_fireandwater, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1951,7 +1951,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_frozenfrenzy = get_location_names_with_ids(["Beat Par Time: LRRR - Frozen Frenzy"])
             region_lrrr_frozenfrenzy.add_locations(locations_lrrr_frozenfrenzy, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_frozenfrenzy = get_location_names_with_ids(["Crystal Target: LRRR - Frozen Frenzy"])
             region_lrrr_frozenfrenzy.add_locations(locations_lrrr_frozenfrenzy, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1975,7 +1975,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_hotstuff = get_location_names_with_ids(["Beat Par Time: LRRR - Hot Stuff"])
             region_lrrr_hotstuff.add_locations(locations_lrrr_hotstuff, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_hotstuff = get_location_names_with_ids(["Crystal Target: LRRR - Hot Stuff"])
             region_lrrr_hotstuff.add_locations(locations_lrrr_hotstuff, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -1997,7 +1997,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_icespy = get_location_names_with_ids(["Beat Par Time: LRRR - Ice Spy"])
             region_lrrr_icespy.add_locations(locations_lrrr_icespy, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_icespy = get_location_names_with_ids(["Crystal Target: LRRR - Ice Spy"])
             region_lrrr_icespy.add_locations(locations_lrrr_icespy, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2015,7 +2015,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_itsaholdup = get_location_names_with_ids(["Beat Par Time: LRRR - It's A Hold Up"])
             region_lrrr_itsaholdup.add_locations(locations_lrrr_itsaholdup, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_itsaholdup = get_location_names_with_ids(["Crystal Target: LRRR - It's A Hold Up"])
             region_lrrr_itsaholdup.add_locations(locations_lrrr_itsaholdup, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2037,7 +2037,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_lakeoffire = get_location_names_with_ids(["Beat Par Time: LRRR - Lake Of Fire"])
             region_lrrr_lakeoffire.add_locations(locations_lrrr_lakeoffire, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_lakeoffire = get_location_names_with_ids(["Crystal Target: LRRR - Lake Of Fire"])
             region_lrrr_lakeoffire.add_locations(locations_lrrr_lakeoffire, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2059,7 +2059,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_lavalaughter = get_location_names_with_ids(["Beat Par Time: LRRR - Lava Laughter"])
             region_lrrr_lavalaughter.add_locations(locations_lrrr_lavalaughter, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_lavalaughter = get_location_names_with_ids(["Crystal Target: LRRR - Lava Laughter"])
             region_lrrr_lavalaughter.add_locations(locations_lrrr_lavalaughter, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2081,7 +2081,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_oresome = get_location_names_with_ids(["Beat Par Time: LRRR - Oresome"])
             region_lrrr_oresome.add_locations(locations_lrrr_oresome, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_oresome = get_location_names_with_ids(["Crystal Target: LRRR - Oresome"])
             region_lrrr_oresome.add_locations(locations_lrrr_oresome, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2101,7 +2101,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_rockhard = get_location_names_with_ids(["Beat Par Time: LRRR - Rock Hard"])
             region_lrrr_rockhard.add_locations(locations_lrrr_rockhard, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_rockhard = get_location_names_with_ids(["Crystal Target: LRRR - Rock Hard"])
             region_lrrr_rockhard.add_locations(locations_lrrr_rockhard, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2125,7 +2125,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_rockyhorror = get_location_names_with_ids(["Beat Par Time: LRRR - Rocky Horror"])
             region_lrrr_rockyhorror.add_locations(locations_lrrr_rockyhorror, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_rockyhorror = get_location_names_with_ids(["Crystal Target: LRRR - Rocky Horror"])
             region_lrrr_rockyhorror.add_locations(locations_lrrr_rockyhorror, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2143,7 +2143,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_rubbletrouble = get_location_names_with_ids(["Beat Par Time: LRRR - Rubble Trouble"])
             region_lrrr_rubbletrouble.add_locations(locations_lrrr_rubbletrouble, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_rubbletrouble = get_location_names_with_ids(["Crystal Target: LRRR - Rubble Trouble"])
             region_lrrr_rubbletrouble.add_locations(locations_lrrr_rubbletrouble, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2161,7 +2161,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_runthegauntlet = get_location_names_with_ids(["Beat Par Time: LRRR - Run The Gauntlet"])
             region_lrrr_runthegauntlet.add_locations(locations_lrrr_runthegauntlet, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_runthegauntlet = get_location_names_with_ids(["Crystal Target: LRRR - Run The Gauntlet"])
             region_lrrr_runthegauntlet.add_locations(locations_lrrr_runthegauntlet, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2181,7 +2181,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_searchandrescue = get_location_names_with_ids(["Beat Par Time: LRRR - Search And Rescue"])
             region_lrrr_searchandrescue.add_locations(locations_lrrr_searchandrescue, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_searchandrescue = get_location_names_with_ids(["Crystal Target: LRRR - Search And Rescue"])
             region_lrrr_searchandrescue.add_locations(locations_lrrr_searchandrescue, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2201,7 +2201,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_splitdownthemiddle = get_location_names_with_ids(["Beat Par Time: LRRR - Split Down The Middle"])
             region_lrrr_splitdownthemiddle.add_locations(locations_lrrr_splitdownthemiddle, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_splitdownthemiddle = get_location_names_with_ids(["Crystal Target: LRRR - Split Down The Middle"])
             region_lrrr_splitdownthemiddle.add_locations(locations_lrrr_splitdownthemiddle, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2219,7 +2219,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_thepathtopower = get_location_names_with_ids(["Beat Par Time: LRRR - The Path To Power"])
             region_lrrr_thepathtopower.add_locations(locations_lrrr_thepathtopower, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_thepathtopower = get_location_names_with_ids(["Crystal Target: LRRR - The Path To Power"])
             region_lrrr_thepathtopower.add_locations(locations_lrrr_thepathtopower, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2239,7 +2239,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_waterlotoffun = get_location_names_with_ids(["Beat Par Time: LRRR - Water Lot Of Fun"])
             region_lrrr_waterlotoffun.add_locations(locations_lrrr_waterlotoffun, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_waterlotoffun = get_location_names_with_ids(["Crystal Target: LRRR - Water Lot Of Fun"])
             region_lrrr_waterlotoffun.add_locations(locations_lrrr_waterlotoffun, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2259,7 +2259,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrr_waterworks = get_location_names_with_ids(["Beat Par Time: LRRR - Water Works"])
             region_lrrr_waterworks.add_locations(locations_lrrr_waterworks, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrr_waterworks = get_location_names_with_ids(["Crystal Target: LRRR - Water Works"])
             region_lrrr_waterworks.add_locations(locations_lrrr_waterworks, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2300,7 +2300,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_airraiders = get_location_names_with_ids(["Beat Par Time: LRRC - Air Raiders"])
             region_lrrc_airraiders.add_locations(locations_lrrc_airraiders, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_airraiders = get_location_names_with_ids(["Crystal Target: LRRC - Air Raiders"])
             region_lrrc_airraiders.add_locations(locations_lrrc_airraiders, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2324,7 +2324,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_backtobasics = get_location_names_with_ids(["Beat Par Time: LRRC - Back To Basics"])
             region_lrrc_backtobasics.add_locations(locations_lrrc_backtobasics, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_backtobasics = get_location_names_with_ids(["Crystal Target: LRRC - Back To Basics"])
             region_lrrc_backtobasics.add_locations(locations_lrrc_backtobasics, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2344,7 +2344,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_breathless = get_location_names_with_ids(["Beat Par Time: LRRC - Breathless"])
             region_lrrc_breathless.add_locations(locations_lrrc_breathless, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_breathless = get_location_names_with_ids(["Crystal Target: LRRC - Breathless"])
             region_lrrc_breathless.add_locations(locations_lrrc_breathless, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2366,7 +2366,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_dontpanic = get_location_names_with_ids(["Beat Par Time: LRRC - Don't Panic"])
             region_lrrc_dontpanic.add_locations(locations_lrrc_dontpanic, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_dontpanic = get_location_names_with_ids(["Crystal Target: LRRC - Don't Panic"])
             region_lrrc_dontpanic.add_locations(locations_lrrc_dontpanic, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2384,7 +2384,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_drillernight = get_location_names_with_ids(["Beat Par Time: LRRC - Driller Night"])
             region_lrrc_drillernight.add_locations(locations_lrrc_drillernight, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_drillernight = get_location_names_with_ids(["Crystal Target: LRRC - Driller Night"])
             region_lrrc_drillernight.add_locations(locations_lrrc_drillernight, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2404,7 +2404,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_erodeworks = get_location_names_with_ids(["Beat Par Time: LRRC - Erode Works"])
             region_lrrc_erodeworks.add_locations(locations_lrrc_erodeworks, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_erodeworks = get_location_names_with_ids(["Crystal Target: LRRC - Erode Works"])
             region_lrrc_erodeworks.add_locations(locations_lrrc_erodeworks, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2422,7 +2422,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_explosiveaction = get_location_names_with_ids(["Beat Par Time: LRRC - Explosive Action"])
             region_lrrc_explosiveaction.add_locations(locations_lrrc_explosiveaction, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_explosiveaction = get_location_names_with_ids(["Crystal Target: LRRC - Explosive Action"])
             region_lrrc_explosiveaction.add_locations(locations_lrrc_explosiveaction, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2444,7 +2444,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_fireandwater = get_location_names_with_ids(["Beat Par Time: LRRC - Fire And Water"])
             region_lrrc_fireandwater.add_locations(locations_lrrc_fireandwater, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_fireandwater = get_location_names_with_ids(["Crystal Target: LRRC - Fire And Water"])
             region_lrrc_fireandwater.add_locations(locations_lrrc_fireandwater, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2464,7 +2464,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_frozenfrenzy = get_location_names_with_ids(["Beat Par Time: LRRC - Frozen Frenzy"])
             region_lrrc_frozenfrenzy.add_locations(locations_lrrc_frozenfrenzy, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_frozenfrenzy = get_location_names_with_ids(["Crystal Target: LRRC - Frozen Frenzy"])
             region_lrrc_frozenfrenzy.add_locations(locations_lrrc_frozenfrenzy, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2488,7 +2488,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_hotstuff = get_location_names_with_ids(["Beat Par Time: LRRC - Hot Stuff"])
             region_lrrc_hotstuff.add_locations(locations_lrrc_hotstuff, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_hotstuff = get_location_names_with_ids(["Crystal Target: LRRC - Hot Stuff"])
             region_lrrc_hotstuff.add_locations(locations_lrrc_hotstuff, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2510,7 +2510,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_icespy = get_location_names_with_ids(["Beat Par Time: LRRC - Ice Spy"])
             region_lrrc_icespy.add_locations(locations_lrrc_icespy, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_icespy = get_location_names_with_ids(["Crystal Target: LRRC - Ice Spy"])
             region_lrrc_icespy.add_locations(locations_lrrc_icespy, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2528,7 +2528,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_itsaholdup = get_location_names_with_ids(["Beat Par Time: LRRC - It's A Hold Up"])
             region_lrrc_itsaholdup.add_locations(locations_lrrc_itsaholdup, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_itsaholdup = get_location_names_with_ids(["Crystal Target: LRRC - It's A Hold Up"])
             region_lrrc_itsaholdup.add_locations(locations_lrrc_itsaholdup, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2550,7 +2550,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_lakeoffire = get_location_names_with_ids(["Beat Par Time: LRRC - Lake Of Fire"])
             region_lrrc_lakeoffire.add_locations(locations_lrrc_lakeoffire, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_lakeoffire = get_location_names_with_ids(["Crystal Target: LRRC - Lake Of Fire"])
             region_lrrc_lakeoffire.add_locations(locations_lrrc_lakeoffire, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2572,7 +2572,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_lavalaughter = get_location_names_with_ids(["Beat Par Time: LRRC - Lava Laughter"])
             region_lrrc_lavalaughter.add_locations(locations_lrrc_lavalaughter, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_lavalaughter = get_location_names_with_ids(["Crystal Target: LRRC - Lava Laughter"])
             region_lrrc_lavalaughter.add_locations(locations_lrrc_lavalaughter, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2594,7 +2594,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_oresome = get_location_names_with_ids(["Beat Par Time: LRRC - Oresome"])
             region_lrrc_oresome.add_locations(locations_lrrc_oresome, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_oresome = get_location_names_with_ids(["Crystal Target: LRRC - Oresome"])
             region_lrrc_oresome.add_locations(locations_lrrc_oresome, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2614,7 +2614,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_rockhard = get_location_names_with_ids(["Beat Par Time: LRRC - Rock Hard"])
             region_lrrc_rockhard.add_locations(locations_lrrc_rockhard, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_rockhard = get_location_names_with_ids(["Crystal Target: LRRC - Rock Hard"])
             region_lrrc_rockhard.add_locations(locations_lrrc_rockhard, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2638,7 +2638,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_rockyhorror = get_location_names_with_ids(["Beat Par Time: LRRC - Rocky Horror"])
             region_lrrc_rockyhorror.add_locations(locations_lrrc_rockyhorror, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_rockyhorror = get_location_names_with_ids(["Crystal Target: LRRC - Rocky Horror"])
             region_lrrc_rockyhorror.add_locations(locations_lrrc_rockyhorror, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2656,7 +2656,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_rubbletrouble = get_location_names_with_ids(["Beat Par Time: LRRC - Rubble Trouble"])
             region_lrrc_rubbletrouble.add_locations(locations_lrrc_rubbletrouble, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_rubbletrouble = get_location_names_with_ids(["Crystal Target: LRRC - Rubble Trouble"])
             region_lrrc_rubbletrouble.add_locations(locations_lrrc_rubbletrouble, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2674,7 +2674,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_runthegauntlet = get_location_names_with_ids(["Beat Par Time: LRRC - Run The Gauntlet"])
             region_lrrc_runthegauntlet.add_locations(locations_lrrc_runthegauntlet, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_runthegauntlet = get_location_names_with_ids(["Crystal Target: LRRC - Run The Gauntlet"])
             region_lrrc_runthegauntlet.add_locations(locations_lrrc_runthegauntlet, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2694,7 +2694,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_searchandrescue = get_location_names_with_ids(["Beat Par Time: LRRC - Search And Rescue"])
             region_lrrc_searchandrescue.add_locations(locations_lrrc_searchandrescue, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_searchandrescue = get_location_names_with_ids(["Crystal Target: LRRC - Search And Rescue"])
             region_lrrc_searchandrescue.add_locations(locations_lrrc_searchandrescue, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2714,7 +2714,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_splitdownthemiddle = get_location_names_with_ids(["Beat Par Time: LRRC - Split Down The Middle"])
             region_lrrc_splitdownthemiddle.add_locations(locations_lrrc_splitdownthemiddle, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_splitdownthemiddle = get_location_names_with_ids(["Crystal Target: LRRC - Split Down The Middle"])
             region_lrrc_splitdownthemiddle.add_locations(locations_lrrc_splitdownthemiddle, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2732,7 +2732,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_thepathtopower = get_location_names_with_ids(["Beat Par Time: LRRC - The Path To Power"])
             region_lrrc_thepathtopower.add_locations(locations_lrrc_thepathtopower, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_thepathtopower = get_location_names_with_ids(["Crystal Target: LRRC - The Path To Power"])
             region_lrrc_thepathtopower.add_locations(locations_lrrc_thepathtopower, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2752,7 +2752,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_waterlotoffun = get_location_names_with_ids(["Beat Par Time: LRRC - Water Lot Of Fun"])
             region_lrrc_waterlotoffun.add_locations(locations_lrrc_waterlotoffun, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_waterlotoffun = get_location_names_with_ids(["Crystal Target: LRRC - Water Lot Of Fun"])
             region_lrrc_waterlotoffun.add_locations(locations_lrrc_waterlotoffun, ManicMinersLocation)
         if world.options.victory_condition == 0:
@@ -2772,7 +2772,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
         if world.options.target_times_are_locations:
             locations_lrrc_waterworks = get_location_names_with_ids(["Beat Par Time: LRRC - Water Works"])
             region_lrrc_waterworks.add_locations(locations_lrrc_waterworks, ManicMinersLocation)
-        if world.options.target_times_are_locations:
+        if world.options.crystal_targets_are_locations:
             locations_lrrc_waterworks = get_location_names_with_ids(["Crystal Target: LRRC - Water Works"])
             region_lrrc_waterworks.add_locations(locations_lrrc_waterworks, ManicMinersLocation)
         if world.options.victory_condition == 0:
