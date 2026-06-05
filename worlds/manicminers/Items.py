@@ -157,6 +157,8 @@ ITEM_NAME_TO_ID = {
     "Vehicle Unlock: Chrome Crusher": 876,
     "Vehicle Unlock: Tunnel Transport": 875,
     
+    "Transporter Coordinates": 874,
+    
     "An Energy Crystal Has Been Found!": 999,
     "Good Work, Cadet!": 998,
     "A Monster Has Appeared!": 997,
@@ -307,6 +309,8 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "Vehicle Unlock: Large Mobile Laser Cutter": ItemClassification.progression,
     "Vehicle Unlock: Chrome Crusher": ItemClassification.progression,
     "Vehicle Unlock: Tunnel Transport": ItemClassification.progression,
+    
+    "Transporter Coordinates": ItemClassification.progression,
     
     "An Energy Crystal Has Been Found!": ItemClassification.filler,
     "Good Work, Cadet!": ItemClassification.filler,
