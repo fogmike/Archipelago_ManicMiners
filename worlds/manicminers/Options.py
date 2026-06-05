@@ -5,23 +5,23 @@ from Options import PerGameCommonOptions, OptionGroup, Toggle, DefaultOnToggle, 
 class VictoryCondition(Choice):
     """
     What the victory condition for the overall game is. 
-    Total Levels Cleared: You must clear X total levels to goal the game.
-    Individual Target Time: You must beat the target time on X levels in the campaign.
+    Clear X Levels: You must clear X total levels to goal the game.
+    Beat X Par Times: You must beat the target time on X total levels.
+    Beat X Crystal Targets: You must beat the crystal target on X total levels.
     """
     
     display_name = "Victory Condition"
     
-    option_total_levels_cleared = 0
-    option_individual_target_time = 1
+    option_clear_x_levels = 0
+    option_beat_x_par_times = 1
+    option_beat_x_crystal_targets = 2
     
-    default = option_total_levels_cleared
+    default = option_clear_x_levels
 
 class TargetLevelCount(Range):
     """
-    If Victory Condition is set to Total Levels Cleared: How many levels must be cleared to goal the game. 
-    If Victory Condition is set to Individual Target Time: How many levels you need to beat the target time on to goal the game. 
-    Otherwise this setting has no effect. 
-    If a target number higher than the number of total levels is given, target will cap at 'all levels'. 
+    Sets the value of X for the chosen Victory Condition. 
+    If a target number higher than the number of total levels is given, target will automatically cap at 'all levels'. 
     """
     
     display_name = "Target Level Count"
