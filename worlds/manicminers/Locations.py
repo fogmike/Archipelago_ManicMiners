@@ -2785,7 +2785,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
 def check_for_victory(options,save_path):
     levelDataList = ParseSaveFile.parseAllLevelsFromFilepath(save_path)
     
-    if options["victory_condition"] == 0: # total_level_count
+    if options["victory_condition"] == 0: # beat_x_levels
         level_count = 0
         target_count = options["target_level_count"]
         for level in levelDataList:
@@ -2797,7 +2797,7 @@ def check_for_victory(options,save_path):
         else:
             return False
     
-    elif options["victory_condition"] == 1: # individual_target_time
+    elif options["victory_condition"] == 1: # beat_x_par_times
         beaten_time_count = 0
         target_count = options["target_level_count"]
         for level in levelDataList:
@@ -2807,6 +2807,20 @@ def check_for_victory(options,save_path):
                 if level[1] < target_time:
                     beaten_time_count += 1
         if beaten_time_count >= target_count:
+            return True
+        else:
+            return False
+    
+    elif options["victory_condition"] == 2: # beat_x_crystal_targets
+        beaten_crystal_target_count = 0
+        target_count = options["target_level_count"]
+        for level in levelDataList:
+            location_id = location_id_from_level_name(level[0])
+            if (location_id != -1):
+                target_crystal_count = get_target_crystal_count(level[0], options["crystal_target_percentage"])
+                if level[2] >= target_crystal_count:
+                    beaten_crystal_target_count += 1
+        if beaten_crystal_target_count >= target_count:
             return True
         else:
             return False
