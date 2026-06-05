@@ -2835,7 +2835,7 @@ def get_locations_from_save_data(options,save_path):
                 location_ids.append(location_id + 8)
                 location_ids.append(location_id + 9)
     
-    if options["target_times_are_locations"] == 1:
+    if options["target_times_are_locations"] == 1 or options["victory_condition"] == 1:
         for level in levelDataList:
             location_id = location_id_from_level_name(level[0])
             if (location_id != -1):
@@ -2844,7 +2844,7 @@ def get_locations_from_save_data(options,save_path):
                 if level[1] < target_time:
                     location_ids.append(location_id)
 
-    if options["crystal_targets_are_locations"] == 1:
+    if options["crystal_targets_are_locations"] == 1 or options["victory_condition"] == 2:
         for level in levelDataList:
             location_id = location_id_from_level_name(level[0])
             if (location_id != -1):

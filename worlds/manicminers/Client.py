@@ -177,17 +177,21 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                     case _:
                         time_difficulty = ""
                 self.output(f"Time difficulty: {time_difficulty}")
-            if self.ctx.slot_data["victory_condition"] == 1:
+            if self.ctx.slot_data["victory_condition"] == 1 and self.ctx.slot_data["target_times_are_locations"] == 1:
                 self.output(f"Par times beaten (in Archipelago): {count_beaten_par_time_levels_ap()}")
                 self.output(f"Par times beaten (in local state): {count_beaten_par_time_levels_local()}")
             elif self.ctx.slot_data["target_times_are_locations"] == 1:
-               self.output(f"Par times beaten: {count_beaten_par_time_levels_ap()}")
+                self.output(f"Par times beaten: {count_beaten_par_time_levels_ap()}")
+            elif self.ctx.slot_data["victory_condition"] == 1:
+                self.output(f"Par times beaten (in local state): {count_beaten_par_time_levels_local()}")
             
-            if self.ctx.slot_data["victory_condition"] == 2:           
+            if self.ctx.slot_data["victory_condition"] == 2 and self.ctx.slot_data["crystal_targets_are_locations"] == 1:           
                 self.output(f"Crystal targets met (in Archipelago): {count_beaten_crystal_target_levels_ap()}")
                 self.output(f"Crystal targets met (in local state): {count_beaten_crystal_target_levels_local()}")
-            elif (self.ctx.slot_data["crystal_targets_are_locations"] == 1):
+            elif self.ctx.slot_data["crystal_targets_are_locations"] == 1:
                 self.output(f"Crystal targets met: {count_beaten_crystal_target_levels_ap()}")
+            elif self.ctx.slot_data["victory_condition"] == 2:
+                self.output(f"Crystal targets met (in local state): {count_beaten_crystal_target_levels_local()}")
             
             if self.ctx.slot_data["buildings_are_items"] == 1:
                 self.output(f"Buildings available: {count_available_buildings()}/11")
