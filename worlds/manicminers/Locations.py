@@ -1256,11 +1256,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_abreathoffreshair = get_location_names_with_ids(["Crystal Target: LRR - A Breath Of Fresh Air"])
             region_lrr_abreathoffreshair.add_locations(locations_lrr_abreathoffreshair, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_abreathoffreshair.add_event("Completable: LRR - A Breath Of Fresh Air", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_abreathoffreshair.add_event("Level Completable: LRR - A Breath Of Fresh Air", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_abreathoffreshair.add_event("Completable: LRR - A Breath Of Fresh Air", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_abreathoffreshair.add_event("Par Time Beatable: LRR - A Breath Of Fresh Air", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_abreathoffreshair.add_event("Completable: LRR - A Breath Of Fresh Air", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_abreathoffreshair.add_event("Crystal Target Beatable: LRR - A Breath Of Fresh Air", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_airraiders:
         locations_lrr_airraiders = get_location_names_with_ids(["Clear: LRR - Air Raiders"])
         region_lrr_airraiders.add_locations(locations_lrr_airraiders, ManicMinersLocation)
@@ -1278,11 +1278,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_airraiders = get_location_names_with_ids(["Crystal Target: LRR - Air Raiders"])
             region_lrr_airraiders.add_locations(locations_lrr_airraiders, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_airraiders.add_event("Completable: LRR - Air Raiders", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_airraiders.add_event("Level Completable: LRR - Air Raiders", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_airraiders.add_event("Completable: LRR - Air Raiders", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_airraiders.add_event("Par Time Beatable: LRR - Air Raiders", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_airraiders.add_event("Completable: LRR - Air Raiders", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_airraiders.add_event("Crystal Target Beatable: LRR - Air Raiders", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_backtobasics:
         locations_lrr_backtobasics = get_location_names_with_ids(["Clear: LRR - Back To Basics"])
         region_lrr_backtobasics.add_locations(locations_lrr_backtobasics, ManicMinersLocation)
@@ -1302,11 +1302,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_backtobasics = get_location_names_with_ids(["Crystal Target: LRR - Back To Basics"])
             region_lrr_backtobasics.add_locations(locations_lrr_backtobasics, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_backtobasics.add_event("Completable: LRR - Back To Basics", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_backtobasics.add_event("Level Completable: LRR - Back To Basics", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_backtobasics.add_event("Completable: LRR - Back To Basics", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_backtobasics.add_event("Par Time Beatable: LRR - Back To Basics", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_backtobasics.add_event("Completable: LRR - Back To Basics", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_backtobasics.add_event("Crystal Target Beatable: LRR - Back To Basics", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_breathless:
         locations_lrr_breathless = get_location_names_with_ids(["Clear: LRR - Breathless"])
         region_lrr_breathless.add_locations(locations_lrr_breathless, ManicMinersLocation)
@@ -1322,11 +1322,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_breathless = get_location_names_with_ids(["Crystal Target: LRR - Breathless"])
             region_lrr_breathless.add_locations(locations_lrr_breathless, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_breathless.add_event("Completable: LRR - Breathless", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_breathless.add_event("Level Completable: LRR - Breathless", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_breathless.add_event("Completable: LRR - Breathless", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_breathless.add_event("Par Time Beatable: LRR - Breathless", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_breathless.add_event("Completable: LRR - Breathless", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_breathless.add_event("Crystal Target Beatable: LRR - Breathless", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_dontpanic:
         locations_lrr_dontpanic = get_location_names_with_ids(["Clear: LRR - Don't Panic"])
         region_lrr_dontpanic.add_locations(locations_lrr_dontpanic, ManicMinersLocation)
@@ -1344,11 +1344,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_dontpanic = get_location_names_with_ids(["Crystal Target: LRR - Don't Panic"])
             region_lrr_dontpanic.add_locations(locations_lrr_dontpanic, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_dontpanic.add_event("Completable: LRR - Don't Panic", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_dontpanic.add_event("Level Completable: LRR - Don't Panic", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_dontpanic.add_event("Completable: LRR - Don't Panic", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_dontpanic.add_event("Par Time Beatable: LRR - Don't Panic", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_dontpanic.add_event("Completable: LRR - Don't Panic", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_dontpanic.add_event("Crystal Target Beatable: LRR - Don't Panic", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_drillernight:
         locations_lrr_drillernight = get_location_names_with_ids(["Clear: LRR - Driller Night"])
         region_lrr_drillernight.add_locations(locations_lrr_drillernight, ManicMinersLocation)
@@ -1362,11 +1362,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_drillernight = get_location_names_with_ids(["Crystal Target: LRR - Driller Night"])
             region_lrr_drillernight.add_locations(locations_lrr_drillernight, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_drillernight.add_event("Completable: LRR - Driller Night", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_drillernight.add_event("Level Completable: LRR - Driller Night", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_drillernight.add_event("Completable: LRR - Driller Night", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_drillernight.add_event("Par Time Beatable: LRR - Driller Night", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_drillernight.add_event("Completable: LRR - Driller Night", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_drillernight.add_event("Crystal Target Beatable: LRR - Driller Night", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_erodeworks:
         locations_lrr_erodeworks = get_location_names_with_ids(["Clear: LRR - Erode Works"])
         region_lrr_erodeworks.add_locations(locations_lrr_erodeworks, ManicMinersLocation)
@@ -1382,11 +1382,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_erodeworks = get_location_names_with_ids(["Crystal Target: LRR - Erode Works"])
             region_lrr_erodeworks.add_locations(locations_lrr_erodeworks, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_erodeworks.add_event("Completable: LRR - Erode Works", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_erodeworks.add_event("Level Completable: LRR - Erode Works", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_erodeworks.add_event("Completable: LRR - Erode Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_erodeworks.add_event("Par Time Beatable: LRR - Erode Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_erodeworks.add_event("Completable: LRR - Erode Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_erodeworks.add_event("Crystal Target Beatable: LRR - Erode Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_explosiveaction:
         locations_lrr_explosiveaction = get_location_names_with_ids(["Clear: LRR - Explosive Action"])
         region_lrr_explosiveaction.add_locations(locations_lrr_explosiveaction, ManicMinersLocation)
@@ -1400,11 +1400,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_explosiveaction = get_location_names_with_ids(["Crystal Target: LRR - Explosive Action"])
             region_lrr_explosiveaction.add_locations(locations_lrr_explosiveaction, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_explosiveaction.add_event("Completable: LRR - Explosive Action", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_explosiveaction.add_event("Level Completable: LRR - Explosive Action", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_explosiveaction.add_event("Completable: LRR - Explosive Action", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_explosiveaction.add_event("Par Time Beatable: LRR - Explosive Action", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_explosiveaction.add_event("Completable: LRR - Explosive Action", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_explosiveaction.add_event("Crystal Target Beatable: LRR - Explosive Action", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_fireandwater:
         locations_lrr_fireandwater = get_location_names_with_ids(["Clear: LRR - Fire And Water"])
         region_lrr_fireandwater.add_locations(locations_lrr_fireandwater, ManicMinersLocation)
@@ -1422,11 +1422,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_fireandwater = get_location_names_with_ids(["Crystal Target: LRR - Fire And Water"])
             region_lrr_fireandwater.add_locations(locations_lrr_fireandwater, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_fireandwater.add_event("Completable: LRR - Fire And Water", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_fireandwater.add_event("Level Completable: LRR - Fire And Water", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_fireandwater.add_event("Completable: LRR - Fire And Water", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_fireandwater.add_event("Par Time Beatable: LRR - Fire And Water", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_fireandwater.add_event("Completable: LRR - Fire And Water", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_fireandwater.add_event("Crystal Target Beatable: LRR - Fire And Water", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_frozenfrenzy:
         locations_lrr_frozenfrenzy = get_location_names_with_ids(["Clear: LRR - Frozen Frenzy"])
         region_lrr_frozenfrenzy.add_locations(locations_lrr_frozenfrenzy, ManicMinersLocation)
@@ -1442,11 +1442,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_frozenfrenzy = get_location_names_with_ids(["Crystal Target: LRR - Frozen Frenzy"])
             region_lrr_frozenfrenzy.add_locations(locations_lrr_frozenfrenzy, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_frozenfrenzy.add_event("Completable: LRR - Frozen Frenzy", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_frozenfrenzy.add_event("Level Completable: LRR - Frozen Frenzy", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_frozenfrenzy.add_event("Completable: LRR - Frozen Frenzy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_frozenfrenzy.add_event("Par Time Beatable: LRR - Frozen Frenzy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_frozenfrenzy.add_event("Completable: LRR - Frozen Frenzy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_frozenfrenzy.add_event("Crystal Target Beatable: LRR - Frozen Frenzy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_hotstuff:
         locations_lrr_hotstuff = get_location_names_with_ids(["Clear: LRR - Hot Stuff"])
         region_lrr_hotstuff.add_locations(locations_lrr_hotstuff, ManicMinersLocation)
@@ -1466,11 +1466,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_hotstuff = get_location_names_with_ids(["Crystal Target: LRR - Hot Stuff"])
             region_lrr_hotstuff.add_locations(locations_lrr_hotstuff, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_hotstuff.add_event("Completable: LRR - Hot Stuff", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_hotstuff.add_event("Level Completable: LRR - Hot Stuff", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_hotstuff.add_event("Completable: LRR - Hot Stuff", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_hotstuff.add_event("Par Time Beatable: LRR - Hot Stuff", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_hotstuff.add_event("Completable: LRR - Hot Stuff", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_hotstuff.add_event("Crystal Target Beatable: LRR - Hot Stuff", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_icespy:
         locations_lrr_icespy = get_location_names_with_ids(["Clear: LRR - Ice Spy"])
         region_lrr_icespy.add_locations(locations_lrr_icespy, ManicMinersLocation)
@@ -1488,11 +1488,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_icespy = get_location_names_with_ids(["Crystal Target: LRR - Ice Spy"])
             region_lrr_icespy.add_locations(locations_lrr_icespy, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_icespy.add_event("Completable: LRR - Ice Spy", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_icespy.add_event("Level Completable: LRR - Ice Spy", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_icespy.add_event("Completable: LRR - Ice Spy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_icespy.add_event("Par Time Beatable: LRR - Ice Spy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_icespy.add_event("Completable: LRR - Ice Spy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_icespy.add_event("Crystal Target Beatable: LRR - Ice Spy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_itsaholdup:
         locations_lrr_itsaholdup = get_location_names_with_ids(["Clear: LRR - It's A Hold Up"])
         region_lrr_itsaholdup.add_locations(locations_lrr_itsaholdup, ManicMinersLocation)
@@ -1506,11 +1506,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_itsaholdup = get_location_names_with_ids(["Crystal Target: LRR - It's A Hold Up"])
             region_lrr_itsaholdup.add_locations(locations_lrr_itsaholdup, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_itsaholdup.add_event("Completable: LRR - It's A Hold Up", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_itsaholdup.add_event("Level Completable: LRR - It's A Hold Up", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_itsaholdup.add_event("Completable: LRR - It's A Hold Up", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_itsaholdup.add_event("Par Time Beatable: LRR - It's A Hold Up", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_itsaholdup.add_event("Completable: LRR - It's A Hold Up", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_itsaholdup.add_event("Crystal Target Beatable: LRR - It's A Hold Up", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_lakeoffire:
         locations_lrr_lakeoffire = get_location_names_with_ids(["Clear: LRR - Lake Of Fire"])
         region_lrr_lakeoffire.add_locations(locations_lrr_lakeoffire, ManicMinersLocation)
@@ -1528,11 +1528,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_lakeoffire = get_location_names_with_ids(["Crystal Target: LRR - Lake Of Fire"])
             region_lrr_lakeoffire.add_locations(locations_lrr_lakeoffire, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_lakeoffire.add_event("Completable: LRR - Lake Of Fire", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_lakeoffire.add_event("Level Completable: LRR - Lake Of Fire", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_lakeoffire.add_event("Completable: LRR - Lake Of Fire", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_lakeoffire.add_event("Par Time Beatable: LRR - Lake Of Fire", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_lakeoffire.add_event("Completable: LRR - Lake Of Fire", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_lakeoffire.add_event("Crystal Target Beatable: LRR - Lake Of Fire", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_lavalaughter:
         locations_lrr_lavalaughter = get_location_names_with_ids(["Clear: LRR - Lava Laughter"])
         region_lrr_lavalaughter.add_locations(locations_lrr_lavalaughter, ManicMinersLocation)
@@ -1550,11 +1550,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_lavalaughter = get_location_names_with_ids(["Crystal Target: LRR - Lava Laughter"])
             region_lrr_lavalaughter.add_locations(locations_lrr_lavalaughter, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_lavalaughter.add_event("Completable: LRR - Lava Laughter", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_lavalaughter.add_event("Level Completable: LRR - Lava Laughter", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_lavalaughter.add_event("Completable: LRR - Lava Laughter", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_lavalaughter.add_event("Par Time Beatable: LRR - Lava Laughter", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_lavalaughter.add_event("Completable: LRR - Lava Laughter", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_lavalaughter.add_event("Crystal Target Beatable: LRR - Lava Laughter", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_oresome:
         locations_lrr_oresome = get_location_names_with_ids(["Clear: LRR - Oresome"])
         region_lrr_oresome.add_locations(locations_lrr_oresome, ManicMinersLocation)
@@ -1572,11 +1572,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_oresome = get_location_names_with_ids(["Crystal Target: LRR - Oresome"])
             region_lrr_oresome.add_locations(locations_lrr_oresome, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_oresome.add_event("Completable: LRR - Oresome", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_oresome.add_event("Level Completable: LRR - Oresome", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_oresome.add_event("Completable: LRR - Oresome", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_oresome.add_event("Par Time Beatable: LRR - Oresome", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_oresome.add_event("Completable: LRR - Oresome", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_oresome.add_event("Crystal Target Beatable: LRR - Oresome", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_rockhard:
         locations_lrr_rockhard = get_location_names_with_ids(["Clear: LRR - Rock Hard"])
         region_lrr_rockhard.add_locations(locations_lrr_rockhard, ManicMinersLocation)
@@ -1592,11 +1592,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_rockhard = get_location_names_with_ids(["Crystal Target: LRR - Rock Hard"])
             region_lrr_rockhard.add_locations(locations_lrr_rockhard, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_rockhard.add_event("Completable: LRR - Rock Hard", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_rockhard.add_event("Level Completable: LRR - Rock Hard", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_rockhard.add_event("Completable: LRR - Rock Hard", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_rockhard.add_event("Par Time Beatable: LRR - Rock Hard", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_rockhard.add_event("Completable: LRR - Rock Hard", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_rockhard.add_event("Crystal Target Beatable: LRR - Rock Hard", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_rockyhorror:
         locations_lrr_rockyhorror = get_location_names_with_ids(["Clear: LRR - Rocky Horror"])
         region_lrr_rockyhorror.add_locations(locations_lrr_rockyhorror, ManicMinersLocation)
@@ -1616,11 +1616,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_rockyhorror = get_location_names_with_ids(["Crystal Target: LRR - Rocky Horror"])
             region_lrr_rockyhorror.add_locations(locations_lrr_rockyhorror, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_rockyhorror.add_event("Completable: LRR - Rocky Horror", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_rockyhorror.add_event("Level Completable: LRR - Rocky Horror", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_rockyhorror.add_event("Completable: LRR - Rocky Horror", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_rockyhorror.add_event("Par Time Beatable: LRR - Rocky Horror", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_rockyhorror.add_event("Completable: LRR - Rocky Horror", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_rockyhorror.add_event("Crystal Target Beatable: LRR - Rocky Horror", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_rubbletrouble:
         locations_lrr_rubbletrouble = get_location_names_with_ids(["Clear: LRR - Rubble Trouble"])
         region_lrr_rubbletrouble.add_locations(locations_lrr_rubbletrouble, ManicMinersLocation)
@@ -1634,11 +1634,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_rubbletrouble = get_location_names_with_ids(["Crystal Target: LRR - Rubble Trouble"])
             region_lrr_rubbletrouble.add_locations(locations_lrr_rubbletrouble, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_rubbletrouble.add_event("Completable: LRR - Rubble Trouble", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_rubbletrouble.add_event("Level Completable: LRR - Rubble Trouble", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_rubbletrouble.add_event("Completable: LRR - Rubble Trouble", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_rubbletrouble.add_event("Par Time Beatable: LRR - Rubble Trouble", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_rubbletrouble.add_event("Completable: LRR - Rubble Trouble", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_rubbletrouble.add_event("Crystal Target Beatable: LRR - Rubble Trouble", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_runthegauntlet:
         locations_lrr_runthegauntlet = get_location_names_with_ids(["Clear: LRR - Run The Gauntlet"])
         region_lrr_runthegauntlet.add_locations(locations_lrr_runthegauntlet, ManicMinersLocation)
@@ -1652,11 +1652,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_runthegauntlet = get_location_names_with_ids(["Crystal Target: LRR - Run The Gauntlet"])
             region_lrr_runthegauntlet.add_locations(locations_lrr_runthegauntlet, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_runthegauntlet.add_event("Completable: LRR - Run The Gauntlet", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_runthegauntlet.add_event("Level Completable: LRR - Run The Gauntlet", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_runthegauntlet.add_event("Completable: LRR - Run The Gauntlet", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_runthegauntlet.add_event("Par Time Beatable: LRR - Run The Gauntlet", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_runthegauntlet.add_event("Completable: LRR - Run The Gauntlet", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_runthegauntlet.add_event("Crystal Target Beatable: LRR - Run The Gauntlet", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_searchandrescue:
         locations_lrr_searchandrescue = get_location_names_with_ids(["Clear: LRR - Search And Rescue"])
         region_lrr_searchandrescue.add_locations(locations_lrr_searchandrescue, ManicMinersLocation)
@@ -1672,11 +1672,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_searchandrescue = get_location_names_with_ids(["Crystal Target: LRR - Search And Rescue"])
             region_lrr_searchandrescue.add_locations(locations_lrr_searchandrescue, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_searchandrescue.add_event("Completable: LRR - Search And Rescue", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_searchandrescue.add_event("Level Completable: LRR - Search And Rescue", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_searchandrescue.add_event("Completable: LRR - Search And Rescue", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_searchandrescue.add_event("Par Time Beatable: LRR - Search And Rescue", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_searchandrescue.add_event("Completable: LRR - Search And Rescue", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_searchandrescue.add_event("Crystal Target Beatable: LRR - Search And Rescue", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_splitdownthemiddle:
         locations_lrr_splitdownthemiddle = get_location_names_with_ids(["Clear: LRR - Split Down The Middle"])
         region_lrr_splitdownthemiddle.add_locations(locations_lrr_splitdownthemiddle, ManicMinersLocation)
@@ -1692,11 +1692,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_splitdownthemiddle = get_location_names_with_ids(["Crystal Target: LRR - Split Down The Middle"])
             region_lrr_splitdownthemiddle.add_locations(locations_lrr_splitdownthemiddle, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_splitdownthemiddle.add_event("Completable: LRR - Split Down The Middle", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_splitdownthemiddle.add_event("Level Completable: LRR - Split Down The Middle", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_splitdownthemiddle.add_event("Completable: LRR - Split Down The Middle", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_splitdownthemiddle.add_event("Par Time Beatable: LRR - Split Down The Middle", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_splitdownthemiddle.add_event("Completable: LRR - Split Down The Middle", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_splitdownthemiddle.add_event("Crystal Target Beatable: LRR - Split Down The Middle", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_thepathtopower:
         locations_lrr_thepathtopower = get_location_names_with_ids(["Clear: LRR - The Path To Power"])
         region_lrr_thepathtopower.add_locations(locations_lrr_thepathtopower, ManicMinersLocation)
@@ -1710,11 +1710,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_thepathtopower = get_location_names_with_ids(["Crystal Target: LRR - The Path To Power"])
             region_lrr_thepathtopower.add_locations(locations_lrr_thepathtopower, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_thepathtopower.add_event("Completable: LRR - The Path To Power", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_thepathtopower.add_event("Level Completable: LRR - The Path To Power", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_thepathtopower.add_event("Completable: LRR - The Path To Power", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_thepathtopower.add_event("Par Time Beatable: LRR - The Path To Power", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_thepathtopower.add_event("Completable: LRR - The Path To Power", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_thepathtopower.add_event("Crystal Target Beatable: LRR - The Path To Power", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_waterlotoffun:
         locations_lrr_waterlotoffun = get_location_names_with_ids(["Clear: LRR - Water Lot Of Fun"])
         region_lrr_waterlotoffun.add_locations(locations_lrr_waterlotoffun, ManicMinersLocation)
@@ -1730,11 +1730,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_waterlotoffun = get_location_names_with_ids(["Crystal Target: LRR - Water Lot Of Fun"])
             region_lrr_waterlotoffun.add_locations(locations_lrr_waterlotoffun, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_waterlotoffun.add_event("Completable: LRR - Water Lot Of Fun", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_waterlotoffun.add_event("Level Completable: LRR - Water Lot Of Fun", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_waterlotoffun.add_event("Completable: LRR - Water Lot Of Fun", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_waterlotoffun.add_event("Par Time Beatable: LRR - Water Lot Of Fun", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_waterlotoffun.add_event("Completable: LRR - Water Lot Of Fun", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_waterlotoffun.add_event("Crystal Target Beatable: LRR - Water Lot Of Fun", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrr_waterworks:
         locations_lrr_waterworks = get_location_names_with_ids(["Clear: LRR - Water Works"])
         region_lrr_waterworks.add_locations(locations_lrr_waterworks, ManicMinersLocation)
@@ -1750,11 +1750,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrr_waterworks = get_location_names_with_ids(["Crystal Target: LRR - Water Works"])
             region_lrr_waterworks.add_locations(locations_lrr_waterworks, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrr_waterworks.add_event("Completable: LRR - Water Works", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_waterworks.add_event("Level Completable: LRR - Water Works", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrr_waterworks.add_event("Completable: LRR - Water Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_waterworks.add_event("Par Time Beatable: LRR - Water Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrr_waterworks.add_event("Completable: LRR - Water Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrr_waterworks.add_event("Crystal Target Beatable: LRR - Water Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
 
     if world.options.level_selection_lrrr_abreathoffreshair:
         locations_lrrr_abreathoffreshair = get_location_names_with_ids(["Clear: LRRR - A Breath Of Fresh Air"])
@@ -1769,11 +1769,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_abreathoffreshair = get_location_names_with_ids(["Crystal Target: LRRR - A Breath Of Fresh Air"])
             region_lrrr_abreathoffreshair.add_locations(locations_lrrr_abreathoffreshair, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_abreathoffreshair.add_event("Completable: LRRR - A Breath Of Fresh Air", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_abreathoffreshair.add_event("Level Completable: LRRR - A Breath Of Fresh Air", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_abreathoffreshair.add_event("Completable: LRRR - A Breath Of Fresh Air", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_abreathoffreshair.add_event("Par Time Beatable: LRRR - A Breath Of Fresh Air", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_abreathoffreshair.add_event("Completable: LRRR - A Breath Of Fresh Air", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_abreathoffreshair.add_event("Crystal Target Beatable: LRRR - A Breath Of Fresh Air", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_airraiders:
         locations_lrrr_airraiders = get_location_names_with_ids(["Clear: LRRR - Air Raiders"])
         region_lrrr_airraiders.add_locations(locations_lrrr_airraiders, ManicMinersLocation)
@@ -1791,11 +1791,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_airraiders = get_location_names_with_ids(["Crystal Target: LRRR - Air Raiders"])
             region_lrrr_airraiders.add_locations(locations_lrrr_airraiders, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_airraiders.add_event("Completable: LRRR - Air Raiders", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_airraiders.add_event("Level Completable: LRRR - Air Raiders", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_airraiders.add_event("Completable: LRRR - Air Raiders", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_airraiders.add_event("Par Time Beatable: LRRR - Air Raiders", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_airraiders.add_event("Completable: LRRR - Air Raiders", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_airraiders.add_event("Crystal Target Beatable: LRRR - Air Raiders", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_backtobasics:
         locations_lrrr_backtobasics = get_location_names_with_ids(["Clear: LRRR - Back To Basics"])
         region_lrrr_backtobasics.add_locations(locations_lrrr_backtobasics, ManicMinersLocation)
@@ -1815,11 +1815,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_backtobasics = get_location_names_with_ids(["Crystal Target: LRRR - Back To Basics"])
             region_lrrr_backtobasics.add_locations(locations_lrrr_backtobasics, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_backtobasics.add_event("Completable: LRRR - Back To Basics", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_backtobasics.add_event("Level Completable: LRRR - Back To Basics", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_backtobasics.add_event("Completable: LRRR - Back To Basics", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_backtobasics.add_event("Par Time Beatable: LRRR - Back To Basics", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_backtobasics.add_event("Completable: LRRR - Back To Basics", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_backtobasics.add_event("Crystal Target Beatable: LRRR - Back To Basics", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_breathless:
         locations_lrrr_breathless = get_location_names_with_ids(["Clear: LRRR - Breathless"])
         region_lrrr_breathless.add_locations(locations_lrrr_breathless, ManicMinersLocation)
@@ -1835,11 +1835,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_breathless = get_location_names_with_ids(["Crystal Target: LRRR - Breathless"])
             region_lrrr_breathless.add_locations(locations_lrrr_breathless, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_breathless.add_event("Completable: LRRR - Breathless", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_breathless.add_event("Level Completable: LRRR - Breathless", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_breathless.add_event("Completable: LRRR - Breathless", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_breathless.add_event("Par Time Beatable: LRRR - Breathless", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_breathless.add_event("Completable: LRRR - Breathless", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_breathless.add_event("Crystal Target Beatable: LRRR - Breathless", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_dontpanic:
         locations_lrrr_dontpanic = get_location_names_with_ids(["Clear: LRRR - Don't Panic"])
         region_lrrr_dontpanic.add_locations(locations_lrrr_dontpanic, ManicMinersLocation)
@@ -1857,11 +1857,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_dontpanic = get_location_names_with_ids(["Crystal Target: LRRR - Don't Panic"])
             region_lrrr_dontpanic.add_locations(locations_lrrr_dontpanic, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_dontpanic.add_event("Completable: LRRR - Don't Panic", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_dontpanic.add_event("Level Completable: LRRR - Don't Panic", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_dontpanic.add_event("Completable: LRRR - Don't Panic", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_dontpanic.add_event("Par Time Beatable: LRRR - Don't Panic", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_dontpanic.add_event("Completable: LRRR - Don't Panic", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_dontpanic.add_event("Crystal Target Beatable: LRRR - Don't Panic", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_drillernight:
         locations_lrrr_drillernight = get_location_names_with_ids(["Clear: LRRR - Driller Night"])
         region_lrrr_drillernight.add_locations(locations_lrrr_drillernight, ManicMinersLocation)
@@ -1875,11 +1875,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_drillernight = get_location_names_with_ids(["Crystal Target: LRRR - Driller Night"])
             region_lrrr_drillernight.add_locations(locations_lrrr_drillernight, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_drillernight.add_event("Completable: LRRR - Driller Night", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_drillernight.add_event("Level Completable: LRRR - Driller Night", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_drillernight.add_event("Completable: LRRR - Driller Night", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_drillernight.add_event("Par Time Beatable: LRRR - Driller Night", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_drillernight.add_event("Completable: LRRR - Driller Night", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_drillernight.add_event("Crystal Target Beatable: LRRR - Driller Night", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_erodeworks:
         locations_lrrr_erodeworks = get_location_names_with_ids(["Clear: LRRR - Erode Works"])
         region_lrrr_erodeworks.add_locations(locations_lrrr_erodeworks, ManicMinersLocation)
@@ -1895,11 +1895,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_erodeworks = get_location_names_with_ids(["Crystal Target: LRRR - Erode Works"])
             region_lrrr_erodeworks.add_locations(locations_lrrr_erodeworks, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_erodeworks.add_event("Completable: LRRR - Erode Works", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_erodeworks.add_event("Level Completable: LRRR - Erode Works", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_erodeworks.add_event("Completable: LRRR - Erode Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_erodeworks.add_event("Par Time Beatable: LRRR - Erode Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_erodeworks.add_event("Completable: LRRR - Erode Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_erodeworks.add_event("Crystal Target Beatable: LRRR - Erode Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_explosiveaction:
         locations_lrrr_explosiveaction = get_location_names_with_ids(["Clear: LRRR - Explosive Action"])
         region_lrrr_explosiveaction.add_locations(locations_lrrr_explosiveaction, ManicMinersLocation)
@@ -1913,11 +1913,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_explosiveaction = get_location_names_with_ids(["Crystal Target: LRRR - Explosive Action"])
             region_lrrr_explosiveaction.add_locations(locations_lrrr_explosiveaction, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_explosiveaction.add_event("Completable: LRRR - Explosive Action", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_explosiveaction.add_event("Level Completable: LRRR - Explosive Action", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_explosiveaction.add_event("Completable: LRRR - Explosive Action", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_explosiveaction.add_event("Par Time Beatable: LRRR - Explosive Action", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_explosiveaction.add_event("Completable: LRRR - Explosive Action", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_explosiveaction.add_event("Crystal Target Beatable: LRRR - Explosive Action", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_fireandwater:
         locations_lrrr_fireandwater = get_location_names_with_ids(["Clear: LRRR - Fire And Water"])
         region_lrrr_fireandwater.add_locations(locations_lrrr_fireandwater, ManicMinersLocation)
@@ -1935,11 +1935,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_fireandwater = get_location_names_with_ids(["Crystal Target: LRRR - Fire And Water"])
             region_lrrr_fireandwater.add_locations(locations_lrrr_fireandwater, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_fireandwater.add_event("Completable: LRRR - Fire And Water", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_fireandwater.add_event("Level Completable: LRRR - Fire And Water", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_fireandwater.add_event("Completable: LRRR - Fire And Water", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_fireandwater.add_event("Par Time Beatable: LRRR - Fire And Water", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_fireandwater.add_event("Completable: LRRR - Fire And Water", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_fireandwater.add_event("Crystal Target Beatable: LRRR - Fire And Water", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_frozenfrenzy:
         locations_lrrr_frozenfrenzy = get_location_names_with_ids(["Clear: LRRR - Frozen Frenzy"])
         region_lrrr_frozenfrenzy.add_locations(locations_lrrr_frozenfrenzy, ManicMinersLocation)
@@ -1955,11 +1955,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_frozenfrenzy = get_location_names_with_ids(["Crystal Target: LRRR - Frozen Frenzy"])
             region_lrrr_frozenfrenzy.add_locations(locations_lrrr_frozenfrenzy, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_frozenfrenzy.add_event("Completable: LRRR - Frozen Frenzy", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_frozenfrenzy.add_event("Level Completable: LRRR - Frozen Frenzy", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_frozenfrenzy.add_event("Completable: LRRR - Frozen Frenzy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_frozenfrenzy.add_event("Par Time Beatable: LRRR - Frozen Frenzy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_frozenfrenzy.add_event("Completable: LRRR - Frozen Frenzy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_frozenfrenzy.add_event("Crystal Target Beatable: LRRR - Frozen Frenzy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_hotstuff:
         locations_lrrr_hotstuff = get_location_names_with_ids(["Clear: LRRR - Hot Stuff"])
         region_lrrr_hotstuff.add_locations(locations_lrrr_hotstuff, ManicMinersLocation)
@@ -1979,11 +1979,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_hotstuff = get_location_names_with_ids(["Crystal Target: LRRR - Hot Stuff"])
             region_lrrr_hotstuff.add_locations(locations_lrrr_hotstuff, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_hotstuff.add_event("Completable: LRRR - Hot Stuff", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_hotstuff.add_event("Level Completable: LRRR - Hot Stuff", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_hotstuff.add_event("Completable: LRRR - Hot Stuff", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_hotstuff.add_event("Par Time Beatable: LRRR - Hot Stuff", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_hotstuff.add_event("Completable: LRRR - Hot Stuff", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_hotstuff.add_event("Crystal Target Beatable: LRRR - Hot Stuff", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_icespy:
         locations_lrrr_icespy = get_location_names_with_ids(["Clear: LRRR - Ice Spy"])
         region_lrrr_icespy.add_locations(locations_lrrr_icespy, ManicMinersLocation)
@@ -2001,11 +2001,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_icespy = get_location_names_with_ids(["Crystal Target: LRRR - Ice Spy"])
             region_lrrr_icespy.add_locations(locations_lrrr_icespy, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_icespy.add_event("Completable: LRRR - Ice Spy", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_icespy.add_event("Level Completable: LRRR - Ice Spy", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_icespy.add_event("Completable: LRRR - Ice Spy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_icespy.add_event("Par Time Beatable: LRRR - Ice Spy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_icespy.add_event("Completable: LRRR - Ice Spy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_icespy.add_event("Crystal Target Beatable: LRRR - Ice Spy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_itsaholdup:
         locations_lrrr_itsaholdup = get_location_names_with_ids(["Clear: LRRR - It's A Hold Up"])
         region_lrrr_itsaholdup.add_locations(locations_lrrr_itsaholdup, ManicMinersLocation)
@@ -2019,11 +2019,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_itsaholdup = get_location_names_with_ids(["Crystal Target: LRRR - It's A Hold Up"])
             region_lrrr_itsaholdup.add_locations(locations_lrrr_itsaholdup, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_itsaholdup.add_event("Completable: LRRR - It's A Hold Up", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_itsaholdup.add_event("Level Completable: LRRR - It's A Hold Up", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_itsaholdup.add_event("Completable: LRRR - It's A Hold Up", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_itsaholdup.add_event("Par Time Beatable: LRRR - It's A Hold Up", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_itsaholdup.add_event("Completable: LRRR - It's A Hold Up", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_itsaholdup.add_event("Crystal Target Beatable: LRRR - It's A Hold Up", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_lakeoffire:
         locations_lrrr_lakeoffire = get_location_names_with_ids(["Clear: LRRR - Lake Of Fire"])
         region_lrrr_lakeoffire.add_locations(locations_lrrr_lakeoffire, ManicMinersLocation)
@@ -2041,11 +2041,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_lakeoffire = get_location_names_with_ids(["Crystal Target: LRRR - Lake Of Fire"])
             region_lrrr_lakeoffire.add_locations(locations_lrrr_lakeoffire, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_lakeoffire.add_event("Completable: LRRR - Lake Of Fire", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_lakeoffire.add_event("Level Completable: LRRR - Lake Of Fire", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_lakeoffire.add_event("Completable: LRRR - Lake Of Fire", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_lakeoffire.add_event("Par Time Beatable: LRRR - Lake Of Fire", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_lakeoffire.add_event("Completable: LRRR - Lake Of Fire", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_lakeoffire.add_event("Crystal Target Beatable: LRRR - Lake Of Fire", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_lavalaughter:
         locations_lrrr_lavalaughter = get_location_names_with_ids(["Clear: LRRR - Lava Laughter"])
         region_lrrr_lavalaughter.add_locations(locations_lrrr_lavalaughter, ManicMinersLocation)
@@ -2063,11 +2063,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_lavalaughter = get_location_names_with_ids(["Crystal Target: LRRR - Lava Laughter"])
             region_lrrr_lavalaughter.add_locations(locations_lrrr_lavalaughter, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_lavalaughter.add_event("Completable: LRRR - Lava Laughter", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_lavalaughter.add_event("Level Completable: LRRR - Lava Laughter", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_lavalaughter.add_event("Completable: LRRR - Lava Laughter", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_lavalaughter.add_event("Par Time Beatable: LRRR - Lava Laughter", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_lavalaughter.add_event("Completable: LRRR - Lava Laughter", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_lavalaughter.add_event("Crystal Target Beatable: LRRR - Lava Laughter", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_oresome:
         locations_lrrr_oresome = get_location_names_with_ids(["Clear: LRRR - Oresome"])
         region_lrrr_oresome.add_locations(locations_lrrr_oresome, ManicMinersLocation)
@@ -2085,11 +2085,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_oresome = get_location_names_with_ids(["Crystal Target: LRRR - Oresome"])
             region_lrrr_oresome.add_locations(locations_lrrr_oresome, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_oresome.add_event("Completable: LRRR - Oresome", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_oresome.add_event("Level Completable: LRRR - Oresome", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_oresome.add_event("Completable: LRRR - Oresome", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_oresome.add_event("Par Time Beatable: LRRR - Oresome", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_oresome.add_event("Completable: LRRR - Oresome", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_oresome.add_event("Crystal Target Beatable: LRRR - Oresome", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_rockhard:
         locations_lrrr_rockhard = get_location_names_with_ids(["Clear: LRRR - Rock Hard"])
         region_lrrr_rockhard.add_locations(locations_lrrr_rockhard, ManicMinersLocation)
@@ -2105,11 +2105,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_rockhard = get_location_names_with_ids(["Crystal Target: LRRR - Rock Hard"])
             region_lrrr_rockhard.add_locations(locations_lrrr_rockhard, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_rockhard.add_event("Completable: LRRR - Rock Hard", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_rockhard.add_event("Level Completable: LRRR - Rock Hard", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_rockhard.add_event("Completable: LRRR - Rock Hard", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_rockhard.add_event("Par Time Beatable: LRRR - Rock Hard", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_rockhard.add_event("Completable: LRRR - Rock Hard", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_rockhard.add_event("Crystal Target Beatable: LRRR - Rock Hard", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_rockyhorror:
         locations_lrrr_rockyhorror = get_location_names_with_ids(["Clear: LRRR - Rocky Horror"])
         region_lrrr_rockyhorror.add_locations(locations_lrrr_rockyhorror, ManicMinersLocation)
@@ -2129,11 +2129,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_rockyhorror = get_location_names_with_ids(["Crystal Target: LRRR - Rocky Horror"])
             region_lrrr_rockyhorror.add_locations(locations_lrrr_rockyhorror, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_rockyhorror.add_event("Completable: LRRR - Rocky Horror", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_rockyhorror.add_event("Level Completable: LRRR - Rocky Horror", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_rockyhorror.add_event("Completable: LRRR - Rocky Horror", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_rockyhorror.add_event("Par Time Beatable: LRRR - Rocky Horror", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_rockyhorror.add_event("Completable: LRRR - Rocky Horror", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_rockyhorror.add_event("Crystal Target Beatable: LRRR - Rocky Horror", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_rubbletrouble:
         locations_lrrr_rubbletrouble = get_location_names_with_ids(["Clear: LRRR - Rubble Trouble"])
         region_lrrr_rubbletrouble.add_locations(locations_lrrr_rubbletrouble, ManicMinersLocation)
@@ -2147,11 +2147,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_rubbletrouble = get_location_names_with_ids(["Crystal Target: LRRR - Rubble Trouble"])
             region_lrrr_rubbletrouble.add_locations(locations_lrrr_rubbletrouble, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_rubbletrouble.add_event("Completable: LRRR - Rubble Trouble", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_rubbletrouble.add_event("Level Completable: LRRR - Rubble Trouble", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_rubbletrouble.add_event("Completable: LRRR - Rubble Trouble", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_rubbletrouble.add_event("Par Time Beatable: LRRR - Rubble Trouble", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_rubbletrouble.add_event("Completable: LRRR - Rubble Trouble", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_rubbletrouble.add_event("Crystal Target Beatable: LRRR - Rubble Trouble", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_runthegauntlet:
         locations_lrrr_runthegauntlet = get_location_names_with_ids(["Clear: LRRR - Run The Gauntlet"])
         region_lrrr_runthegauntlet.add_locations(locations_lrrr_runthegauntlet, ManicMinersLocation)
@@ -2165,11 +2165,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_runthegauntlet = get_location_names_with_ids(["Crystal Target: LRRR - Run The Gauntlet"])
             region_lrrr_runthegauntlet.add_locations(locations_lrrr_runthegauntlet, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_runthegauntlet.add_event("Completable: LRRR - Run The Gauntlet", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_runthegauntlet.add_event("Level Completable: LRRR - Run The Gauntlet", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_runthegauntlet.add_event("Completable: LRRR - Run The Gauntlet", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_runthegauntlet.add_event("Par Time Beatable: LRRR - Run The Gauntlet", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_runthegauntlet.add_event("Completable: LRRR - Run The Gauntlet", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_runthegauntlet.add_event("Crystal Target Beatable: LRRR - Run The Gauntlet", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_searchandrescue:
         locations_lrrr_searchandrescue = get_location_names_with_ids(["Clear: LRRR - Search And Rescue"])
         region_lrrr_searchandrescue.add_locations(locations_lrrr_searchandrescue, ManicMinersLocation)
@@ -2185,11 +2185,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_searchandrescue = get_location_names_with_ids(["Crystal Target: LRRR - Search And Rescue"])
             region_lrrr_searchandrescue.add_locations(locations_lrrr_searchandrescue, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_searchandrescue.add_event("Completable: LRRR - Search And Rescue", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_searchandrescue.add_event("Level Completable: LRRR - Search And Rescue", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_searchandrescue.add_event("Completable: LRRR - Search And Rescue", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_searchandrescue.add_event("Par Time Beatable: LRRR - Search And Rescue", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_searchandrescue.add_event("Completable: LRRR - Search And Rescue", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_searchandrescue.add_event("Crystal Target Beatable: LRRR - Search And Rescue", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_splitdownthemiddle:
         locations_lrrr_splitdownthemiddle = get_location_names_with_ids(["Clear: LRRR - Split Down The Middle"])
         region_lrrr_splitdownthemiddle.add_locations(locations_lrrr_splitdownthemiddle, ManicMinersLocation)
@@ -2205,11 +2205,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_splitdownthemiddle = get_location_names_with_ids(["Crystal Target: LRRR - Split Down The Middle"])
             region_lrrr_splitdownthemiddle.add_locations(locations_lrrr_splitdownthemiddle, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_splitdownthemiddle.add_event("Completable: LRRR - Split Down The Middle", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_splitdownthemiddle.add_event("Level Completable: LRRR - Split Down The Middle", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_splitdownthemiddle.add_event("Completable: LRRR - Split Down The Middle", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_splitdownthemiddle.add_event("Par Time Beatable: LRRR - Split Down The Middle", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_splitdownthemiddle.add_event("Completable: LRRR - Split Down The Middle", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_splitdownthemiddle.add_event("Crystal Target Beatable: LRRR - Split Down The Middle", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_thepathtopower:
         locations_lrrr_thepathtopower = get_location_names_with_ids(["Clear: LRRR - The Path To Power"])
         region_lrrr_thepathtopower.add_locations(locations_lrrr_thepathtopower, ManicMinersLocation)
@@ -2223,11 +2223,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_thepathtopower = get_location_names_with_ids(["Crystal Target: LRRR - The Path To Power"])
             region_lrrr_thepathtopower.add_locations(locations_lrrr_thepathtopower, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_thepathtopower.add_event("Completable: LRRR - The Path To Power", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_thepathtopower.add_event("Level Completable: LRRR - The Path To Power", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_thepathtopower.add_event("Completable: LRRR - The Path To Power", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_thepathtopower.add_event("Par Time Beatable: LRRR - The Path To Power", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_thepathtopower.add_event("Completable: LRRR - The Path To Power", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_thepathtopower.add_event("Crystal Target Beatable: LRRR - The Path To Power", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_waterlotoffun:
         locations_lrrr_waterlotoffun = get_location_names_with_ids(["Clear: LRRR - Water Lot Of Fun"])
         region_lrrr_waterlotoffun.add_locations(locations_lrrr_waterlotoffun, ManicMinersLocation)
@@ -2243,11 +2243,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_waterlotoffun = get_location_names_with_ids(["Crystal Target: LRRR - Water Lot Of Fun"])
             region_lrrr_waterlotoffun.add_locations(locations_lrrr_waterlotoffun, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_waterlotoffun.add_event("Completable: LRRR - Water Lot Of Fun", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_waterlotoffun.add_event("Level Completable: LRRR - Water Lot Of Fun", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_waterlotoffun.add_event("Completable: LRRR - Water Lot Of Fun", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_waterlotoffun.add_event("Par Time Beatable: LRRR - Water Lot Of Fun", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_waterlotoffun.add_event("Completable: LRRR - Water Lot Of Fun", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_waterlotoffun.add_event("Crystal Target Beatable: LRRR - Water Lot Of Fun", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrr_waterworks:
         locations_lrrr_waterworks = get_location_names_with_ids(["Clear: LRRR - Water Works"])
         region_lrrr_waterworks.add_locations(locations_lrrr_waterworks, ManicMinersLocation)
@@ -2263,11 +2263,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrr_waterworks = get_location_names_with_ids(["Crystal Target: LRRR - Water Works"])
             region_lrrr_waterworks.add_locations(locations_lrrr_waterworks, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrr_waterworks.add_event("Completable: LRRR - Water Works", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_waterworks.add_event("Level Completable: LRRR - Water Works", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrr_waterworks.add_event("Completable: LRRR - Water Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_waterworks.add_event("Par Time Beatable: LRRR - Water Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrr_waterworks.add_event("Completable: LRRR - Water Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrr_waterworks.add_event("Crystal Target Beatable: LRRR - Water Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
 
     if world.options.level_selection_lrrc_abreathoffreshair:
         locations_lrrc_abreathoffreshair = get_location_names_with_ids(["Clear: LRRC - A Breath Of Fresh Air"])
@@ -2282,11 +2282,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_abreathoffreshair = get_location_names_with_ids(["Crystal Target: LRRC - A Breath Of Fresh Air"])
             region_lrrc_abreathoffreshair.add_locations(locations_lrrc_abreathoffreshair, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_abreathoffreshair.add_event("Completable: LRRC - A Breath Of Fresh Air", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_abreathoffreshair.add_event("Level Completable: LRRC - A Breath Of Fresh Air", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_abreathoffreshair.add_event("Completable: LRRC - A Breath Of Fresh Air", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_abreathoffreshair.add_event("Par Time Beatable: LRRC - A Breath Of Fresh Air", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_abreathoffreshair.add_event("Completable: LRRC - A Breath Of Fresh Air", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_abreathoffreshair.add_event("Crystal Target Beatable: LRRC - A Breath Of Fresh Air", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_airraiders:
         locations_lrrc_airraiders = get_location_names_with_ids(["Clear: LRRC - Air Raiders"])
         region_lrrc_airraiders.add_locations(locations_lrrc_airraiders, ManicMinersLocation)
@@ -2304,11 +2304,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_airraiders = get_location_names_with_ids(["Crystal Target: LRRC - Air Raiders"])
             region_lrrc_airraiders.add_locations(locations_lrrc_airraiders, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_airraiders.add_event("Completable: LRRC - Air Raiders", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_airraiders.add_event("Level Completable: LRRC - Air Raiders", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_airraiders.add_event("Completable: LRRC - Air Raiders", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_airraiders.add_event("Par Time Beatable: LRRC - Air Raiders", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_airraiders.add_event("Completable: LRRC - Air Raiders", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_airraiders.add_event("Crystal Target Beatable: LRRC - Air Raiders", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_backtobasics:
         locations_lrrc_backtobasics = get_location_names_with_ids(["Clear: LRRC - Back To Basics"])
         region_lrrc_backtobasics.add_locations(locations_lrrc_backtobasics, ManicMinersLocation)
@@ -2328,11 +2328,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_backtobasics = get_location_names_with_ids(["Crystal Target: LRRC - Back To Basics"])
             region_lrrc_backtobasics.add_locations(locations_lrrc_backtobasics, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_backtobasics.add_event("Completable: LRRC - Back To Basics", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_backtobasics.add_event("Level Completable: LRRC - Back To Basics", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_backtobasics.add_event("Completable: LRRC - Back To Basics", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_backtobasics.add_event("Par Time Beatable: LRRC - Back To Basics", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_backtobasics.add_event("Completable: LRRC - Back To Basics", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_backtobasics.add_event("Crystal Target Beatable: LRRC - Back To Basics", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_breathless:
         locations_lrrc_breathless = get_location_names_with_ids(["Clear: LRRC - Breathless"])
         region_lrrc_breathless.add_locations(locations_lrrc_breathless, ManicMinersLocation)
@@ -2348,11 +2348,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_breathless = get_location_names_with_ids(["Crystal Target: LRRC - Breathless"])
             region_lrrc_breathless.add_locations(locations_lrrc_breathless, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_breathless.add_event("Completable: LRRC - Breathless", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_breathless.add_event("Level Completable: LRRC - Breathless", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_breathless.add_event("Completable: LRRC - Breathless", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_breathless.add_event("Par Time Beatable: LRRC - Breathless", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_breathless.add_event("Completable: LRRC - Breathless", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_breathless.add_event("Crystal Target Beatable: LRRC - Breathless", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_dontpanic:
         locations_lrrc_dontpanic = get_location_names_with_ids(["Clear: LRRC - Don't Panic"])
         region_lrrc_dontpanic.add_locations(locations_lrrc_dontpanic, ManicMinersLocation)
@@ -2370,11 +2370,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_dontpanic = get_location_names_with_ids(["Crystal Target: LRRC - Don't Panic"])
             region_lrrc_dontpanic.add_locations(locations_lrrc_dontpanic, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_dontpanic.add_event("Completable: LRRC - Don't Panic", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_dontpanic.add_event("Level Completable: LRRC - Don't Panic", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_dontpanic.add_event("Completable: LRRC - Don't Panic", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_dontpanic.add_event("Par Time Beatable: LRRC - Don't Panic", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_dontpanic.add_event("Completable: LRRC - Don't Panic", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_dontpanic.add_event("Crystal Target Beatable: LRRC - Don't Panic", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_drillernight:
         locations_lrrc_drillernight = get_location_names_with_ids(["Clear: LRRC - Driller Night"])
         region_lrrc_drillernight.add_locations(locations_lrrc_drillernight, ManicMinersLocation)
@@ -2388,11 +2388,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_drillernight = get_location_names_with_ids(["Crystal Target: LRRC - Driller Night"])
             region_lrrc_drillernight.add_locations(locations_lrrc_drillernight, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_drillernight.add_event("Completable: LRRC - Driller Night", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_drillernight.add_event("Level Completable: LRRC - Driller Night", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_drillernight.add_event("Completable: LRRC - Driller Night", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_drillernight.add_event("Par Time Beatable: LRRC - Driller Night", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_drillernight.add_event("Completable: LRRC - Driller Night", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_drillernight.add_event("Crystal Target Beatable: LRRC - Driller Night", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_erodeworks:
         locations_lrrc_erodeworks = get_location_names_with_ids(["Clear: LRRC - Erode Works"])
         region_lrrc_erodeworks.add_locations(locations_lrrc_erodeworks, ManicMinersLocation)
@@ -2408,11 +2408,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_erodeworks = get_location_names_with_ids(["Crystal Target: LRRC - Erode Works"])
             region_lrrc_erodeworks.add_locations(locations_lrrc_erodeworks, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_erodeworks.add_event("Completable: LRRC - Erode Works", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_erodeworks.add_event("Level Completable: LRRC - Erode Works", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_erodeworks.add_event("Completable: LRRC - Erode Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_erodeworks.add_event("Par Time Beatable: LRRC - Erode Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_erodeworks.add_event("Completable: LRRC - Erode Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_erodeworks.add_event("Crystal Target Beatable: LRRC - Erode Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_explosiveaction:
         locations_lrrc_explosiveaction = get_location_names_with_ids(["Clear: LRRC - Explosive Action"])
         region_lrrc_explosiveaction.add_locations(locations_lrrc_explosiveaction, ManicMinersLocation)
@@ -2426,11 +2426,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_explosiveaction = get_location_names_with_ids(["Crystal Target: LRRC - Explosive Action"])
             region_lrrc_explosiveaction.add_locations(locations_lrrc_explosiveaction, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_explosiveaction.add_event("Completable: LRRC - Explosive Action", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_explosiveaction.add_event("Level Completable: LRRC - Explosive Action", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_explosiveaction.add_event("Completable: LRRC - Explosive Action", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_explosiveaction.add_event("Par Time Beatable: LRRC - Explosive Action", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_explosiveaction.add_event("Completable: LRRC - Explosive Action", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_explosiveaction.add_event("Crystal Target Beatable: LRRC - Explosive Action", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_fireandwater:
         locations_lrrc_fireandwater = get_location_names_with_ids(["Clear: LRRC - Fire And Water"])
         region_lrrc_fireandwater.add_locations(locations_lrrc_fireandwater, ManicMinersLocation)
@@ -2448,11 +2448,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_fireandwater = get_location_names_with_ids(["Crystal Target: LRRC - Fire And Water"])
             region_lrrc_fireandwater.add_locations(locations_lrrc_fireandwater, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_fireandwater.add_event("Completable: LRRC - Fire And Water", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_fireandwater.add_event("Level Completable: LRRC - Fire And Water", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_fireandwater.add_event("Completable: LRRC - Fire And Water", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_fireandwater.add_event("Par Time Beatable: LRRC - Fire And Water", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_fireandwater.add_event("Completable: LRRC - Fire And Water", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_fireandwater.add_event("Crystal Target Beatable: LRRC - Fire And Water", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_frozenfrenzy:
         locations_lrrc_frozenfrenzy = get_location_names_with_ids(["Clear: LRRC - Frozen Frenzy"])
         region_lrrc_frozenfrenzy.add_locations(locations_lrrc_frozenfrenzy, ManicMinersLocation)
@@ -2468,11 +2468,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_frozenfrenzy = get_location_names_with_ids(["Crystal Target: LRRC - Frozen Frenzy"])
             region_lrrc_frozenfrenzy.add_locations(locations_lrrc_frozenfrenzy, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_frozenfrenzy.add_event("Completable: LRRC - Frozen Frenzy", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_frozenfrenzy.add_event("Level Completable: LRRC - Frozen Frenzy", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_frozenfrenzy.add_event("Completable: LRRC - Frozen Frenzy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_frozenfrenzy.add_event("Par Time Beatable: LRRC - Frozen Frenzy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_frozenfrenzy.add_event("Completable: LRRC - Frozen Frenzy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_frozenfrenzy.add_event("Crystal Target Beatable: LRRC - Frozen Frenzy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_hotstuff:
         locations_lrrc_hotstuff = get_location_names_with_ids(["Clear: LRRC - Hot Stuff"])
         region_lrrc_hotstuff.add_locations(locations_lrrc_hotstuff, ManicMinersLocation)
@@ -2492,11 +2492,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_hotstuff = get_location_names_with_ids(["Crystal Target: LRRC - Hot Stuff"])
             region_lrrc_hotstuff.add_locations(locations_lrrc_hotstuff, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_hotstuff.add_event("Completable: LRRC - Hot Stuff", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_hotstuff.add_event("Level Completable: LRRC - Hot Stuff", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_hotstuff.add_event("Completable: LRRC - Hot Stuff", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_hotstuff.add_event("Par Time Beatable: LRRC - Hot Stuff", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_hotstuff.add_event("Completable: LRRC - Hot Stuff", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_hotstuff.add_event("Crystal Target Beatable: LRRC - Hot Stuff", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_icespy:
         locations_lrrc_icespy = get_location_names_with_ids(["Clear: LRRC - Ice Spy"])
         region_lrrc_icespy.add_locations(locations_lrrc_icespy, ManicMinersLocation)
@@ -2514,11 +2514,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_icespy = get_location_names_with_ids(["Crystal Target: LRRC - Ice Spy"])
             region_lrrc_icespy.add_locations(locations_lrrc_icespy, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_icespy.add_event("Completable: LRRC - Ice Spy", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_icespy.add_event("Level Completable: LRRC - Ice Spy", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_icespy.add_event("Completable: LRRC - Ice Spy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_icespy.add_event("Par Time Beatable: LRRC - Ice Spy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_icespy.add_event("Completable: LRRC - Ice Spy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_icespy.add_event("Crystal Target Beatable: LRRC - Ice Spy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_itsaholdup:
         locations_lrrc_itsaholdup = get_location_names_with_ids(["Clear: LRRC - It's A Hold Up"])
         region_lrrc_itsaholdup.add_locations(locations_lrrc_itsaholdup, ManicMinersLocation)
@@ -2532,11 +2532,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_itsaholdup = get_location_names_with_ids(["Crystal Target: LRRC - It's A Hold Up"])
             region_lrrc_itsaholdup.add_locations(locations_lrrc_itsaholdup, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_itsaholdup.add_event("Completable: LRRC - It's A Hold Up", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_itsaholdup.add_event("Level Completable: LRRC - It's A Hold Up", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_itsaholdup.add_event("Completable: LRRC - It's A Hold Up", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_itsaholdup.add_event("Par Time Beatable: LRRC - It's A Hold Up", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_itsaholdup.add_event("Completable: LRRC - It's A Hold Up", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_itsaholdup.add_event("Crystal Target Beatable: LRRC - It's A Hold Up", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_lakeoffire:
         locations_lrrc_lakeoffire = get_location_names_with_ids(["Clear: LRRC - Lake Of Fire"])
         region_lrrc_lakeoffire.add_locations(locations_lrrc_lakeoffire, ManicMinersLocation)
@@ -2554,11 +2554,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_lakeoffire = get_location_names_with_ids(["Crystal Target: LRRC - Lake Of Fire"])
             region_lrrc_lakeoffire.add_locations(locations_lrrc_lakeoffire, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_lakeoffire.add_event("Completable: LRRC - Lake Of Fire", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_lakeoffire.add_event("Level Completable: LRRC - Lake Of Fire", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_lakeoffire.add_event("Completable: LRRC - Lake Of Fire", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_lakeoffire.add_event("Par Time Beatable: LRRC - Lake Of Fire", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_lakeoffire.add_event("Completable: LRRC - Lake Of Fire", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_lakeoffire.add_event("Crystal Target Beatable: LRRC - Lake Of Fire", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_lavalaughter:
         locations_lrrc_lavalaughter = get_location_names_with_ids(["Clear: LRRC - Lava Laughter"])
         region_lrrc_lavalaughter.add_locations(locations_lrrc_lavalaughter, ManicMinersLocation)
@@ -2576,11 +2576,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_lavalaughter = get_location_names_with_ids(["Crystal Target: LRRC - Lava Laughter"])
             region_lrrc_lavalaughter.add_locations(locations_lrrc_lavalaughter, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_lavalaughter.add_event("Completable: LRRC - Lava Laughter", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_lavalaughter.add_event("Level Completable: LRRC - Lava Laughter", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_lavalaughter.add_event("Completable: LRRC - Lava Laughter", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_lavalaughter.add_event("Par Time Beatable: LRRC - Lava Laughter", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_lavalaughter.add_event("Completable: LRRC - Lava Laughter", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_lavalaughter.add_event("Crystal Target Beatable: LRRC - Lava Laughter", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_oresome:
         locations_lrrc_oresome = get_location_names_with_ids(["Clear: LRRC - Oresome"])
         region_lrrc_oresome.add_locations(locations_lrrc_oresome, ManicMinersLocation)
@@ -2598,11 +2598,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_oresome = get_location_names_with_ids(["Crystal Target: LRRC - Oresome"])
             region_lrrc_oresome.add_locations(locations_lrrc_oresome, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_oresome.add_event("Completable: LRRC - Oresome", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_oresome.add_event("Level Completable: LRRC - Oresome", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_oresome.add_event("Completable: LRRC - Oresome", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_oresome.add_event("Par Time Beatable: LRRC - Oresome", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_oresome.add_event("Completable: LRRC - Oresome", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_oresome.add_event("Crystal Target Beatable: LRRC - Oresome", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_rockhard:
         locations_lrrc_rockhard = get_location_names_with_ids(["Clear: LRRC - Rock Hard"])
         region_lrrc_rockhard.add_locations(locations_lrrc_rockhard, ManicMinersLocation)
@@ -2618,11 +2618,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_rockhard = get_location_names_with_ids(["Crystal Target: LRRC - Rock Hard"])
             region_lrrc_rockhard.add_locations(locations_lrrc_rockhard, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_rockhard.add_event("Completable: LRRC - Rock Hard", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_rockhard.add_event("Level Completable: LRRC - Rock Hard", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_rockhard.add_event("Completable: LRRC - Rock Hard", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_rockhard.add_event("Par Time Beatable: LRRC - Rock Hard", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_rockhard.add_event("Completable: LRRC - Rock Hard", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_rockhard.add_event("Crystal Target Beatable: LRRC - Rock Hard", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_rockyhorror:
         locations_lrrc_rockyhorror = get_location_names_with_ids(["Clear: LRRC - Rocky Horror"])
         region_lrrc_rockyhorror.add_locations(locations_lrrc_rockyhorror, ManicMinersLocation)
@@ -2642,11 +2642,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_rockyhorror = get_location_names_with_ids(["Crystal Target: LRRC - Rocky Horror"])
             region_lrrc_rockyhorror.add_locations(locations_lrrc_rockyhorror, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_rockyhorror.add_event("Completable: LRRC - Rocky Horror", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_rockyhorror.add_event("Level Completable: LRRC - Rocky Horror", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_rockyhorror.add_event("Completable: LRRC - Rocky Horror", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_rockyhorror.add_event("Par Time Beatable: LRRC - Rocky Horror", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_rockyhorror.add_event("Completable: LRRC - Rocky Horror", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_rockyhorror.add_event("Crystal Target Beatable: LRRC - Rocky Horror", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_rubbletrouble:
         locations_lrrc_rubbletrouble = get_location_names_with_ids(["Clear: LRRC - Rubble Trouble"])
         region_lrrc_rubbletrouble.add_locations(locations_lrrc_rubbletrouble, ManicMinersLocation)
@@ -2660,11 +2660,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_rubbletrouble = get_location_names_with_ids(["Crystal Target: LRRC - Rubble Trouble"])
             region_lrrc_rubbletrouble.add_locations(locations_lrrc_rubbletrouble, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_rubbletrouble.add_event("Completable: LRRC - Rubble Trouble", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_rubbletrouble.add_event("Level Completable: LRRC - Rubble Trouble", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_rubbletrouble.add_event("Completable: LRRC - Rubble Trouble", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_rubbletrouble.add_event("Par Time Beatable: LRRC - Rubble Trouble", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_rubbletrouble.add_event("Completable: LRRC - Rubble Trouble", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_rubbletrouble.add_event("Crystal Target Beatable: LRRC - Rubble Trouble", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_runthegauntlet:
         locations_lrrc_runthegauntlet = get_location_names_with_ids(["Clear: LRRC - Run The Gauntlet"])
         region_lrrc_runthegauntlet.add_locations(locations_lrrc_runthegauntlet, ManicMinersLocation)
@@ -2678,11 +2678,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_runthegauntlet = get_location_names_with_ids(["Crystal Target: LRRC - Run The Gauntlet"])
             region_lrrc_runthegauntlet.add_locations(locations_lrrc_runthegauntlet, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_runthegauntlet.add_event("Completable: LRRC - Run The Gauntlet", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_runthegauntlet.add_event("Level Completable: LRRC - Run The Gauntlet", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_runthegauntlet.add_event("Completable: LRRC - Run The Gauntlet", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_runthegauntlet.add_event("Par Time Beatable: LRRC - Run The Gauntlet", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_runthegauntlet.add_event("Completable: LRRC - Run The Gauntlet", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_runthegauntlet.add_event("Crystal Target Beatable: LRRC - Run The Gauntlet", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_searchandrescue:
         locations_lrrc_searchandrescue = get_location_names_with_ids(["Clear: LRRC - Search And Rescue"])
         region_lrrc_searchandrescue.add_locations(locations_lrrc_searchandrescue, ManicMinersLocation)
@@ -2698,11 +2698,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_searchandrescue = get_location_names_with_ids(["Crystal Target: LRRC - Search And Rescue"])
             region_lrrc_searchandrescue.add_locations(locations_lrrc_searchandrescue, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_searchandrescue.add_event("Completable: LRRC - Search And Rescue", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_searchandrescue.add_event("Level Completable: LRRC - Search And Rescue", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_searchandrescue.add_event("Completable: LRRC - Search And Rescue", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_searchandrescue.add_event("Par Time Beatable: LRRC - Search And Rescue", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_searchandrescue.add_event("Completable: LRRC - Search And Rescue", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_searchandrescue.add_event("Crystal Target Beatable: LRRC - Search And Rescue", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_splitdownthemiddle:
         locations_lrrc_splitdownthemiddle = get_location_names_with_ids(["Clear: LRRC - Split Down The Middle"])
         region_lrrc_splitdownthemiddle.add_locations(locations_lrrc_splitdownthemiddle, ManicMinersLocation)
@@ -2718,11 +2718,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_splitdownthemiddle = get_location_names_with_ids(["Crystal Target: LRRC - Split Down The Middle"])
             region_lrrc_splitdownthemiddle.add_locations(locations_lrrc_splitdownthemiddle, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_splitdownthemiddle.add_event("Completable: LRRC - Split Down The Middle", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_splitdownthemiddle.add_event("Level Completable: LRRC - Split Down The Middle", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_splitdownthemiddle.add_event("Completable: LRRC - Split Down The Middle", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_splitdownthemiddle.add_event("Par Time Beatable: LRRC - Split Down The Middle", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_splitdownthemiddle.add_event("Completable: LRRC - Split Down The Middle", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_splitdownthemiddle.add_event("Crystal Target Beatable: LRRC - Split Down The Middle", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_thepathtopower:
         locations_lrrc_thepathtopower = get_location_names_with_ids(["Clear: LRRC - The Path To Power"])
         region_lrrc_thepathtopower.add_locations(locations_lrrc_thepathtopower, ManicMinersLocation)
@@ -2736,11 +2736,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_thepathtopower = get_location_names_with_ids(["Crystal Target: LRRC - The Path To Power"])
             region_lrrc_thepathtopower.add_locations(locations_lrrc_thepathtopower, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_thepathtopower.add_event("Completable: LRRC - The Path To Power", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_thepathtopower.add_event("Level Completable: LRRC - The Path To Power", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_thepathtopower.add_event("Completable: LRRC - The Path To Power", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_thepathtopower.add_event("Par Time Beatable: LRRC - The Path To Power", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_thepathtopower.add_event("Completable: LRRC - The Path To Power", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_thepathtopower.add_event("Crystal Target Beatable: LRRC - The Path To Power", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_waterlotoffun:
         locations_lrrc_waterlotoffun = get_location_names_with_ids(["Clear: LRRC - Water Lot Of Fun"])
         region_lrrc_waterlotoffun.add_locations(locations_lrrc_waterlotoffun, ManicMinersLocation)
@@ -2756,11 +2756,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_waterlotoffun = get_location_names_with_ids(["Crystal Target: LRRC - Water Lot Of Fun"])
             region_lrrc_waterlotoffun.add_locations(locations_lrrc_waterlotoffun, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_waterlotoffun.add_event("Completable: LRRC - Water Lot Of Fun", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_waterlotoffun.add_event("Level Completable: LRRC - Water Lot Of Fun", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_waterlotoffun.add_event("Completable: LRRC - Water Lot Of Fun", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_waterlotoffun.add_event("Par Time Beatable: LRRC - Water Lot Of Fun", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_waterlotoffun.add_event("Completable: LRRC - Water Lot Of Fun", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_waterlotoffun.add_event("Crystal Target Beatable: LRRC - Water Lot Of Fun", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
     if world.options.level_selection_lrrc_waterworks:
         locations_lrrc_waterworks = get_location_names_with_ids(["Clear: LRRC - Water Works"])
         region_lrrc_waterworks.add_locations(locations_lrrc_waterworks, ManicMinersLocation)
@@ -2776,11 +2776,11 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             locations_lrrc_waterworks = get_location_names_with_ids(["Crystal Target: LRRC - Water Works"])
             region_lrrc_waterworks.add_locations(locations_lrrc_waterworks, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_lrrc_waterworks.add_event("Completable: LRRC - Water Works", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_waterworks.add_event("Level Completable: LRRC - Water Works", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_lrrc_waterworks.add_event("Completable: LRRC - Water Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_waterworks.add_event("Par Time Beatable: LRRC - Water Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_lrrc_waterworks.add_event("Completable: LRRC - Water Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_lrrc_waterworks.add_event("Crystal Target Beatable: LRRC - Water Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
 
 def check_for_victory(options,save_path):
     levelDataList = ParseSaveFile.parseAllLevelsFromFilepath(save_path)
