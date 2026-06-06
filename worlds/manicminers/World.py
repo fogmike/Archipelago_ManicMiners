@@ -410,6 +410,10 @@ class ManicMinersWorld(World):
         # Add locations for par times
         if self.options.target_times_are_locations:
             number_locations += number_levels
+        
+        # Add locations for crystal targets
+        if self.options.crystal_targets_are_locations:
+            number_locations += number_levels
 
         # Can't start with more levels than there are levels
         if self.options.available_levels_at_start > (number_levels):
