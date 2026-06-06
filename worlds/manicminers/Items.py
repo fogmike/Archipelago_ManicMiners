@@ -641,7 +641,7 @@ def create_all_items(world: ManicMinersWorld) -> None:
             itempool_access.append(world.create_item("Level Access: LRR - Oresome"))
         if world.options.level_selection_lrr_rockhard:
             itempool_access.append(world.create_item("Level Access: LRR - Rock Hard"))
-        if world.options.level_selection_lrr_rockyhorror:
+        if world.options.level_selection_lrr_rockyhorror and world.options.boss_level_lrr_rockyhorror == 0:
             itempool_access.append(world.create_item("Level Access: LRR - Rocky Horror"))
         if world.options.level_selection_lrr_rubbletrouble:
             itempool_access.append(world.create_item("Level Access: LRR - Rubble Trouble"))
@@ -692,7 +692,7 @@ def create_all_items(world: ManicMinersWorld) -> None:
             itempool_access.append(world.create_item("Level Access: LRRR - Oresome"))
         if world.options.level_selection_lrrr_rockhard:
             itempool_access.append(world.create_item("Level Access: LRRR - Rock Hard"))
-        if world.options.level_selection_lrrr_rockyhorror:
+        if world.options.level_selection_lrrr_rockyhorror and world.options.boss_level_lrrr_rockyhorror == 0:
             itempool_access.append(world.create_item("Level Access: LRRR - Rocky Horror"))
         if world.options.level_selection_lrrr_rubbletrouble:
             itempool_access.append(world.create_item("Level Access: LRRR - Rubble Trouble"))
@@ -743,7 +743,7 @@ def create_all_items(world: ManicMinersWorld) -> None:
             itempool_access.append(world.create_item("Level Access: LRRC - Oresome"))
         if world.options.level_selection_lrrc_rockhard:
             itempool_access.append(world.create_item("Level Access: LRRC - Rock Hard"))
-        if world.options.level_selection_lrrc_rockyhorror:
+        if world.options.level_selection_lrrc_rockyhorror and world.options.boss_level_lrrc_rockyhorror == 0:
             itempool_access.append(world.create_item("Level Access: LRRC - Rocky Horror"))
         if world.options.level_selection_lrrc_rubbletrouble:
             itempool_access.append(world.create_item("Level Access: LRRC - Rubble Trouble"))
@@ -820,6 +820,13 @@ def create_all_items(world: ManicMinersWorld) -> None:
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))
     needed_number_of_filler_items = number_of_unfilled_locations - number_of_items
     itempool += [world.create_filler() for _ in range(needed_number_of_filler_items)]
+    
+    if world.options.boss_level_lrr_rockyhorror:
+        world.push_precollected(world.create_item("Level Access: LRR - Rocky Horror"))
+    if world.options.boss_level_lrrr_rockyhorror:
+        world.push_precollected(world.create_item("Level Access: LRRR - Rocky Horror"))
+    if world.options.boss_level_lrrc_rockyhorror:
+        world.push_precollected(world.create_item("Level Access: LRRC - Rocky Horror"))
     
     world.multiworld.itempool += itempool
 
