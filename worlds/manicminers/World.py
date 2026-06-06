@@ -436,8 +436,11 @@ class ManicMinersWorld(World):
                 self.options.bonus_clear_locations.value = 1
 
         # If more levels are required than are available, reduce number required
-        elif self.options.target_level_count > number_levels:
+        elif self.options.target_level_count >= number_levels:
             self.options.target_level_count.value = number_levels
+            # And -1 again if we need coordinates that were placed on the boss level
+            if self.options.victory_condition == 3 and self.options.locked_coordinates:
+                self.options.target_level_count.value -= 1
     
     def create_regions(self) -> None:
         Regions.create_and_connect_regions(self)
