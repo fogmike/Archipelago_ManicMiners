@@ -801,7 +801,7 @@ def create_all_items(world: ManicMinersWorld) -> None:
             world.push_precollected(item)
             
     if world.options.bonus_truck:
-        itempool += world.create_item("Chief's Favourite Truck")
+        itempool.append(world.create_item("Chief's Favourite Truck"))
     
     if world.options.victory_condition == 3 and world.options.locked_coordinates == 0:
         level_count = 0
