@@ -100,7 +100,11 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
             def count_available_levels():
                 all_items = set(get_ids_from_networkitems(self.ctx.items_received))
                 level_items = set(range(1,26)) | set(range(1001,1026)) | set(range(2001,2026)) | set(range(3001,3034))
-                return len(all_items & level_items)
+                level_count = len(all_items & level_items)
+                if self.ctx.slot_data["victory_condition"] == 3:
+                    if count_coordinates() < self.ctx.slot_data["target_level_count"]:
+                        return level_count-1
+                return level_count
             
             def count_available_buildings():
                 all_items = set(get_ids_from_networkitems(self.ctx.items_received))
