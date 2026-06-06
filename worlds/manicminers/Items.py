@@ -803,6 +803,19 @@ def create_all_items(world: ManicMinersWorld) -> None:
     if world.options.bonus_truck:
         itempool += world.create_item("Chief's Favourite Truck")
     
+    if world.options.victory_condition == 3 and world.options.locked_coordinates == 0:
+        level_count = 0
+        if world.options.campaign_selection_lrr:
+            level_count += 25
+        if world.options.campaign_selection_lrrr:
+            level_count += 25
+        if world.options.campaign_selection_lrrc:
+            level_count += 25
+        if world.options.no_duplicate_levels:
+            level_count = 25
+        for i in range(level_count):
+            itempool.append(world.create_item("Transporter Coordinates"))
+
     number_of_items = len(itempool)
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))
     needed_number_of_filler_items = number_of_unfilled_locations - number_of_items
