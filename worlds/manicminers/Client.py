@@ -368,7 +368,7 @@ class ManicMinersContext(CommonContext):
             self.slot_data = args.get("slot_data", {})
             self.save_watcher = asyncio.create_task(save_read_loop(self), name="save watcher")
         
-        if cmd == "ReceivedItems":
+        elif cmd == "ReceivedItems":
             sync_levels(self)
         # Rest of the incoming message handling goes here
 
