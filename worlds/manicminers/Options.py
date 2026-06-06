@@ -26,6 +26,8 @@ class LockedCoordinates(DefaultOnToggle):
     If true, then clearing each level unlocks one "Transporter Coordinates" item. 
     If false, then the "Transporter Coordinates" can be anywhere in the multiworld. An extra location is still added to each level.
     """
+    
+    display_name = "Locked Coordinate Locations"
 
 class TargetLevelCount(Range):
     """
