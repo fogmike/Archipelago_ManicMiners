@@ -428,16 +428,27 @@ class ManicMinersWorld(World):
             number_items += 2 # Item Unlocks
         if self.options.vehicles_are_items:
             number_items += 12 # Vehicle Unlocks
+        if self.options.bonus_truck:
+            number_items += 1 # Chief's Favourite Truck
         number_items -= self.options.available_levels_at_start
         
         # Check we haven't got more Items than Locations, handle if so
         item_location_diffcount = number_items - number_locations
         if item_location_diffcount > 0:
-            if self.options.bonus_clear_locations == 1:
-                #handling the case where bonus truck throws off numbers by one
-                self.options.available_levels_at_start.value +=1
-            else:
+            if self.options.bonus_clear_locations == 0:
                 self.options.bonus_clear_locations.value = 1
+                if self.options.no_duplicate_levels:
+                    number_locations += 56
+                else:
+                    if self.options.campaign_selection_lrr:
+                        number_locations += 56
+                    if self.options.campaign_selection_lrrr:
+                        number_locations += 56
+                    if self.options.campaign_selection_lrrc:
+                        number_locations += 56
+        item_location_diffcount = number_items - number_locations
+        if item_location_diffcount > 0:
+            self.options.available_levels_at_start.value += item_location_diffcount
 
         # If more levels are required than are available, reduce number required
         elif self.options.target_level_count >= number_levels:
