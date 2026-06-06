@@ -393,7 +393,7 @@ def sync_levels(self):
     root_dir = ManicMinersWorld.settings.manic_miners_install_dir
     arch_level_dir = ManicMinersWorld.settings.manic_miners_level_dir
     for index, item in enumerate(self.items_received, 1):
-        Items.copy_level_into_archipelago(root_dir, arch_level_dir, item.item, get_ids_from_networkitems(self.items_received))
+        Items.copy_level_into_archipelago(root_dir, arch_level_dir, item.item, get_ids_from_networkitems(self.items_received), self.slot_data)
 
 def get_ids_from_networkitems(items):
     id_list = []

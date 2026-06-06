@@ -823,7 +823,7 @@ def create_all_items(world: ManicMinersWorld) -> None:
     
     world.multiworld.itempool += itempool
 
-def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items):
+def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, options):
     main_level_dir = root_dir + "\\ManicMiners\\Levels"
     arch_level_dir = arch_level_dir + "\\Levels\\Archipelago"
     match item_id:
@@ -879,6 +879,9 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items):
             source = "\\LRR\\rockhard.dat"
             target = "\\LRR - Rock Hard.dat"
         case 18:
+            if options["boss_level_lrr_rockyhorror"] == 1:
+                if all_items.count(874) < options["target_level_count"]:
+                    return False
             source = "\\LRR\\rockyhorror.dat"
             target = "\\LRR - Rocky Horror.dat"
         case 19:
@@ -954,6 +957,9 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items):
             source = "\\LRRR\\rockhard.dat"
             target = "\\LRRR - Rock Hard.dat"
         case 1018:
+            if options["boss_level_lrrr_rockyhorror"] == 1:
+                if all_items.count(874) < options["target_level_count"]:
+                    return False
             source = "\\LRRR\\rockyhorror.dat"
             target = "\\LRRR - Rocky Horror.dat"
         case 1019:
@@ -1029,6 +1035,9 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items):
             source = "\\LRRC\\rockhard.dat"
             target = "\\LRRC - Rock Hard.dat"
         case 2018:
+            if options["boss_level_lrrc_rockyhorror"] == 1:
+                if all_items.count(874) < options["target_level_count"]:
+                    return False
             source = "\\LRRC\\rockyhorror.dat"
             target = "\\LRRC - Rocky Horror.dat"
         case 2019:
