@@ -24,7 +24,7 @@ class LockedCoordinates(DefaultOnToggle):
     """
     Only relevant if Victory Condition is set to "Coordinate Hunt". 
     If true, then clearing each level unlocks one "Transporter Coordinates" item. 
-    If false, then the "Transporter Coordinates" can be anywhere in the multiworld.
+    If false, then the "Transporter Coordinates" can be anywhere in the multiworld. An extra location is still added to each level.
     """
 
 class TargetLevelCount(Range):
