@@ -3353,6 +3353,16 @@ def check_for_victory(options,save_path):
         else:
             return False
     
+    elif options["victory_condition"] == 3: # coordinate_hunt
+        for level in levelDataList:
+            if options["boss_level_lrr_rockyhorror"] == 1 and level[0] == "Archipelago/LRR - Rocky Horror":
+                return True
+            if options["boss_level_lrrr_rockyhorror"] == 1 and level[0] == "Archipelago/LRRR - Rocky Horror":
+                return True
+            if options["boss_level_lrrc_rockyhorror"] == 1 and level[0] == "Archipelago/LRRC - Rocky Horror":
+                return True
+        return False
+    
     #shouldn't hit this, but to make sure we return something
     return False
   
