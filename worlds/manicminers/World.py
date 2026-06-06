@@ -393,6 +393,19 @@ class ManicMinersWorld(World):
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
+        
+        # Select boss level
+        if self.options.victory_condition == 3:
+            level_list = []
+            if self.options.level_selection_lrr_rockyhorror:
+                level_list.append(self.options.boss_level_lrr_rockyhorror)
+            if self.options.level_selection_lrrr_rockyhorror:
+                level_list.append(self.options.boss_level_lrrr_rockyhorror)
+            if self.options.level_selection_lrrc_rockyhorror:
+                level_list.append(self.options.boss_level_lrrc_rockyhorror)
+            random_index = self.random.randint(0,len(level_list)-1)
+            level_list[random_index].value = 1
+            level_list.clear()
 
         # Add locations for par times
         if self.options.target_times_are_locations:
@@ -445,7 +458,7 @@ class ManicMinersWorld(World):
     def fill_slot_data(self) -> Mapping[str, Any]:
         return self.options.as_dict(
         # "victory_condition", "target_level_count", "target_times_are_locations", "target_time_difficulty", "buildings_are_items", "items_are_items", "vehicles_are_items", "campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc", "campaign_selection_baz"
-        "victory_condition", "target_level_count", "target_times_are_locations", "target_time_difficulty", "crystal_targets_are_locations", "crystal_target_percentage", "buildings_are_items", "items_are_items", "vehicles_are_items", "bonus_clear_locations","campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc","no_duplicate_levels"
+        "victory_condition", "target_level_count", "target_times_are_locations", "target_time_difficulty", "crystal_targets_are_locations", "crystal_target_percentage", "buildings_are_items", "items_are_items", "vehicles_are_items", "bonus_clear_locations", "campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc", "no_duplicate_levels", "boss_level_lrr_rockyhorror", "boss_level_lrrr_rockyhorror", "boss_level_lrrc_rockyhorror"
         )
 
 def launch_client(*args):

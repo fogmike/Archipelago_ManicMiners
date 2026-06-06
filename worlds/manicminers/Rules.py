@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from worlds.generic.Rules import set_rule, add_rule
-from rule_builder.rules import Has, HasAll, HasAny, OptionFilter, Filtered
+from rule_builder.rules import Has, HasAll, HasAny, OptionFilter, Filtered, CanReachRegion
 from . import Items
 from . import Options as ManicMiners_Options
 
@@ -581,6 +581,13 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(goal_achievable, Has("Par Time Beaten", world.options.target_level_count.value))
     elif world.options.victory_condition == 2:
         world.set_rule(goal_achievable, Has("Crystal Target Beaten", world.options.target_level_count.value))
+    elif world.options.victory_condition == 3:
+        if world.options.boss_level_lrr_rockyhorror:
+            world.set_rule(goal_achievable, CanReachRegion("LRR - Rocky Horror"))
+        elif world.options.boss_level_lrrr_rockyhorror:
+            world.set_rule(goal_achievable, CanReachRegion("LRRR - Rocky Horror"))
+        elif world.options.boss_level_lrrc_rockyhorror:
+            world.set_rule(goal_achievable, CanReachRegion("LRRC - Rocky Horror"))
     
 def set_completion_condition(world: ManicMinersWorld) -> None:
     world.set_completion_rule(Has("Victory"))

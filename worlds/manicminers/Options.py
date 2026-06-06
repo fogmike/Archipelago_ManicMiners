@@ -340,6 +340,13 @@ class LevelSelectionLRRCWaterLotOfFun(Toggle):
 class LevelSelectionLRRCWaterWorks(Toggle):
     visibility = Visibility.none
 
+class BossLevelLRRRockyHorror(Toggle):
+    visibility = Visibility.none
+class BossLevelLRRRRockyHorror(Toggle):
+    visibility = Visibility.none
+class BossLevelLRRCRockyHorror(Toggle):
+    visibility = Visibility.none
+
 @dataclass
 class ManicMinersOptions(PerGameCommonOptions):
     victory_condition: VictoryCondition
@@ -440,6 +447,10 @@ class ManicMinersOptions(PerGameCommonOptions):
     level_selection_lrrc_thepathtopower: LevelSelectionLRRCThePathToPower
     level_selection_lrrc_waterlotoffun: LevelSelectionLRRCWaterLotOfFun
     level_selection_lrrc_waterworks: LevelSelectionLRRCWaterWorks
+    
+    boss_level_lrr_rockyhorror: BossLevelLRRRockyHorror
+    boss_level_lrrr_rockyhorror: BossLevelLRRRRockyHorror
+    boss_level_lrrc_rockyhorror: BossLevelLRRCRockyHorror
 
 option_groups = [
     OptionGroup(
