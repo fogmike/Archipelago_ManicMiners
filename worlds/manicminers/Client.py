@@ -116,6 +116,9 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                 all_items = set(get_ids_from_networkitems(self.ctx.items_received))
                 level_items = set(range(875,887))
                 return len(all_items & level_items)
+            
+            def count_coordinates():
+                return get_ids_from_networkitems(self.ctx.items_received).count(874)
                 
             def count_total_time():
                 level_count = count_cleared_levels_local()
@@ -156,6 +159,18 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                 self.output(f"Goal: Beat par time on {self.ctx.slot_data["target_level_count"]} levels")
             elif self.ctx.slot_data["victory_condition"] == 2:
                 self.output(f"Goal: Beat crystal targets on {self.ctx.slot_data["target_level_count"]} levels")
+            elif self.ctx.slot_data["victory_condition"] == 3:
+                if self.ctx.slot_data["boss_level_lrr_rockyhorror"] == 1:
+                    boss_level = "LRR - Rocky Horror"
+                if self.ctx.slot_data["boss_level_lrrr_rockyhorror"] == 1:
+                    boss_level = "LRRR - Rocky Horror"
+                if self.ctx.slot_data["boss_level_lrrc_rockyhorror"] == 1:
+                    boss_level = "LRRC - Rocky Horror"
+                self.output(f"Goal: Get {self.ctx.slot_data["target_level_count"]} Transporter Coordinates items to unlock {boss_level} then clear it.")
+                if self.ctx.slot_data["locked_coordinates"] == 1:
+                    self.output(f"Transporter Coordinates are found for beating levels.")
+                else:
+                    self.output(f"Transporter Coordinates can be anywhere in the multiworld.")
  
             self.output(f"Levels available: {count_available_levels()}/{count_total_levels()}") 
             if self.ctx.slot_data["victory_condition"] == 0:
@@ -192,6 +207,9 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                 self.output(f"Crystal targets met: {count_beaten_crystal_target_levels_ap()}")
             elif self.ctx.slot_data["victory_condition"] == 2:
                 self.output(f"Crystal targets met (in local state): {count_beaten_crystal_target_levels_local()}")
+                
+            if self.ctx.slot_data["victory_condition"] == 3:
+                self.output(f"Transporter Coordinates found: {count_coordinates()}")
             
             if self.ctx.slot_data["buildings_are_items"] == 1:
                 self.output(f"Buildings available: {count_available_buildings()}/11")
