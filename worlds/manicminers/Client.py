@@ -239,7 +239,7 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                 item_name = list(Items.ITEM_NAME_TO_ID.keys())[list(Items.ITEM_NAME_TO_ID.values()).index(item)]
                 if item_name[:13] == "Level Access:":
                     item_names.append(item_name[14:])
-            for location in  self.ctx.missing_locations:
+            for location in self.ctx.missing_locations:
                 location_name = list(Locations.LOCATION_NAME_TO_ID.keys())[list(Locations.LOCATION_NAME_TO_ID.values()).index(location)]
                 if location_name[:6] == "Clear:":
                     location_names.append(location_name[7:])
