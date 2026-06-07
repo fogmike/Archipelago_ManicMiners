@@ -416,8 +416,11 @@ class ManicMinersWorld(World):
             number_locations += number_levels
 
         # Can't start with more levels than there are levels
-        if self.options.available_levels_at_start > (number_levels):
+        if self.options.available_levels_at_start >= (number_levels):
             self.options.available_levels_at_start.value = number_levels
+            # And -1 again if we get given one free boss level access item for Coordinate Hunt
+            if self.options.victory_condition == 3:
+                self.options.available_levels_at_start.value -= 1
         
         # Identify number of Items
         number_items = 0
