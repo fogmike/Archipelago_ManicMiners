@@ -322,7 +322,8 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                     self.output(f"The following {len(intersection)} crystal targets are available, but not cleared.")
                     self.output(f"(They may not yet be clearable with your current unlocks.)")
                     for level_name in intersection:
-                        crystal_target = Locations.TARGET_CRYSTAL_COUNT[level_name]
+                        full_crystal_target = Locations.TARGET_CRYSTAL_COUNT[level_name]
+                        crystal_target = (full_crystal_target * self.ctx.slot_data["crystal_target_percentage"]) // 100
                         self.output(f"{level_name}: {crystal_target}")
             else:
                 self.output(f"Power levels are stable, you don't need to go beyond the regular level targets!")
