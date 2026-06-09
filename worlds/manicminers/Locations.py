@@ -3375,17 +3375,16 @@ def get_locations_from_save_data(options,save_path):
         location_id = location_id_from_level_name(level[0])
         if (location_id != -1):
             location_ids.append(location_id)
-            if options["bonus_clear_locations"] == 1:
-                # generic solution that allows up to 10 locations for any level
-                location_ids.append(location_id + 1)
-                location_ids.append(location_id + 2)
-                location_ids.append(location_id + 3)
-                location_ids.append(location_id + 4)
-                location_ids.append(location_id + 5)
-                location_ids.append(location_id + 6)
-                location_ids.append(location_id + 7)
-                location_ids.append(location_id + 8)
-                location_ids.append(location_id + 9)
+            # generic solution that allows up to 10 locations for any level
+            location_ids.append(location_id + 1)
+            location_ids.append(location_id + 2)
+            location_ids.append(location_id + 3)
+            location_ids.append(location_id + 4)
+            location_ids.append(location_id + 5)
+            location_ids.append(location_id + 6)
+            location_ids.append(location_id + 7)
+            location_ids.append(location_id + 8)
+            location_ids.append(location_id + 9)
     
     if options["target_times_are_locations"] == 1 or options["victory_condition"] == 1:
         for level in levelDataList:
