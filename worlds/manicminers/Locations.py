@@ -1777,7 +1777,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrr_rockhard = world.get_location("Research Coordinates: LRR - Rock Hard")
                 locations_lrr_rockhard.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrr_rockyhorror:
+    if world.options.level_selection_lrr_rockyhorror and world.options.boss_level_lrr_rockyhorror == 0:
         locations_lrr_rockyhorror = get_location_names_with_ids(["Clear: LRR - Rocky Horror"])
         region_lrr_rockyhorror.add_locations(locations_lrr_rockyhorror, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -2440,7 +2440,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrr_rockhard = world.get_location("Research Coordinates: LRRR - Rock Hard")
                 locations_lrrr_rockhard.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrr_rockyhorror:
+    if world.options.level_selection_lrrr_rockyhorror and world.options.boss_level_lrrr_rockyhorror == 0:
         locations_lrrr_rockyhorror = get_location_names_with_ids(["Clear: LRRR - Rocky Horror"])
         region_lrrr_rockyhorror.add_locations(locations_lrrr_rockyhorror, ManicMinersLocation)
         if world.options.bonus_clear_locations:
@@ -3103,7 +3103,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_lrrc_rockhard = world.get_location("Research Coordinates: LRRC - Rock Hard")
                 locations_lrrc_rockhard.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_lrrc_rockyhorror:
+    if world.options.level_selection_lrrc_rockyhorror and world.options.boss_level_lrrc_rockyhorror == 0:
         locations_lrrc_rockyhorror = get_location_names_with_ids(["Clear: LRRC - Rocky Horror"])
         region_lrrc_rockyhorror.add_locations(locations_lrrc_rockyhorror, ManicMinersLocation)
         if world.options.bonus_clear_locations:
