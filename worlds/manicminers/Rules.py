@@ -172,7 +172,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     if world.options.level_selection_lrr_rockyhorror:
         entrance_lrr_rockyhorror = world.get_entrance("Start Level - LRR - Rocky Horror")
         world.set_rule(entrance_lrr_rockyhorror, (rule_can_breathe & Has("Level Access: LRR - Rocky Horror") & Has("Transporter Coordinates",world.options.target_level_count.value,options=[OptionFilter(ManicMiners_Options.BossLevelLRRRockyHorror,1)])))
-        if world.options.crystal_targets_are_locations:
+        if world.options.crystal_targets_are_locations and world.options.boss_level_lrr_rockyhorror == 0:
             location_crystals_lrr_rockyhorror = world.get_location("Crystal Target: LRR - Rocky Horror")
             world.set_rule(location_crystals_lrr_rockyhorror, rule_can_blast)
         if world.options.victory_condition == 2:
@@ -362,7 +362,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     if world.options.level_selection_lrrr_rockyhorror:
         entrance_lrrr_rockyhorror = world.get_entrance("Start Level - LRRR - Rocky Horror")
         world.set_rule(entrance_lrrr_rockyhorror, (rule_can_breathe & rule_can_build_toolstore & rule_can_build_canteen & Has("Vehicle Unlock: Small Transport Truck") & Has("Level Access: LRRR - Rocky Horror") & Has("Transporter Coordinates",world.options.target_level_count.value,options=[OptionFilter(ManicMiners_Options.BossLevelLRRRRockyHorror,1)])))
-        if world.options.crystal_targets_are_locations:
+        if world.options.crystal_targets_are_locations and world.options.boss_level_lrrr_rockyhorror == 0:
             location_crystals_lrrr_rockyhorror = world.get_location("Crystal Target: LRRR - Rocky Horror")
             world.set_rule(location_crystals_lrrr_rockyhorror, rule_can_flying_lase)
         if world.options.victory_condition == 2:
@@ -522,7 +522,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     if world.options.level_selection_lrrc_rockyhorror:
         entrance_lrrc_rockyhorror = world.get_entrance("Start Level - LRRC - Rocky Horror")
         world.set_rule(entrance_lrrc_rockyhorror, (rule_can_breathe & Has("Level Access: LRRC - Rocky Horror") & Has("Transporter Coordinates",world.options.target_level_count.value,options=[OptionFilter(ManicMiners_Options.BossLevelLRRCRockyHorror,1)])))
-        if world.options.crystal_targets_are_locations:
+        if world.options.crystal_targets_are_locations and world.options.boss_level_lrrc_rockyhorror == 0:
             location_crystals_lrrc_rockyhorror = world.get_location("Crystal Target: LRRC - Rocky Horror")
             world.set_rule(location_crystals_lrrc_rockyhorror, rule_can_blast)
         if world.options.victory_condition == 2:
