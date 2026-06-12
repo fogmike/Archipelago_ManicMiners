@@ -343,7 +343,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_lrrr_lavalaughter, rule_can_blast)
     if world.options.level_selection_lrrr_oresome:
         entrance_lrrr_oresome = world.get_entrance("Start Level - LRRR - Oresome")
-        world.set_rule(entrance_lrrr_oresome, (rule_can_breathe & Has("Level Access: LRRR - Oresome")))
+        world.set_rule(entrance_lrrr_oresome, (rule_can_breathe & rule_can_build_upgradestation & Has("Level Access: LRRR - Oresome")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrr_oresome = world.get_location("Crystal Target: LRRR - Oresome")
             world.set_rule(location_crystals_lrrr_oresome, (rule_can_blast & rule_can_fly & rule_can_lase))
