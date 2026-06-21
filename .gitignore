@@ -203,3 +203,4 @@ Thumbs.db
 # Fuzzer
 fuzz.py
 fuzz_output/
+fuzz_meta.yaml
