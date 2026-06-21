@@ -72,7 +72,7 @@ The 100% crystal targets are shown, though the options only allow up to 95% to m
 | Don't Panic           | 12m           | 8m              | 5m            | 4m                 | 4                     | 31             |
 | Driller Night         | 5m            | 3m              | 1m 30s        | 1m                 | 2                     | 11             |
 | Erode Works           | 20m           | 12m             | 8m            | 6m                 | 3                     | 64             |
-| Explosive Action      | 12m           | 7m              | 4m 30s        | 3m 30s             | 2                     | 24             |
+| Explosive Action      | 15m           | 11m             | 8m 30s        | 7m 30s             | 2                     | 24             |
 | Fire and Water        | 30m           | 20m             | 14m           | 11m                | 4                     | 71             |
 | Frozen Frenzy         | 15m           | 10m             | 6m            | 5m                 | 3                     | 181            |
 | Hot Stuff             | 30m           | 20m             | 14m           | 11m                | 5                     | 200            |

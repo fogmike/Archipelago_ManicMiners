@@ -627,7 +627,7 @@ TARGET_CLEAR_TIME_EASY = {
     "LRRC - Don't Panic": 720, # 12:00
     "LRRC - Driller Night": 300, # 05:00
     "LRRC - Erode Works": 1200, # 20:00
-    "LRRC - Explosive Action": 720, # 12:00
+    "LRRC - Explosive Action": 900, # 15:00
     "LRRC - Fire And Water": 1800, # 30:00
     "LRRC - Frozen Frenzy": 900, # 15:00
     "LRRC - Hot Stuff": 1800, # 30:00
@@ -757,7 +757,7 @@ TARGET_CLEAR_TIME_MEDIUM = {
     "LRRC - Don't Panic": 480, # 08:00
     "LRRC - Driller Night": 180, # 03:00
     "LRRC - Erode Works": 720, # 12:00
-    "LRRC - Explosive Action": 420, # 07:00
+    "LRRC - Explosive Action": 660, # 11:00
     "LRRC - Fire And Water": 1200, # 20:00
     "LRRC - Frozen Frenzy": 600, # 10:00
     "LRRC - Hot Stuff": 1200, # 20:00
@@ -887,7 +887,7 @@ TARGET_CLEAR_TIME_HARD = {
     "LRRC - Don't Panic": 300, # 05:00
     "LRRC - Driller Night": 90, # 01:30
     "LRRC - Erode Works": 480, # 08:00
-    "LRRC - Explosive Action": 270, # 04:30
+    "LRRC - Explosive Action": 510, # 08:30
     "LRRC - Fire And Water": 840, # 14:00
     "LRRC - Frozen Frenzy": 360, # 06:00
     "LRRC - Hot Stuff": 840, # 14:00
@@ -1017,7 +1017,7 @@ TARGET_CLEAR_TIME_ROCK_HARD = {
     "LRRC - Don't Panic": 240, # 04:00
     "LRRC - Driller Night": 60, # 01:00
     "LRRC - Erode Works": 360, # 06:00
-    "LRRC - Explosive Action": 210, # 03:30
+    "LRRC - Explosive Action": 450, # 07:30
     "LRRC - Fire And Water": 660, # 11:00
     "LRRC - Frozen Frenzy": 300, # 05:00
     "LRRC - Hot Stuff": 660, # 11:00
