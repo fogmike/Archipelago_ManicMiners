@@ -329,18 +329,6 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                 self.output(f"Power levels are stable, you don't need to go beyond the regular level targets!")
 
 def cleanup_install(self):
-    arch_level_dir = ManicMinersWorld.settings.manic_miners_level_dir + "\\Levels\\Archipelago"
-    if platform.system() != "Windows":
-        arch_level_dir = arch_level_dir.replace("\\","/")
-    path = pathlib.Path(arch_level_dir)
-    # delete Archipelago Levels
-    if (path.is_dir()):
-        self.output(f"Deleting Archipelago Campaign directory...")
-        for file in path.iterdir():
-            file.unlink()
-        path.rmdir()
-    else:
-        self.output(f"No Archipelago campaign directory found needing cleanup...")
     # delete Archipelago profile
     if platform.system() == "Windows":
         lad = os.getenv('LOCALAPPDATA')
@@ -353,7 +341,19 @@ def cleanup_install(self):
         self.output(f"Deleting Archipelago save...")
         path.unlink()
     else: 
-        self.output(f"No Archipelago save found needing cleanup...")   
+        self.output(f"No Archipelago save found needing cleanup...")  
+    arch_level_dir = ManicMinersWorld.settings.manic_miners_level_dir + "\\Levels\\Archipelago"
+    if platform.system() != "Windows":
+        arch_level_dir = arch_level_dir.replace("\\","/")
+    path = pathlib.Path(arch_level_dir)
+    # delete Archipelago Levels
+    if (path.is_dir()):
+        self.output(f"Deleting Archipelago Campaign directory...")
+        for file in path.iterdir():
+            file.unlink()
+        path.rmdir()
+    else:
+        self.output(f"No Archipelago campaign directory found needing cleanup...")
 
 class ManicMinersContext(CommonContext):
     command_processor = ManicMinersClientCommandProcessor
