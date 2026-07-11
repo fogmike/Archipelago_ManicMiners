@@ -45,7 +45,7 @@ class TargetLevelCount(Range):
 class AvailableLevelsAtStart(Range):
     """
     How many levels are available initially.
-    If other setting combinations lead to more overall items than locations, this setting may be automatically increased to make generation possible.
+    If other setting combinations lead to more overall items than locations, or problematically restrictive starts, this setting may be automatically increased to make generation possible.
     """
     
     display_name = "Available Levels At Start"

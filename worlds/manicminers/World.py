@@ -51,6 +51,10 @@ class ManicMinersWorld(World):
         if ((self.options.campaign_selection_lrr == 0) & (self.options.campaign_selection_lrrr == 0) & (self.options.campaign_selection_lrrc == 0)):
             self.options.campaign_selection_lrr.value = 1
         
+        # If only campaign is LRRR, and everything is restricted, set minimum start level count to 5 to help with fill error chance
+        if ((self.options.campaign_selection_lrr == 0) & (self.options.campaign_selection_lrrr == 1) & (self.options.campaign_selection_lrrc == 0) & ((self.options.items_are_items == 1) | (self.options.buildings_are_items == 1) | (self.options.vehicles_are_items == 1))):
+            self.options.available_levels_at_start.value = max(self.options.available_levels_at_start.value,5)
+        
         # Identify number of levels and locations for clearing
         number_levels = 0
         number_locations = 0
