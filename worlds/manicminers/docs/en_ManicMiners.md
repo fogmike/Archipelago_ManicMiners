@@ -67,9 +67,9 @@ Players familiar with Manic Miners may prefer to enable all campaigns and the No
 
 Note: running with every campaign fully selected and a matching high target level goal, can take a long time. 
 
-#### What are the target times?
+#### What are the target times or crystal counts?
 
-The target times for all levels can be viewed [here](./level_properties_en.md).
+The stats for all levels can be viewed [here](./level_properties_en.md).
 
 ## Additional commands
 
