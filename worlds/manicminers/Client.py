@@ -409,7 +409,7 @@ async def save_read_loop(self):
             if victory:
                 await self.send_msgs([{"cmd": "StatusUpdate", "status": ClientStatus.CLIENT_GOAL}])
                 self.finished_game = True
-        await asyncio.sleep(0.1)
+        await asyncio.sleep(1)
 
 def sync_levels(self):
     item: NetworkItem
