@@ -1269,8 +1269,9 @@ def update_disabled_unlocks(filepath, all_items):
         vehicle_spawn_line = "\nVehicleSmallTransportTruck_C," + toolstore_translation + "Rotation: P=0.000000 Y=0.000000 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000,Essential=true"
        
         vehicles_section_start = new_file_contents.find("vehicles{")+9
+        vehicles_section_end = new_file_contents.find("}",vehicles_section_start)
 
-        temp = new_file_contents[:vehicles_section_start] + vehicle_spawn_line + new_file_contents[vehicles_section_start:]
+        temp = new_file_contents[:vehicles_section_end-1] + vehicle_spawn_line + new_file_contents[vehicles_section_end-1:]
         new_file_contents = temp
     
     with open(filepath,'w') as file:
