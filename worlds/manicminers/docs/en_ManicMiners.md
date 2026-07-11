@@ -99,6 +99,10 @@ Shows specific game information about which target times are accessible, but not
 
 Shows specific game information about which crystal targets are accessible, but not yet cleared. It _only_ considers the level unlock items, and does not factor if you have all other prerequisites. Crystal targets may have additional prerequisites beyond those needed to clear a level.
 
+#### `/toggle_truck`
+
+If playing with Chief's Favourite Truck enabled, this allows you to disable it temporarily if it's causing more hindrance than help (possible in certain monster- or lava-heavy levels). Run it again to re-enable. Must be run each time the client is restarted, i.e. truck is enabled by default at the start of each session. 
+
 ## Under the hood
 
 The Archipelago integration works in two main ways. 
