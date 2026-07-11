@@ -830,7 +830,7 @@ def create_all_items(world: ManicMinersWorld) -> None:
     
     world.multiworld.itempool += itempool
 
-def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, options):
+def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, options, disable_truck):
     main_level_dir = root_dir + "\\ManicMiners\\Levels"
     arch_level_dir = arch_level_dir + "\\Levels\\Archipelago"
     match item_id:
@@ -1177,10 +1177,10 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, op
     source_path = pathlib.Path(main_level_dir + source)
     target_path = pathlib.Path(arch_level_dir + target)
     shutil.copy(source_path, target_path)
-    update_disabled_unlocks(target_path, all_items)
+    update_disabled_unlocks(target_path, all_items, disable_truck)
     return True
 
-def update_disabled_unlocks(filepath, all_items):
+def update_disabled_unlocks(filepath, all_items, disable_truck):
     with open(filepath,'r') as file:
         original_file_contents = file.read()
         file.close()
@@ -1253,7 +1253,7 @@ def update_disabled_unlocks(filepath, all_items):
 
     new_file_contents = original_file_beginning + archipelago_section
     
-    if 949 in all_items:
+    if (949 in all_items) & (disable_truck == False):
         buildings_section_start = new_file_contents.find("buildings{")
         buildings_section_end = new_file_contents.find("}",buildings_section_start)+1
         buildings_section = new_file_contents[buildings_section_start:buildings_section_end]

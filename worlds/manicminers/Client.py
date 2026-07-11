@@ -327,6 +327,25 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                         self.output(f"{level_name}: {crystal_target}")
             else:
                 self.output(f"Power levels are stable, you don't need to go beyond the regular level targets!")
+    
+    def _cmd_toggle_truck(self):
+        """Toggle Chief's Favourite Truck, if applicable."""
+        did_something = False
+        for item in get_ids_from_networkitems(self.ctx.items_received):
+            if item == 949:
+                if self.ctx.disable_truck == False:
+                    self.output(f"Chief has stowed his truck! Better safe than sorry!")
+                    self.ctx.disable_truck = True
+                    did_something = True
+                    sync_levels(self.ctx)
+                else:
+                    self.output(f"Chief has lent you his truck again! Don't break it!")
+                    self.ctx.disable_truck = False
+                    did_something = True
+                    sync_levels(self.ctx)
+                break
+        if did_something == False:
+            self.output(f"Nothing to do - you haven't unlocked Chief's Favourite Truck, or you're not connected to the slot.")
 
 def cleanup_install(self):
     # delete Archipelago profile
@@ -360,6 +379,8 @@ class ManicMinersContext(CommonContext):
     game = "Manic Miners"
     items_handling = 0b111
     base_title = "Manic Miners Client"
+    
+    disable_truck = False
     
     async def server_auth(self, password_requested: bool = False):
         if password_requested and not self.password:
@@ -416,7 +437,7 @@ def sync_levels(self):
     root_dir = ManicMinersWorld.settings.manic_miners_install_dir
     arch_level_dir = ManicMinersWorld.settings.manic_miners_level_dir
     for index, item in enumerate(self.items_received, 1):
-        Items.copy_level_into_archipelago(root_dir, arch_level_dir, item.item, get_ids_from_networkitems(self.items_received), self.slot_data)
+        Items.copy_level_into_archipelago(root_dir, arch_level_dir, item.item, get_ids_from_networkitems(self.items_received), self.slot_data, self.disable_truck)
 
 def get_ids_from_networkitems(items):
     id_list = []
