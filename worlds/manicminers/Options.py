@@ -190,163 +190,241 @@ class NoDuplicateLevels(Toggle):
 
 # Individual hidden options for each level
 class LevelSelectionLRRABreathOfFreshAir(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRAirRaiders(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRBackToBasics(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRBreathless(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRDontPanic(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRDrillerNight(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRErodeWorks(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRExplosiveAction(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRFireAndWater(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRFrozenFrenzy(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRHotStuff(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRIceSpy(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRItsAHoldUp(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRLakeOfFire(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRLavaLaughter(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRROresome(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRockHard(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRockyHorror(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRubbleTrouble(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRunTheGauntlet(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRSearchAndRescue(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRSplitDownTheMiddle(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRThePathToPower(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRWaterLotOfFun(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRWaterWorks(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 
 class LevelSelectionLRRRABreathOfFreshAir(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRAirRaiders(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRBackToBasics(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRBreathless(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRDontPanic(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRDrillerNight(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRErodeWorks(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRExplosiveAction(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRFireAndWater(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRFrozenFrenzy(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRHotStuff(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRIceSpy(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRItsAHoldUp(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRLakeOfFire(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRLavaLaughter(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRROresome(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRRockHard(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRRockyHorror(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRRubbleTrouble(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRRunTheGauntlet(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRSearchAndRescue(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRSplitDownTheMiddle(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRThePathToPower(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRWaterLotOfFun(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRRWaterWorks(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 
 class LevelSelectionLRRCABreathOfFreshAir(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCAirRaiders(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCBackToBasics(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCBreathless(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCDontPanic(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCDrillerNight(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCErodeWorks(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCExplosiveAction(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCFireAndWater(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCFrozenFrenzy(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCHotStuff(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCIceSpy(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCItsAHoldUp(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCLakeOfFire(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCLavaLaughter(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCOresome(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCRockHard(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCRockyHorror(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCRubbleTrouble(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCRunTheGauntlet(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCSearchAndRescue(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCSplitDownTheMiddle(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCThePathToPower(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCWaterLotOfFun(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionLRRCWaterWorks(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 
 class BossLevelLRRRockyHorror(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class BossLevelLRRRRockyHorror(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class BossLevelLRRCRockyHorror(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 
 @dataclass
