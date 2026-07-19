@@ -1422,6 +1422,11 @@ def update_disabled_unlocks(filepath, all_items, options, disable_truck):
         tick_section = "tick::;\n"
     else:
         tick_section = ""
+    if options["progressive_items"] == 2 and options["buildings_are_items"]:
+        archipelago_section = archipelago_section + "building ArchipelagoBuildingToCheck\nstring LimitMessage=\"Oi, you were over your building cap! Back up to the LMS it goes! Careful when placing several foundations at once.\"\n"
+        autodelete_section = "when(BuildingSupportStation_C.new)[ArchipelagoNewBuildingWhatDo_SupportStation]\nArchipelagoNewBuildingWhatDo_SupportStation::savebuilding:ArchBuildingToCheck;\n((BuildingSupportStation_C<=1))return;\n((time<10))return;           # prevents any starting building from being killed\n((BuildingSupportStation_C>SupportStationCap))msg:LimitMessage;\n((BuildingSupportStation_C>SupportStationCap))kill:ArchBuildingToCheck;\n\nwhen(BuildingCanteen_C.new)[ArchipelagoNewBuildingWhatDo_Canteen]\nArchipelagoNewBuildingWhatDo_Canteen::savebuilding:ArchBuildingToCheck;\n((BuildingCanteen_C<=1))return;\n((time<10))return;\n((BuildingCanteen_C>CanteenCap))msg:LimitMessage;\n((BuildingCanteen_C>CanteenCap))kill:ArchBuildingToCheck;\n\nwhen(BuildingMiningLaser_C.new)[ArchipelagoNewBuildingWhatDo_MiningLaser]\nArchipelagoNewBuildingWhatDo_MiningLaser::savebuilding:ArchBuildingToCheck;\n((BuildingMiningLaser_C<=1))return;\n((time<10))return;\n((BuildingMiningLaser_C>MiningLaserCap))msg:LimitMessage;\n((BuildingMiningLaser_C>MiningLaserCap))kill:ArchBuildingToCheck;"
+    else:
+        autodelete_section = ""
     
     if options["miner_cap"]:
         miner_cap = 8
@@ -1433,7 +1438,7 @@ def update_disabled_unlocks(filepath, all_items, options, disable_truck):
     
     if options["progressive_items"] == 2:
         if options["buildings_are_items"]:
-            toolstore_cap = all_items.count(899)
+            toolstore_cap = all_items.count(849)
             if toolstore_cap > 2:
                 toolstore_cap = 999
             toolstore_limit_string = "int ToolStoreCap=" + str(toolstore_cap) + "\n"
@@ -1443,7 +1448,7 @@ def update_disabled_unlocks(filepath, all_items, options, disable_truck):
                 init_section = init_section + "disable:TeleportPad;\n"
             if 897 not in all_items:
                 init_section = init_section + "disable:Docks;\n"
-            canteen_cap = all_items.count(896)
+            canteen_cap = all_items.count(848)
             if canteen_cap > 2:
                 canteen_cap = 999
             canteen_limit_string = "int CanteenCap=" + str(canteen_cap) + "\n"
@@ -1451,7 +1456,7 @@ def update_disabled_unlocks(filepath, all_items, options, disable_truck):
             tick_section = tick_section + "((BuildingCanteen_C<CanteenCap))enable:BuildingCanteen_C;\n((BuildingCanteen_C>=CanteenCap))disable:BuildingCanteen_C;\n"
             if 895 not in all_items:
                 init_section = init_section + "disable:PowerStation;\n"
-            supportstation_cap = all_items.count(894)
+            supportstation_cap = all_items.count(847)
             if supportstation_cap > 2:
                 supportstation_cap = 999
             supportstation_limit_string = "int SupportStationCap=" + str(supportstation_cap) + "\n"
@@ -1463,7 +1468,7 @@ def update_disabled_unlocks(filepath, all_items, options, disable_truck):
                 init_section = init_section + "disable:GeologicalCenter;\n"
             if 891 not in all_items:
                 init_section = init_section + "disable:OreRefinery;\n"
-            mininglaser_cap = all_items.count(890)
+            mininglaser_cap = all_items.count(846)
             if mininglaser_cap > 2:
                 mininglaser_cap = 999
             mininglaser_limit_string = "int MiningLaserCap=" + str(mininglaser_cap) + "\n"
@@ -1477,73 +1482,73 @@ def update_disabled_unlocks(filepath, all_items, options, disable_truck):
             if 887 not in all_items:
                 init_section = init_section + "disable:Dynamite;\n"
         if options["vehicles_are_items"]:
-            hoverscout_cap = all_items.count(886)
+            hoverscout_cap = all_items.count(845)
             if hoverscout_cap > 2:
                 hoverscout_cap = 999
             hoverscout_limit_string = "int HoverScoutCap=" + str(hoverscout_cap) + "\n"
             archipelago_section = archipelago_section + hoverscout_limit_string
             tick_section = tick_section + "((VehicleHoverScout_C<HoverScoutCap))enable:VehicleHoverScout_C;\n((VehicleHoverScout_C>=HoverScoutCap))disable:VehicleHoverScout_C;\n"
-            tunnelscout_cap = all_items.count(885)
+            tunnelscout_cap = all_items.count(844)
             if tunnelscout_cap > 2:
                 tunnelscout_cap = 999
             tunnelscout_limit_string = "int TunnelScoutCap=" + str(tunnelscout_cap) + "\n"
             archipelago_section = archipelago_section + tunnelscout_limit_string
             tick_section = tick_section + "((VehicleTunnelScout_C<TunnelScoutCap))enable:VehicleTunnelScout_C;\n((VehicleTunnelScout_C>=TunnelScoutCap))disable:VehicleTunnelScout_C;\n"
-            smalldigger_cap = all_items.count(884)
+            smalldigger_cap = all_items.count(843)
             if smalldigger_cap > 2:
                 smalldigger_cap = 999
             smalldigger_limit_string = "int SmallDiggerCap=" + str(smalldigger_cap) + "\n"
             archipelago_section = archipelago_section + smalldigger_limit_string
             tick_section = tick_section + "((VehicleSmallDigger_C<SmallDiggerCap))enable:VehicleSmallDigger_C;\n((VehicleSmallDigger_C>=SmallDiggerCap))disable:VehicleSmallDigger_C;\n"
-            smalltransporttruck_cap = all_items.count(883)
+            smalltransporttruck_cap = all_items.count(842)
             if smalltransporttruck_cap > 2:
                 smalltransporttruck_cap = 999
             smalltransporttruck_limit_string = "int SmallTransportTruckCap=" + str(smalltransporttruck_cap) + "\n"
             archipelago_section = archipelago_section + smalltransporttruck_limit_string
             tick_section = tick_section + "((VehicleSmallTransportTruck_C<SmallTransportTruckCap))enable:VehicleSmallTransportTruck_C;\n((VehicleSmallTransportTruck_C>=SmallTransportTruckCap))disable:VehicleSmallTransportTruck_C;\n"
-            smlc_cap = all_items.count(882)
+            smlc_cap = all_items.count(841)
             if smlc_cap > 2:
                 smlc_cap = 999
             smlc_limit_string = "int SMLCCap=" + str(smlc_cap) + "\n"
             archipelago_section = archipelago_section + smlc_limit_string
             tick_section = tick_section + "((VehicleSMLC_C<SMLCCap))enable:VehicleSMLC_C;\n((VehicleSMLC_C>=SMLCCap))disable:VehicleSMLC_C;\n"
-            rapidrider_cap = all_items.count(881)
+            rapidrider_cap = all_items.count(840)
             if rapidrider_cap > 2:
                 rapidrider_cap = 999
             rapidrider_limit_string = "int RapidRiderCap=" + str(rapidrider_cap) + "\n"
             archipelago_section = archipelago_section + rapidrider_limit_string
             tick_section = tick_section + "((VehicleRapidRider_C<RapidRiderCap))enable:VehicleRapidRider_C;\n((VehicleRapidRider_C>=RapidRiderCap))disable:VehicleRapidRider_C;\n"
-            cargocarrier_cap = all_items.count(880)
+            cargocarrier_cap = all_items.count(839)
             if cargocarrier_cap > 2:
                 cargocarrier_cap = 999
             cargocarrier_limit_string = "int CargoCarrierCap=" + str(cargocarrier_cap) + "\n"
             archipelago_section = archipelago_section + cargocarrier_limit_string
             tick_section = tick_section + "((VehicleCargoCarrier_C<CargoCarrierCap))enable:VehicleCargoCarrier_C;\n((VehicleCargoCarrier_C>=CargoCarrierCap))disable:VehicleCargoCarrier_C;\n"
-            loaderdozer_cap = all_items.count(879)
+            loaderdozer_cap = all_items.count(838)
             if loaderdozer_cap > 2:
                 loaderdozer_cap = 999
             loaderdozer_limit_string = "int LoaderDozerCap=" + str(loaderdozer_cap) + "\n"
             archipelago_section = archipelago_section + loaderdozer_limit_string
             tick_section = tick_section + "((VehicleLoaderDozer_C<LoaderDozerCap))enable:VehicleLoaderDozer_C;\n((VehicleLoaderDozer_C>=LoaderDozerCap))disable:VehicleLoaderDozer_C;\n"
-            granitegrinder_cap = all_items.count(878)
+            granitegrinder_cap = all_items.count(837)
             if granitegrinder_cap > 2:
                 granitegrinder_cap = 999
             granitegrinder_limit_string = "int GraniteGrinderCap=" + str(granitegrinder_cap) + "\n"
             archipelago_section = archipelago_section + granitegrinder_limit_string
             tick_section = tick_section + "((VehicleGraniteGrinder_C<GraniteGrinderCap))enable:VehicleGraniteGrinder_C;\n((VehicleGraniteGrinder_C>=GraniteGrinderCap))disable:VehicleGraniteGrinder_C;\n"
-            lmlc_cap = all_items.count(877)
+            lmlc_cap = all_items.count(836)
             if lmlc_cap > 2:
                 lmlc_cap = 999
             lmlc_limit_string = "int LMLCCap=" + str(lmlc_cap) + "\n"
             archipelago_section = archipelago_section + lmlc_limit_string
             tick_section = tick_section + "((VehicleLMLC_C<LMLCCap))enable:VehicleLMLC_C;\n((VehicleLMLC_C>=LMLCCap))disable:VehicleLMLC_C;\n"
-            chromecrusher_cap = all_items.count(876)
+            chromecrusher_cap = all_items.count(835)
             if chromecrusher_cap > 2:
                 chromecrusher_cap = 999
             chromecrusher_limit_string = "int ChromeCrusherCap=" + str(chromecrusher_cap) + "\n"
             archipelago_section = archipelago_section + chromecrusher_limit_string
             tick_section = tick_section + "((VehicleChromeCrusher_C<ChromeCrusherCap))enable:VehicleChromeCrusher_C;\n((VehicleChromeCrusher_C>=ChromeCrusherCap))disable:VehicleChromeCrusher_C;\n"
-            tunneltransport_cap = all_items.count(875)
+            tunneltransport_cap = all_items.count(834)
             if tunneltransport_cap > 2:
                 tunneltransport_cap = 999
             tunneltransport_limit_string = "int TunnelTransportCap=" + str(tunneltransport_cap) + "\n"
@@ -1607,7 +1612,7 @@ def update_disabled_unlocks(filepath, all_items, options, disable_truck):
     bonus_ore = all_items.count(950)
     init_section = init_section + "ore+=" + str(bonus_ore) + ";\n"
 
-    archipelago_section = archipelago_section + "\n" + init_section + "\n" + tick_section + "\n}\n"
+    archipelago_section = archipelago_section + "\n" + init_section + "\n" + tick_section + "\n" + autodelete_section + "\n}\n"
 
     new_file_contents = original_file_beginning + archipelago_section
     
