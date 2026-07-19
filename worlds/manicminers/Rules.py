@@ -15,38 +15,43 @@ def set_all_rules(world: ManicMinersWorld) -> None:
     
 def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     
-    rule_can_build_toolstore = Has("Building Unlock: Tool Store")
+    rule_can_build_toolstore = HasAny("Building Unlock: Tool Store","Progressive Building Unlock: Tool Store")
     rule_can_build_teleportpad = HasAll("Building Unlock: Teleport Pad", "Building Unlock: Power Station")
     rule_can_build_powerstation = rule_can_build_teleportpad
     rule_can_build_docks = Has("Building Unlock: Docks") & rule_can_build_powerstation
-    rule_can_build_canteen = Has("Building Unlock: Canteen")
-    rule_can_build_supportstation = Has("Building Unlock: Support Station") & rule_can_build_powerstation
+    rule_can_build_canteen = HasAny("Building Unlock: Canteen","Progressive Building Unlock: Canteen")
+    rule_can_build_supportstation = HasAny("Building Unlock: Support Station","Progressive Building Unlock: Support Station") & rule_can_build_powerstation
     rule_can_build_geologicalcenter = Has("Building Unlock: Geological Center") & rule_can_build_powerstation
     rule_can_build_upgradestation = Has("Building Unlock: Upgrade Station") & rule_can_build_powerstation
     rule_can_build_orerefinery = Has("Building Unlock: Ore Refinery") & rule_can_build_powerstation
-    rule_can_build_mininglaser = Has("Building Unlock: Mining Laser") & rule_can_build_supportstation
+    rule_can_build_mininglaser = HasAny("Building Unlock: Mining Laser","Progressive Building Unlock: Mining Laser") & rule_can_build_supportstation
     rule_can_build_superteleport = Has("Building Unlock: Super Teleport") & rule_can_build_supportstation
     rule_can_breathe = rule_can_build_supportstation
     rule_can_always_breathe = Filtered(rule_can_breathe, options = [OptionFilter(ManicMiners_Options.BreathingAlwaysInLogic, 1)], filtered_resolution = True)
-    rule_can_build_smalldigger = Has("Vehicle Unlock: Small Digger") & rule_can_build_supportstation & Filtered(rule_can_build_upgradestation, options = [OptionFilter(ManicMiners_Options.FasterBlastingAlwaysInLogic, 1)], filtered_resolution = True)
-    rule_can_build_smlc = Has("Vehicle Unlock: Small Mobile Laser Cutter") & rule_can_build_supportstation & Filtered(rule_can_build_upgradestation, options = [OptionFilter(ManicMiners_Options.FasterBlastingAlwaysInLogic, 1)], filtered_resolution = True)
-    rule_can_build_rapidrider = rule_can_build_docks & Has("Vehicle Unlock: Rapid Rider")
-    rule_can_build_cargocarrier = rule_can_build_docks & Has("Vehicle Unlock: Cargo Carrier")
-    rule_can_build_tunnelscout = rule_can_build_teleportpad & Has("Vehicle Unlock: Tunnel Scout")
-    rule_can_build_tunneltransport = rule_can_build_superteleport & Has("Vehicle Unlock: Tunnel Transport")
-    rule_can_build_hoverscout = rule_can_build_teleportpad & Has("Vehicle Unlock: Tunnel Scout")
-    rule_can_build_granitegrinder = rule_can_build_superteleport & Has("Vehicle Unlock: Granite Grinder")
+    rule_can_build_smalldigger = HasAny("Vehicle Unlock: Small Digger","Progressive Vehicle Unlock: Small Digger") & rule_can_build_supportstation & Filtered(rule_can_build_upgradestation, options = [OptionFilter(ManicMiners_Options.FasterBlastingAlwaysInLogic, 1)], filtered_resolution = True)
+    rule_can_build_smalltransporttruck = HasAny("Vehicle Unlock: Small Transport Truck","Progressive Vehicle Unlock: Small Transport Truck") & rule_can_build_supportstation
+    rule_can_build_smlc = HasAny("Vehicle Unlock: Small Mobile Laser Cutter","Progressive Vehicle Unlock: Small Mobile Laser Cutter") & rule_can_build_supportstation & Filtered(rule_can_build_upgradestation, options = [OptionFilter(ManicMiners_Options.FasterBlastingAlwaysInLogic, 1)], filtered_resolution = True)
+    rule_can_build_rapidrider = rule_can_build_docks & HasAny("Vehicle Unlock: Rapid Rider","Progressive Vehicle Unlock: Rapid Rider")
+    rule_can_build_cargocarrier = rule_can_build_docks & HasAny("Vehicle Unlock: Cargo Carrier","Progressive Vehicle Unlock: Cargo Carrier")
+    rule_can_build_tunnelscout = rule_can_build_teleportpad & HasAny("Vehicle Unlock: Tunnel Scout","Progressive Vehicle Unlock: Tunnel Scout")
+    rule_can_build_tunneltransport = rule_can_build_superteleport & HasAny("Vehicle Unlock: Tunnel Transport","Progressive Vehicle Unlock: Tunnel Transport")
+    rule_can_build_hoverscout = rule_can_build_teleportpad & HasAny("Vehicle Unlock: Hover Scout","Progressive Vehicle Unlock: Hover Scout")
+    rule_can_build_granitegrinder = rule_can_build_superteleport & HasAny("Vehicle Unlock: Granite Grinder","Progressive Vehicle Unlock: Granite Grinder")
+    rule_can_build_lmlc = rule_can_build_superteleport & HasAny("Vehicle Unlock: Large Mobile Laser Cutter","Progressive Vehicle Unlock: Large Mobile Laser Cutter")
+    rule_can_build_chromecrusher = rule_can_build_superteleport & HasAny("Vehicle Unlock: Chrome Crusher","Progressive Vehicle Unlock: Chrome Crusher")
+    rule_can_dynamite = Has("Item Unlock: Dynamite")
+    rule_can_build_electricfence = Has("Item Unlock: Electric Fence") & rule_can_build_powerstation
     rule_can_jump = rule_can_build_hoverscout | rule_can_build_granitegrinder
     rule_can_fly = rule_can_build_tunnelscout | rule_can_build_tunneltransport
     rule_can_swim = rule_can_fly | rule_can_build_rapidrider | rule_can_build_cargocarrier
-    rule_can_vehicle_lase = rule_can_build_smlc | (HasAny("Vehicle Unlock: Chrome Crusher","Vehicle Unlock: Large Mobile Laser Cutter") & rule_can_build_superteleport)
+    rule_can_vehicle_lase = rule_can_build_smlc | rule_can_build_lmlc | rule_can_build_chromecrusher
     rule_can_lase = rule_can_vehicle_lase | rule_can_build_mininglaser
     rule_can_flying_lase = rule_can_vehicle_lase & rule_can_build_tunneltransport
     rule_can_flydrill = (rule_can_build_tunnelscout & rule_can_build_upgradestation) | rule_can_flying_lase
     rule_can_swimdrill = (rule_can_flydrill | rule_can_build_rapidrider)
-    rule_can_cheap_blast = Has("Item Unlock: Dynamite") | rule_can_build_smalldigger | rule_can_build_smlc | rule_can_build_mininglaser
-    rule_can_blast = Has("Item Unlock: Dynamite") | rule_can_lase | rule_can_build_smalldigger | rule_can_build_granitegrinder
-    rule_can_bazblast = HasAny("Vehicle Unlock: Granite Grinder","Vehicle Unlock: Chrome Crusher","Vehicle Unlock: Large Mobile Laser Cutter") & rule_can_build_superteleport
+    rule_can_cheap_blast = rule_can_dynamite | rule_can_build_smalldigger | rule_can_build_smlc | rule_can_build_mininglaser
+    rule_can_blast = rule_can_dynamite | rule_can_lase | rule_can_build_smalldigger | rule_can_build_granitegrinder
+    rule_can_bazblast = rule_can_build_granitegrinder | rule_can_build_lmlc | rule_can_build_chromecrusher
     rule_can_swimblast = (rule_can_build_cargocarrier & (rule_can_build_smalldigger | rule_can_build_smlc)) | (rule_can_build_tunneltransport & (rule_can_lase | rule_can_build_smalldigger | rule_can_build_granitegrinder)) | (rule_can_swim & rule_can_blast & rule_can_build_toolstore)
 
     if world.options.level_selection_lrr_abreathoffreshair:
@@ -78,7 +83,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_lrr_backtobasics, (rule_can_swim & rule_can_blast))
     if world.options.level_selection_lrr_breathless:
         entrance_lrr_breathless = world.get_entrance("Start Level - LRR - Breathless")
-        world.set_rule(entrance_lrr_breathless, ((Has("Item Unlock: Dynamite") | rule_can_build_mininglaser | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_granitegrinder) & Has("Level Access: LRR - Breathless") & rule_can_always_breathe))
+        world.set_rule(entrance_lrr_breathless, (rule_can_dynamite | rule_can_build_mininglaser | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_granitegrinder) & Has("Level Access: LRR - Breathless") & rule_can_always_breathe)
     if world.options.level_selection_lrr_dontpanic:
         entrance_lrr_dontpanic = world.get_entrance("Start Level - LRR - Don't Panic")
         world.set_rule(entrance_lrr_dontpanic, Has("Level Access: LRR - Don't Panic"))
@@ -96,7 +101,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_lrr_erodeworks, rule_can_fly)
     if world.options.level_selection_lrr_explosiveaction:
         entrance_lrr_explosiveaction = world.get_entrance("Start Level - LRR - Explosive Action")
-        world.set_rule(entrance_lrr_explosiveaction, ((Has("Item Unlock: Dynamite") | rule_can_build_smalldigger | rule_can_build_mininglaser) & rule_can_build_supportstation & Has("Level Access: LRR - Explosive Action")))
+        world.set_rule(entrance_lrr_explosiveaction, ((rule_can_dynamite | rule_can_build_smalldigger | rule_can_build_mininglaser) & rule_can_build_supportstation & Has("Level Access: LRR - Explosive Action")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrr_explosiveaction = world.get_location("Crystal Target: LRR - Explosive Action")
             world.set_rule(location_crystals_lrr_explosiveaction, rule_can_build_rapidrider)
@@ -132,10 +137,10 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_lrr_itsaholdup, Has("Level Access: LRR - It's A Hold Up"))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrr_itsaholdup = world.get_location("Crystal Target: LRR - It's A Hold Up")
-            world.set_rule(location_crystals_lrr_itsaholdup, (Has("Item Unlock: Dynamite") | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
+            world.set_rule(location_crystals_lrr_itsaholdup, (rule_can_dynamite | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
         if world.options.victory_condition == 2:
             event_crystals_lrr_itsaholdup = world.get_location("Crystal Target Beatable: LRR - It's A Hold Up")
-            world.set_rule(event_crystals_lrr_itsaholdup, (Has("Item Unlock: Dynamite") | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
+            world.set_rule(event_crystals_lrr_itsaholdup, (rule_can_dynamite | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
     if world.options.level_selection_lrr_lakeoffire:
         entrance_lrr_lakeoffire = world.get_entrance("Start Level - LRR - Lake Of Fire")
         world.set_rule(entrance_lrr_lakeoffire, Has("Level Access: LRR - Lake Of Fire"))
@@ -165,7 +170,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_lrr_oresome, rule_can_flying_lase)
     if world.options.level_selection_lrr_rockhard:
         entrance_lrr_rockhard = world.get_entrance("Start Level - LRR - Rock Hard")
-        world.set_rule(entrance_lrr_rockhard, ((Has("Item Unlock: Dynamite") | rule_can_build_mininglaser) & Has("Level Access: LRR - Rock Hard") & rule_can_always_breathe))
+        world.set_rule(entrance_lrr_rockhard, ((rule_can_dynamite | rule_can_build_mininglaser) & Has("Level Access: LRR - Rock Hard") & rule_can_always_breathe))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrr_rockhard = world.get_location("Crystal Target: LRR - Rock Hard")
             world.set_rule(location_crystals_lrr_rockhard, (rule_can_breathe & rule_can_swim))
@@ -204,13 +209,13 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_lrr_thepathtopower, (rule_can_build_powerstation & Has("Level Access: LRR - The Path To Power")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrr_thepathtopower = world.get_location("Crystal Target: LRR - The Path To Power")
-            world.set_rule(location_crystals_lrr_thepathtopower, (Has("Item Unlock: Dynamite") | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
+            world.set_rule(location_crystals_lrr_thepathtopower, (rule_can_dynamite | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
         if world.options.victory_condition == 2:
             event_crystals_lrr_thepathtopower = world.get_location("Crystal Target Beatable: LRR - The Path To Power")
-            world.set_rule(event_crystals_lrr_thepathtopower, (Has("Item Unlock: Dynamite") | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
+            world.set_rule(event_crystals_lrr_thepathtopower, (rule_can_dynamite | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
     if world.options.level_selection_lrr_waterlotoffun:
         entrance_lrr_waterlotoffun = world.get_entrance("Start Level - LRR - Water Lot Of Fun")
-        world.set_rule(entrance_lrr_waterlotoffun, ((rule_can_build_rapidrider | rule_can_build_cargocarrier | rule_can_build_tunnelscout) & (rule_can_build_toolstore | ((Has("Item Unlock: Dynamite") | rule_can_build_mininglaser) & rule_can_breathe) | (rule_can_build_rapidrider & rule_can_blast & rule_can_breathe)) & Has("Level Access: LRR - Water Lot Of Fun") & rule_can_always_breathe))
+        world.set_rule(entrance_lrr_waterlotoffun, ((rule_can_build_rapidrider | rule_can_build_cargocarrier | rule_can_build_tunnelscout) & (rule_can_build_toolstore | ((rule_can_dynamite | rule_can_build_mininglaser) & rule_can_breathe) | (rule_can_build_rapidrider & rule_can_blast & rule_can_breathe)) & Has("Level Access: LRR - Water Lot Of Fun") & rule_can_always_breathe))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrr_waterlotoffun = world.get_location("Crystal Target: LRR - Water Lot Of Fun")
             world.set_rule(location_crystals_lrr_waterlotoffun, (rule_can_breathe & rule_can_swimdrill & rule_can_blast))
@@ -229,7 +234,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     
     if world.options.level_selection_lrrr_abreathoffreshair:
         entrance_lrrr_abreathoffreshair = world.get_entrance("Start Level - LRRR - A Breath Of Fresh Air")
-        world.set_rule(entrance_lrrr_abreathoffreshair, (rule_can_breathe & Has("Item Unlock: Dynamite") & Has("Level Access: LRRR - A Breath Of Fresh Air")))
+        world.set_rule(entrance_lrrr_abreathoffreshair, (rule_can_breathe & rule_can_dynamite & Has("Level Access: LRRR - A Breath Of Fresh Air")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrr_abreathoffreshair = world.get_location("Crystal Target: LRRR - A Breath Of Fresh Air")
             world.set_rule(location_crystals_lrrr_abreathoffreshair, rule_can_swimdrill)
@@ -247,7 +252,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_lrrr_airraiders, rule_can_swimdrill)
     if world.options.level_selection_lrrr_backtobasics:
         entrance_lrrr_backtobasics = world.get_entrance("Start Level - LRRR - Back To Basics")
-        world.set_rule(entrance_lrrr_backtobasics, (rule_can_breathe & rule_can_build_toolstore & rule_can_build_upgradestation & Has("Item Unlock: Electric Fence") & Has("Level Access: LRRR - Back To Basics")))
+        world.set_rule(entrance_lrrr_backtobasics, (rule_can_breathe & rule_can_build_toolstore & rule_can_build_upgradestation & rule_can_build_electricfence & Has("Level Access: LRRR - Back To Basics")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrr_backtobasics = world.get_location("Crystal Target: LRRR - Back To Basics")
             world.set_rule(location_crystals_lrrr_backtobasics, rule_can_flying_lase)
@@ -271,7 +276,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_lrrr_drillernight, Has("Level Access: LRRR - Driller Night"))
     if world.options.level_selection_lrrr_erodeworks:
         entrance_lrrr_erodeworks = world.get_entrance("Start Level - LRRR - Erode Works")
-        world.set_rule(entrance_lrrr_erodeworks, (Has("Item Unlock: Dynamite") & Has("Level Access: LRRR - Erode Works")))
+        world.set_rule(entrance_lrrr_erodeworks, (rule_can_dynamite & Has("Level Access: LRRR - Erode Works")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrr_erodeworks = world.get_location("Crystal Target: LRRR - Erode Works")
             world.set_rule(location_crystals_lrrr_erodeworks, rule_can_flying_lase)
@@ -313,13 +318,13 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_lrrr_icespy, (rule_can_breathe & Has("Level Access: LRRR - Ice Spy")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrr_icespy = world.get_location("Crystal Target: LRRR - Ice Spy")
-            world.set_rule(location_crystals_lrrr_icespy, (Has("Item Unlock: Electric Fence") & rule_can_swim & rule_can_blast))
+            world.set_rule(location_crystals_lrrr_icespy, (rule_can_build_electricfence & rule_can_swim & rule_can_blast))
         if world.options.victory_condition == 2:
             event_crystals_lrrr_icespy = world.get_location("Crystal Target Beatable: LRRR - Ice Spy")
-            world.set_rule(event_crystals_lrrr_icespy, (Has("Item Unlock: Electric Fence") & rule_can_swim & rule_can_blast))
+            world.set_rule(event_crystals_lrrr_icespy, (rule_can_build_electricfence & rule_can_swim & rule_can_blast))
     if world.options.level_selection_lrrr_itsaholdup:
         entrance_lrrr_itsaholdup = world.get_entrance("Start Level - LRRR - It's A Hold Up")
-        world.set_rule(entrance_lrrr_itsaholdup, (rule_can_build_orerefinery & (rule_can_lase | rule_can_swim | rule_can_jump | Has("Item Unlock: Dynamite")) & Has("Level Access: LRRR - It's A Hold Up")))
+        world.set_rule(entrance_lrrr_itsaholdup, (rule_can_build_orerefinery & (rule_can_lase | rule_can_swim | rule_can_jump | rule_can_dynamite) & Has("Level Access: LRRR - It's A Hold Up")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrr_itsaholdup = world.get_location("Crystal Target: LRRR - It's A Hold Up")
             world.set_rule(location_crystals_lrrr_itsaholdup, (rule_can_blast & (rule_can_swim | rule_can_jump) & (rule_can_fly | rule_can_jump | rule_can_lase)))
@@ -331,10 +336,10 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_lrrr_lakeoffire, (rule_can_breathe & rule_can_flying_lase & Has("Level Access: LRRR - Lake Of Fire")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrr_lakeoffire = world.get_location("Crystal Target: LRRR - Lake Of Fire")
-            world.set_rule(location_crystals_lrrr_lakeoffire, (rule_can_build_granitegrinder | (rule_can_build_hoverscout & rule_can_build_toolstore & Has("Item Unlock: Dynamite"))))
+            world.set_rule(location_crystals_lrrr_lakeoffire, (rule_can_build_granitegrinder | (rule_can_build_hoverscout & rule_can_build_toolstore & rule_can_dynamite)))
         if world.options.victory_condition == 2:
             event_crystals_lrrr_lakeoffire = world.get_location("Crystal Target Beatable: LRRR - Lake Of Fire")
-            world.set_rule(event_crystals_lrrr_lakeoffire, (rule_can_build_granitegrinder | (rule_can_build_hoverscout & rule_can_build_toolstore & Has("Item Unlock: Dynamite"))))
+            world.set_rule(event_crystals_lrrr_lakeoffire, (rule_can_build_granitegrinder | (rule_can_build_hoverscout & rule_can_build_toolstore & rule_can_dynamite)))
     if world.options.level_selection_lrrr_lavalaughter:
         entrance_lrrr_lavalaughter = world.get_entrance("Start Level - LRRR - Lava Laughter")
         world.set_rule(entrance_lrrr_lavalaughter, (rule_can_breathe & Has("Level Access: LRRR - Lava Laughter")))
@@ -355,7 +360,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_lrrr_oresome, (rule_can_blast & rule_can_fly & rule_can_lase))
     if world.options.level_selection_lrrr_rockhard:
         entrance_lrrr_rockhard = world.get_entrance("Start Level - LRRR - Rock Hard")
-        world.set_rule(entrance_lrrr_rockhard, ((rule_can_build_smalldigger | rule_can_build_mininglaser | Has("Item Unlock: Dynamite")) & rule_can_breathe & Has("Level Access: LRRR - Rock Hard")))
+        world.set_rule(entrance_lrrr_rockhard, ((rule_can_build_smalldigger | rule_can_build_mininglaser | rule_can_dynamite) & rule_can_breathe & Has("Level Access: LRRR - Rock Hard")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrr_rockhard = world.get_location("Crystal Target: LRRR - Rock Hard")
             world.set_rule(location_crystals_lrrr_rockhard, (rule_can_swim & rule_can_lase))
@@ -364,7 +369,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_lrrr_rockhard, (rule_can_swim & rule_can_lase))
     if world.options.level_selection_lrrr_rockyhorror:
         entrance_lrrr_rockyhorror = world.get_entrance("Start Level - LRRR - Rocky Horror")
-        world.set_rule(entrance_lrrr_rockyhorror, (rule_can_breathe & rule_can_build_toolstore & rule_can_build_canteen & Has("Vehicle Unlock: Small Transport Truck") & Has("Level Access: LRRR - Rocky Horror") & Has("Transporter Coordinates",world.options.target_level_count.value,options=[OptionFilter(ManicMiners_Options.BossLevelLRRRRockyHorror,1)],filtered_resolution=True)))
+        world.set_rule(entrance_lrrr_rockyhorror, (rule_can_breathe & rule_can_build_toolstore & rule_can_build_canteen & rule_can_build_smalltransporttruck & Has("Level Access: LRRR - Rocky Horror") & Has("Transporter Coordinates",world.options.target_level_count.value,options=[OptionFilter(ManicMiners_Options.BossLevelLRRRRockyHorror,1)],filtered_resolution=True)))
         if world.options.crystal_targets_are_locations and world.options.boss_level_lrrr_rockyhorror == 0:
             location_crystals_lrrr_rockyhorror = world.get_location("Crystal Target: LRRR - Rocky Horror")
             world.set_rule(location_crystals_lrrr_rockyhorror, rule_can_flying_lase)
@@ -373,7 +378,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_lrrr_rockyhorror, rule_can_flying_lase)
     if world.options.level_selection_lrrr_rubbletrouble:
         entrance_lrrr_rubbletrouble = world.get_entrance("Start Level - LRRR - Rubble Trouble")
-        world.set_rule(entrance_lrrr_rubbletrouble, (Has("Building Unlock: Tool Store") & Has("Level Access: LRRR - Rubble Trouble")))
+        world.set_rule(entrance_lrrr_rubbletrouble, (rule_can_build_toolstore & Has("Level Access: LRRR - Rubble Trouble")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrr_rubbletrouble = world.get_location("Crystal Target: LRRR - Rubble Trouble")
             world.set_rule(location_crystals_lrrr_rubbletrouble, rule_can_blast)
@@ -394,7 +399,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_lrrr_searchandrescue, (rule_can_build_rapidrider & rule_can_blast))
     if world.options.level_selection_lrrr_splitdownthemiddle:
         entrance_lrrr_splitdownthemiddle = world.get_entrance("Start Level - LRRR - Split Down The Middle")
-        world.set_rule(entrance_lrrr_splitdownthemiddle, ((Has("Item Unlock: Dynamite") | rule_can_build_smlc) & Has("Level Access: LRRR - Split Down The Middle")))
+        world.set_rule(entrance_lrrr_splitdownthemiddle, ((rule_can_dynamite | rule_can_build_smlc) & Has("Level Access: LRRR - Split Down The Middle")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrr_splitdownthemiddle = world.get_location("Crystal Target: LRRR - Split Down The Middle")
             world.set_rule(location_crystals_lrrr_splitdownthemiddle, (rule_can_build_tunneltransport & rule_can_build_smlc))
@@ -403,7 +408,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_lrrr_splitdownthemiddle, (rule_can_build_tunneltransport & rule_can_build_smlc))
     if world.options.level_selection_lrrr_thepathtopower:
         entrance_lrrr_thepathtopower = world.get_entrance("Start Level - LRRR - The Path To Power")
-        world.set_rule(entrance_lrrr_thepathtopower, (rule_can_build_powerstation & Has("Item Unlock: Electric Fence") & Has("Level Access: LRRR - The Path To Power")))
+        world.set_rule(entrance_lrrr_thepathtopower, (rule_can_build_electricfence & Has("Level Access: LRRR - The Path To Power")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrr_thepathtopower = world.get_location("Crystal Target: LRRR - The Path To Power")
             world.set_rule(location_crystals_lrrr_thepathtopower, (rule_can_blast & rule_can_swimdrill))
@@ -412,7 +417,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_lrrr_thepathtopower, (rule_can_blast & rule_can_swimdrill))
     if world.options.level_selection_lrrr_waterlotoffun:
         entrance_lrrr_waterlotoffun = world.get_entrance("Start Level - LRRR - Water Lot Of Fun")
-        world.set_rule(entrance_lrrr_waterlotoffun, (rule_can_build_docks & (rule_can_build_rapidrider | rule_can_build_tunnelscout) & Has("Item Unlock: Dynamite") & Has("Building Unlock: Tool Store") & Has("Level Access: LRRR - Water Lot Of Fun") & rule_can_always_breathe))
+        world.set_rule(entrance_lrrr_waterlotoffun, (rule_can_build_docks & (rule_can_build_rapidrider | rule_can_build_tunnelscout) & rule_can_dynamite & rule_can_build_toolstore & Has("Level Access: LRRR - Water Lot Of Fun") & rule_can_always_breathe))
     if world.options.level_selection_lrrr_waterworks:
         entrance_lrrr_waterworks = world.get_entrance("Start Level - LRRR - Water Works")   
         world.set_rule(entrance_lrrr_waterworks, (rule_can_build_docks & (rule_can_build_toolstore | rule_can_build_tunneltransport) & (rule_can_build_tunnelscout | rule_can_build_rapidrider) & Has("Level Access: LRRR - Water Works")))
@@ -440,13 +445,13 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_lrrc_backtobasics, (rule_can_swim & rule_can_blast))
     if world.options.level_selection_lrrc_breathless:
         entrance_lrrc_breathless = world.get_entrance("Start Level - LRRC - Breathless")
-        world.set_rule(entrance_lrrc_breathless, ((Has("Item Unlock: Dynamite") | rule_can_build_smalldigger | rule_can_build_granitegrinder | rule_can_build_mininglaser | rule_can_build_smlc) & Has("Level Access: LRRC - Breathless") & rule_can_always_breathe))
+        world.set_rule(entrance_lrrc_breathless, ((rule_can_dynamite | rule_can_build_smalldigger | rule_can_build_granitegrinder | rule_can_build_mininglaser | rule_can_build_smlc) & Has("Level Access: LRRC - Breathless") & rule_can_always_breathe))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrc_breathless = world.get_location("Crystal Target: LRRC - Breathless")
-            world.set_rule(location_crystals_lrrc_breathless, (Has("Item Unlock: Dynamite") | rule_can_build_mininglaser | rule_can_build_smalldigger | rule_can_build_smlc | rule_can_build_granitegrinder))
+            world.set_rule(location_crystals_lrrc_breathless, (rule_can_dynamite | rule_can_build_mininglaser | rule_can_build_smalldigger | rule_can_build_smlc | rule_can_build_granitegrinder))
         if world.options.victory_condition == 2:
             event_crystals_lrrc_breathless = world.get_location("Crystal Target Beatable: LRRC - Breathless")
-            world.set_rule(event_crystals_lrrc_breathless, (Has("Item Unlock: Dynamite") | rule_can_build_mininglaser | rule_can_build_smalldigger | rule_can_build_smlc | rule_can_build_granitegrinder))
+            world.set_rule(event_crystals_lrrc_breathless, (rule_can_dynamite | rule_can_build_mininglaser | rule_can_build_smalldigger | rule_can_build_smlc | rule_can_build_granitegrinder))
     if world.options.level_selection_lrrc_dontpanic:
         entrance_lrrc_dontpanic = world.get_entrance("Start Level - LRRC - Don't Panic")
         world.set_rule(entrance_lrrc_dontpanic, Has("Level Access: LRRC - Don't Panic"))
@@ -458,7 +463,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_lrrc_erodeworks, (rule_can_blast & Has("Level Access: LRRC - Erode Works")))
     if world.options.level_selection_lrrc_explosiveaction:
         entrance_lrrc_explosiveaction = world.get_entrance("Start Level - LRRC - Explosive Action")
-        world.set_rule(entrance_lrrc_explosiveaction, ((rule_can_build_smalldigger | rule_can_build_mininglaser | Has("Item Unlock: Dynamite")) & rule_can_build_supportstation & Has("Level Access: LRRC - Explosive Action")))
+        world.set_rule(entrance_lrrc_explosiveaction, ((rule_can_build_smalldigger | rule_can_build_mininglaser | rule_can_dynamite) & rule_can_build_supportstation & Has("Level Access: LRRC - Explosive Action")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrc_explosiveaction = world.get_location("Crystal Target: LRRC - Explosive Action")
             world.set_rule(location_crystals_lrrc_explosiveaction, (rule_can_build_rapidrider | (rule_can_build_mininglaser & rule_can_build_tunneltransport)))
@@ -488,10 +493,10 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_lrrc_itsaholdup, Has("Level Access: LRRC - It's A Hold Up"))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrc_itsaholdup = world.get_location("Crystal Target: LRRC - It's A Hold Up")
-            world.set_rule(location_crystals_lrrc_itsaholdup, (Has("Item Unlock: Dynamite") | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
+            world.set_rule(location_crystals_lrrc_itsaholdup, (rule_can_dynamite | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
         if world.options.victory_condition == 2:
             event_crystals_lrrc_itsaholdup = world.get_location("Crystal Target Beatable: LRRC - It's A Hold Up")
-            world.set_rule(event_crystals_lrrc_itsaholdup, (Has("Item Unlock: Dynamite") | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
+            world.set_rule(event_crystals_lrrc_itsaholdup, (rule_can_dynamite | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
     if world.options.level_selection_lrrc_lakeoffire:
         entrance_lrrc_lakeoffire = world.get_entrance("Start Level - LRRC - Lake Of Fire")
         world.set_rule(entrance_lrrc_lakeoffire, Has("Level Access: LRRC - Lake Of Fire"))
@@ -554,13 +559,13 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_lrrc_thepathtopower, (rule_can_build_powerstation & Has("Level Access: LRRC - The Path To Power")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrc_thepathtopower = world.get_location("Crystal Target: LRRC - The Path To Power")
-            world.set_rule(location_crystals_lrrc_thepathtopower, (Has("Item Unlock: Dynamite") | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
+            world.set_rule(location_crystals_lrrc_thepathtopower, (rule_can_dynamite | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
         if world.options.victory_condition == 2:
             event_crystals_lrrc_thepathtopower = world.get_location("Crystal Target Beatable: LRRC - The Path To Power")
-            world.set_rule(event_crystals_lrrc_thepathtopower, (Has("Item Unlock: Dynamite") | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
+            world.set_rule(event_crystals_lrrc_thepathtopower, (rule_can_dynamite | rule_can_build_smlc | rule_can_build_smalldigger | rule_can_build_mininglaser))
     if world.options.level_selection_lrrc_waterlotoffun:
         entrance_lrrc_waterlotoffun = world.get_entrance("Start Level - LRRC - Water Lot Of Fun")
-        world.set_rule(entrance_lrrc_waterlotoffun, ((rule_can_build_smalldigger | rule_can_build_mininglaser | rule_can_build_smlc | Has("Item Unlock: Dynamite") | rule_can_build_cargocarrier | rule_can_build_rapidrider | rule_can_build_tunnelscout) & Has("Level Access: LRRC - Water Lot Of Fun") & rule_can_always_breathe))
+        world.set_rule(entrance_lrrc_waterlotoffun, ((rule_can_build_smalldigger | rule_can_build_mininglaser | rule_can_build_smlc | rule_can_dynamite | rule_can_build_cargocarrier | rule_can_build_rapidrider | rule_can_build_tunnelscout) & Has("Level Access: LRRC - Water Lot Of Fun") & rule_can_always_breathe))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrc_waterlotoffun = world.get_location("Crystal Target: LRRC - Water Lot Of Fun")
             world.set_rule(location_crystals_lrrc_waterlotoffun, (rule_can_breathe & rule_can_blast & (rule_can_build_cargocarrier | rule_can_build_rapidrider)))
@@ -597,7 +602,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_baz_airraiders, rule_can_blast)
     if world.options.level_selection_baz_backtobasics:
         entrance_baz_backtobasics = world.get_entrance("Start Level - BAZ - Back To Basics")
-        world.set_rule(entrance_baz_backtobasics, (Has("Level Access: BAZ - Back To Basics") & rule_can_breathe & (rule_can_blast | (rule_can_swim & rule_can_build_toolstore) | rule_can_build_tunneltransport) & rule_can_bazblast & Has("Vehicle Unlock: Small Transport Truck")))
+        world.set_rule(entrance_baz_backtobasics, (Has("Level Access: BAZ - Back To Basics") & rule_can_breathe & (rule_can_blast | (rule_can_swim & rule_can_build_toolstore) | rule_can_build_tunneltransport) & rule_can_bazblast & rule_can_build_smalltransporttruck))
         if world.options.crystal_targets_are_locations:
             location_crystals_baz_backtobasics = world.get_location("Crystal Target: BAZ - Back To Basics")
             world.set_rule(location_crystals_baz_backtobasics, ((rule_can_swim & rule_can_build_toolstore) | rule_can_build_tunneltransport))
@@ -660,7 +665,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_baz_hotstuff, (Has("Level Access: BAZ - Hot Stuff") & rule_can_flying_lase))
     if world.options.level_selection_baz_icespy:
         entrance_baz_icespy = world.get_entrance("Start Level - BAZ - Ice Spy")
-        world.set_rule(entrance_baz_icespy, (Has("Level Access: BAZ - Ice Spy") & rule_can_breathe & rule_can_swim & rule_can_build_smalldigger & Has("Vehicle Unlock: Small Transport Truck")))
+        world.set_rule(entrance_baz_icespy, (Has("Level Access: BAZ - Ice Spy") & rule_can_breathe & rule_can_swim & rule_can_build_smalldigger & rule_can_build_smalltransporttruck))
     if world.options.level_selection_baz_itsaholdup:
         entrance_baz_itsaholdup = world.get_entrance("Start Level - BAZ - It's A Hold Up")
         world.set_rule(entrance_baz_itsaholdup, (Has("Level Access: BAZ - It's A Hold Up") & rule_can_cheap_blast & rule_can_bazblast))
@@ -708,7 +713,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_baz_recruitment, rule_can_swimblast)
     if world.options.level_selection_baz_rockhard:
         entrance_baz_rockhard = world.get_entrance("Start Level - BAZ - Rock Hard")
-        world.set_rule(entrance_baz_rockhard, (Has("Level Access: BAZ - Rock Hard") & rule_can_breathe & (rule_can_build_smalldigger | Has("Item Unlock: Dynamite"))))
+        world.set_rule(entrance_baz_rockhard, (Has("Level Access: BAZ - Rock Hard") & rule_can_breathe & (rule_can_build_smalldigger | rule_can_dynamite)))
         if world.options.crystal_targets_are_locations:
             location_crystals_baz_rockhard = world.get_location("Crystal Target: BAZ - Rock Hard")
             world.set_rule(location_crystals_baz_rockhard, (rule_can_build_tunneltransport | (rule_can_fly & rule_can_build_toolstore)))
@@ -738,7 +743,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_baz_runthegauntlet, rule_can_blast)
     if world.options.level_selection_baz_seamless:
         entrance_baz_seamless = world.get_entrance("Start Level - BAZ - Seamless")
-        world.set_rule(entrance_baz_seamless, (Has("Level Access: BAZ - Seamless") & Has("Item Unlock: Dynamite")))
+        world.set_rule(entrance_baz_seamless, (Has("Level Access: BAZ - Seamless") & rule_can_dynamite))
     if world.options.level_selection_baz_searchandrescue:
         entrance_baz_searchandrescue = world.get_entrance("Start Level - BAZ - Search And Rescue")
         world.set_rule(entrance_baz_searchandrescue, (Has("Level Access: BAZ - Search And Rescue") & rule_can_breathe & (rule_can_swimblast | rule_can_swimdrill)))
@@ -759,7 +764,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_baz_thehardrocklife, (Has("Level Access: BAZ - The Hard Rock Life") & rule_can_cheap_blast & rule_can_fly & rule_can_bazblast))
     if world.options.level_selection_baz_thepathtopower:
         entrance_baz_thepathtopower = world.get_entrance("Start Level - BAZ - The Path To Power")
-        world.set_rule(entrance_baz_thepathtopower, (Has("Level Access: BAZ - The Path To Power") & rule_can_build_supportstation & rule_can_build_geologicalcenter & Has("Item Unlock: Dynamite")))
+        world.set_rule(entrance_baz_thepathtopower, (Has("Level Access: BAZ - The Path To Power") & rule_can_build_supportstation & rule_can_build_geologicalcenter & rule_can_dynamite))
     if world.options.level_selection_baz_waterlotoffun:
         entrance_baz_waterlotoffun = world.get_entrance("Start Level - BAZ - Water Lot Of Fun")
         world.set_rule(entrance_baz_waterlotoffun, (Has("Level Access: BAZ - Water Lot Of Fun") & rule_can_breathe & rule_can_swim & rule_can_cheap_blast & (rule_can_swimblast | rule_can_lase) & (rule_can_build_toolstore | rule_can_build_tunneltransport)))
