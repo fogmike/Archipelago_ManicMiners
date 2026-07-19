@@ -172,12 +172,12 @@ class CampaignSelectionLRRC(Toggle):
     
     display_name = "Include 'Classic' Campaign Levels"
 
-# class CampaignSelectionBAZ(Toggle):
-    # """
-    # Whether your game will include the Baz's Mod campaign levels.
-    # """
+class CampaignSelectionBAZ(Toggle):
+    """
+    Whether your game will include the Baz's Mod campaign levels.
+    """
     
-    # display_name = "Include 'Baz's Mod' Campaign Levels"
+    display_name = "Include 'Baz's Mod' Campaign Levels"
 
 class NoDuplicateLevels(Toggle):
     """
@@ -188,6 +188,15 @@ class NoDuplicateLevels(Toggle):
     
     display_name = "No Duplicate Levels"
 
+class IncludeBazUniqueLevels(DefaultOnToggle):
+    """
+    When using No Duplicate Levels and Baz's Mod, whether to include the Baz-unique levels. Has no effect if not using both of these options.
+    If disabled, only the original 25 levels will be shuffled. 
+    If enabled, all 33 levels will be shuffled, which means the Baz-unique 8 will always be present. 
+    """
+
+    display_name = "Include Baz-unique Levels"
+    
 # Individual hidden options for each level
 class LevelSelectionLRRABreathOfFreshAir(Toggle):
     """ Hidden level selection option"""
@@ -417,6 +426,73 @@ class LevelSelectionLRRCWaterWorks(Toggle):
     """ Hidden level selection option"""
     visibility = Visibility.none
 
+class LevelSelectionBAZABreathOfFreshAir(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZAirRaiders(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZBackToBasics(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZBreathless(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZColdComfort(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZDontPanic(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZDownInTheDirt(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZDrillerNight(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZErodeWorks(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZExplosiveAction(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZFireAndWater(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZFrozenFrenzy(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZHotStuff(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZIceSpy(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZItsAHoldUp(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZLakeOfFire(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZLavaLaughter(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZMineOverMatter(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZMoltenMeltdown(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZOresome(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZRecruitment(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZRockHard(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZRockyHorror(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZRubbleTrouble(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZRunTheGauntlet(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZSeamless(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZSearchAndRescue(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZSlimeySimple(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZSplitDownTheMiddle(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZTheHardRockLife(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZThePathToPower(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZWaterLotOfFun(Toggle):
+    visibility = Visibility.none
+class LevelSelectionBAZWaterWorks(Toggle):
+    visibility = Visibility.none
+
 class BossLevelLRRRockyHorror(Toggle):
     """ Hidden level selection option"""
     visibility = Visibility.none
@@ -425,6 +501,8 @@ class BossLevelLRRRRockyHorror(Toggle):
     visibility = Visibility.none
 class BossLevelLRRCRockyHorror(Toggle):
     """ Hidden level selection option"""
+    visibility = Visibility.none
+class BossLevelBAZRockyHorror(Toggle):
     visibility = Visibility.none
 
 @dataclass
@@ -447,8 +525,9 @@ class ManicMinersOptions(PerGameCommonOptions):
     campaign_selection_lrr: CampaignSelectionLRR
     campaign_selection_lrrr: CampaignSelectionLRRR
     campaign_selection_lrrc: CampaignSelectionLRRC
-    # campaign_selection_baz: CampaignSelectionBAZ
+    campaign_selection_baz: CampaignSelectionBAZ
     no_duplicate_levels: NoDuplicateLevels
+    include_baz_unique_levels: IncludeBazUniqueLevels
 
     level_selection_lrr_abreathoffreshair: LevelSelectionLRRABreathOfFreshAir
     level_selection_lrr_airraiders: LevelSelectionLRRAirRaiders
@@ -528,15 +607,49 @@ class ManicMinersOptions(PerGameCommonOptions):
     level_selection_lrrc_waterlotoffun: LevelSelectionLRRCWaterLotOfFun
     level_selection_lrrc_waterworks: LevelSelectionLRRCWaterWorks
     
+    level_selection_baz_abreathoffreshair: LevelSelectionBAZABreathOfFreshAir
+    level_selection_baz_airraiders: LevelSelectionBAZAirRaiders
+    level_selection_baz_backtobasics: LevelSelectionBAZBackToBasics
+    level_selection_baz_breathless: LevelSelectionBAZBreathless
+    level_selection_baz_coldcomfort: LevelSelectionBAZColdComfort
+    level_selection_baz_dontpanic: LevelSelectionBAZDontPanic
+    level_selection_baz_downinthedirt: LevelSelectionBAZDownInTheDirt
+    level_selection_baz_drillernight: LevelSelectionBAZDrillerNight
+    level_selection_baz_erodeworks: LevelSelectionBAZErodeWorks
+    level_selection_baz_explosiveaction: LevelSelectionBAZExplosiveAction
+    level_selection_baz_fireandwater: LevelSelectionBAZFireAndWater
+    level_selection_baz_frozenfrenzy: LevelSelectionBAZFrozenFrenzy
+    level_selection_baz_hotstuff: LevelSelectionBAZHotStuff
+    level_selection_baz_icespy: LevelSelectionBAZIceSpy
+    level_selection_baz_itsaholdup: LevelSelectionBAZItsAHoldUp
+    level_selection_baz_lakeoffire: LevelSelectionBAZLakeOfFire
+    level_selection_baz_lavalaughter: LevelSelectionBAZLavaLaughter
+    level_selection_baz_mineovermatter: LevelSelectionBAZMineOverMatter
+    level_selection_baz_moltenmeltdown: LevelSelectionBAZMoltenMeltdown
+    level_selection_baz_oresome: LevelSelectionBAZOresome
+    level_selection_baz_recruitment: LevelSelectionBAZRecruitment
+    level_selection_baz_rockhard: LevelSelectionBAZRockHard
+    level_selection_baz_rockyhorror: LevelSelectionBAZRockyHorror
+    level_selection_baz_rubbletrouble: LevelSelectionBAZRubbleTrouble
+    level_selection_baz_runthegauntlet: LevelSelectionBAZRunTheGauntlet
+    level_selection_baz_seamless: LevelSelectionBAZSeamless
+    level_selection_baz_searchandrescue: LevelSelectionBAZSearchAndRescue
+    level_selection_baz_slimeysimple: LevelSelectionBAZSlimeySimple
+    level_selection_baz_splitdownthemiddle: LevelSelectionBAZSplitDownTheMiddle
+    level_selection_baz_thehardrocklife: LevelSelectionBAZTheHardRockLife
+    level_selection_baz_thepathtopower: LevelSelectionBAZThePathToPower
+    level_selection_baz_waterlotoffun: LevelSelectionBAZWaterLotOfFun
+    level_selection_baz_waterworks: LevelSelectionBAZWaterWorks
+    
     boss_level_lrr_rockyhorror: BossLevelLRRRockyHorror
     boss_level_lrrr_rockyhorror: BossLevelLRRRRockyHorror
     boss_level_lrrc_rockyhorror: BossLevelLRRCRockyHorror
+    boss_level_baz_rockyhorror: BossLevelBAZRockyHorror
 
 option_groups = [
     OptionGroup(
         "Campaign Selection",
-        # [CampaignSelectionLRR,CampaignSelectionLRRR,CampaignSelectionLRRC,CampaignSelectionBAZ]
-        [CampaignSelectionLRR,CampaignSelectionLRRR,CampaignSelectionLRRC,NoDuplicateLevels]
+        [CampaignSelectionLRR,CampaignSelectionLRRR,CampaignSelectionLRRC,CampaignSelectionBAZ,NoDuplicateLevels,IncludeBazUniqueLevels]
     ),
     OptionGroup(
         "Goal",

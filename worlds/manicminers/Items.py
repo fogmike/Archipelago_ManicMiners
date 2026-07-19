@@ -288,7 +288,7 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "Building Unlock: Canteen": ItemClassification.useful,
     "Building Unlock: Power Station": (ItemClassification.progression | ItemClassification.useful), # On SS critical path so same logic as SS
     "Building Unlock: Support Station": (ItemClassification.progression | ItemClassification.useful), # Since SS gates so much, like breathing and every non-dynamite blast option, it's worth marking as a prog-useful item
-    "Building Unlock: Upgrade Station": ItemClassification.useful,
+    "Building Unlock: Upgrade Station": ItemClassification.progression,
     "Building Unlock: Geological Center": ItemClassification.useful,
     "Building Unlock: Ore Refinery": ItemClassification.useful,
     "Building Unlock: Mining Laser": ItemClassification.progression,
@@ -421,13 +421,14 @@ LEVEL_ACCESS_LRRC_NEEDSUNLOCK_LIST = [
 LEVEL_ACCESS_LRRC_LIST = LEVEL_ACCESS_LRRC_NOUNLOCK_LIST + LEVEL_ACCESS_LRRC_NEEDSUNLOCK_LIST
 
 LEVEL_ACCESS_BAZ_NOUNLOCK_LIST = [
+    "Level Access: BAZ - A Breath Of Fresh Air",
     "Level Access: BAZ - Mine Over Matter",
     "Level Access: BAZ - Driller Night",
+    "Level Access: BAZ - Run The Gauntlet",
     "Level Access: BAZ - Split Down The Middle"
 ]
 
 LEVEL_ACCESS_BAZ_NEEDSUNLOCK_LIST = [
-    "Level Access: BAZ - A Breath Of Fresh Air",
     "Level Access: BAZ - Air Raiders",
     "Level Access: BAZ - Back To Basics",
     "Level Access: BAZ - Breathless",
@@ -449,7 +450,6 @@ LEVEL_ACCESS_BAZ_NEEDSUNLOCK_LIST = [
     "Level Access: BAZ - Rock Hard",
     "Level Access: BAZ - Rocky Horror",
     "Level Access: BAZ - Rubble Trouble",
-    "Level Access: BAZ - Run The Gauntlet",
     "Level Access: BAZ - Seamless",
     "Level Access: BAZ - Search And Rescue",
     "Level Access: BAZ - Slimey Simple",
@@ -509,14 +509,12 @@ def get_random_filler_item_name(world: ManicMinersWorld) -> str:
     
 def create_item_with_correct_classification(world: ManicMinersWorld, name: str) -> ManicMinersItem:
     classification = DEFAULT_ITEM_CLASSIFICATIONS[name]
-    if world.options.campaign_selection_lrrr:
+    if world.options.campaign_selection_lrrr or world.options.campaign_selection_baz:
         if name == "Item Unlock: Electric Fence":
             classification = ItemClassification.progression
         if name == "Building Unlock: Geological Center":
             classification = ItemClassification.progression
         if name == "Building Unlock: Ore Refinery":
-            classification = ItemClassification.progression
-        if name == "Building Unlock: Upgrade Station":
             classification = ItemClassification.progression
         if name == "Building Unlock: Canteen":
             classification = ItemClassification.progression
@@ -580,19 +578,19 @@ def create_all_items(world: ManicMinersWorld) -> None:
             itempool_sphere1_access += itempool_lrrc_sphere1_access
             itempool_sphere2plus_access += itempool_lrrc_sphere2plus_access
      
-        # if world.options.campaign_selection_baz:
-            # itempool_baz_sphere1_access = []
-            # itempool_baz_sphere2plus_access = []
-            # for item in LEVEL_ACCESS_BAZ_NOUNLOCK_LIST:
-                # itempool_baz_sphere1_access.append(world.create_item(item))
-            # for item in LEVEL_ACCESS_BAZ_NEEDSUNLOCK_LIST:
-                # itempool_baz_sphere2plus_access.append(world.create_item(item))
-            # if world.options.buildings_are_items == 0 and world.options.items_are_items == 0 and world.options.vehicles_are_items == 0:
-                # itempool_baz_sphere1_access += itempool_baz_sphere2plus_access
-                # itempool_baz_sphere2plus_access.clear()
+        if world.options.campaign_selection_baz:
+            itempool_baz_sphere1_access = []
+            itempool_baz_sphere2plus_access = []
+            for item in LEVEL_ACCESS_BAZ_NOUNLOCK_LIST:
+                itempool_baz_sphere1_access.append(world.create_item(item))
+            for item in LEVEL_ACCESS_BAZ_NEEDSUNLOCK_LIST:
+                itempool_baz_sphere2plus_access.append(world.create_item(item))
+            if world.options.buildings_are_items == 0 and world.options.items_are_items == 0 and world.options.vehicles_are_items == 0:
+                itempool_baz_sphere1_access += itempool_baz_sphere2plus_access
+                itempool_baz_sphere2plus_access.clear()
             
-            # itempool_sphere1_access += itempool_baz_sphere1_access
-            # itempool_sphere2plus_access += itempool_baz_sphere2plus_access
+            itempool_sphere1_access += itempool_baz_sphere1_access
+            itempool_sphere2plus_access += itempool_baz_sphere2plus_access
         
         initial_access_item_index = world.random.randint(0,len(itempool_sphere1_access)-1)
         initial_access_item_list.append(itempool_sphere1_access[initial_access_item_index])
@@ -760,6 +758,73 @@ def create_all_items(world: ManicMinersWorld) -> None:
         if world.options.level_selection_lrrc_waterworks:
             itempool_access.append(world.create_item("Level Access: LRRC - Water Works"))
         
+        if world.options.level_selection_baz_abreathoffreshair:
+            itempool_access.append(world.create_item("Level Access: BAZ - A Breath Of Fresh Air"))
+        if world.options.level_selection_baz_airraiders:
+            itempool_access.append(world.create_item("Level Access: BAZ - Air Raiders"))
+        if world.options.level_selection_baz_backtobasics:
+            itempool_access.append(world.create_item("Level Access: BAZ - Back To Basics"))
+        if world.options.level_selection_baz_breathless:
+            itempool_access.append(world.create_item("Level Access: BAZ - Breathless"))
+        if world.options.level_selection_baz_coldcomfort:
+            itempool_access.append(world.create_item("Level Access: BAZ - Cold Comfort"))
+        if world.options.level_selection_baz_dontpanic:
+            itempool_access.append(world.create_item("Level Access: BAZ - Don't Panic"))
+        if world.options.level_selection_baz_downinthedirt:
+            itempool_access.append(world.create_item("Level Access: BAZ - Down In The Dirt"))
+        if world.options.level_selection_baz_drillernight:
+            initial_access_item_list.append(world.create_item("Level Access: BAZ - Driller Night"))
+        if world.options.level_selection_baz_erodeworks:
+            itempool_access.append(world.create_item("Level Access: BAZ - Erode Works"))
+        if world.options.level_selection_baz_explosiveaction:
+            itempool_access.append(world.create_item("Level Access: BAZ - Explosive Action"))
+        if world.options.level_selection_baz_fireandwater:
+            itempool_access.append(world.create_item("Level Access: BAZ - Fire And Water"))
+        if world.options.level_selection_baz_frozenfrenzy:
+            itempool_access.append(world.create_item("Level Access: BAZ - Frozen Frenzy"))
+        if world.options.level_selection_baz_hotstuff:
+            itempool_access.append(world.create_item("Level Access: BAZ - Hot Stuff"))
+        if world.options.level_selection_baz_icespy:
+            itempool_access.append(world.create_item("Level Access: BAZ - Ice Spy"))
+        if world.options.level_selection_baz_itsaholdup:
+            itempool_access.append(world.create_item("Level Access: BAZ - It's A Hold Up"))
+        if world.options.level_selection_baz_lakeoffire:
+            itempool_access.append(world.create_item("Level Access: BAZ - Lake Of Fire"))
+        if world.options.level_selection_baz_lavalaughter:
+            itempool_access.append(world.create_item("Level Access: BAZ - Lava Laughter"))
+        if world.options.level_selection_baz_mineovermatter:
+            itempool_access.append(world.create_item("Level Access: BAZ - Mine Over Matter"))
+        if world.options.level_selection_baz_moltenmeltdown:
+            itempool_access.append(world.create_item("Level Access: BAZ - Molten Meltdown"))
+        if world.options.level_selection_baz_oresome:
+            itempool_access.append(world.create_item("Level Access: BAZ - Oresome"))
+        if world.options.level_selection_baz_recruitment:
+            itempool_access.append(world.create_item("Level Access: BAZ - Recruitment"))
+        if world.options.level_selection_baz_rockhard:
+            itempool_access.append(world.create_item("Level Access: BAZ - Rock Hard"))
+        if world.options.level_selection_baz_rockyhorror and world.options.boss_level_baz_rockyhorror == 0:
+            itempool_access.append(world.create_item("Level Access: BAZ - Rocky Horror"))
+        if world.options.level_selection_baz_rubbletrouble:
+            itempool_access.append(world.create_item("Level Access: BAZ - Rubble Trouble"))
+        if world.options.level_selection_baz_runthegauntlet:
+            itempool_access.append(world.create_item("Level Access: BAZ - Run The Gauntlet"))
+        if world.options.level_selection_baz_seamless:
+            itempool_access.append(world.create_item("Level Access: BAZ - Seamless"))
+        if world.options.level_selection_baz_searchandrescue:
+            itempool_access.append(world.create_item("Level Access: BAZ - Search And Rescue"))
+        if world.options.level_selection_baz_slimeysimple:
+            itempool_access.append(world.create_item("Level Access: BAZ - Slimey Simple"))
+        if world.options.level_selection_baz_splitdownthemiddle:
+            itempool_access.append(world.create_item("Level Access: BAZ - Split Down The Middle"))
+        if world.options.level_selection_baz_thehardrocklife:
+            itempool_access.append(world.create_item("Level Access: BAZ - The Hard Rock Life"))
+        if world.options.level_selection_baz_thepathtopower:
+            itempool_access.append(world.create_item("Level Access: BAZ - The Path To Power"))
+        if world.options.level_selection_baz_waterlotoffun:
+            itempool_access.append(world.create_item("Level Access: BAZ - Water Lot Of Fun"))
+        if world.options.level_selection_baz_waterworks:
+            itempool_access.append(world.create_item("Level Access: BAZ - Water Works"))
+        
         for i in range(world.options.available_levels_at_start-1):
             initial_access_item_index = world.random.randint(0,len(itempool_access)-1)
             initial_access_item_list.append(itempool_access[initial_access_item_index])
@@ -811,8 +876,12 @@ def create_all_items(world: ManicMinersWorld) -> None:
             level_count += 25
         if world.options.campaign_selection_lrrc:
             level_count += 25
+        if world.options.campaign_selection_baz:
+            level_count += 33
         if world.options.no_duplicate_levels:
             level_count = 25
+            if world.options.include_baz_unique_levels:
+                level_count = 33
         for i in range(level_count):
             itempool.append(world.create_item("Transporter Coordinates"))
 
@@ -827,6 +896,8 @@ def create_all_items(world: ManicMinersWorld) -> None:
         world.push_precollected(world.create_item("Level Access: LRRR - Rocky Horror"))
     if world.options.boss_level_lrrc_rockyhorror:
         world.push_precollected(world.create_item("Level Access: LRRC - Rocky Horror"))
+    if world.options.boss_level_baz_rockyhorror:
+        world.push_precollected(world.create_item("Level Access: BAZ - Rocky Horror"))
     
     world.multiworld.itempool += itempool
 
@@ -1135,6 +1206,9 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, op
             source = "\\BAZ\\rockhard.dat"
             target = "\\BAZ - Rock Hard.dat"
         case 3023:
+            if options["boss_level_baz_rockyhorror"] == 1:
+                if all_items.count(874) < options["target_level_count"]:
+                    return False
             source = "\\BAZ\\rockyhorror.dat"
             target = "\\BAZ - Rocky Horror.dat"
         case 3024:

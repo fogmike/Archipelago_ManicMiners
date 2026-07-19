@@ -151,10 +151,13 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                     level_count += 25
                 if self.ctx.slot_data["campaign_selection_lrrc"]:
                     level_count += 25
-                # if self.ctx.slot_data["campaign_selection_baz"]:
-                    # level_count += 33
+                if self.ctx.slot_data["campaign_selection_baz"]:
+                    level_count += 33
                 if self.ctx.slot_data["no_duplicate_levels"]:
-                    level_count = 25
+                    if (self.ctx.slot_data["campaign_selection_baz"] and self.ctx.slot_data["include_baz_unique_levels"]):
+                        level_count = 33
+                    else:
+                        level_count = 25
                 return level_count
 
             if self.ctx.slot_data["victory_condition"] == 0:
@@ -170,6 +173,8 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
                     boss_level = "LRRR - Rocky Horror"
                 if self.ctx.slot_data["boss_level_lrrc_rockyhorror"] == 1:
                     boss_level = "LRRC - Rocky Horror"
+                if self.ctx.slot_data["boss_level_baz_rockyhorror"] == 1:
+                    boss_level = "BAZ - Rocky Horror"
                 self.output(f"Goal: Get {self.ctx.slot_data["target_level_count"]} Transporter Coordinates items to unlock {boss_level} then clear it.")
                 if self.ctx.slot_data["locked_coordinates"] == 1:
                     self.output(f"Transporter Coordinates are found for beating levels.")

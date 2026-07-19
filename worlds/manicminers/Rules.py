@@ -44,7 +44,10 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     rule_can_flying_lase = rule_can_vehicle_lase & rule_can_build_tunneltransport
     rule_can_flydrill = (rule_can_build_tunnelscout & rule_can_build_upgradestation) | rule_can_flying_lase
     rule_can_swimdrill = (rule_can_flydrill | rule_can_build_rapidrider)
+    rule_can_cheap_blast = Has("Item Unlock: Dynamite") | rule_can_build_smalldigger | rule_can_build_smlc | rule_can_build_mininglaser
     rule_can_blast = Has("Item Unlock: Dynamite") | rule_can_lase | rule_can_build_smalldigger | rule_can_build_granitegrinder
+    rule_can_bazblast = HasAny("Vehicle Unlock: Granite Grinder","Vehicle Unlock: Chrome Crusher","Vehicle Unlock: Large Mobile Laser Cutter") & rule_can_build_superteleport
+    rule_can_swimblast = (rule_can_build_cargocarrier & (rule_can_build_smalldigger | rule_can_build_smlc)) | (rule_can_build_tunneltransport & (rule_can_lase | rule_can_build_smalldigger | rule_can_build_granitegrinder)) | (rule_can_swim & rule_can_blast & rule_can_build_toolstore)
 
     if world.options.level_selection_lrr_abreathoffreshair:
         entrance_lrr_abreathoffreshair = world.get_entrance("Start Level - LRR - A Breath Of Fresh Air")
@@ -574,6 +577,202 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             event_crystals_lrrc_waterworks = world.get_location("Crystal Target Beatable: LRRC - Water Works")
             world.set_rule(event_crystals_lrrc_waterworks, rule_can_swim)
     
+    if world.options.level_selection_baz_abreathoffreshair:
+        entrance_baz_abreathoffreshair = world.get_entrance("Start Level - BAZ - A Breath Of Fresh Air")
+        world.set_rule(entrance_baz_abreathoffreshair, (Has("Level Access: BAZ - A Breath Of Fresh Air") & rule_can_breathe & rule_can_build_geologicalcenter))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_abreathoffreshair = world.get_location("Crystal Target: BAZ - A Breath Of Fresh Air")
+            world.set_rule(location_crystals_baz_abreathoffreshair, rule_can_blast)
+        if world.options.victory_condition == 2:
+            event_crystals_baz_abreathoffreshair = world.get_location("Crystal Target Beatable: BAZ - A Breath Of Fresh Air")
+            world.set_rule(event_crystals_baz_abreathoffreshair, rule_can_blast)
+    if world.options.level_selection_baz_airraiders:
+        entrance_baz_airraiders = world.get_entrance("Start Level - BAZ - Air Raiders")
+        world.set_rule(entrance_baz_airraiders, (Has("Level Access: BAZ - Air Raiders")))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_airraiders = world.get_location("Crystal Target: BAZ - Air Raiders")
+            world.set_rule(location_crystals_baz_airraiders, rule_can_blast)
+        if world.options.victory_condition == 2:
+            event_crystals_baz_airraiders = world.get_location("Crystal Target Beatable: BAZ - Air Raiders")
+            world.set_rule(event_crystals_baz_airraiders, rule_can_blast)
+    if world.options.level_selection_baz_backtobasics:
+        entrance_baz_backtobasics = world.get_entrance("Start Level - BAZ - Back To Basics")
+        world.set_rule(entrance_baz_backtobasics, (Has("Level Access: BAZ - Back To Basics") & rule_can_breathe & (rule_can_blast | (rule_can_swim & rule_can_build_toolstore) | rule_can_build_tunneltransport) & rule_can_bazblast & Has("Vehicle Unlock: Small Transport Truck")))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_backtobasics = world.get_location("Crystal Target: BAZ - Back To Basics")
+            world.set_rule(location_crystals_baz_backtobasics, ((rule_can_swim & rule_can_build_toolstore) | rule_can_build_tunneltransport))
+        if world.options.victory_condition == 2:
+            event_crystals_baz_backtobasics = world.get_location("Crystal Target Beatable: BAZ - Back To Basics")
+            world.set_rule(event_crystals_baz_backtobasics, ((rule_can_swim & rule_can_build_toolstore) | rule_can_build_tunneltransport))
+    if world.options.level_selection_baz_breathless:
+        entrance_baz_breathless = world.get_entrance("Start Level - BAZ - Breathless")
+        world.set_rule(entrance_baz_breathless, (Has("Level Access: BAZ - Breathless") & rule_can_blast & rule_can_always_breathe))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_breathless = world.get_location("Crystal Target: BAZ - Breathless")
+            world.set_rule(location_crystals_baz_breathless, rule_can_breathe)
+        if world.options.victory_condition == 2:
+            event_crystals_baz_breathless = world.get_location("Crystal Target Beatable: BAZ - Breathless")
+            world.set_rule(event_crystals_baz_breathless, rule_can_breathe)
+    if world.options.level_selection_baz_coldcomfort:
+        entrance_baz_coldcomfort = world.get_entrance("Start Level - BAZ - Cold Comfort")
+        world.set_rule(entrance_baz_coldcomfort, (Has("Level Access: BAZ - Cold Comfort") & rule_can_breathe & ((rule_can_blast & rule_can_swim) | rule_can_cheap_blast)))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_coldcomfort = world.get_location("Crystal Target: BAZ - Cold Comfort")
+            world.set_rule(location_crystals_baz_coldcomfort, (rule_can_blast & rule_can_swim))
+        if world.options.victory_condition == 2:
+            event_crystals_baz_coldcomfort = world.get_location("Crystal Target Beatable: BAZ - Cold Comfort")
+            world.set_rule(event_crystals_baz_coldcomfort, (rule_can_blast & rule_can_swim))
+    if world.options.level_selection_baz_dontpanic:
+        entrance_baz_dontpanic = world.get_entrance("Start Level - BAZ - Don't Panic")
+        world.set_rule(entrance_baz_dontpanic, (Has("Level Access: BAZ - Don't Panic") & rule_can_breathe & rule_can_flying_lase))
+    if world.options.level_selection_baz_downinthedirt:
+        entrance_baz_downinthedirt = world.get_entrance("Start Level - BAZ - Down In The Dirt")
+        world.set_rule(entrance_baz_downinthedirt, (Has("Level Access: BAZ - Down In The Dirt") & rule_can_breathe & rule_can_cheap_blast & rule_can_swim))
+    if world.options.level_selection_baz_drillernight:
+        entrance_baz_drillernight = world.get_entrance("Start Level - BAZ - Driller Night")
+        world.set_rule(entrance_baz_drillernight, Has("Level Access: BAZ - Driller Night"))
+    if world.options.level_selection_baz_erodeworks:
+        entrance_baz_erodeworks = world.get_entrance("Start Level - BAZ - Erode Works")
+        world.set_rule(entrance_baz_erodeworks, (Has("Level Access: BAZ - Erode Works") & rule_can_breathe & rule_can_flying_lase))
+    if world.options.level_selection_baz_explosiveaction:
+        entrance_baz_explosiveaction = world.get_entrance("Start Level - BAZ - Explosive Action")
+        world.set_rule(entrance_baz_explosiveaction, (Has("Level Access: BAZ - Explosive Action") & rule_can_breathe & rule_can_cheap_blast))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_explosiveaction = world.get_location("Crystal Target: BAZ - Explosive Action")
+            world.set_rule(location_crystals_baz_explosiveaction, (rule_can_lase | rule_can_build_rapidrider | (rule_can_build_tunnelscout & rule_can_build_upgradestation)))
+        if world.options.victory_condition == 2:
+            event_crystals_baz_explosiveaction = world.get_location("Crystal Target Beatable: BAZ - Explosive Action")
+            world.set_rule(event_crystals_baz_explosiveaction, (rule_can_lase | rule_can_build_rapidrider | (rule_can_build_tunnelscout & rule_can_build_upgradestation)))
+    if world.options.level_selection_baz_fireandwater:
+        entrance_baz_fireandwater = world.get_entrance("Start Level - BAZ - Fire And Water")
+        world.set_rule(entrance_baz_fireandwater, (Has("Level Access: BAZ - Fire And Water") & rule_can_breathe & rule_can_swim))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_fireandwater = world.get_location("Crystal Target: BAZ - Fire And Water")
+            world.set_rule(location_crystals_baz_fireandwater, (rule_can_blast & rule_can_build_toolstore))
+        if world.options.victory_condition == 2:
+            event_crystals_baz_fireandwater = world.get_location("Crystal Target Beatable: BAZ - Fire And Water")
+            world.set_rule(event_crystals_baz_fireandwater, (rule_can_blast & rule_can_build_toolstore))
+    if world.options.level_selection_baz_frozenfrenzy:
+        entrance_baz_frozenfrenzy = world.get_entrance("Start Level - BAZ - Frozen Frenzy")
+        world.set_rule(entrance_baz_frozenfrenzy, (Has("Level Access: BAZ - Frozen Frenzy") & rule_can_breathe & rule_can_blast))
+    if world.options.level_selection_baz_hotstuff:
+        entrance_baz_hotstuff = world.get_entrance("Start Level - BAZ - Hot Stuff")
+        world.set_rule(entrance_baz_hotstuff, (Has("Level Access: BAZ - Hot Stuff") & rule_can_flying_lase))
+    if world.options.level_selection_baz_icespy:
+        entrance_baz_icespy = world.get_entrance("Start Level - BAZ - Ice Spy")
+        world.set_rule(entrance_baz_icespy, (Has("Level Access: BAZ - Ice Spy") & rule_can_breathe & rule_can_swim & rule_can_build_smalldigger & Has("Vehicle Unlock: Small Transport Truck")))
+    if world.options.level_selection_baz_itsaholdup:
+        entrance_baz_itsaholdup = world.get_entrance("Start Level - BAZ - It's A Hold Up")
+        world.set_rule(entrance_baz_itsaholdup, (Has("Level Access: BAZ - It's A Hold Up") & rule_can_cheap_blast & rule_can_bazblast))
+    if world.options.level_selection_baz_lakeoffire:
+        entrance_baz_lakeoffire = world.get_entrance("Start Level - BAZ - Lake Of Fire")
+        world.set_rule(entrance_baz_lakeoffire, (Has("Level Access: BAZ - Lake Of Fire") & rule_can_breathe & (rule_can_build_tunneltransport | (rule_can_fly & rule_can_build_toolstore))))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_lakeoffire = world.get_location("Crystal Target: BAZ - Lake Of Fire")
+            world.set_rule(location_crystals_baz_lakeoffire, rule_can_flying_lase)
+        if world.options.victory_condition == 2:
+            event_crystals_baz_lakeoffire = world.get_location("Crystal Target Beatable: BAZ - Lake Of Fire")
+            world.set_rule(event_crystals_baz_lakeoffire, rule_can_flying_lase)
+    if world.options.level_selection_baz_lavalaughter:
+        entrance_baz_lavalaughter = world.get_entrance("Start Level - BAZ - Lava Laughter")
+        world.set_rule(entrance_baz_lavalaughter, (Has("Level Access: BAZ - Lava Laughter") & rule_can_breathe & rule_can_cheap_blast))
+    if world.options.level_selection_baz_mineovermatter:
+        entrance_baz_mineovermatter = world.get_entrance("Start Level - BAZ - Mine Over Matter")
+        world.set_rule(entrance_baz_mineovermatter, Has("Level Access: BAZ - Mine Over Matter"))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_mineovermatter = world.get_location("Crystal Target: BAZ - Mine Over Matter")
+            world.set_rule(location_crystals_baz_mineovermatter, rule_can_blast)
+        if world.options.victory_condition == 2:
+            event_crystals_baz_mineovermatter = world.get_location("Crystal Target Beatable: BAZ - Mine Over Matter")
+            world.set_rule(event_crystals_baz_mineovermatter, rule_can_blast)
+    if world.options.level_selection_baz_moltenmeltdown:
+        entrance_baz_moltenmeltdown = world.get_entrance("Start Level - BAZ - Molten Meltdown")
+        world.set_rule(entrance_baz_moltenmeltdown, (Has("Level Access: BAZ - Molten Meltdown") & rule_can_blast & rule_can_fly))
+    if world.options.level_selection_baz_oresome:
+        entrance_baz_oresome = world.get_entrance("Start Level - BAZ - Oresome")
+        world.set_rule(entrance_baz_oresome, (Has("Level Access: BAZ - Oresome") & rule_can_fly & (rule_can_build_toolstore | rule_can_blast)))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_oresome = world.get_location("Crystal Target: BAZ - Oresome")
+            world.set_rule(location_crystals_baz_oresome, rule_can_flying_lase)
+        if world.options.victory_condition == 2:
+            event_crystals_baz_oresome = world.get_location("Crystal Target Beatable: BAZ - Oresome")
+            world.set_rule(event_crystals_baz_oresome, rule_can_flying_lase)
+    if world.options.level_selection_baz_recruitment:
+        entrance_baz_recruitment = world.get_entrance("Start Level - BAZ - Recruitment")
+        world.set_rule(entrance_baz_recruitment, (Has("Level Access: BAZ - Recruitment") & (rule_can_build_tunnelscout | (rule_can_build_tunneltransport & (rule_can_build_cargocarrier | rule_can_build_rapidrider)))))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_recruitment = world.get_location("Crystal Target: BAZ - Recruitment")
+            world.set_rule(location_crystals_baz_recruitment, rule_can_swimblast)
+        if world.options.victory_condition == 2:
+            event_crystals_baz_recruitment = world.get_location("Crystal Target Beatable: BAZ - Recruitment")
+            world.set_rule(event_crystals_baz_recruitment, rule_can_swimblast)
+    if world.options.level_selection_baz_rockhard:
+        entrance_baz_rockhard = world.get_entrance("Start Level - BAZ - Rock Hard")
+        world.set_rule(entrance_baz_rockhard, (Has("Level Access: BAZ - Rock Hard") & rule_can_breathe & (rule_can_build_smalldigger | Has("Item Unlock: Dynamite"))))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_rockhard = world.get_location("Crystal Target: BAZ - Rock Hard")
+            world.set_rule(location_crystals_baz_rockhard, (rule_can_build_tunneltransport | (rule_can_fly & rule_can_build_toolstore)))
+        if world.options.victory_condition == 2:
+            event_crystals_baz_rockhard = world.get_location("Crystal Target Beatable: BAZ - Rock Hard")
+            world.set_rule(event_crystals_baz_rockhard, (rule_can_build_tunneltransport | (rule_can_fly & rule_can_build_toolstore)))
+    if world.options.level_selection_baz_rockyhorror:
+        entrance_baz_rockyhorror = world.get_entrance("Start Level - BAZ - Rocky Horror")
+        world.set_rule(entrance_baz_rockyhorror, (Has("Level Access: BAZ - Rocky Horror") & rule_can_breathe & rule_can_swimblast & rule_can_lase))
+    if world.options.level_selection_baz_rubbletrouble:
+        entrance_baz_rubbletrouble = world.get_entrance("Start Level - BAZ - Rubble Trouble")
+        world.set_rule(entrance_baz_rubbletrouble, (Has("Level Access: BAZ - Rubble Trouble") & rule_can_cheap_blast))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_rubbletrouble = world.get_location("Crystal Target: BAZ - Rubble Trouble")
+            world.set_rule(location_crystals_baz_rubbletrouble, (rule_can_swim | rule_can_fly | rule_can_lase))
+        if world.options.victory_condition == 2:
+            event_crystals_baz_rubbletrouble = world.get_location("Crystal Target Beatable: BAZ - Rubble Trouble")
+            world.set_rule(event_crystals_baz_rubbletrouble, (rule_can_swim | rule_can_fly | rule_can_lase))
+    if world.options.level_selection_baz_runthegauntlet:
+        entrance_baz_runthegauntlet = world.get_entrance("Start Level - BAZ - Run The Gauntlet")
+        world.set_rule(entrance_baz_runthegauntlet, Has("Level Access: BAZ - Run The Gauntlet"))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_runthegauntlet = world.get_location("Crystal Target: BAZ - Run The Gauntlet")
+            world.set_rule(location_crystals_baz_runthegauntlet, rule_can_blast)
+        if world.options.victory_condition == 2:
+            event_crystals_baz_runthegauntlet = world.get_location("Crystal Target Beatable: BAZ - Run The Gauntlet")
+            world.set_rule(event_crystals_baz_runthegauntlet, rule_can_blast)
+    if world.options.level_selection_baz_seamless:
+        entrance_baz_seamless = world.get_entrance("Start Level - BAZ - Seamless")
+        world.set_rule(entrance_baz_seamless, (Has("Level Access: BAZ - Seamless") & Has("Item Unlock: Dynamite")))
+    if world.options.level_selection_baz_searchandrescue:
+        entrance_baz_searchandrescue = world.get_entrance("Start Level - BAZ - Search And Rescue")
+        world.set_rule(entrance_baz_searchandrescue, (Has("Level Access: BAZ - Search And Rescue") & rule_can_breathe & (rule_can_swimblast | rule_can_swimdrill)))
+    if world.options.level_selection_baz_slimeysimple:
+        entrance_baz_slimeysimple = world.get_entrance("Start Level - BAZ - Slimey Simple")
+        world.set_rule(entrance_baz_slimeysimple, (Has("Level Access: BAZ - Slimey Simple") & rule_can_breathe & rule_can_blast))
+    if world.options.level_selection_baz_splitdownthemiddle:
+        entrance_baz_splitdownthemiddle = world.get_entrance("Start Level - BAZ - Split Down The Middle")
+        world.set_rule(entrance_baz_splitdownthemiddle, Has("Level Access: BAZ - Split Down The Middle"))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_splitdownthemiddle = world.get_location("Crystal Target: BAZ - Split Down The Middle")
+            world.set_rule(location_crystals_baz_splitdownthemiddle, rule_can_blast)
+        if world.options.victory_condition == 2:
+            event_crystals_baz_splitdownthemiddle = world.get_location("Crystal Target Beatable: BAZ - Split Down The Middle")
+            world.set_rule(event_crystals_baz_splitdownthemiddle, rule_can_blast)
+    if world.options.level_selection_baz_thehardrocklife:
+        entrance_baz_thehardrocklife = world.get_entrance("Start Level - BAZ - The Hard Rock Life")
+        world.set_rule(entrance_baz_thehardrocklife, (Has("Level Access: BAZ - The Hard Rock Life") & rule_can_cheap_blast & rule_can_fly & rule_can_bazblast))
+    if world.options.level_selection_baz_thepathtopower:
+        entrance_baz_thepathtopower = world.get_entrance("Start Level - BAZ - The Path To Power")
+        world.set_rule(entrance_baz_thepathtopower, (Has("Level Access: BAZ - The Path To Power") & rule_can_build_supportstation & rule_can_build_geologicalcenter & Has("Item Unlock: Dynamite")))
+    if world.options.level_selection_baz_waterlotoffun:
+        entrance_baz_waterlotoffun = world.get_entrance("Start Level - BAZ - Water Lot Of Fun")
+        world.set_rule(entrance_baz_waterlotoffun, (Has("Level Access: BAZ - Water Lot Of Fun") & rule_can_breathe & rule_can_swim & rule_can_cheap_blast & (rule_can_swimblast | rule_can_lase) & (rule_can_build_toolstore | rule_can_build_tunneltransport)))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_waterlotoffun = world.get_location("Crystal Target: BAZ - Water Lot Of Fun")
+            world.set_rule(location_crystals_baz_waterlotoffun, (rule_can_build_tunneltransport | (rule_can_fly & rule_can_build_toolstore)))
+        if world.options.victory_condition == 2:
+            event_crystals_baz_waterlotoffun = world.get_location("Crystal Target Beatable: BAZ - Water Lot Of Fun")
+            world.set_rule(event_crystals_baz_waterlotoffun, (rule_can_build_tunneltransport | (rule_can_fly & rule_can_build_toolstore)))
+    if world.options.level_selection_baz_waterworks:
+        entrance_baz_waterworks = world.get_entrance("Start Level - BAZ - Water Works")
+        world.set_rule(entrance_baz_waterworks, (Has("Level Access: BAZ - Water Works") & rule_can_breathe & rule_can_flying_lase))
+
     goal_achievable = world.get_location("Goal Conditions Achievable")
     if world.options.victory_condition == 0:
         world.set_rule(goal_achievable, Has("Level Completed", world.options.target_level_count.value))
@@ -588,6 +787,8 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(goal_achievable, CanReachRegion("LRRR - Rocky Horror"))
         elif world.options.boss_level_lrrc_rockyhorror:
             world.set_rule(goal_achievable, CanReachRegion("LRRC - Rocky Horror"))
+        elif world.options.boss_level_baz_rockyhorror:
+            world.set_rule(goal_achievable, CanReachRegion("BAZ - Rocky Horror"))
     
 def set_completion_condition(world: ManicMinersWorld) -> None:
     world.set_completion_rule(Has("Victory"))

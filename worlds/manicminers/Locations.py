@@ -531,7 +531,110 @@ LOCATION_NAME_TO_ID = {
     "Clear: BAZ - The Path To Power": 30310,
     "Clear: BAZ - Water Lot Of Fun": 30320,
     "Clear: BAZ - Water Works": 30330,
-    
+
+    "Bonus Clear 1: BAZ - A Breath Of Fresh Air": 30011,
+    "Bonus Clear 1: BAZ - Air Raiders": 30021,
+    "Bonus Clear 2: BAZ - Air Raiders": 30022,
+    "Bonus Clear 3: BAZ - Air Raiders": 30023,
+    "Bonus Clear 1: BAZ - Back To Basics": 30031,
+    "Bonus Clear 2: BAZ - Back To Basics": 30032,
+    "Bonus Clear 3: BAZ - Back To Basics": 30033,
+    "Bonus Clear 4: BAZ - Back To Basics": 30034,
+    "Bonus Clear 1: BAZ - Breathless": 30041,
+    "Bonus Clear 2: BAZ - Breathless": 30042,
+    "Bonus Clear 1: BAZ - Cold Comfort": 30051,
+    "Bonus Clear 2: BAZ - Cold Comfort": 30052,
+    "Bonus Clear 1: BAZ - Don't Panic": 30061,
+    "Bonus Clear 2: BAZ - Don't Panic": 30062,
+    "Bonus Clear 3: BAZ - Don't Panic": 30063,
+    "Bonus Clear 1: BAZ - Down In The Dirt": 30071,
+    "Bonus Clear 2: BAZ - Down In The Dirt": 30072,
+    "Bonus Clear 1: BAZ - Driller Night": 30081,
+    "Bonus Clear 1: BAZ - Erode Works": 30091,
+    "Bonus Clear 2: BAZ - Erode Works": 30092,
+    "Bonus Clear 1: BAZ - Explosive Action": 30101,
+    "Bonus Clear 1: BAZ - Fire And Water": 30111,
+    "Bonus Clear 2: BAZ - Fire And Water": 30112,
+    "Bonus Clear 3: BAZ - Fire And Water": 30113,
+    "Bonus Clear 1: BAZ - Frozen Frenzy": 30121,
+    "Bonus Clear 2: BAZ - Frozen Frenzy": 30122,
+    "Bonus Clear 1: BAZ - Hot Stuff": 30131,
+    "Bonus Clear 2: BAZ - Hot Stuff": 30132,
+    "Bonus Clear 3: BAZ - Hot Stuff": 30133,
+    "Bonus Clear 4: BAZ - Hot Stuff": 30134,
+    "Bonus Clear 1: BAZ - Ice Spy": 30141,
+    "Bonus Clear 2: BAZ - Ice Spy": 30142,
+    "Bonus Clear 3: BAZ - Ice Spy": 30143,
+    "Bonus Clear 1: BAZ - It's A Hold Up": 30151,
+    "Bonus Clear 1: BAZ - Lake Of Fire": 30161,
+    "Bonus Clear 2: BAZ - Lake Of Fire": 30162,
+    "Bonus Clear 3: BAZ - Lake Of Fire": 30163,
+    "Bonus Clear 1: BAZ - Lava Laughter": 30171,
+    "Bonus Clear 2: BAZ - Lava Laughter": 30172,
+    "Bonus Clear 3: BAZ - Lava Laughter": 30173,
+    "Bonus Clear 1: BAZ - Mine Over Matter": 30181,
+    "Bonus Clear 1: BAZ - Molten Meltdown": 30191,
+    "Bonus Clear 1: BAZ - Oresome": 30201,
+    "Bonus Clear 2: BAZ - Oresome": 30202,
+    "Bonus Clear 3: BAZ - Oresome": 30203,
+    "Bonus Clear 1: BAZ - Recruitment": 30211,
+    "Bonus Clear 1: BAZ - Rock Hard": 30221,
+    "Bonus Clear 2: BAZ - Rock Hard": 30222,
+    "Bonus Clear 1: BAZ - Rocky Horror": 30231,
+    "Bonus Clear 2: BAZ - Rocky Horror": 30232,
+    "Bonus Clear 3: BAZ - Rocky Horror": 30233,
+    "Bonus Clear 4: BAZ - Rocky Horror": 30234,
+    "Bonus Clear 1: BAZ - Rubble Trouble": 30241,
+    "Bonus Clear 1: BAZ - Run The Gauntlet": 30251,
+    "Bonus Clear 1: BAZ - Seamless": 30261,
+    "Bonus Clear 2: BAZ - Seamless": 30262,
+    "Bonus Clear 1: BAZ - Search And Rescue": 30271,
+    "Bonus Clear 2: BAZ - Search And Rescue": 30272,
+    "Bonus Clear 1: BAZ - Slimey Simple": 30281,
+    "Bonus Clear 2: BAZ - Slimey Simple": 30282,
+    "Bonus Clear 1: BAZ - Split Down The Middle": 30291,
+    "Bonus Clear 2: BAZ - Split Down The Middle": 30292,
+    "Bonus Clear 1: BAZ - The Hard Rock Life": 30301,
+    "Bonus Clear 1: BAZ - The Path To Power": 30311,
+    "Bonus Clear 1: BAZ - Water Lot Of Fun": 30321,
+    "Bonus Clear 2: BAZ - Water Lot Of Fun": 30322,
+    "Bonus Clear 1: BAZ - Water Works": 30331,
+    "Bonus Clear 2: BAZ - Water Works": 30332,
+        
+    "Research Coordinates: BAZ - A Breath Of Fresh Air": 30019,
+    "Research Coordinates: BAZ - Air Raiders": 30029,
+    "Research Coordinates: BAZ - Back To Basics": 30039,
+    "Research Coordinates: BAZ - Breathless": 30049,
+    "Research Coordinates: BAZ - Cold Comfort": 30059,
+    "Research Coordinates: BAZ - Don't Panic": 30069,
+    "Research Coordinates: BAZ - Down In The Dirt": 30079,
+    "Research Coordinates: BAZ - Driller Night": 30089,
+    "Research Coordinates: BAZ - Erode Works": 30099,
+    "Research Coordinates: BAZ - Explosive Action": 30109,
+    "Research Coordinates: BAZ - Fire And Water": 30119,
+    "Research Coordinates: BAZ - Frozen Frenzy": 30129,
+    "Research Coordinates: BAZ - Hot Stuff": 30139,
+    "Research Coordinates: BAZ - Ice Spy": 30149,
+    "Research Coordinates: BAZ - It's A Hold Up": 30159,
+    "Research Coordinates: BAZ - Lake Of Fire": 30169,
+    "Research Coordinates: BAZ - Lava Laughter": 30179,
+    "Research Coordinates: BAZ - Mine Over Matter": 30189,
+    "Research Coordinates: BAZ - Molten Meltdown": 30199,
+    "Research Coordinates: BAZ - Oresome": 30209,
+    "Research Coordinates: BAZ - Recruitment": 30219,
+    "Research Coordinates: BAZ - Rock Hard": 30229,
+    "Research Coordinates: BAZ - Rocky Horror": 30239,
+    "Research Coordinates: BAZ - Rubble Trouble": 30249,
+    "Research Coordinates: BAZ - Run The Gauntlet": 30259,
+    "Research Coordinates: BAZ - Seamless": 30269,
+    "Research Coordinates: BAZ - Search And Rescue": 30279,
+    "Research Coordinates: BAZ - Slimey Simple": 30289,
+    "Research Coordinates: BAZ - Split Down The Middle": 30299,
+    "Research Coordinates: BAZ - The Hard Rock Life": 30309,
+    "Research Coordinates: BAZ - The Path To Power": 30319,
+    "Research Coordinates: BAZ - Water Lot Of Fun": 30329,
+    "Research Coordinates: BAZ - Water Works": 30339,
+     
     "Beat Par Time: BAZ - A Breath Of Fresh Air": 31010,
     "Beat Par Time: BAZ - Air Raiders": 31020,
     "Beat Par Time: BAZ - Back To Basics": 31030,
@@ -564,7 +667,42 @@ LOCATION_NAME_TO_ID = {
     "Beat Par Time: BAZ - The Hard Rock Life": 31300,
     "Beat Par Time: BAZ - The Path To Power": 31310,
     "Beat Par Time: BAZ - Water Lot Of Fun": 31320,
-    "Beat Par Time: BAZ - Water Works": 31330
+    "Beat Par Time: BAZ - Water Works": 31330,
+
+    "Crystal Target: BAZ - A Breath Of Fresh Air": 32010,
+    "Crystal Target: BAZ - Air Raiders": 32020,
+    "Crystal Target: BAZ - Back To Basics": 32030,
+    "Crystal Target: BAZ - Breathless": 32040,
+    "Crystal Target: BAZ - Cold Comfort": 32050,
+    "Crystal Target: BAZ - Don't Panic": 32060,
+    "Crystal Target: BAZ - Down In The Dirt": 32070,
+    "Crystal Target: BAZ - Driller Night": 32080,
+    "Crystal Target: BAZ - Erode Works": 32090,
+    "Crystal Target: BAZ - Explosive Action": 32100,
+    "Crystal Target: BAZ - Fire And Water": 32110,
+    "Crystal Target: BAZ - Frozen Frenzy": 32120,
+    "Crystal Target: BAZ - Hot Stuff": 32130,
+    "Crystal Target: BAZ - Ice Spy": 32140,
+    "Crystal Target: BAZ - It's A Hold Up": 32150,
+    "Crystal Target: BAZ - Lake Of Fire": 32160,
+    "Crystal Target: BAZ - Lava Laughter": 32170,
+    "Crystal Target: BAZ - Mine Over Matter": 32180,
+    "Crystal Target: BAZ - Molten Meltdown": 32190,
+    "Crystal Target: BAZ - Oresome": 32200,
+    "Crystal Target: BAZ - Recruitment": 32210,
+    "Crystal Target: BAZ - Rock Hard": 32220,
+    "Crystal Target: BAZ - Rocky Horror": 32230,
+    "Crystal Target: BAZ - Rubble Trouble": 32240,
+    "Crystal Target: BAZ - Run The Gauntlet": 32250,
+    "Crystal Target: BAZ - Seamless": 32260,
+    "Crystal Target: BAZ - Search And Rescue": 32270,
+    "Crystal Target: BAZ - Slimey Simple": 32280,
+    "Crystal Target: BAZ - Split Down The Middle": 32290,
+    "Crystal Target: BAZ - The Hard Rock Life": 32300,
+    "Crystal Target: BAZ - The Path To Power": 32310,
+    "Crystal Target: BAZ - Water Lot Of Fun": 32320,
+    "Crystal Target: BAZ - Water Works": 32330
+
 }
 
 TARGET_CLEAR_TIME_EASY = {
@@ -646,39 +784,39 @@ TARGET_CLEAR_TIME_EASY = {
     "LRRC - Water Lot Of Fun": 960, # 16:00
     "LRRC - Water Works": 720, # 12:00
     
-    "BAZ - A Breath Of Fresh Air": 99999,
-    "BAZ - Air Raiders": 99999,
-    "BAZ - Back To Basics": 99999,
-    "BAZ - Breathless": 99999,
-    "BAZ - Cold Comfort": 99999,
-    "BAZ - Don't Panic": 99999,
-    "BAZ - Down In The Dirt": 99999,
-    "BAZ - Driller Night": 99999,
-    "BAZ - Erode Works": 99999,
-    "BAZ - Explosive Action": 99999,
-    "BAZ - Fire And Water": 99999,
-    "BAZ - Frozen Frenzy": 99999,
-    "BAZ - Hot Stuff": 99999,
-    "BAZ - Ice Spy": 99999,
-    "BAZ - It's A Hold Up": 99999,
-    "BAZ - Lake Of Fire": 99999,
-    "BAZ - Lava Laughter": 99999,
-    "BAZ - Mine Over Matter": 99999,
-    "BAZ - Molten Meltdown": 99999,
-    "BAZ - Oresome": 99999,
-    "BAZ - Rock Hard": 99999,
-    "BAZ - Recruitment": 99999,
-    "BAZ - Rocky Horror": 99999,
-    "BAZ - Rubble Trouble": 99999,
-    "BAZ - Run The Gauntlet": 99999,
-    "BAZ - Seamless": 99999,
-    "BAZ - Search And Rescue": 99999,
-    "BAZ - Slimey Simple": 99999,
-    "BAZ - Split Down The Middle": 99999,
-    "BAZ - The Hard Rock Life": 99999,
-    "BAZ - The Path To Power": 99999,
-    "BAZ - Water Lot Of Fun": 99999,
-    "BAZ - Water Works": 99999
+    "BAZ - A Breath Of Fresh Air": 3600, # 60:00
+    "BAZ - Air Raiders": 7200, # 120:00
+    "BAZ - Back To Basics": 7200, # 120:00
+    "BAZ - Breathless": 2100, # 35:00
+    "BAZ - Cold Comfort": 4800, # 80:00
+    "BAZ - Don't Panic": 5400, # 90:00
+    "BAZ - Down In The Dirt": 6300, # 105:00
+    "BAZ - Driller Night": 1800, # 30:00
+    "BAZ - Erode Works": 3300, # 55:00
+    "BAZ - Explosive Action": 2100, # 35:00 
+    "BAZ - Fire And Water": 6300, # 105:00
+    "BAZ - Frozen Frenzy": 4800, # 80:00
+    "BAZ - Hot Stuff": 6300, # 105:00
+    "BAZ - Ice Spy": 7200, # 120:00
+    "BAZ - It's A Hold Up": 3600, # 60:00
+    "BAZ - Lake Of Fire": 3600, # 60:00
+    "BAZ - Lava Laughter": 3300, # 55:00
+    "BAZ - Mine Over Matter": 2100, # 35:00 
+    "BAZ - Molten Meltdown": 3000, # 50:00
+    "BAZ - Oresome": 13500, # 225:00
+    "BAZ - Recruitment": 3600, # 60:00
+    "BAZ - Rock Hard": 6900, # 115:00
+    "BAZ - Rocky Horror": 13200, # 220:00
+    "BAZ - Rubble Trouble": 1800, # 30:00
+    "BAZ - Run The Gauntlet": 5700, # 95:00
+    "BAZ - Seamless": 3600, # 60:00
+    "BAZ - Search And Rescue": 5400, # 90:00
+    "BAZ - Slimey Simple": 3000, # 50:00
+    "BAZ - Split Down The Middle": 2100, # 35:00 
+    "BAZ - The Hard Rock Life": 4200, # 70:00
+    "BAZ - The Path To Power": 1800, # 30:00
+    "BAZ - Water Lot Of Fun": 11400, # 190:00
+    "BAZ - Water Works": 5400 # 90:00
 }
 
 TARGET_TOTAL_CLEAR_TIME_LRR_EASY = 0
@@ -776,39 +914,39 @@ TARGET_CLEAR_TIME_MEDIUM = {
     "LRRC - Water Lot Of Fun": 660, # 11:00
     "LRRC - Water Works": 450, # 07:30
     
-    "BAZ - A Breath Of Fresh Air": 99999,
-    "BAZ - Air Raiders": 99999,
-    "BAZ - Back To Basics": 99999,
-    "BAZ - Breathless": 99999,
-    "BAZ - Cold Comfort": 99999,
-    "BAZ - Don't Panic": 99999,
-    "BAZ - Down In The Dirt": 99999,
-    "BAZ - Driller Night": 99999,
-    "BAZ - Erode Works": 99999,
-    "BAZ - Explosive Action": 99999,
-    "BAZ - Fire And Water": 99999,
-    "BAZ - Frozen Frenzy": 99999,
-    "BAZ - Hot Stuff": 99999,
-    "BAZ - Ice Spy": 99999,
-    "BAZ - It's A Hold Up": 99999,
-    "BAZ - Lake Of Fire": 99999,
-    "BAZ - Lava Laughter": 99999,
-    "BAZ - Mine Over Matter": 99999,
-    "BAZ - Molten Meltdown": 99999,
-    "BAZ - Oresome": 99999,
-    "BAZ - Rock Hard": 99999,
-    "BAZ - Recruitment": 99999,
-    "BAZ - Rocky Horror": 99999,
-    "BAZ - Rubble Trouble": 99999,
-    "BAZ - Run The Gauntlet": 99999,
-    "BAZ - Seamless": 99999,
-    "BAZ - Search And Rescue": 99999,
-    "BAZ - Slimey Simple": 99999,
-    "BAZ - Split Down The Middle": 99999,
-    "BAZ - The Hard Rock Life": 99999,
-    "BAZ - The Path To Power": 99999,
-    "BAZ - Water Lot Of Fun": 99999,
-    "BAZ - Water Works": 99999
+    "BAZ - A Breath Of Fresh Air": 2400, # 40:00
+    "BAZ - Air Raiders": 5400, # 90:00
+    "BAZ - Back To Basics": 5400, # 90:00
+    "BAZ - Breathless": 1500, # 25:00
+    "BAZ - Cold Comfort": 3000, # 50:00
+    "BAZ - Don't Panic": 3600, # 60:00
+    "BAZ - Down In The Dirt": 4500, # 75:00
+    "BAZ - Driller Night": 1200, # 20:00
+    "BAZ - Erode Works": 2400, # 40:00
+    "BAZ - Explosive Action": 1500, # 25:00
+    "BAZ - Fire And Water": 4800, # 80:00
+    "BAZ - Frozen Frenzy": 3000, # 50:00
+    "BAZ - Hot Stuff": 4500, # 75:00
+    "BAZ - Ice Spy": 5400, # 90:00
+    "BAZ - It's A Hold Up": 2700, # 45:00
+    "BAZ - Lake Of Fire": 2700, # 45:00
+    "BAZ - Lava Laughter": 2400, # 40:00
+    "BAZ - Mine Over Matter": 1500, # 25:00
+    "BAZ - Molten Meltdown": 2100, # 35:00
+    "BAZ - Oresome": 9900, # 165:00
+    "BAZ - Recruitment": 2700, # 45:00
+    "BAZ - Rock Hard": 4800, # 80:00
+    "BAZ - Rocky Horror": 9000, # 150:00
+    "BAZ - Rubble Trouble": 1200, # 20:00
+    "BAZ - Run The Gauntlet": 3900, # 65:00
+    "BAZ - Seamless": 2700, # 45:00
+    "BAZ - Search And Rescue": 3600, # 60:00
+    "BAZ - Slimey Simple": 2100, # 35:00
+    "BAZ - Split Down The Middle": 1440, # 24:00
+    "BAZ - The Hard Rock Life": 2700, # 45:00
+    "BAZ - The Path To Power": 1200, # 20:00
+    "BAZ - Water Lot Of Fun": 7800, # 130:00
+    "BAZ - Water Works": 3600 # 60:00
 }
 
 TARGET_TOTAL_CLEAR_TIME_LRR_MEDIUM = 0
@@ -906,39 +1044,39 @@ TARGET_CLEAR_TIME_HARD = {
     "LRRC - Water Lot Of Fun": 420, # 07:00
     "LRRC - Water Works": 300, # 05:00
     
-    "BAZ - A Breath Of Fresh Air": 99999,
-    "BAZ - Air Raiders": 99999,
-    "BAZ - Back To Basics": 99999,
-    "BAZ - Breathless": 99999,
-    "BAZ - Cold Comfort": 99999,
-    "BAZ - Don't Panic": 99999,
-    "BAZ - Down In The Dirt": 99999,
-    "BAZ - Driller Night": 99999,
-    "BAZ - Erode Works": 99999,
-    "BAZ - Explosive Action": 99999,
-    "BAZ - Fire And Water": 99999,
-    "BAZ - Frozen Frenzy": 99999,
-    "BAZ - Hot Stuff": 99999,
-    "BAZ - Ice Spy": 99999,
-    "BAZ - It's A Hold Up": 99999,
-    "BAZ - Lake Of Fire": 99999,
-    "BAZ - Lava Laughter": 99999,
-    "BAZ - Mine Over Matter": 99999,
-    "BAZ - Molten Meltdown": 99999,
-    "BAZ - Oresome": 99999,
-    "BAZ - Rock Hard": 99999,
-    "BAZ - Recruitment": 99999,
-    "BAZ - Rocky Horror": 99999,
-    "BAZ - Rubble Trouble": 99999,
-    "BAZ - Run The Gauntlet": 99999,
-    "BAZ - Seamless": 99999,
-    "BAZ - Search And Rescue": 99999,
-    "BAZ - Slimey Simple": 99999,
-    "BAZ - Split Down The Middle": 99999,
-    "BAZ - The Hard Rock Life": 99999,
-    "BAZ - The Path To Power": 99999,
-    "BAZ - Water Lot Of Fun": 99999,
-    "BAZ - Water Works": 99999
+    "BAZ - A Breath Of Fresh Air": 1680, # 28:00
+    "BAZ - Air Raiders": 3600, # 60:00
+    "BAZ - Back To Basics": 4200, # 70:00
+    "BAZ - Breathless": 900, # 15:00
+    "BAZ - Cold Comfort": 2160, # 36:00
+    "BAZ - Don't Panic": 2580, # 43:00
+    "BAZ - Down In The Dirt": 3000, # 50:00
+    "BAZ - Driller Night": 780, # 13:00
+    "BAZ - Erode Works": 1980, # 33:00
+    "BAZ - Explosive Action": 1080, # 18:00
+    "BAZ - Fire And Water": 3300, # 55:00
+    "BAZ - Frozen Frenzy": 2100, # 35:00
+    "BAZ - Hot Stuff": 3000, # 50:00
+    "BAZ - Ice Spy": 3600, # 60:00
+    "BAZ - It's A Hold Up": 1920, # 32:00
+    "BAZ - Lake Of Fire": 1800, # 30:00
+    "BAZ - Lava Laughter": 1620, # 27:00
+    "BAZ - Mine Over Matter": 1080, # 18:00
+    "BAZ - Molten Meltdown": 1440, # 24:00
+    "BAZ - Oresome": 7200, # 120:00
+    "BAZ - Recruitment": 1680, # 28:00
+    "BAZ - Rock Hard": 3300, # 55:00
+    "BAZ - Rocky Horror": 6300, # 105:00
+    "BAZ - Rubble Trouble": 900, # 15:00
+    "BAZ - Run The Gauntlet": 2700, # 45:00
+    "BAZ - Seamless": 1800, # 30:00
+    "BAZ - Search And Rescue": 2520, # 42:00
+    "BAZ - Slimey Simple": 1260, # 21:00
+    "BAZ - Split Down The Middle": 960, # 16:00
+    "BAZ - The Hard Rock Life": 1680, # 28:00
+    "BAZ - The Path To Power": 900, # 15:00
+    "BAZ - Water Lot Of Fun": 6000, # 100:00
+    "BAZ - Water Works": 2700 # 45:00
 }
 
 TARGET_TOTAL_CLEAR_TIME_LRR_HARD = 0
@@ -1036,39 +1174,39 @@ TARGET_CLEAR_TIME_ROCK_HARD = {
     "LRRC - Water Lot Of Fun": 330, # 05:30
     "LRRC - Water Works": 240, # 04:00
     
-    "BAZ - A Breath Of Fresh Air": 99999,
-    "BAZ - Air Raiders": 99999,
-    "BAZ - Back To Basics": 99999,
-    "BAZ - Breathless": 99999,
-    "BAZ - Cold Comfort": 99999,
-    "BAZ - Don't Panic": 99999,
-    "BAZ - Down In The Dirt": 99999,
-    "BAZ - Driller Night": 99999,
-    "BAZ - Erode Works": 99999,
-    "BAZ - Explosive Action": 99999,
-    "BAZ - Fire And Water": 99999,
-    "BAZ - Frozen Frenzy": 99999,
-    "BAZ - Hot Stuff": 99999,
-    "BAZ - Ice Spy": 99999,
-    "BAZ - It's A Hold Up": 99999,
-    "BAZ - Lake Of Fire": 99999,
-    "BAZ - Lava Laughter": 99999,
-    "BAZ - Mine Over Matter": 99999,
-    "BAZ - Molten Meltdown": 99999,
-    "BAZ - Oresome": 99999,
-    "BAZ - Rock Hard": 99999,
-    "BAZ - Recruitment": 99999,
-    "BAZ - Rocky Horror": 99999,
-    "BAZ - Rubble Trouble": 99999,
-    "BAZ - Run The Gauntlet": 99999,
-    "BAZ - Seamless": 99999,
-    "BAZ - Search And Rescue": 99999,
-    "BAZ - Slimey Simple": 99999,
-    "BAZ - Split Down The Middle": 99999,
-    "BAZ - The Hard Rock Life": 99999,
-    "BAZ - The Path To Power": 99999,
-    "BAZ - Water Lot Of Fun": 99999,
-    "BAZ - Water Works": 99999
+    "BAZ - A Breath Of Fresh Air": 1440, # 24:00
+    "BAZ - Air Raiders": 3000, # 50:00
+    "BAZ - Back To Basics": 3600, # 60:00
+    "BAZ - Breathless": 720, # 12:00
+    "BAZ - Cold Comfort": 1800, # 30:00
+    "BAZ - Don't Panic": 2340, # 39:00
+    "BAZ - Down In The Dirt": 2520, # 42:00
+    "BAZ - Driller Night": 660, # 11:00
+    "BAZ - Erode Works": 1740, # 29:00
+    "BAZ - Explosive Action": 960, # 16:00
+    "BAZ - Fire And Water": 2880, # 48:00
+    "BAZ - Frozen Frenzy": 1800, # 30:00
+    "BAZ - Hot Stuff": 2520, # 42:00
+    "BAZ - Ice Spy": 3000, # 50:00
+    "BAZ - It's A Hold Up": 1680, # 28:00
+    "BAZ - Lake Of Fire": 1500, # 25:00
+    "BAZ - Lava Laughter": 1440, # 24:00
+    "BAZ - Mine Over Matter": 960, # 16:00
+    "BAZ - Molten Meltdown": 1260, # 21:00
+    "BAZ - Oresome": 6000, # 100:00
+    "BAZ - Recruitment": 1440, # 24:00
+    "BAZ - Rock Hard": 2700, # 45:00
+    "BAZ - Rocky Horror": 5400, # 90:00
+    "BAZ - Rubble Trouble": 720, # 12:00
+    "BAZ - Run The Gauntlet": 2280, # 38:00
+    "BAZ - Seamless": 1500, # 25:00
+    "BAZ - Search And Rescue": 2280, # 38:00
+    "BAZ - Slimey Simple": 1020, # 17:00
+    "BAZ - Split Down The Middle": 780, # 13:00
+    "BAZ - The Hard Rock Life": 1440, # 24:00
+    "BAZ - The Path To Power": 720, # 12:00
+    "BAZ - Water Lot Of Fun": 4800, # 80:00
+    "BAZ - Water Works": 2400 # 40:00
 }
 
 TARGET_TOTAL_CLEAR_TIME_LRR_ROCK_HARD = 0
@@ -1166,39 +1304,39 @@ TARGET_CRYSTAL_COUNT = {
     "LRRC - Water Lot Of Fun": 62,
     "LRRC - Water Works": 104,
     
-    "BAZ - A Breath Of Fresh Air": 99999,
-    "BAZ - Air Raiders": 99999,
-    "BAZ - Back To Basics": 99999,
-    "BAZ - Breathless": 99999,
-    "BAZ - Cold Comfort": 99999,
-    "BAZ - Don't Panic": 99999,
-    "BAZ - Down In The Dirt": 99999,
-    "BAZ - Driller Night": 99999,
-    "BAZ - Erode Works": 99999,
-    "BAZ - Explosive Action": 99999,
-    "BAZ - Fire And Water": 99999,
-    "BAZ - Frozen Frenzy": 99999,
-    "BAZ - Hot Stuff": 99999,
-    "BAZ - Ice Spy": 99999,
-    "BAZ - It's A Hold Up": 99999,
-    "BAZ - Lake Of Fire": 99999,
-    "BAZ - Lava Laughter": 99999,
-    "BAZ - Mine Over Matter": 99999,
-    "BAZ - Molten Meltdown": 99999,
-    "BAZ - Oresome": 99999,
-    "BAZ - Rock Hard": 99999,
-    "BAZ - Recruitment": 99999,
-    "BAZ - Rocky Horror": 99999,
-    "BAZ - Rubble Trouble": 99999,
-    "BAZ - Run The Gauntlet": 99999,
-    "BAZ - Seamless": 99999,
-    "BAZ - Search And Rescue": 99999,
-    "BAZ - Slimey Simple": 99999,
-    "BAZ - Split Down The Middle": 99999,
-    "BAZ - The Hard Rock Life": 99999,
-    "BAZ - The Path To Power": 99999,
-    "BAZ - Water Lot Of Fun": 99999,
-    "BAZ - Water Works": 99999
+    "BAZ - A Breath Of Fresh Air": 66,
+    "BAZ - Air Raiders": 158,
+    "BAZ - Back To Basics": 340,
+    "BAZ - Breathless": 219,
+    "BAZ - Cold Comfort": 117,
+    "BAZ - Don't Panic": 155,
+    "BAZ - Down In The Dirt": 98,
+    "BAZ - Driller Night": 59,
+    "BAZ - Erode Works": 154,
+    "BAZ - Explosive Action": 163,
+    "BAZ - Fire And Water": 218,
+    "BAZ - Frozen Frenzy": 306,
+    "BAZ - Hot Stuff": 241,
+    "BAZ - Ice Spy": 206,
+    "BAZ - It's A Hold Up": 85,
+    "BAZ - Lake Of Fire": 230,
+    "BAZ - Lava Laughter": 106,
+    "BAZ - Mine Over Matter": 65,
+    "BAZ - Molten Meltdown": 111,
+    "BAZ - Oresome": 229,
+    "BAZ - Recruitment": 61,
+    "BAZ - Rock Hard": 139,
+    "BAZ - Rocky Horror": 408,
+    "BAZ - Rubble Trouble": 74,
+    "BAZ - Run The Gauntlet": 235,
+    "BAZ - Seamless": 92,
+    "BAZ - Search And Rescue": 320,
+    "BAZ - Slimey Simple": 106,
+    "BAZ - Split Down The Middle": 127,
+    "BAZ - The Hard Rock Life": 95,
+    "BAZ - The Path To Power": 62,
+    "BAZ - Water Lot Of Fun": 209,
+    "BAZ - Water Works": 224
 }
 
 def get_location_names_with_ids(location_names: list[str]) -> dict[str, int | None]:
@@ -1287,39 +1425,39 @@ def create_all_locations(world: ManicMinersWorld) -> None:
     region_lrrc_waterlotoffun = world.get_region("LRRC - Water Lot Of Fun")
     region_lrrc_waterworks = world.get_region("LRRC - Water Works")
 
-    # region_baz_abreathoffreshair = world.get_region("BAZ - A Breath Of Fresh Air")
-    # region_baz_airraiders = world.get_region("BAZ - Air Raiders")
-    # region_baz_backtobasics = world.get_region("BAZ - Back To Basics")
-    # region_baz_breathless = world.get_region("BAZ - Breathless")
-    # region_baz_coldcomfort = world.get_region("BAZ - Cold Comfort")
-    # region_baz_dontpanic = world.get_region("BAZ - Don't Panic")
-    # region_baz_downinthedirt = world.get_region("BAZ - Down In The Dirt")
-    # region_baz_drillernight = world.get_region("BAZ - Driller Night")
-    # region_baz_erodeworks = world.get_region("BAZ - Erode Works")
-    # region_baz_explosiveaction = world.get_region("BAZ - Explosive Action")
-    # region_baz_fireandwater = world.get_region("BAZ - Fire And Water")
-    # region_baz_frozenfrenzy = world.get_region("BAZ - Frozen Frenzy")
-    # region_baz_hotstuff = world.get_region("BAZ - Hot Stuff")
-    # region_baz_icespy = world.get_region("BAZ - Ice Spy")
-    # region_baz_itsaholdup = world.get_region("BAZ - It's A Hold Up")
-    # region_baz_lakeoffire = world.get_region("BAZ - Lake Of Fire")
-    # region_baz_lavalaughter = world.get_region("BAZ - Lava Laughter")
-    # region_baz_mineovermatter = world.get_region("BAZ - Mine Over Matter")
-    # region_baz_moltenmeltdown = world.get_region("BAZ - Molten Meltdown")
-    # region_baz_oresome = world.get_region("BAZ - Oresome")
-    # region_baz_recruitment = world.get_region("BAZ - Recruitment")
-    # region_baz_rockhard = world.get_region("BAZ - Rock Hard")
-    # region_baz_rockyhorror = world.get_region("BAZ - Rocky Horror")
-    # region_baz_rubbletrouble = world.get_region("BAZ - Rubble Trouble")
-    # region_baz_runthegauntlet = world.get_region("BAZ - Run The Gauntlet")
-    # region_baz_seamless = world.get_region("BAZ - Seamless")
-    # region_baz_searchandrescue = world.get_region("BAZ - Search And Rescue")
-    # region_baz_slimeysimple = world.get_region("BAZ - Slimey Simple")
-    # region_baz_splitdownthemiddle = world.get_region("BAZ - Split Down The Middle")
-    # region_baz_thehardrocklife = world.get_region("BAZ - The Hard Rock Life")
-    # region_baz_thepathtopower = world.get_region("BAZ - The Path To Power")
-    # region_baz_waterlotoffun = world.get_region("BAZ - Water Lot Of Fun")
-    # region_baz_waterworks = world.get_region("BAZ - Water Works")
+    region_baz_abreathoffreshair = world.get_region("BAZ - A Breath Of Fresh Air")
+    region_baz_airraiders = world.get_region("BAZ - Air Raiders")
+    region_baz_backtobasics = world.get_region("BAZ - Back To Basics")
+    region_baz_breathless = world.get_region("BAZ - Breathless")
+    region_baz_coldcomfort = world.get_region("BAZ - Cold Comfort")
+    region_baz_dontpanic = world.get_region("BAZ - Don't Panic")
+    region_baz_downinthedirt = world.get_region("BAZ - Down In The Dirt")
+    region_baz_drillernight = world.get_region("BAZ - Driller Night")
+    region_baz_erodeworks = world.get_region("BAZ - Erode Works")
+    region_baz_explosiveaction = world.get_region("BAZ - Explosive Action")
+    region_baz_fireandwater = world.get_region("BAZ - Fire And Water")
+    region_baz_frozenfrenzy = world.get_region("BAZ - Frozen Frenzy")
+    region_baz_hotstuff = world.get_region("BAZ - Hot Stuff")
+    region_baz_icespy = world.get_region("BAZ - Ice Spy")
+    region_baz_itsaholdup = world.get_region("BAZ - It's A Hold Up")
+    region_baz_lakeoffire = world.get_region("BAZ - Lake Of Fire")
+    region_baz_lavalaughter = world.get_region("BAZ - Lava Laughter")
+    region_baz_mineovermatter = world.get_region("BAZ - Mine Over Matter")
+    region_baz_moltenmeltdown = world.get_region("BAZ - Molten Meltdown")
+    region_baz_oresome = world.get_region("BAZ - Oresome")
+    region_baz_recruitment = world.get_region("BAZ - Recruitment")
+    region_baz_rockhard = world.get_region("BAZ - Rock Hard")
+    region_baz_rockyhorror = world.get_region("BAZ - Rocky Horror")
+    region_baz_rubbletrouble = world.get_region("BAZ - Rubble Trouble")
+    region_baz_runthegauntlet = world.get_region("BAZ - Run The Gauntlet")
+    region_baz_seamless = world.get_region("BAZ - Seamless")
+    region_baz_searchandrescue = world.get_region("BAZ - Search And Rescue")
+    region_baz_slimeysimple = world.get_region("BAZ - Slimey Simple")
+    region_baz_splitdownthemiddle = world.get_region("BAZ - Split Down The Middle")
+    region_baz_thehardrocklife = world.get_region("BAZ - The Hard Rock Life")
+    region_baz_thepathtopower = world.get_region("BAZ - The Path To Power")
+    region_baz_waterlotoffun = world.get_region("BAZ - Water Lot Of Fun")
+    region_baz_waterworks = world.get_region("BAZ - Water Works")
     
     if world.options.level_selection_lrr_abreathoffreshair:
         locations_lrr_abreathoffreshair = get_location_names_with_ids(["Clear: LRR - A Breath Of Fresh Air"])
@@ -3310,6 +3448,869 @@ def create_all_locations(world: ManicMinersWorld) -> None:
                 locations_lrrc_waterworks = world.get_location("Research Coordinates: LRRC - Water Works")
                 locations_lrrc_waterworks.place_locked_item(world.create_item("Transporter Coordinates"))
 
+    if world.options.level_selection_baz_abreathoffreshair:
+        locations_baz_abreathoffreshair = get_location_names_with_ids(["Clear: BAZ - A Breath Of Fresh Air"])
+        region_baz_abreathoffreshair.add_locations(locations_baz_abreathoffreshair, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_abreathoffreshair_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - A Breath Of Fresh Air"])
+            region_baz_abreathoffreshair.add_locations(locations_baz_abreathoffreshair_bonus1, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_abreathoffreshair = get_location_names_with_ids(["Beat Par Time: BAZ - A Breath Of Fresh Air"])
+            region_baz_abreathoffreshair.add_locations(locations_baz_abreathoffreshair, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_abreathoffreshair = get_location_names_with_ids(["Crystal Target: BAZ - A Breath Of Fresh Air"])
+            region_baz_abreathoffreshair.add_locations(locations_baz_abreathoffreshair, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_abreathoffreshair.add_event("Level Completable: BAZ - A Breath Of Fresh Air", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_abreathoffreshair.add_event("Par Time Beatable: BAZ - A Breath Of Fresh Air", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_abreathoffreshair.add_event("Crystal Target Beatable: BAZ - A Breath Of Fresh Air", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_abreathoffreshair = get_location_names_with_ids(["Research Coordinates: BAZ - A Breath Of Fresh Air"])
+            region_baz_abreathoffreshair.add_locations(locations_baz_abreathoffreshair, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_abreathoffreshair = world.get_location("Research Coordinates: BAZ - A Breath Of Fresh Air")
+                locations_baz_abreathoffreshair.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_airraiders:
+        locations_baz_airraiders = get_location_names_with_ids(["Clear: BAZ - Air Raiders"])
+        region_baz_airraiders.add_locations(locations_baz_airraiders, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_airraiders_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Air Raiders"])
+            region_baz_airraiders.add_locations(locations_baz_airraiders_bonus1, ManicMinersLocation)
+            locations_baz_airraiders_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Air Raiders"])
+            region_baz_airraiders.add_locations(locations_baz_airraiders_bonus2, ManicMinersLocation)
+            locations_baz_airraiders_bonus3 = get_location_names_with_ids(["Bonus Clear 3: BAZ - Air Raiders"])
+            region_baz_airraiders.add_locations(locations_baz_airraiders_bonus3, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_airraiders = get_location_names_with_ids(["Beat Par Time: BAZ - Air Raiders"])
+            region_baz_airraiders.add_locations(locations_baz_airraiders, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_airraiders = get_location_names_with_ids(["Crystal Target: BAZ - Air Raiders"])
+            region_baz_airraiders.add_locations(locations_baz_airraiders, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_airraiders.add_event("Level Completable: BAZ - Air Raiders", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_airraiders.add_event("Par Time Beatable: BAZ - Air Raiders", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_airraiders.add_event("Crystal Target Beatable: BAZ - Air Raiders", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_airraiders = get_location_names_with_ids(["Research Coordinates: BAZ - Air Raiders"])
+            region_baz_airraiders.add_locations(locations_baz_airraiders, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_airraiders = world.get_location("Research Coordinates: BAZ - Air Raiders")
+                locations_baz_airraiders.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_backtobasics:
+        locations_baz_backtobasics = get_location_names_with_ids(["Clear: BAZ - Back To Basics"])
+        region_baz_backtobasics.add_locations(locations_baz_backtobasics, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_backtobasics_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Back To Basics"])
+            region_baz_backtobasics.add_locations(locations_baz_backtobasics_bonus1, ManicMinersLocation)
+            locations_baz_backtobasics_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Back To Basics"])
+            region_baz_backtobasics.add_locations(locations_baz_backtobasics_bonus2, ManicMinersLocation)
+            locations_baz_backtobasics_bonus3 = get_location_names_with_ids(["Bonus Clear 3: BAZ - Back To Basics"])
+            region_baz_backtobasics.add_locations(locations_baz_backtobasics_bonus3, ManicMinersLocation)
+            locations_baz_backtobasics_bonus4 = get_location_names_with_ids(["Bonus Clear 4: BAZ - Back To Basics"])
+            region_baz_backtobasics.add_locations(locations_baz_backtobasics_bonus4, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_backtobasics = get_location_names_with_ids(["Beat Par Time: BAZ - Back To Basics"])
+            region_baz_backtobasics.add_locations(locations_baz_backtobasics, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_backtobasics = get_location_names_with_ids(["Crystal Target: BAZ - Back To Basics"])
+            region_baz_backtobasics.add_locations(locations_baz_backtobasics, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_backtobasics.add_event("Level Completable: BAZ - Back To Basics", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_backtobasics.add_event("Par Time Beatable: BAZ - Back To Basics", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_backtobasics.add_event("Crystal Target Beatable: BAZ - Back To Basics", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_backtobasics = get_location_names_with_ids(["Research Coordinates: BAZ - Back To Basics"])
+            region_baz_backtobasics.add_locations(locations_baz_backtobasics, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_backtobasics = world.get_location("Research Coordinates: BAZ - Back To Basics")
+                locations_baz_backtobasics.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_breathless:
+        locations_baz_breathless = get_location_names_with_ids(["Clear: BAZ - Breathless"])
+        region_baz_breathless.add_locations(locations_baz_breathless, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_breathless_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Breathless"])
+            region_baz_breathless.add_locations(locations_baz_breathless_bonus1, ManicMinersLocation)
+            locations_baz_breathless_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Breathless"])
+            region_baz_breathless.add_locations(locations_baz_breathless_bonus2, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_breathless = get_location_names_with_ids(["Beat Par Time: BAZ - Breathless"])
+            region_baz_breathless.add_locations(locations_baz_breathless, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_breathless = get_location_names_with_ids(["Crystal Target: BAZ - Breathless"])
+            region_baz_breathless.add_locations(locations_baz_breathless, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_breathless.add_event("Level Completable: BAZ - Breathless", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_breathless.add_event("Par Time Beatable: BAZ - Breathless", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_breathless.add_event("Crystal Target Beatable: BAZ - Breathless", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_breathless = get_location_names_with_ids(["Research Coordinates: BAZ - Breathless"])
+            region_baz_breathless.add_locations(locations_baz_breathless, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_breathless = world.get_location("Research Coordinates: BAZ - Breathless")
+                locations_baz_breathless.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_coldcomfort:
+        locations_baz_coldcomfort = get_location_names_with_ids(["Clear: BAZ - Cold Comfort"])
+        region_baz_coldcomfort.add_locations(locations_baz_coldcomfort, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_coldcomfort_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Cold Comfort"])
+            region_baz_coldcomfort.add_locations(locations_baz_coldcomfort_bonus1, ManicMinersLocation)
+            locations_baz_coldcomfort_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Cold Comfort"])
+            region_baz_coldcomfort.add_locations(locations_baz_coldcomfort_bonus2, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_coldcomfort = get_location_names_with_ids(["Beat Par Time: BAZ - Cold Comfort"])
+            region_baz_coldcomfort.add_locations(locations_baz_coldcomfort, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_coldcomfort = get_location_names_with_ids(["Crystal Target: BAZ - Cold Comfort"])
+            region_baz_coldcomfort.add_locations(locations_baz_coldcomfort, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_coldcomfort.add_event("Level Completable: BAZ - Cold Comfort", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_coldcomfort.add_event("Par Time Beatable: BAZ - Cold Comfort", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_coldcomfort.add_event("Crystal Target Beatable: BAZ - Cold Comfort", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_coldcomfort = get_location_names_with_ids(["Research Coordinates: BAZ - Cold Comfort"])
+            region_baz_coldcomfort.add_locations(locations_baz_coldcomfort, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_coldcomfort = world.get_location("Research Coordinates: BAZ - Cold Comfort")
+                locations_baz_coldcomfort.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_dontpanic:
+        locations_baz_dontpanic = get_location_names_with_ids(["Clear: BAZ - Don't Panic"])
+        region_baz_dontpanic.add_locations(locations_baz_dontpanic, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_dontpanic_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Don't Panic"])
+            region_baz_dontpanic.add_locations(locations_baz_dontpanic_bonus1, ManicMinersLocation)
+            locations_baz_dontpanic_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Don't Panic"])
+            region_baz_dontpanic.add_locations(locations_baz_dontpanic_bonus2, ManicMinersLocation)
+            locations_baz_dontpanic_bonus3 = get_location_names_with_ids(["Bonus Clear 3: BAZ - Don't Panic"])
+            region_baz_dontpanic.add_locations(locations_baz_dontpanic_bonus3, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_dontpanic = get_location_names_with_ids(["Beat Par Time: BAZ - Don't Panic"])
+            region_baz_dontpanic.add_locations(locations_baz_dontpanic, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_dontpanic = get_location_names_with_ids(["Crystal Target: BAZ - Don't Panic"])
+            region_baz_dontpanic.add_locations(locations_baz_dontpanic, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_dontpanic.add_event("Level Completable: BAZ - Don't Panic", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_dontpanic.add_event("Par Time Beatable: BAZ - Don't Panic", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_dontpanic.add_event("Crystal Target Beatable: BAZ - Don't Panic", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_dontpanic = get_location_names_with_ids(["Research Coordinates: BAZ - Don't Panic"])
+            region_baz_dontpanic.add_locations(locations_baz_dontpanic, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_dontpanic = world.get_location("Research Coordinates: BAZ - Don't Panic")
+                locations_baz_dontpanic.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_downinthedirt:
+        locations_baz_downinthedirt = get_location_names_with_ids(["Clear: BAZ - Down In The Dirt"])
+        region_baz_downinthedirt.add_locations(locations_baz_downinthedirt, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_downinthedirt_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Down In The Dirt"])
+            region_baz_downinthedirt.add_locations(locations_baz_downinthedirt_bonus1, ManicMinersLocation)
+            locations_baz_downinthedirt_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Down In The Dirt"])
+            region_baz_downinthedirt.add_locations(locations_baz_downinthedirt_bonus2, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_downinthedirt = get_location_names_with_ids(["Beat Par Time: BAZ - Down In The Dirt"])
+            region_baz_downinthedirt.add_locations(locations_baz_downinthedirt, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_downinthedirt = get_location_names_with_ids(["Crystal Target: BAZ - Down In The Dirt"])
+            region_baz_downinthedirt.add_locations(locations_baz_downinthedirt, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_downinthedirt.add_event("Level Completable: BAZ - Down In The Dirt", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_downinthedirt.add_event("Par Time Beatable: BAZ - Down In The Dirt", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_downinthedirt.add_event("Crystal Target Beatable: BAZ - Down In The Dirt", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_downinthedirt = get_location_names_with_ids(["Research Coordinates: BAZ - Down In The Dirt"])
+            region_baz_downinthedirt.add_locations(locations_baz_downinthedirt, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_downinthedirt = world.get_location("Research Coordinates: BAZ - Down In The Dirt")
+                locations_baz_downinthedirt.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_drillernight:
+        locations_baz_drillernight = get_location_names_with_ids(["Clear: BAZ - Driller Night"])
+        region_baz_drillernight.add_locations(locations_baz_drillernight, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_drillernight_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Driller Night"])
+            region_baz_drillernight.add_locations(locations_baz_drillernight_bonus1, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_drillernight = get_location_names_with_ids(["Beat Par Time: BAZ - Driller Night"])
+            region_baz_drillernight.add_locations(locations_baz_drillernight, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_drillernight = get_location_names_with_ids(["Crystal Target: BAZ - Driller Night"])
+            region_baz_drillernight.add_locations(locations_baz_drillernight, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_drillernight.add_event("Level Completable: BAZ - Driller Night", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_drillernight.add_event("Par Time Beatable: BAZ - Driller Night", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_drillernight.add_event("Crystal Target Beatable: BAZ - Driller Night", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_drillernight = get_location_names_with_ids(["Research Coordinates: BAZ - Driller Night"])
+            region_baz_drillernight.add_locations(locations_baz_drillernight, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_drillernight = world.get_location("Research Coordinates: BAZ - Driller Night")
+                locations_baz_drillernight.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_erodeworks:
+        locations_baz_erodeworks = get_location_names_with_ids(["Clear: BAZ - Erode Works"])
+        region_baz_erodeworks.add_locations(locations_baz_erodeworks, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_erodeworks_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Erode Works"])
+            region_baz_erodeworks.add_locations(locations_baz_erodeworks_bonus1, ManicMinersLocation)
+            locations_baz_erodeworks_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Erode Works"])
+            region_baz_erodeworks.add_locations(locations_baz_erodeworks_bonus2, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_erodeworks = get_location_names_with_ids(["Beat Par Time: BAZ - Erode Works"])
+            region_baz_erodeworks.add_locations(locations_baz_erodeworks, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_erodeworks = get_location_names_with_ids(["Crystal Target: BAZ - Erode Works"])
+            region_baz_erodeworks.add_locations(locations_baz_erodeworks, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_erodeworks.add_event("Level Completable: BAZ - Erode Works", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_erodeworks.add_event("Par Time Beatable: BAZ - Erode Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_erodeworks.add_event("Crystal Target Beatable: BAZ - Erode Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_erodeworks = get_location_names_with_ids(["Research Coordinates: BAZ - Erode Works"])
+            region_baz_erodeworks.add_locations(locations_baz_erodeworks, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_erodeworks = world.get_location("Research Coordinates: BAZ - Erode Works")
+                locations_baz_erodeworks.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_explosiveaction:
+        locations_baz_explosiveaction = get_location_names_with_ids(["Clear: BAZ - Explosive Action"])
+        region_baz_explosiveaction.add_locations(locations_baz_explosiveaction, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_explosiveaction_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Explosive Action"])
+            region_baz_explosiveaction.add_locations(locations_baz_explosiveaction_bonus1, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_explosiveaction = get_location_names_with_ids(["Beat Par Time: BAZ - Explosive Action"])
+            region_baz_explosiveaction.add_locations(locations_baz_explosiveaction, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_explosiveaction = get_location_names_with_ids(["Crystal Target: BAZ - Explosive Action"])
+            region_baz_explosiveaction.add_locations(locations_baz_explosiveaction, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_explosiveaction.add_event("Level Completable: BAZ - Explosive Action", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_explosiveaction.add_event("Par Time Beatable: BAZ - Explosive Action", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_explosiveaction.add_event("Crystal Target Beatable: BAZ - Explosive Action", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_explosiveaction = get_location_names_with_ids(["Research Coordinates: BAZ - Explosive Action"])
+            region_baz_explosiveaction.add_locations(locations_baz_explosiveaction, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_explosiveaction = world.get_location("Research Coordinates: BAZ - Explosive Action")
+                locations_baz_explosiveaction.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_fireandwater:
+        locations_baz_fireandwater = get_location_names_with_ids(["Clear: BAZ - Fire And Water"])
+        region_baz_fireandwater.add_locations(locations_baz_fireandwater, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_fireandwater_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Fire And Water"])
+            region_baz_fireandwater.add_locations(locations_baz_fireandwater_bonus1, ManicMinersLocation)
+            locations_baz_fireandwater_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Fire And Water"])
+            region_baz_fireandwater.add_locations(locations_baz_fireandwater_bonus2, ManicMinersLocation)
+            locations_baz_fireandwater_bonus3 = get_location_names_with_ids(["Bonus Clear 3: BAZ - Fire And Water"])
+            region_baz_fireandwater.add_locations(locations_baz_fireandwater_bonus3, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_fireandwater = get_location_names_with_ids(["Beat Par Time: BAZ - Fire And Water"])
+            region_baz_fireandwater.add_locations(locations_baz_fireandwater, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_fireandwater = get_location_names_with_ids(["Crystal Target: BAZ - Fire And Water"])
+            region_baz_fireandwater.add_locations(locations_baz_fireandwater, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_fireandwater.add_event("Level Completable: BAZ - Fire And Water", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_fireandwater.add_event("Par Time Beatable: BAZ - Fire And Water", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_fireandwater.add_event("Crystal Target Beatable: BAZ - Fire And Water", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_fireandwater = get_location_names_with_ids(["Research Coordinates: BAZ - Fire And Water"])
+            region_baz_fireandwater.add_locations(locations_baz_fireandwater, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_fireandwater = world.get_location("Research Coordinates: BAZ - Fire And Water")
+                locations_baz_fireandwater.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_frozenfrenzy:
+        locations_baz_frozenfrenzy = get_location_names_with_ids(["Clear: BAZ - Frozen Frenzy"])
+        region_baz_frozenfrenzy.add_locations(locations_baz_frozenfrenzy, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_frozenfrenzy_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Frozen Frenzy"])
+            region_baz_frozenfrenzy.add_locations(locations_baz_frozenfrenzy_bonus1, ManicMinersLocation)
+            locations_baz_frozenfrenzy_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Frozen Frenzy"])
+            region_baz_frozenfrenzy.add_locations(locations_baz_frozenfrenzy_bonus2, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_frozenfrenzy = get_location_names_with_ids(["Beat Par Time: BAZ - Frozen Frenzy"])
+            region_baz_frozenfrenzy.add_locations(locations_baz_frozenfrenzy, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_frozenfrenzy = get_location_names_with_ids(["Crystal Target: BAZ - Frozen Frenzy"])
+            region_baz_frozenfrenzy.add_locations(locations_baz_frozenfrenzy, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_frozenfrenzy.add_event("Level Completable: BAZ - Frozen Frenzy", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_frozenfrenzy.add_event("Par Time Beatable: BAZ - Frozen Frenzy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_frozenfrenzy.add_event("Crystal Target Beatable: BAZ - Frozen Frenzy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_frozenfrenzy = get_location_names_with_ids(["Research Coordinates: BAZ - Frozen Frenzy"])
+            region_baz_frozenfrenzy.add_locations(locations_baz_frozenfrenzy, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_frozenfrenzy = world.get_location("Research Coordinates: BAZ - Frozen Frenzy")
+                locations_baz_frozenfrenzy.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_hotstuff:
+        locations_baz_hotstuff = get_location_names_with_ids(["Clear: BAZ - Hot Stuff"])
+        region_baz_hotstuff.add_locations(locations_baz_hotstuff, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_hotstuff_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Hot Stuff"])
+            region_baz_hotstuff.add_locations(locations_baz_hotstuff_bonus1, ManicMinersLocation)
+            locations_baz_hotstuff_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Hot Stuff"])
+            region_baz_hotstuff.add_locations(locations_baz_hotstuff_bonus2, ManicMinersLocation)
+            locations_baz_hotstuff_bonus3 = get_location_names_with_ids(["Bonus Clear 3: BAZ - Hot Stuff"])
+            region_baz_hotstuff.add_locations(locations_baz_hotstuff_bonus3, ManicMinersLocation)
+            locations_baz_hotstuff_bonus4 = get_location_names_with_ids(["Bonus Clear 4: BAZ - Hot Stuff"])
+            region_baz_hotstuff.add_locations(locations_baz_hotstuff_bonus4, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_hotstuff = get_location_names_with_ids(["Beat Par Time: BAZ - Hot Stuff"])
+            region_baz_hotstuff.add_locations(locations_baz_hotstuff, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_hotstuff = get_location_names_with_ids(["Crystal Target: BAZ - Hot Stuff"])
+            region_baz_hotstuff.add_locations(locations_baz_hotstuff, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_hotstuff.add_event("Level Completable: BAZ - Hot Stuff", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_hotstuff.add_event("Par Time Beatable: BAZ - Hot Stuff", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_hotstuff.add_event("Crystal Target Beatable: BAZ - Hot Stuff", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_hotstuff = get_location_names_with_ids(["Research Coordinates: BAZ - Hot Stuff"])
+            region_baz_hotstuff.add_locations(locations_baz_hotstuff, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_hotstuff = world.get_location("Research Coordinates: BAZ - Hot Stuff")
+                locations_baz_hotstuff.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_icespy:
+        locations_baz_icespy = get_location_names_with_ids(["Clear: BAZ - Ice Spy"])
+        region_baz_icespy.add_locations(locations_baz_icespy, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_icespy_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Ice Spy"])
+            region_baz_icespy.add_locations(locations_baz_icespy_bonus1, ManicMinersLocation)
+            locations_baz_icespy_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Ice Spy"])
+            region_baz_icespy.add_locations(locations_baz_icespy_bonus2, ManicMinersLocation)
+            locations_baz_icespy_bonus3 = get_location_names_with_ids(["Bonus Clear 3: BAZ - Ice Spy"])
+            region_baz_icespy.add_locations(locations_baz_icespy_bonus3, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_icespy = get_location_names_with_ids(["Beat Par Time: BAZ - Ice Spy"])
+            region_baz_icespy.add_locations(locations_baz_icespy, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_icespy = get_location_names_with_ids(["Crystal Target: BAZ - Ice Spy"])
+            region_baz_icespy.add_locations(locations_baz_icespy, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_icespy.add_event("Level Completable: BAZ - Ice Spy", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_icespy.add_event("Par Time Beatable: BAZ - Ice Spy", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_icespy.add_event("Crystal Target Beatable: BAZ - Ice Spy", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_icespy = get_location_names_with_ids(["Research Coordinates: BAZ - Ice Spy"])
+            region_baz_icespy.add_locations(locations_baz_icespy, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_icespy = world.get_location("Research Coordinates: BAZ - Ice Spy")
+                locations_baz_icespy.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_itsaholdup:
+        locations_baz_itsaholdup = get_location_names_with_ids(["Clear: BAZ - It's A Hold Up"])
+        region_baz_itsaholdup.add_locations(locations_baz_itsaholdup, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_itsaholdup_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - It's A Hold Up"])
+            region_baz_itsaholdup.add_locations(locations_baz_itsaholdup_bonus1, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_itsaholdup = get_location_names_with_ids(["Beat Par Time: BAZ - It's A Hold Up"])
+            region_baz_itsaholdup.add_locations(locations_baz_itsaholdup, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_itsaholdup = get_location_names_with_ids(["Crystal Target: BAZ - It's A Hold Up"])
+            region_baz_itsaholdup.add_locations(locations_baz_itsaholdup, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_itsaholdup.add_event("Level Completable: BAZ - It's A Hold Up", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_itsaholdup.add_event("Par Time Beatable: BAZ - It's A Hold Up", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_itsaholdup.add_event("Crystal Target Beatable: BAZ - It's A Hold Up", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_itsaholdup = get_location_names_with_ids(["Research Coordinates: BAZ - It's A Hold Up"])
+            region_baz_itsaholdup.add_locations(locations_baz_itsaholdup, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_itsaholdup = world.get_location("Research Coordinates: BAZ - It's A Hold Up")
+                locations_baz_itsaholdup.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_lakeoffire:
+        locations_baz_lakeoffire = get_location_names_with_ids(["Clear: BAZ - Lake Of Fire"])
+        region_baz_lakeoffire.add_locations(locations_baz_lakeoffire, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_lakeoffire_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Lake Of Fire"])
+            region_baz_lakeoffire.add_locations(locations_baz_lakeoffire_bonus1, ManicMinersLocation)
+            locations_baz_lakeoffire_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Lake Of Fire"])
+            region_baz_lakeoffire.add_locations(locations_baz_lakeoffire_bonus2, ManicMinersLocation)
+            locations_baz_lakeoffire_bonus3 = get_location_names_with_ids(["Bonus Clear 3: BAZ - Lake Of Fire"])
+            region_baz_lakeoffire.add_locations(locations_baz_lakeoffire_bonus3, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_lakeoffire = get_location_names_with_ids(["Beat Par Time: BAZ - Lake Of Fire"])
+            region_baz_lakeoffire.add_locations(locations_baz_lakeoffire, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_lakeoffire = get_location_names_with_ids(["Crystal Target: BAZ - Lake Of Fire"])
+            region_baz_lakeoffire.add_locations(locations_baz_lakeoffire, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_lakeoffire.add_event("Level Completable: BAZ - Lake Of Fire", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_lakeoffire.add_event("Par Time Beatable: BAZ - Lake Of Fire", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_lakeoffire.add_event("Crystal Target Beatable: BAZ - Lake Of Fire", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_lakeoffire = get_location_names_with_ids(["Research Coordinates: BAZ - Lake Of Fire"])
+            region_baz_lakeoffire.add_locations(locations_baz_lakeoffire, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_lakeoffire = world.get_location("Research Coordinates: BAZ - Lake Of Fire")
+                locations_baz_lakeoffire.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_lavalaughter:
+        locations_baz_lavalaughter = get_location_names_with_ids(["Clear: BAZ - Lava Laughter"])
+        region_baz_lavalaughter.add_locations(locations_baz_lavalaughter, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_lavalaughter_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Lava Laughter"])
+            region_baz_lavalaughter.add_locations(locations_baz_lavalaughter_bonus1, ManicMinersLocation)
+            locations_baz_lavalaughter_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Lava Laughter"])
+            region_baz_lavalaughter.add_locations(locations_baz_lavalaughter_bonus2, ManicMinersLocation)
+            locations_baz_lavalaughter_bonus3 = get_location_names_with_ids(["Bonus Clear 3: BAZ - Lava Laughter"])
+            region_baz_lavalaughter.add_locations(locations_baz_lavalaughter_bonus3, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_lavalaughter = get_location_names_with_ids(["Beat Par Time: BAZ - Lava Laughter"])
+            region_baz_lavalaughter.add_locations(locations_baz_lavalaughter, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_lavalaughter = get_location_names_with_ids(["Crystal Target: BAZ - Lava Laughter"])
+            region_baz_lavalaughter.add_locations(locations_baz_lavalaughter, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_lavalaughter.add_event("Level Completable: BAZ - Lava Laughter", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_lavalaughter.add_event("Par Time Beatable: BAZ - Lava Laughter", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_lavalaughter.add_event("Crystal Target Beatable: BAZ - Lava Laughter", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_lavalaughter = get_location_names_with_ids(["Research Coordinates: BAZ - Lava Laughter"])
+            region_baz_lavalaughter.add_locations(locations_baz_lavalaughter, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_lavalaughter = world.get_location("Research Coordinates: BAZ - Lava Laughter")
+                locations_baz_lavalaughter.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_mineovermatter:
+        locations_baz_mineovermatter = get_location_names_with_ids(["Clear: BAZ - Mine Over Matter"])
+        region_baz_mineovermatter.add_locations(locations_baz_mineovermatter, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_mineovermatter_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Mine Over Matter"])
+            region_baz_mineovermatter.add_locations(locations_baz_mineovermatter_bonus1, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_mineovermatter = get_location_names_with_ids(["Beat Par Time: BAZ - Mine Over Matter"])
+            region_baz_mineovermatter.add_locations(locations_baz_mineovermatter, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_mineovermatter = get_location_names_with_ids(["Crystal Target: BAZ - Mine Over Matter"])
+            region_baz_mineovermatter.add_locations(locations_baz_mineovermatter, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_mineovermatter.add_event("Level Completable: BAZ - Mine Over Matter", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_mineovermatter.add_event("Par Time Beatable: BAZ - Mine Over Matter", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_mineovermatter.add_event("Crystal Target Beatable: BAZ - Mine Over Matter", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_mineovermatter = get_location_names_with_ids(["Research Coordinates: BAZ - Mine Over Matter"])
+            region_baz_mineovermatter.add_locations(locations_baz_mineovermatter, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_mineovermatter = world.get_location("Research Coordinates: BAZ - Mine Over Matter")
+                locations_baz_mineovermatter.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_moltenmeltdown:
+        locations_baz_moltenmeltdown = get_location_names_with_ids(["Clear: BAZ - Molten Meltdown"])
+        region_baz_moltenmeltdown.add_locations(locations_baz_moltenmeltdown, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_moltenmeltdown_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Molten Meltdown"])
+            region_baz_moltenmeltdown.add_locations(locations_baz_moltenmeltdown_bonus1, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_moltenmeltdown = get_location_names_with_ids(["Beat Par Time: BAZ - Molten Meltdown"])
+            region_baz_moltenmeltdown.add_locations(locations_baz_moltenmeltdown, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_moltenmeltdown = get_location_names_with_ids(["Crystal Target: BAZ - Molten Meltdown"])
+            region_baz_moltenmeltdown.add_locations(locations_baz_moltenmeltdown, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_moltenmeltdown.add_event("Level Completable: BAZ - Molten Meltdown", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_moltenmeltdown.add_event("Par Time Beatable: BAZ - Molten Meltdown", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_moltenmeltdown.add_event("Crystal Target Beatable: BAZ - Molten Meltdown", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_moltenmeltdown = get_location_names_with_ids(["Research Coordinates: BAZ - Molten Meltdown"])
+            region_baz_moltenmeltdown.add_locations(locations_baz_moltenmeltdown, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_moltenmeltdown = world.get_location("Research Coordinates: BAZ - Molten Meltdown")
+                locations_baz_moltenmeltdown.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_oresome:
+        locations_baz_oresome = get_location_names_with_ids(["Clear: BAZ - Oresome"])
+        region_baz_oresome.add_locations(locations_baz_oresome, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_oresome_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Oresome"])
+            region_baz_oresome.add_locations(locations_baz_oresome_bonus1, ManicMinersLocation)
+            locations_baz_oresome_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Oresome"])
+            region_baz_oresome.add_locations(locations_baz_oresome_bonus2, ManicMinersLocation)
+            locations_baz_oresome_bonus3 = get_location_names_with_ids(["Bonus Clear 3: BAZ - Oresome"])
+            region_baz_oresome.add_locations(locations_baz_oresome_bonus3, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_oresome = get_location_names_with_ids(["Beat Par Time: BAZ - Oresome"])
+            region_baz_oresome.add_locations(locations_baz_oresome, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_oresome = get_location_names_with_ids(["Crystal Target: BAZ - Oresome"])
+            region_baz_oresome.add_locations(locations_baz_oresome, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_oresome.add_event("Level Completable: BAZ - Oresome", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_oresome.add_event("Par Time Beatable: BAZ - Oresome", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_oresome.add_event("Crystal Target Beatable: BAZ - Oresome", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_oresome = get_location_names_with_ids(["Research Coordinates: BAZ - Oresome"])
+            region_baz_oresome.add_locations(locations_baz_oresome, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_oresome = world.get_location("Research Coordinates: BAZ - Oresome")
+                locations_baz_oresome.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_recruitment:
+        locations_baz_recruitment = get_location_names_with_ids(["Clear: BAZ - Recruitment"])
+        region_baz_recruitment.add_locations(locations_baz_recruitment, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_recruitment_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Recruitment"])
+            region_baz_recruitment.add_locations(locations_baz_recruitment_bonus1, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_recruitment = get_location_names_with_ids(["Beat Par Time: BAZ - Recruitment"])
+            region_baz_recruitment.add_locations(locations_baz_recruitment, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_recruitment = get_location_names_with_ids(["Crystal Target: BAZ - Recruitment"])
+            region_baz_recruitment.add_locations(locations_baz_recruitment, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_recruitment.add_event("Level Completable: BAZ - Recruitment", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_recruitment.add_event("Par Time Beatable: BAZ - Recruitment", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_recruitment.add_event("Crystal Target Beatable: BAZ - Recruitment", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_recruitment = get_location_names_with_ids(["Research Coordinates: BAZ - Recruitment"])
+            region_baz_recruitment.add_locations(locations_baz_recruitment, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_recruitment = world.get_location("Research Coordinates: BAZ - Recruitment")
+                locations_baz_recruitment.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_rockhard:
+        locations_baz_rockhard = get_location_names_with_ids(["Clear: BAZ - Rock Hard"])
+        region_baz_rockhard.add_locations(locations_baz_rockhard, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_rockhard_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Rock Hard"])
+            region_baz_rockhard.add_locations(locations_baz_rockhard_bonus1, ManicMinersLocation)
+            locations_baz_rockhard_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Rock Hard"])
+            region_baz_rockhard.add_locations(locations_baz_rockhard_bonus2, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_rockhard = get_location_names_with_ids(["Beat Par Time: BAZ - Rock Hard"])
+            region_baz_rockhard.add_locations(locations_baz_rockhard, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_rockhard = get_location_names_with_ids(["Crystal Target: BAZ - Rock Hard"])
+            region_baz_rockhard.add_locations(locations_baz_rockhard, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_rockhard.add_event("Level Completable: BAZ - Rock Hard", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_rockhard.add_event("Par Time Beatable: BAZ - Rock Hard", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_rockhard.add_event("Crystal Target Beatable: BAZ - Rock Hard", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_rockhard = get_location_names_with_ids(["Research Coordinates: BAZ - Rock Hard"])
+            region_baz_rockhard.add_locations(locations_baz_rockhard, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_rockhard = world.get_location("Research Coordinates: BAZ - Rock Hard")
+                locations_baz_rockhard.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_rockyhorror and world.options.boss_level_baz_rockyhorror == 0:
+        locations_baz_rockyhorror = get_location_names_with_ids(["Clear: BAZ - Rocky Horror"])
+        region_baz_rockyhorror.add_locations(locations_baz_rockyhorror, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_rockyhorror_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Rocky Horror"])
+            region_baz_rockyhorror.add_locations(locations_baz_rockyhorror_bonus1, ManicMinersLocation)
+            locations_baz_rockyhorror_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Rocky Horror"])
+            region_baz_rockyhorror.add_locations(locations_baz_rockyhorror_bonus2, ManicMinersLocation)
+            locations_baz_rockyhorror_bonus3 = get_location_names_with_ids(["Bonus Clear 3: BAZ - Rocky Horror"])
+            region_baz_rockyhorror.add_locations(locations_baz_rockyhorror_bonus3, ManicMinersLocation)
+            locations_baz_rockyhorror_bonus4 = get_location_names_with_ids(["Bonus Clear 4: BAZ - Rocky Horror"])
+            region_baz_rockyhorror.add_locations(locations_baz_rockyhorror_bonus4, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_rockyhorror = get_location_names_with_ids(["Beat Par Time: BAZ - Rocky Horror"])
+            region_baz_rockyhorror.add_locations(locations_baz_rockyhorror, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_rockyhorror = get_location_names_with_ids(["Crystal Target: BAZ - Rocky Horror"])
+            region_baz_rockyhorror.add_locations(locations_baz_rockyhorror, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_rockyhorror.add_event("Level Completable: BAZ - Rocky Horror", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_rockyhorror.add_event("Par Time Beatable: BAZ - Rocky Horror", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_rockyhorror.add_event("Crystal Target Beatable: BAZ - Rocky Horror", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_rockyhorror = get_location_names_with_ids(["Research Coordinates: BAZ - Rocky Horror"])
+            region_baz_rockyhorror.add_locations(locations_baz_rockyhorror, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_rockyhorror = world.get_location("Research Coordinates: BAZ - Rocky Horror")
+                locations_baz_rockyhorror.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_rubbletrouble:
+        locations_baz_rubbletrouble = get_location_names_with_ids(["Clear: BAZ - Rubble Trouble"])
+        region_baz_rubbletrouble.add_locations(locations_baz_rubbletrouble, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_rubbletrouble_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Rubble Trouble"])
+            region_baz_rubbletrouble.add_locations(locations_baz_rubbletrouble_bonus1, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_rubbletrouble = get_location_names_with_ids(["Beat Par Time: BAZ - Rubble Trouble"])
+            region_baz_rubbletrouble.add_locations(locations_baz_rubbletrouble, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_rubbletrouble = get_location_names_with_ids(["Crystal Target: BAZ - Rubble Trouble"])
+            region_baz_rubbletrouble.add_locations(locations_baz_rubbletrouble, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_rubbletrouble.add_event("Level Completable: BAZ - Rubble Trouble", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_rubbletrouble.add_event("Par Time Beatable: BAZ - Rubble Trouble", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_rubbletrouble.add_event("Crystal Target Beatable: BAZ - Rubble Trouble", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_rubbletrouble = get_location_names_with_ids(["Research Coordinates: BAZ - Rubble Trouble"])
+            region_baz_rubbletrouble.add_locations(locations_baz_rubbletrouble, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_rubbletrouble = world.get_location("Research Coordinates: BAZ - Rubble Trouble")
+                locations_baz_rubbletrouble.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_runthegauntlet:
+        locations_baz_runthegauntlet = get_location_names_with_ids(["Clear: BAZ - Run The Gauntlet"])
+        region_baz_runthegauntlet.add_locations(locations_baz_runthegauntlet, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_runthegauntlet_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Run The Gauntlet"])
+            region_baz_runthegauntlet.add_locations(locations_baz_runthegauntlet_bonus1, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_runthegauntlet = get_location_names_with_ids(["Beat Par Time: BAZ - Run The Gauntlet"])
+            region_baz_runthegauntlet.add_locations(locations_baz_runthegauntlet, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_runthegauntlet = get_location_names_with_ids(["Crystal Target: BAZ - Run The Gauntlet"])
+            region_baz_runthegauntlet.add_locations(locations_baz_runthegauntlet, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_runthegauntlet.add_event("Level Completable: BAZ - Run The Gauntlet", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_runthegauntlet.add_event("Par Time Beatable: BAZ - Run The Gauntlet", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_runthegauntlet.add_event("Crystal Target Beatable: BAZ - Run The Gauntlet", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_runthegauntlet = get_location_names_with_ids(["Research Coordinates: BAZ - Run The Gauntlet"])
+            region_baz_runthegauntlet.add_locations(locations_baz_runthegauntlet, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_runthegauntlet = world.get_location("Research Coordinates: BAZ - Run The Gauntlet")
+                locations_baz_runthegauntlet.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_seamless:
+        locations_baz_seamless = get_location_names_with_ids(["Clear: BAZ - Seamless"])
+        region_baz_seamless.add_locations(locations_baz_seamless, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_seamless_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Seamless"])
+            region_baz_seamless.add_locations(locations_baz_seamless_bonus1, ManicMinersLocation)
+            locations_baz_seamless_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Seamless"])
+            region_baz_seamless.add_locations(locations_baz_seamless_bonus2, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_seamless = get_location_names_with_ids(["Beat Par Time: BAZ - Seamless"])
+            region_baz_seamless.add_locations(locations_baz_seamless, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_seamless = get_location_names_with_ids(["Crystal Target: BAZ - Seamless"])
+            region_baz_seamless.add_locations(locations_baz_seamless, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_seamless.add_event("Level Completable: BAZ - Seamless", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_seamless.add_event("Par Time Beatable: BAZ - Seamless", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_seamless.add_event("Crystal Target Beatable: BAZ - Seamless", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_seamless = get_location_names_with_ids(["Research Coordinates: BAZ - Seamless"])
+            region_baz_seamless.add_locations(locations_baz_seamless, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_seamless = world.get_location("Research Coordinates: BAZ - Seamless")
+                locations_baz_seamless.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_searchandrescue:
+        locations_baz_searchandrescue = get_location_names_with_ids(["Clear: BAZ - Search And Rescue"])
+        region_baz_searchandrescue.add_locations(locations_baz_searchandrescue, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_searchandrescue_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Search And Rescue"])
+            region_baz_searchandrescue.add_locations(locations_baz_searchandrescue_bonus1, ManicMinersLocation)
+            locations_baz_searchandrescue_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Search And Rescue"])
+            region_baz_searchandrescue.add_locations(locations_baz_searchandrescue_bonus2, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_searchandrescue = get_location_names_with_ids(["Beat Par Time: BAZ - Search And Rescue"])
+            region_baz_searchandrescue.add_locations(locations_baz_searchandrescue, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_searchandrescue = get_location_names_with_ids(["Crystal Target: BAZ - Search And Rescue"])
+            region_baz_searchandrescue.add_locations(locations_baz_searchandrescue, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_searchandrescue.add_event("Level Completable: BAZ - Search And Rescue", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_searchandrescue.add_event("Par Time Beatable: BAZ - Search And Rescue", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_searchandrescue.add_event("Crystal Target Beatable: BAZ - Search And Rescue", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_searchandrescue = get_location_names_with_ids(["Research Coordinates: BAZ - Search And Rescue"])
+            region_baz_searchandrescue.add_locations(locations_baz_searchandrescue, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_searchandrescue = world.get_location("Research Coordinates: BAZ - Search And Rescue")
+                locations_baz_searchandrescue.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_slimeysimple:
+        locations_baz_slimeysimple = get_location_names_with_ids(["Clear: BAZ - Slimey Simple"])
+        region_baz_slimeysimple.add_locations(locations_baz_slimeysimple, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_slimeysimple_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Slimey Simple"])
+            region_baz_slimeysimple.add_locations(locations_baz_slimeysimple_bonus1, ManicMinersLocation)
+            locations_baz_slimeysimple_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Slimey Simple"])
+            region_baz_slimeysimple.add_locations(locations_baz_slimeysimple_bonus2, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_slimeysimple = get_location_names_with_ids(["Beat Par Time: BAZ - Slimey Simple"])
+            region_baz_slimeysimple.add_locations(locations_baz_slimeysimple, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_slimeysimple = get_location_names_with_ids(["Crystal Target: BAZ - Slimey Simple"])
+            region_baz_slimeysimple.add_locations(locations_baz_slimeysimple, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_slimeysimple.add_event("Level Completable: BAZ - Slimey Simple", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_slimeysimple.add_event("Par Time Beatable: BAZ - Slimey Simple", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_slimeysimple.add_event("Crystal Target Beatable: BAZ - Slimey Simple", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_slimeysimple = get_location_names_with_ids(["Research Coordinates: BAZ - Slimey Simple"])
+            region_baz_slimeysimple.add_locations(locations_baz_slimeysimple, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_slimeysimple = world.get_location("Research Coordinates: BAZ - Slimey Simple")
+                locations_baz_slimeysimple.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_splitdownthemiddle:
+        locations_baz_splitdownthemiddle = get_location_names_with_ids(["Clear: BAZ - Split Down The Middle"])
+        region_baz_splitdownthemiddle.add_locations(locations_baz_splitdownthemiddle, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_splitdownthemiddle_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Split Down The Middle"])
+            region_baz_splitdownthemiddle.add_locations(locations_baz_splitdownthemiddle_bonus1, ManicMinersLocation)
+            locations_baz_splitdownthemiddle_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Split Down The Middle"])
+            region_baz_splitdownthemiddle.add_locations(locations_baz_splitdownthemiddle_bonus2, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_splitdownthemiddle = get_location_names_with_ids(["Beat Par Time: BAZ - Split Down The Middle"])
+            region_baz_splitdownthemiddle.add_locations(locations_baz_splitdownthemiddle, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_splitdownthemiddle = get_location_names_with_ids(["Crystal Target: BAZ - Split Down The Middle"])
+            region_baz_splitdownthemiddle.add_locations(locations_baz_splitdownthemiddle, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_splitdownthemiddle.add_event("Level Completable: BAZ - Split Down The Middle", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_splitdownthemiddle.add_event("Par Time Beatable: BAZ - Split Down The Middle", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_splitdownthemiddle.add_event("Crystal Target Beatable: BAZ - Split Down The Middle", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_splitdownthemiddle = get_location_names_with_ids(["Research Coordinates: BAZ - Split Down The Middle"])
+            region_baz_splitdownthemiddle.add_locations(locations_baz_splitdownthemiddle, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_splitdownthemiddle = world.get_location("Research Coordinates: BAZ - Split Down The Middle")
+                locations_baz_splitdownthemiddle.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_thehardrocklife:
+        locations_baz_thehardrocklife = get_location_names_with_ids(["Clear: BAZ - The Hard Rock Life"])
+        region_baz_thehardrocklife.add_locations(locations_baz_thehardrocklife, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_thehardrocklife_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - The Hard Rock Life"])
+            region_baz_thehardrocklife.add_locations(locations_baz_thehardrocklife_bonus1, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_thehardrocklife = get_location_names_with_ids(["Beat Par Time: BAZ - The Hard Rock Life"])
+            region_baz_thehardrocklife.add_locations(locations_baz_thehardrocklife, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_thehardrocklife = get_location_names_with_ids(["Crystal Target: BAZ - The Hard Rock Life"])
+            region_baz_thehardrocklife.add_locations(locations_baz_thehardrocklife, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_thehardrocklife.add_event("Level Completable: BAZ - The Hard Rock Life", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_thehardrocklife.add_event("Par Time Beatable: BAZ - The Hard Rock Life", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_thehardrocklife.add_event("Crystal Target Beatable: BAZ - The Hard Rock Life", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_thehardrocklife = get_location_names_with_ids(["Research Coordinates: BAZ - The Hard Rock Life"])
+            region_baz_thehardrocklife.add_locations(locations_baz_thehardrocklife, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_thehardrocklife = world.get_location("Research Coordinates: BAZ - The Hard Rock Life")
+                locations_baz_thehardrocklife.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_thepathtopower:
+        locations_baz_thepathtopower = get_location_names_with_ids(["Clear: BAZ - The Path To Power"])
+        region_baz_thepathtopower.add_locations(locations_baz_thepathtopower, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_thepathtopower_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - The Path To Power"])
+            region_baz_thepathtopower.add_locations(locations_baz_thepathtopower_bonus1, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_thepathtopower = get_location_names_with_ids(["Beat Par Time: BAZ - The Path To Power"])
+            region_baz_thepathtopower.add_locations(locations_baz_thepathtopower, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_thepathtopower = get_location_names_with_ids(["Crystal Target: BAZ - The Path To Power"])
+            region_baz_thepathtopower.add_locations(locations_baz_thepathtopower, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_thepathtopower.add_event("Level Completable: BAZ - The Path To Power", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_thepathtopower.add_event("Par Time Beatable: BAZ - The Path To Power", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_thepathtopower.add_event("Crystal Target Beatable: BAZ - The Path To Power", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_thepathtopower = get_location_names_with_ids(["Research Coordinates: BAZ - The Path To Power"])
+            region_baz_thepathtopower.add_locations(locations_baz_thepathtopower, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_thepathtopower = world.get_location("Research Coordinates: BAZ - The Path To Power")
+                locations_baz_thepathtopower.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_waterlotoffun:
+        locations_baz_waterlotoffun = get_location_names_with_ids(["Clear: BAZ - Water Lot Of Fun"])
+        region_baz_waterlotoffun.add_locations(locations_baz_waterlotoffun, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_waterlotoffun_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Water Lot Of Fun"])
+            region_baz_waterlotoffun.add_locations(locations_baz_waterlotoffun_bonus1, ManicMinersLocation)
+            locations_baz_waterlotoffun_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Water Lot Of Fun"])
+            region_baz_waterlotoffun.add_locations(locations_baz_waterlotoffun_bonus2, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_waterlotoffun = get_location_names_with_ids(["Beat Par Time: BAZ - Water Lot Of Fun"])
+            region_baz_waterlotoffun.add_locations(locations_baz_waterlotoffun, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_waterlotoffun = get_location_names_with_ids(["Crystal Target: BAZ - Water Lot Of Fun"])
+            region_baz_waterlotoffun.add_locations(locations_baz_waterlotoffun, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_waterlotoffun.add_event("Level Completable: BAZ - Water Lot Of Fun", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_waterlotoffun.add_event("Par Time Beatable: BAZ - Water Lot Of Fun", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_waterlotoffun.add_event("Crystal Target Beatable: BAZ - Water Lot Of Fun", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_waterlotoffun = get_location_names_with_ids(["Research Coordinates: BAZ - Water Lot Of Fun"])
+            region_baz_waterlotoffun.add_locations(locations_baz_waterlotoffun, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_waterlotoffun = world.get_location("Research Coordinates: BAZ - Water Lot Of Fun")
+                locations_baz_waterlotoffun.place_locked_item(world.create_item("Transporter Coordinates"))
+    if world.options.level_selection_baz_waterworks:
+        locations_baz_waterworks = get_location_names_with_ids(["Clear: BAZ - Water Works"])
+        region_baz_waterworks.add_locations(locations_baz_waterworks, ManicMinersLocation)
+        if world.options.bonus_clear_locations:
+            locations_baz_waterworks_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Water Works"])
+            region_baz_waterworks.add_locations(locations_baz_waterworks_bonus1, ManicMinersLocation)            
+            locations_baz_waterworks_bonus2 = get_location_names_with_ids(["Bonus Clear 2: BAZ - Water Works"])
+            region_baz_waterworks.add_locations(locations_baz_waterworks_bonus2, ManicMinersLocation)
+        if world.options.target_times_are_locations:
+            locations_baz_waterworks = get_location_names_with_ids(["Beat Par Time: BAZ - Water Works"])
+            region_baz_waterworks.add_locations(locations_baz_waterworks, ManicMinersLocation)
+        if world.options.crystal_targets_are_locations:
+            locations_baz_waterworks = get_location_names_with_ids(["Crystal Target: BAZ - Water Works"])
+            region_baz_waterworks.add_locations(locations_baz_waterworks, ManicMinersLocation)
+        if world.options.victory_condition == 0:
+            region_baz_waterworks.add_event("Level Completable: BAZ - Water Works", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 1:
+            region_baz_waterworks.add_event("Par Time Beatable: BAZ - Water Works", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 2:
+            region_baz_waterworks.add_event("Crystal Target Beatable: BAZ - Water Works", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+        elif world.options.victory_condition == 3:
+            locations_baz_waterworks = get_location_names_with_ids(["Research Coordinates: BAZ - Water Works"])
+            region_baz_waterworks.add_locations(locations_baz_waterworks, ManicMinersLocation)
+            if world.options.locked_coordinates:
+                locations_baz_waterworks = world.get_location("Research Coordinates: BAZ - Water Works")
+                locations_baz_waterworks.place_locked_item(world.create_item("Transporter Coordinates"))
+
 def check_for_victory(options,save_path):
     levelDataList = ParseSaveFile.parseAllLevelsFromFilepath(save_path)
     
@@ -3360,6 +4361,8 @@ def check_for_victory(options,save_path):
             if options["boss_level_lrrr_rockyhorror"] == 1 and level[0] == "Archipelago/LRRR - Rocky Horror":
                 return True
             if options["boss_level_lrrc_rockyhorror"] == 1 and level[0] == "Archipelago/LRRC - Rocky Horror":
+                return True
+            if options["boss_level_baz_rockyhorror"] == 1 and level[0] == "Archipelago/LRRC - Rocky Horror":
                 return True
         return False
     
