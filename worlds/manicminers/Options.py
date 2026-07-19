@@ -427,70 +427,103 @@ class LevelSelectionLRRCWaterWorks(Toggle):
     visibility = Visibility.none
 
 class LevelSelectionBAZABreathOfFreshAir(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZAirRaiders(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZBackToBasics(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZBreathless(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZColdComfort(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZDontPanic(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZDownInTheDirt(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZDrillerNight(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZErodeWorks(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZExplosiveAction(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZFireAndWater(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZFrozenFrenzy(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZHotStuff(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZIceSpy(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZItsAHoldUp(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZLakeOfFire(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZLavaLaughter(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZMineOverMatter(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZMoltenMeltdown(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZOresome(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZRecruitment(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZRockHard(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZRockyHorror(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZRubbleTrouble(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZRunTheGauntlet(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZSeamless(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZSearchAndRescue(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZSlimeySimple(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZSplitDownTheMiddle(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZTheHardRockLife(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZThePathToPower(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZWaterLotOfFun(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZWaterWorks(Toggle):
+    """ Hidden level selection option"""    
     visibility = Visibility.none
 
 class BossLevelLRRRockyHorror(Toggle):
