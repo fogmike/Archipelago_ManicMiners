@@ -517,6 +517,14 @@ BUILDING_UNLOCK_LIST = [
     "Building Unlock: Super Teleport"
 ]
 
+DUPLICATE_BUILDING_UNLOCK_LIST = [
+    "Building Unlock: Tool Store",
+    "Building Unlock: Teleport Pad",
+    "Building Unlock: Power Station",
+    "Building Unlock: Support Station",
+    "Building Unlock: Super Teleport"
+]
+
 ITEM_UNLOCK_LIST = [
     "Item Unlock: Electric Fence",
     "Item Unlock: Dynamite"
@@ -531,6 +539,19 @@ VEHICLE_UNLOCK_LIST = [
     "Vehicle Unlock: Rapid Rider",
     "Vehicle Unlock: Cargo Carrier",
     "Vehicle Unlock: Loader Dozer",
+    "Vehicle Unlock: Granite Grinder",
+    "Vehicle Unlock: Large Mobile Laser Cutter",
+    "Vehicle Unlock: Chrome Crusher",
+    "Vehicle Unlock: Tunnel Transport"
+]
+
+DUPLICATE_VEHICLE_UNLOCK_LIST = [
+    "Vehicle Unlock: Tunnel Scout",
+    "Vehicle Unlock: Small Digger",
+    "Vehicle Unlock: Small Transport Truck",
+    "Vehicle Unlock: Small Mobile Laser Cutter",
+    "Vehicle Unlock: Rapid Rider",
+    "Vehicle Unlock: Cargo Carrier",
     "Vehicle Unlock: Granite Grinder",
     "Vehicle Unlock: Large Mobile Laser Cutter",
     "Vehicle Unlock: Chrome Crusher",
@@ -888,14 +909,22 @@ def create_all_items(world: ManicMinersWorld) -> None:
     if world.options.buildings_are_items:    
         for item in BUILDING_UNLOCK_LIST:
             itempool.append(world.create_item(item))
+        if world.options.progressive_items == 1:
+            for item in DUPLICATE_BUILDING_UNLOCK_LIST:
+                itempool.append(world.create_item(item))
     
     if world.options.items_are_items:
         for item in ITEM_UNLOCK_LIST:
             itempool.append(world.create_item(item))
+        if world.options.progressive_items == 1:
+            itempool.append(world.create_item("Item Unlock: Dynamite"))
 
     if world.options.vehicles_are_items:
         for item in VEHICLE_UNLOCK_LIST:
             itempool.append(world.create_item(item))
+        if world.options.progressive_items == 1:
+            for item in DUPLICATE_VEHICLE_UNLOCK_LIST:
+                itempool.append(world.create_item(item))
     
     if world.options.bonus_truck:
         itempool.append(world.create_item("Chief's Favourite Truck"))
