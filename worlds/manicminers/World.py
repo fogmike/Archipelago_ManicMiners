@@ -48,11 +48,11 @@ class ManicMinersWorld(World):
         # Fix some potentially fatal option combinations
         
         # Must have at least one campaign selected, default to LRR if all unticked
-        if ((self.options.campaign_selection_lrr == 0) & (self.options.campaign_selection_lrrr == 0) & (self.options.campaign_selection_lrrc == 0)):
+        if ((self.options.campaign_selection_lrr == 0) & (self.options.campaign_selection_lrrr == 0) & (self.options.campaign_selection_lrrc == 0) & (self.options.campaign_selection_baz == 0)):
             self.options.campaign_selection_lrr.value = 1
         
         # If only campaign is LRRR, and everything is restricted, set minimum start level count to 5 to help with fill error chance
-        if ((self.options.campaign_selection_lrr == 0) & (self.options.campaign_selection_lrrr == 1) & (self.options.campaign_selection_lrrc == 0) & ((self.options.items_are_items == 1) | (self.options.buildings_are_items == 1) | (self.options.vehicles_are_items == 1))):
+        if ((self.options.campaign_selection_lrr == 0) & (self.options.campaign_selection_lrrr == 1) & (self.options.campaign_selection_lrrc == 0) & (self.options.campaign_selection_baz == 0) & ((self.options.items_are_items == 1) | (self.options.buildings_are_items == 1) | (self.options.vehicles_are_items == 1))):
             self.options.available_levels_at_start.value = max(self.options.available_levels_at_start.value,5)
         
         # Identify number of levels and locations for clearing
@@ -77,11 +77,11 @@ class ManicMinersWorld(World):
             if self.options.bonus_clear_locations:
                 number_locations += 56
 
-        # if self.options.campaign_selection_baz:
-            # number_levels += 33
-            # number_locations += 33
-            # if self.options.bonus_clear_locations:
-                # number_locations += ???
+        if self.options.campaign_selection_baz:
+            number_levels += 33
+            number_locations += 33
+            if self.options.bonus_clear_locations:
+                number_locations += 76
         
         # Select levels
         if self.options.no_duplicate_levels == 0:
@@ -166,11 +166,51 @@ class ManicMinersWorld(World):
                 self.options.level_selection_lrrc_waterlotoffun.value = 1
                 self.options.level_selection_lrrc_waterworks.value = 1
             
+            if self.options.campaign_selection_baz:
+                self.options.level_selection_baz_abreathoffreshair.value = 1
+                self.options.level_selection_baz_airraiders.value = 1
+                self.options.level_selection_baz_backtobasics.value = 1
+                self.options.level_selection_baz_breathless.value = 1
+                self.options.level_selection_baz_coldcomfort.value = 1
+                self.options.level_selection_baz_dontpanic.value = 1
+                self.options.level_selection_baz_downinthedirt.value = 1
+                self.options.level_selection_baz_drillernight.value = 1
+                self.options.level_selection_baz_erodeworks.value = 1
+                self.options.level_selection_baz_explosiveaction.value = 1
+                self.options.level_selection_baz_fireandwater.value = 1
+                self.options.level_selection_baz_frozenfrenzy.value = 1
+                self.options.level_selection_baz_hotstuff.value = 1
+                self.options.level_selection_baz_icespy.value = 1
+                self.options.level_selection_baz_itsaholdup.value = 1
+                self.options.level_selection_baz_lakeoffire.value = 1
+                self.options.level_selection_baz_lavalaughter.value = 1
+                self.options.level_selection_baz_mineovermatter.value = 1
+                self.options.level_selection_baz_moltenmeltdown.value = 1
+                self.options.level_selection_baz_oresome.value = 1
+                self.options.level_selection_baz_recruitment.value = 1
+                self.options.level_selection_baz_rockhard.value = 1
+                self.options.level_selection_baz_rockyhorror.value = 1
+                self.options.level_selection_baz_rubbletrouble.value = 1
+                self.options.level_selection_baz_runthegauntlet.value = 1
+                self.options.level_selection_baz_seamless.value = 1
+                self.options.level_selection_baz_searchandrescue.value = 1
+                self.options.level_selection_baz_slimeysimple.value = 1
+                self.options.level_selection_baz_splitdownthemiddle.value = 1
+                self.options.level_selection_baz_thehardrocklife.value = 1
+                self.options.level_selection_baz_thepathtopower.value = 1
+                self.options.level_selection_baz_waterlotoffun.value = 1
+                self.options.level_selection_baz_waterworks.value = 1
+            
         else:
             number_levels = 25
             number_locations = 25
             if self.options.bonus_clear_locations:
                 number_locations += 56
+            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
+                number_levels = 33
+                number_locations = 33
+                if self.options.bonus_clear_locations:
+                    number_locations += 76               
             level_list = []
             if self.options.campaign_selection_lrr:
                 level_list.append(self.options.level_selection_lrr_abreathoffreshair)
@@ -178,6 +218,8 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_abreathoffreshair)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_abreathoffreshair)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_abreathoffreshair)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -187,6 +229,8 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_airraiders)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_airraiders)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_airraiders)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -196,6 +240,8 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_backtobasics)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_backtobasics)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_backtobasics)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -205,24 +251,34 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_breathless)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_breathless)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_breathless)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
+            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
+                self.options.level_selection_baz_coldcomfort.value = 1
             if self.options.campaign_selection_lrr:
                 level_list.append(self.options.level_selection_lrr_dontpanic)
             if self.options.campaign_selection_lrrr:
                 level_list.append(self.options.level_selection_lrrr_dontpanic)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_dontpanic)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_dontpanic)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
+            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
+                self.options.level_selection_baz_downinthedirt.value = 1
             if self.options.campaign_selection_lrr:
                 level_list.append(self.options.level_selection_lrr_drillernight)
             if self.options.campaign_selection_lrrr:
                 level_list.append(self.options.level_selection_lrrr_drillernight)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_drillernight)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_drillernight)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -232,6 +288,8 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_erodeworks)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_erodeworks)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_erodeworks)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -241,6 +299,8 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_explosiveaction)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_explosiveaction)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_explosiveaction)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -250,6 +310,8 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_fireandwater)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_fireandwater)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_fireandwater)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -259,6 +321,8 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_frozenfrenzy)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_frozenfrenzy)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_frozenfrenzy)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -268,6 +332,8 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_hotstuff)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_hotstuff)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_hotstuff)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -277,6 +343,8 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_icespy)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_icespy)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_icespy)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -286,6 +354,8 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_itsaholdup)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_itsaholdup)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_itsaholdup)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -295,6 +365,8 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_lakeoffire)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_lakeoffire)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_lakeoffire)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -304,24 +376,36 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_lavalaughter)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_lavalaughter)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_lavalaughter)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
+            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
+                self.options.level_selection_baz_mineovermatter.value = 1
+            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
+                self.options.level_selection_baz_moltenmeltdown.value = 1
             if self.options.campaign_selection_lrr:
                 level_list.append(self.options.level_selection_lrr_oresome)
             if self.options.campaign_selection_lrrr:
                 level_list.append(self.options.level_selection_lrrr_oresome)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_oresome)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_oresome)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
+            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
+                self.options.level_selection_baz_recruitment.value = 1
             if self.options.campaign_selection_lrr:
                 level_list.append(self.options.level_selection_lrr_rockhard)
             if self.options.campaign_selection_lrrr:
                 level_list.append(self.options.level_selection_lrrr_rockhard)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_rockhard)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_rockhard)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -331,6 +415,8 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_rockyhorror)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_rockyhorror)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_rockyhorror)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -340,6 +426,8 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_rubbletrouble)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_rubbletrouble)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_rubbletrouble)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -349,33 +437,47 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_runthegauntlet)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_runthegauntlet)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_runthegauntlet)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
+            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
+                self.options.level_selection_baz_seamless.value = 1
             if self.options.campaign_selection_lrr:
                 level_list.append(self.options.level_selection_lrr_searchandrescue)
             if self.options.campaign_selection_lrrr:
                 level_list.append(self.options.level_selection_lrrr_searchandrescue)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_searchandrescue)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_searchandrescue)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
+            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
+                self.options.level_selection_baz_slimeysimple.value = 1
             if self.options.campaign_selection_lrr:
                 level_list.append(self.options.level_selection_lrr_splitdownthemiddle)
             if self.options.campaign_selection_lrrr:
                 level_list.append(self.options.level_selection_lrrr_splitdownthemiddle)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_splitdownthemiddle)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_splitdownthemiddle)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
+            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
+                self.options.level_selection_baz_thehardrocklife.value = 1
             if self.options.campaign_selection_lrr:
                 level_list.append(self.options.level_selection_lrr_thepathtopower)
             if self.options.campaign_selection_lrrr:
                 level_list.append(self.options.level_selection_lrrr_thepathtopower)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_thepathtopower)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_thepathtopower)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -385,6 +487,8 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_waterlotoffun)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_waterlotoffun)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_waterlotoffun)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -394,9 +498,11 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.level_selection_lrrr_waterworks)
             if self.options.campaign_selection_lrrc:
                 level_list.append(self.options.level_selection_lrrc_waterworks)
+            if self.options.campaign_selection_baz:
+                level_list.append(self.options.level_selection_baz_waterworks)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
-            level_list.clear()
+            level_list.clear()  
         
         # Select boss level
         if self.options.victory_condition == 3:
@@ -407,6 +513,8 @@ class ManicMinersWorld(World):
                 level_list.append(self.options.boss_level_lrrr_rockyhorror)
             if self.options.level_selection_lrrc_rockyhorror:
                 level_list.append(self.options.boss_level_lrrc_rockyhorror)
+            if self.options.level_selection_baz_rockyhorror:
+                level_list.append(self.options.boss_level_baz_rockyhorror)
             random_index = self.random.randint(0,len(level_list)-1)
             level_list[random_index].value = 1
             level_list.clear()
@@ -446,6 +554,8 @@ class ManicMinersWorld(World):
                 self.options.bonus_clear_locations.value = 1
                 if self.options.no_duplicate_levels:
                     number_locations += 56
+                    if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
+                        number_locations += 20
                 else:
                     if self.options.campaign_selection_lrr:
                         number_locations += 56
@@ -453,6 +563,8 @@ class ManicMinersWorld(World):
                         number_locations += 56
                     if self.options.campaign_selection_lrrc:
                         number_locations += 56
+                    if self.options.campaign_selection_baz:
+                        number_locations += 76
         item_location_diffcount = number_items - number_locations
         if item_location_diffcount > 0:
             self.options.available_levels_at_start.value += item_location_diffcount
@@ -482,8 +594,7 @@ class ManicMinersWorld(World):
     
     def fill_slot_data(self) -> Mapping[str, Any]:
         return self.options.as_dict(
-        # "victory_condition", "target_level_count", "target_times_are_locations", "target_time_difficulty", "buildings_are_items", "items_are_items", "vehicles_are_items", "campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc", "campaign_selection_baz"
-        "victory_condition", "locked_coordinates", "target_level_count", "target_times_are_locations", "target_time_difficulty", "crystal_targets_are_locations", "crystal_target_percentage", "buildings_are_items", "items_are_items", "vehicles_are_items", "bonus_clear_locations", "campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc", "no_duplicate_levels", "boss_level_lrr_rockyhorror", "boss_level_lrrr_rockyhorror", "boss_level_lrrc_rockyhorror"
+        "victory_condition", "locked_coordinates", "target_level_count", "target_times_are_locations", "target_time_difficulty", "crystal_targets_are_locations", "crystal_target_percentage", "buildings_are_items", "items_are_items", "vehicles_are_items", "bonus_clear_locations", "campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc", "campaign_selection_baz", "no_duplicate_levels", "include_baz_unique_levels", "boss_level_lrr_rockyhorror", "boss_level_lrrr_rockyhorror", "boss_level_lrrc_rockyhorror", "boss_level_baz_rockyhorror"
         )
 
 def launch_client(*args):

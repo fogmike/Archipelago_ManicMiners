@@ -28,7 +28,7 @@ The current options are:
 
 ### What campaigns are supported?
 
-Three campaigns from Manic Miners are supported: Standard, Remastered, Classic. Support for Baz's Mod is planned. 
+All four campaigns from Manic Miners are supported: Standard, Remastered, Classic, and Baz's Mod.
 
 The first three campaigns each have 25 levels, while Baz's Mod has 33. 
 
@@ -65,7 +65,7 @@ The default settings are to clear all 25 levels in the Standard campaign, with a
 
 Players familiar with Manic Miners may prefer to enable all campaigns and the No Duplicate Levels setting, which will still do a full run of 25 levels, but will randomly select each one.
 
-Note: running with every campaign fully selected and a matching high target level goal, can take a long time. 
+Note: The Remastered and Baz's Mod levels are a lot longer on average than Standard or Classic. Running with every campaign fully selected and a high target level goal can take a long time. 
 
 #### What are the target times or crystal counts?
 
