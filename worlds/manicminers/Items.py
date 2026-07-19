@@ -882,39 +882,21 @@ def create_all_items(world: ManicMinersWorld) -> None:
     
     itempool += itempool_access   
     
-    itempool_buildings = []
-    for item in BUILDING_UNLOCK_LIST:
-        itempool_buildings.append(world.create_item(item))
-    
-    itempool_items = []
-    for item in ITEM_UNLOCK_LIST:
-        itempool_items.append(world.create_item(item))
-
-    itempool_vehicles = []
-    for item in VEHICLE_UNLOCK_LIST:
-        itempool_vehicles.append(world.create_item(item))
-    
     for item in initial_access_item_list:
         world.push_precollected(item)
     
-    if world.options.buildings_are_items:
-        itempool += itempool_buildings
-    else:
-        for item in itempool_buildings:
-            world.push_precollected(item)
-
+    if world.options.buildings_are_items:    
+        for item in BUILDING_UNLOCK_LIST:
+            itempool.append(world.create_item(item))
+    
     if world.options.items_are_items:
-        itempool += itempool_items
-    else:
-        for item in itempool_items:
-            world.push_precollected(item)
+        for item in ITEM_UNLOCK_LIST:
+            itempool.append(world.create_item(item))
 
     if world.options.vehicles_are_items:
-        itempool += itempool_vehicles
-    else:
-        for item in itempool_vehicles:
-            world.push_precollected(item)
-            
+        for item in VEHICLE_UNLOCK_LIST:
+            itempool.append(world.create_item(item))
+    
     if world.options.bonus_truck:
         itempool.append(world.create_item("Chief's Favourite Truck"))
     
@@ -1338,58 +1320,59 @@ def update_disabled_unlocks(filepath, all_items, options, disable_truck):
     if options["progressive_items"] == 2:
         pass
     else:
-        if 899 not in all_items: 
-            init_section = init_section + "disable:ToolStore;\n"
-        if 898 not in all_items:
-            init_section = init_section + "disable:TeleportPad;\n"
-        if 897 not in all_items:
-            init_section = init_section + "disable:Docks;\n"
-        if 896 not in all_items:
-            init_section = init_section + "disable:Canteen;\n"
-        if 895 not in all_items:
-            init_section = init_section + "disable:PowerStation;\n"
-        if 894 not in all_items:
-            init_section = init_section + "disable:SupportStation;\n"
-        if 893 not in all_items:
-            init_section = init_section + "disable:UpgradeStation;\n"
-        if 892 not in all_items:
-            init_section = init_section + "disable:GeologicalCenter;\n"
-        if 891 not in all_items:
-            init_section = init_section + "disable:OreRefinery;\n"
-        if 890 not in all_items:
-            init_section = init_section + "disable:MiningLaser;\n"
-        if 889 not in all_items:
-            init_section = init_section + "disable:SuperTeleport;\n"
-
-        if 888 not in all_items:
-            init_section = init_section + "disable:ElectricFence;\n"
-        if 887 not in all_items:
-            init_section = init_section + "disable:Dynamite;\n"
-
-        if 886 not in all_items:
-            init_section = init_section + "disable:HoverScout;\n"
-        if 885 not in all_items:
-            init_section = init_section + "disable:TunnelScout;\n"
-        if 884 not in all_items:
-            init_section = init_section + "disable:SmallDigger;\n"
-        if 883 not in all_items:
-            init_section = init_section + "disable:SmallTransportTruck;\n"
-        if 882 not in all_items:
-            init_section = init_section + "disable:SMLC;\n"
-        if 881 not in all_items:
-            init_section = init_section + "disable:RapidRider;\n"
-        if 880 not in all_items:
-            init_section = init_section + "disable:CargoCarrier;\n"
-        if 879 not in all_items:
-            init_section = init_section + "disable:LoaderDozer;\n"
-        if 878 not in all_items:
-            init_section = init_section + "disable:GraniteGrinder;\n"
-        if 877 not in all_items:
-            init_section = init_section + "disable:LMLC;\n"
-        if 876 not in all_items:
-            init_section = init_section + "disable:ChromeCrusher;\n"
-        if 875 not in all_items:
-            init_section = init_section + "disable:TunnelTransport;\n"
+        if options["buildings_are_items"]:
+            if 899 not in all_items: 
+                init_section = init_section + "disable:ToolStore;\n"
+            if 898 not in all_items:
+                init_section = init_section + "disable:TeleportPad;\n"
+            if 897 not in all_items:
+                init_section = init_section + "disable:Docks;\n"
+            if 896 not in all_items:
+                init_section = init_section + "disable:Canteen;\n"
+            if 895 not in all_items:
+                init_section = init_section + "disable:PowerStation;\n"
+            if 894 not in all_items:
+                init_section = init_section + "disable:SupportStation;\n"
+            if 893 not in all_items:
+                init_section = init_section + "disable:UpgradeStation;\n"
+            if 892 not in all_items:
+                init_section = init_section + "disable:GeologicalCenter;\n"
+            if 891 not in all_items:
+                init_section = init_section + "disable:OreRefinery;\n"
+            if 890 not in all_items:
+                init_section = init_section + "disable:MiningLaser;\n"
+            if 889 not in all_items:
+                init_section = init_section + "disable:SuperTeleport;\n"
+        if options["items_are_items"]:
+            if 888 not in all_items:
+                init_section = init_section + "disable:ElectricFence;\n"
+            if 887 not in all_items:
+                init_section = init_section + "disable:Dynamite;\n"
+        if options["vehicles_are_items"]:
+            if 886 not in all_items:
+                init_section = init_section + "disable:HoverScout;\n"
+            if 885 not in all_items:
+                init_section = init_section + "disable:TunnelScout;\n"
+            if 884 not in all_items:
+                init_section = init_section + "disable:SmallDigger;\n"
+            if 883 not in all_items:
+                init_section = init_section + "disable:SmallTransportTruck;\n"
+            if 882 not in all_items:
+                init_section = init_section + "disable:SMLC;\n"
+            if 881 not in all_items:
+                init_section = init_section + "disable:RapidRider;\n"
+            if 880 not in all_items:
+                init_section = init_section + "disable:CargoCarrier;\n"
+            if 879 not in all_items:
+                init_section = init_section + "disable:LoaderDozer;\n"
+            if 878 not in all_items:
+                init_section = init_section + "disable:GraniteGrinder;\n"
+            if 877 not in all_items:
+                init_section = init_section + "disable:LMLC;\n"
+            if 876 not in all_items:
+                init_section = init_section + "disable:ChromeCrusher;\n"
+            if 875 not in all_items:
+                init_section = init_section + "disable:TunnelTransport;\n"
     
     bonus_ore = all_items.count(950)
     init_section = init_section + "ore+=" + str(bonus_ore) + ";\n"
