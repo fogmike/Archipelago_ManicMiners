@@ -118,6 +118,29 @@ class VehiclesAreItems(DefaultOnToggle):
     
     display_name = "Vehicles Are Items"
 
+class ProgressiveItems(Choice):
+    """
+    Affects behaviour of unlockable Buildings/Items/Vehicles.
+    'Normal' puts a single unlockable copy into the itempool. Finding the unlock item allows you build as many copies of that unlockable as you like.
+    'Duplicates' adds a second copy of certain unlock items, to increase the chances of finding one sooner. Receiving the second copy has no effect.
+    'Progressive' adds split copies of several unlock items, where getting the first item allows you to build a single copy of the unlockable, and further copies of the unlock items increase that limit. 
+    """
+    
+    display_name = "Progressive Items"
+    
+    option_normal = 0
+    option_duplicates = 1
+    option_progressive = 2
+    
+    default = option_normal 
+    
+class MinerCap(Toggle):
+    """
+    Adds a limit to the number of miners you can have at once, increasable by items in the multiworld. 
+    """
+    
+    display_name = "Miner Cap"
+
 class BonusTruck(Toggle):
     """
     Whether to include a bonus starting Small Transport Truck in the Item pool.
@@ -552,6 +575,8 @@ class ManicMinersOptions(PerGameCommonOptions):
     buildings_are_items: BuildingsAreItems
     items_are_items: ItemsAreItems
     vehicles_are_items: VehiclesAreItems
+    progressive_items: ProgressiveItems
+    miner_cap: MinerCap
     bonus_truck: BonusTruck
     breathing_always_in_logic: BreathingAlwaysInLogic
     faster_blasting_always_in_logic: FasterBlastingAlwaysInLogic
@@ -695,7 +720,7 @@ option_groups = [
     ),
     OptionGroup(
         "Items",
-        [AvailableLevelsAtStart,BuildingsAreItems,ItemsAreItems,VehiclesAreItems,BonusTruck]
+        [AvailableLevelsAtStart,BuildingsAreItems,ItemsAreItems,VehiclesAreItems,ProgressiveItems,MinerCap,BonusTruck]
     ),
     OptionGroup(
         "Logic",

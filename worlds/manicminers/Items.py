@@ -159,13 +159,34 @@ ITEM_NAME_TO_ID = {
     
     "Transporter Coordinates": 874,
     
+    "Miner Cap +5": 850,
+    
+    "Progressive Building Unlock: Tool Store": 849,
+    "Progressive Building Unlock: Canteen": 848,
+    "Progressive Building Unlock: Support Station": 847,
+    "Progressive Building Unlock: Mining Laser": 846,
+    
+    "Progressive Vehicle Unlock: Hover Scout": 845,
+    "Progressive Vehicle Unlock: Tunnel Scout": 844,
+    "Progressive Vehicle Unlock: Small Digger": 843,
+    "Progressive Vehicle Unlock: Small Transport Truck": 842,
+    "Progressive Vehicle Unlock: Small Mobile Laser Cutter": 841,
+    "Progressive Vehicle Unlock: Rapid Rider": 840,
+    "Progressive Vehicle Unlock: Cargo Carrier": 839,
+    "Progressive Vehicle Unlock: Loader Dozer": 838,
+    "Progressive Vehicle Unlock: Granite Grinder": 837,
+    "Progressive Vehicle Unlock: Large Mobile Laser Cutter": 836,
+    "Progressive Vehicle Unlock: Chrome Crusher": 835,
+    "Progressive Vehicle Unlock: Tunnel Transport": 834, 
+    
     "An Energy Crystal Has Been Found!": 999,
     "Good Work, Cadet!": 998,
     "A Monster Has Appeared!": 997,
     "Well Done!": 996,
     
     "Increased Starting Ore": 950,    
-    "Chief's Favourite Truck": 949
+    "Chief's Favourite Truck": 949,
+    "Miner Cap +1": 948,
     
 }
 
@@ -312,13 +333,34 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     
     "Transporter Coordinates": ItemClassification.progression,
     
+    "Miner Cap +5": ItemClassification.progression,
+    
+    "Progressive Building Unlock: Tool Store": ItemClassification.progression,
+    "Progressive Building Unlock: Canteen": ItemClassification.useful,
+    "Progressive Building Unlock: Support Station": (ItemClassification.progression | ItemClassification.useful),
+    "Progressive Building Unlock: Mining Laser": ItemClassification.progression,
+    
+    "Progressive Vehicle Unlock: Hover Scout": ItemClassification.useful,
+    "Progressive Vehicle Unlock: Tunnel Scout": ItemClassification.progression,
+    "Progressive Vehicle Unlock: Small Digger": ItemClassification.progression,
+    "Progressive Vehicle Unlock: Small Transport Truck": ItemClassification.useful,
+    "Progressive Vehicle Unlock: Small Mobile Laser Cutter": ItemClassification.progression,
+    "Progressive Vehicle Unlock: Rapid Rider": ItemClassification.progression,
+    "Progressive Vehicle Unlock: Cargo Carrier": ItemClassification.progression,
+    "Progressive Vehicle Unlock: Loader Dozer": ItemClassification.useful,
+    "Progressive Vehicle Unlock: Granite Grinder": ItemClassification.progression,
+    "Progressive Vehicle Unlock: Large Mobile Laser Cutter": ItemClassification.progression,
+    "Progressive Vehicle Unlock: Chrome Crusher": ItemClassification.progression,
+    "Progressive Vehicle Unlock: Tunnel Transport": ItemClassification.progression, 
+    
     "An Energy Crystal Has Been Found!": ItemClassification.filler,
     "Good Work, Cadet!": ItemClassification.filler,
     "A Monster Has Appeared!": ItemClassification.filler,
     "Well Done!": ItemClassification.filler,
     
     "Increased Starting Ore": ItemClassification.filler,    
-    "Chief's Favourite Truck": ItemClassification.useful
+    "Chief's Favourite Truck": ItemClassification.useful,
+    "Miner Cap +1": ItemClassification.useful
 }
 
 LEVEL_ACCESS_LRR_NOUNLOCK_LIST = [
@@ -514,13 +556,21 @@ def create_item_with_correct_classification(world: ManicMinersWorld, name: str) 
             classification = ItemClassification.progression
         if name == "Building Unlock: Geological Center":
             classification = ItemClassification.progression
+        if name == "Progressive Building Unlock: Geological Center":
+            classification = ItemClassification.progression
         if name == "Building Unlock: Ore Refinery":
             classification = ItemClassification.progression
         if name == "Building Unlock: Canteen":
             classification = ItemClassification.progression
+        if name == "Progressive Building Unlock: Canteen":
+            classification = ItemClassification.progression
         if name == "Vehicle Unlock: Hover Scout":
             classification = ItemClassification.progression
+        if name == "Progressive Vehicle Unlock: Hover Scout":
+            classification = ItemClassification.progression
         if name == "Vehicle Unlock: Small Transport Truck":
+            classification = ItemClassification.progression
+        if name == "Progressive Vehicle Unlock: Small Transport Truck":
             classification = ItemClassification.progression
     return ManicMinersItem(name, classification, ITEM_NAME_TO_ID[name], world.player)
     
@@ -884,6 +934,11 @@ def create_all_items(world: ManicMinersWorld) -> None:
                 level_count = 33
         for i in range(level_count):
             itempool.append(world.create_item("Transporter Coordinates"))
+
+    if world.options.miner_cap:
+        FILLER_LIST.append("Miner Cap +1")
+        for _ in range(4):
+            itempool.append(world.create_item("Miner Cap +5"))
 
     number_of_items = len(itempool)
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))
@@ -1251,10 +1306,10 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, op
     source_path = pathlib.Path(main_level_dir + source)
     target_path = pathlib.Path(arch_level_dir + target)
     shutil.copy(source_path, target_path)
-    update_disabled_unlocks(target_path, all_items, disable_truck)
+    update_disabled_unlocks(target_path, all_items, options, disable_truck)
     return True
 
-def update_disabled_unlocks(filepath, all_items, disable_truck):
+def update_disabled_unlocks(filepath, all_items, options, disable_truck):
     with open(filepath,'r') as file:
         original_file_contents = file.read()
         file.close()
@@ -1265,65 +1320,81 @@ def update_disabled_unlocks(filepath, all_items, disable_truck):
 
     original_file_beginning = original_file_contents[:archipelago_index]
 
-    archipelago_section = "# Begin Archipelago Disablers\n# Everything after this point in the file will be overwritten by Archipelago!\n\ninit::;\n"
+    archipelago_section = "\n# Begin Archipelago Disablers\n# Everything after this point in the file will be overwritten by Archipelago!\n\n"
+    init_section = "init::;\n"
+    if options["progressive_items"] == 2 or options["miner_cap"]:
+        tick_section = "tick::;\n"
+    else:
+        tick_section = ""
     
-    if 899 not in all_items: 
-        archipelago_section = archipelago_section + "disable:ToolStore;\n"
-    if 898 not in all_items:
-        archipelago_section = archipelago_section + "disable:TeleportPad;\n"
-    if 897 not in all_items:
-        archipelago_section = archipelago_section + "disable:Docks;\n"
-    if 896 not in all_items:
-        archipelago_section = archipelago_section + "disable:Canteen;\n"
-    if 895 not in all_items:
-        archipelago_section = archipelago_section + "disable:PowerStation;\n"
-    if 894 not in all_items:
-        archipelago_section = archipelago_section + "disable:SupportStation;\n"
-    if 893 not in all_items:
-        archipelago_section = archipelago_section + "disable:UpgradeStation;\n"
-    if 892 not in all_items:
-        archipelago_section = archipelago_section + "disable:GeologicalCenter;\n"
-    if 891 not in all_items:
-        archipelago_section = archipelago_section + "disable:OreRefinery;\n"
-    if 890 not in all_items:
-        archipelago_section = archipelago_section + "disable:MiningLaser;\n"
-    if 889 not in all_items:
-        archipelago_section = archipelago_section + "disable:SuperTeleport;\n"
+    if options["miner_cap"]:
+        miner_cap = 8
+        miner_cap += 5 * (all_items.count(850))
+        miner_cap += all_items.count(948)
+        miner_limit_string = "int MinerCap=" + str(miner_cap) + "\n"
+        archipelago_section = archipelago_section + miner_limit_string
+        tick_section = tick_section + "((miners<MinerCap))enable:miners;\n((miners>=MinerCap))disable:miners;\n"
+    
+    if options["progressive_items"] == 2:
+        pass
+    else:
+        if 899 not in all_items: 
+            init_section = init_section + "disable:ToolStore;\n"
+        if 898 not in all_items:
+            init_section = init_section + "disable:TeleportPad;\n"
+        if 897 not in all_items:
+            init_section = init_section + "disable:Docks;\n"
+        if 896 not in all_items:
+            init_section = init_section + "disable:Canteen;\n"
+        if 895 not in all_items:
+            init_section = init_section + "disable:PowerStation;\n"
+        if 894 not in all_items:
+            init_section = init_section + "disable:SupportStation;\n"
+        if 893 not in all_items:
+            init_section = init_section + "disable:UpgradeStation;\n"
+        if 892 not in all_items:
+            init_section = init_section + "disable:GeologicalCenter;\n"
+        if 891 not in all_items:
+            init_section = init_section + "disable:OreRefinery;\n"
+        if 890 not in all_items:
+            init_section = init_section + "disable:MiningLaser;\n"
+        if 889 not in all_items:
+            init_section = init_section + "disable:SuperTeleport;\n"
 
-    if 888 not in all_items:
-        archipelago_section = archipelago_section + "disable:ElectricFence;\n"
-    if 887 not in all_items:
-        archipelago_section = archipelago_section + "disable:Dynamite;\n"
+        if 888 not in all_items:
+            init_section = init_section + "disable:ElectricFence;\n"
+        if 887 not in all_items:
+            init_section = init_section + "disable:Dynamite;\n"
 
-    if 886 not in all_items:
-        archipelago_section = archipelago_section + "disable:HoverScout;\n"
-    if 885 not in all_items:
-        archipelago_section = archipelago_section + "disable:TunnelScout;\n"
-    if 884 not in all_items:
-        archipelago_section = archipelago_section + "disable:SmallDigger;\n"
-    if 883 not in all_items:
-        archipelago_section = archipelago_section + "disable:SmallTransportTruck;\n"
-    if 882 not in all_items:
-        archipelago_section = archipelago_section + "disable:SMLC;\n"
-    if 881 not in all_items:
-        archipelago_section = archipelago_section + "disable:RapidRider;\n"
-    if 880 not in all_items:
-        archipelago_section = archipelago_section + "disable:CargoCarrier;\n"
-    if 879 not in all_items:
-        archipelago_section = archipelago_section + "disable:LoaderDozer;\n"
-    if 878 not in all_items:
-        archipelago_section = archipelago_section + "disable:GraniteGrinder;\n"
-    if 877 not in all_items:
-        archipelago_section = archipelago_section + "disable:LMLC;\n"
-    if 876 not in all_items:
-        archipelago_section = archipelago_section + "disable:ChromeCrusher;\n"
-    if 875 not in all_items:
-        archipelago_section = archipelago_section + "disable:TunnelTransport;\n"
+        if 886 not in all_items:
+            init_section = init_section + "disable:HoverScout;\n"
+        if 885 not in all_items:
+            init_section = init_section + "disable:TunnelScout;\n"
+        if 884 not in all_items:
+            init_section = init_section + "disable:SmallDigger;\n"
+        if 883 not in all_items:
+            init_section = init_section + "disable:SmallTransportTruck;\n"
+        if 882 not in all_items:
+            init_section = init_section + "disable:SMLC;\n"
+        if 881 not in all_items:
+            init_section = init_section + "disable:RapidRider;\n"
+        if 880 not in all_items:
+            init_section = init_section + "disable:CargoCarrier;\n"
+        if 879 not in all_items:
+            init_section = init_section + "disable:LoaderDozer;\n"
+        if 878 not in all_items:
+            init_section = init_section + "disable:GraniteGrinder;\n"
+        if 877 not in all_items:
+            init_section = init_section + "disable:LMLC;\n"
+        if 876 not in all_items:
+            init_section = init_section + "disable:ChromeCrusher;\n"
+        if 875 not in all_items:
+            init_section = init_section + "disable:TunnelTransport;\n"
     
     bonus_ore = all_items.count(950)
-    archipelago_section = archipelago_section + "ore+=" + str(bonus_ore) + ";\n"
+    init_section = init_section + "ore+=" + str(bonus_ore) + ";\n"
 
-    archipelago_section = archipelago_section + "\n}\n"
+    archipelago_section = archipelago_section + "\n" + init_section + "\n" + tick_section + "\n}\n"
 
     new_file_contents = original_file_beginning + archipelago_section
     
