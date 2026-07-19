@@ -536,6 +536,7 @@ class BossLevelLRRCRockyHorror(Toggle):
     """ Hidden level selection option"""
     visibility = Visibility.none
 class BossLevelBAZRockyHorror(Toggle):
+    """ Hidden level selection option"""
     visibility = Visibility.none
 
 @dataclass
