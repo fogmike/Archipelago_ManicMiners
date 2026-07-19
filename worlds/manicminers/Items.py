@@ -525,6 +525,32 @@ DUPLICATE_BUILDING_UNLOCK_LIST = [
     "Building Unlock: Super Teleport"
 ]
 
+PROGRESSIVE_BUILDING_UNLOCK_LIST = [
+    "Progressive Building Unlock: Tool Store",
+    "Progressive Building Unlock: Tool Store",
+    "Progressive Building Unlock: Tool Store",
+    "Progressive Building Unlock: Tool Store",
+    "Building Unlock: Teleport Pad",
+    "Building Unlock: Docks",
+    "Progressive Building Unlock: Canteen",
+    "Progressive Building Unlock: Canteen",
+    "Progressive Building Unlock: Canteen",
+    "Progressive Building Unlock: Canteen",
+    "Building Unlock: Power Station",
+    "Progressive Building Unlock: Support Station",
+    "Progressive Building Unlock: Support Station",
+    "Progressive Building Unlock: Support Station",
+    "Progressive Building Unlock: Support Station",
+    "Building Unlock: Upgrade Station",
+    "Building Unlock: Geological Center",
+    "Building Unlock: Ore Refinery",
+    "Progressive Building Unlock: Mining Laser",
+    "Progressive Building Unlock: Mining Laser",
+    "Progressive Building Unlock: Mining Laser",
+    "Progressive Building Unlock: Mining Laser",
+    "Building Unlock: Super Teleport"
+]
+
 ITEM_UNLOCK_LIST = [
     "Item Unlock: Electric Fence",
     "Item Unlock: Dynamite"
@@ -556,6 +582,57 @@ DUPLICATE_VEHICLE_UNLOCK_LIST = [
     "Vehicle Unlock: Large Mobile Laser Cutter",
     "Vehicle Unlock: Chrome Crusher",
     "Vehicle Unlock: Tunnel Transport"
+]
+
+PROGRESSIVE_VEHICLE_UNLOCK_LIST = [
+    "Progressive Vehicle Unlock: Hover Scout",
+    "Progressive Vehicle Unlock: Hover Scout",
+    "Progressive Vehicle Unlock: Hover Scout",
+    "Progressive Vehicle Unlock: Hover Scout",
+    "Progressive Vehicle Unlock: Tunnel Scout",
+    "Progressive Vehicle Unlock: Tunnel Scout",
+    "Progressive Vehicle Unlock: Tunnel Scout",
+    "Progressive Vehicle Unlock: Tunnel Scout",
+    "Progressive Vehicle Unlock: Small Digger",
+    "Progressive Vehicle Unlock: Small Digger",
+    "Progressive Vehicle Unlock: Small Digger",
+    "Progressive Vehicle Unlock: Small Digger",
+    "Progressive Vehicle Unlock: Small Transport Truck",
+    "Progressive Vehicle Unlock: Small Transport Truck",
+    "Progressive Vehicle Unlock: Small Transport Truck",
+    "Progressive Vehicle Unlock: Small Transport Truck",
+    "Progressive Vehicle Unlock: Small Mobile Laser Cutter",
+    "Progressive Vehicle Unlock: Small Mobile Laser Cutter",
+    "Progressive Vehicle Unlock: Small Mobile Laser Cutter",
+    "Progressive Vehicle Unlock: Small Mobile Laser Cutter",
+    "Progressive Vehicle Unlock: Rapid Rider",
+    "Progressive Vehicle Unlock: Rapid Rider",
+    "Progressive Vehicle Unlock: Rapid Rider",
+    "Progressive Vehicle Unlock: Rapid Rider",
+    "Progressive Vehicle Unlock: Cargo Carrier",
+    "Progressive Vehicle Unlock: Cargo Carrier",
+    "Progressive Vehicle Unlock: Cargo Carrier",
+    "Progressive Vehicle Unlock: Cargo Carrier",
+    "Progressive Vehicle Unlock: Loader Dozer",
+    "Progressive Vehicle Unlock: Loader Dozer",
+    "Progressive Vehicle Unlock: Loader Dozer",
+    "Progressive Vehicle Unlock: Loader Dozer",
+    "Progressive Vehicle Unlock: Granite Grinder",
+    "Progressive Vehicle Unlock: Granite Grinder",
+    "Progressive Vehicle Unlock: Granite Grinder",
+    "Progressive Vehicle Unlock: Granite Grinder",
+    "Progressive Vehicle Unlock: Large Mobile Laser Cutter",
+    "Progressive Vehicle Unlock: Large Mobile Laser Cutter",
+    "Progressive Vehicle Unlock: Large Mobile Laser Cutter",
+    "Progressive Vehicle Unlock: Large Mobile Laser Cutter",
+    "Progressive Vehicle Unlock: Chrome Crusher",
+    "Progressive Vehicle Unlock: Chrome Crusher",
+    "Progressive Vehicle Unlock: Chrome Crusher",
+    "Progressive Vehicle Unlock: Chrome Crusher",
+    "Progressive Vehicle Unlock: Tunnel Transport",
+    "Progressive Vehicle Unlock: Tunnel Transport",
+    "Progressive Vehicle Unlock: Tunnel Transport",
+    "Progressive Vehicle Unlock: Tunnel Transport"
 ]
 
 FILLER_LIST = [
@@ -906,13 +983,17 @@ def create_all_items(world: ManicMinersWorld) -> None:
     for item in initial_access_item_list:
         world.push_precollected(item)
     
-    if world.options.buildings_are_items:    
-        for item in BUILDING_UNLOCK_LIST:
-            itempool.append(world.create_item(item))
-        if world.options.progressive_items == 1:
-            for item in DUPLICATE_BUILDING_UNLOCK_LIST:
+    if world.options.buildings_are_items:
+        if world.options.progressive_items == 0 or world.options.progressive_items == 1:
+            for item in BUILDING_UNLOCK_LIST:
                 itempool.append(world.create_item(item))
-    
+            if world.options.progressive_items == 1:
+                for item in DUPLICATE_BUILDING_UNLOCK_LIST:
+                    itempool.append(world.create_item(item))
+        else:
+            for item in PROGRESSIVE_BUILDING_UNLOCK_LIST:
+                itempool.append(world.create_item(item))
+        
     if world.options.items_are_items:
         for item in ITEM_UNLOCK_LIST:
             itempool.append(world.create_item(item))
@@ -920,10 +1001,14 @@ def create_all_items(world: ManicMinersWorld) -> None:
             itempool.append(world.create_item("Item Unlock: Dynamite"))
 
     if world.options.vehicles_are_items:
-        for item in VEHICLE_UNLOCK_LIST:
-            itempool.append(world.create_item(item))
-        if world.options.progressive_items == 1:
-            for item in DUPLICATE_VEHICLE_UNLOCK_LIST:
+        if world.options.progressive_items == 0 or world.options.progressive_items == 1:
+            for item in VEHICLE_UNLOCK_LIST:
+                itempool.append(world.create_item(item))
+            if world.options.progressive_items == 1:
+                for item in DUPLICATE_VEHICLE_UNLOCK_LIST:
+                    itempool.append(world.create_item(item))
+        else:
+            for item in PROGRESSIVE_VEHICLE_UNLOCK_LIST:
                 itempool.append(world.create_item(item))
     
     if world.options.bonus_truck:
