@@ -57,7 +57,7 @@ class AvailableLevelsAtStart(Range):
 
 class TargetTimesAreLocations(DefaultOnToggle):
     """
-    Whether target times for levels are Locations."
+    Whether target times for levels are Locations.
     """
     
     display_name = "Target Times Are Locations"
@@ -120,7 +120,7 @@ class VehiclesAreItems(DefaultOnToggle):
 
 class BonusTruck(Toggle):
     """
-    Whether to include a bonus starting Small Transport Truck in the Item pool."
+    Whether to include a bonus starting Small Transport Truck in the Item pool.
     """
     
     display_name = "Chief's Favourite Truck"
