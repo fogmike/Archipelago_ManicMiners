@@ -148,6 +148,13 @@ class BonusTruck(Toggle):
     
     display_name = "Chief's Favourite Truck"
 
+class UsefulFillerOnly(Toggle):
+    """
+    If enabled, only gameplay-affecting filler will be included, instead of 'empty' items. Can affect game balance slightly.
+    """
+    
+    display_name = "Useful Filler Only"
+
 class BreathingAlwaysInLogic(Toggle):
     """
     Whether the ability to build a Support Station is logically required for all levels with limited air.
@@ -578,6 +585,7 @@ class ManicMinersOptions(PerGameCommonOptions):
     progressive_items: ProgressiveItems
     miner_cap: MinerCap
     bonus_truck: BonusTruck
+    useful_filler_only: UsefulFillerOnly
     breathing_always_in_logic: BreathingAlwaysInLogic
     faster_blasting_always_in_logic: FasterBlastingAlwaysInLogic
     bonus_clear_locations: BonusClearLocations
@@ -720,7 +728,7 @@ option_groups = [
     ),
     OptionGroup(
         "Items",
-        [AvailableLevelsAtStart,BuildingsAreItems,ItemsAreItems,VehiclesAreItems,ProgressiveItems,MinerCap,BonusTruck]
+        [AvailableLevelsAtStart,BuildingsAreItems,ItemsAreItems,VehiclesAreItems,ProgressiveItems,MinerCap,BonusTruck,UsefulFillerOnly]
     ),
     OptionGroup(
         "Logic",

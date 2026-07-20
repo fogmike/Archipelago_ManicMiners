@@ -186,7 +186,7 @@ ITEM_NAME_TO_ID = {
     "A Monster Has Appeared!": 997,
     "Well Done!": 996,
     
-    "Increased Starting Ore": 950,    
+    "Starting Ore +1": 950,    
     "Chief's Favourite Truck": 949,
     "Miner Cap +1": 948,
     
@@ -362,7 +362,7 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "A Monster Has Appeared!": ItemClassification.filler,
     "Well Done!": ItemClassification.filler,
     
-    "Increased Starting Ore": ItemClassification.filler,    
+    "Starting Ore +1": ItemClassification.filler,    
     "Chief's Favourite Truck": ItemClassification.useful,
     "Miner Cap +1": ItemClassification.useful
 }
@@ -645,12 +645,19 @@ PROGRESSIVE_VEHICLE_UNLOCK_LIST = [
     "Progressive Vehicle Unlock: Tunnel Transport"
 ]
 
-FILLER_LIST = [
+EMPTY_FILLER_LIST = [
     "An Energy Crystal Has Been Found!",
     "Good Work, Cadet!",
     "A Monster Has Appeared!",
-    "Well Done!",
-    "Increased Starting Ore"
+    "Well Done!"
+]
+
+USEFUL_FILLER_LIST = [
+    "Starting Ore +1"
+]
+
+MINER_CAP_FILLER_LIST = [
+    "Miner Cap +1"
 ]
 
 def get_random_filler_item_name(world: ManicMinersWorld) -> str:
@@ -1040,9 +1047,14 @@ def create_all_items(world: ManicMinersWorld) -> None:
                 level_count = 33
         for i in range(level_count):
             itempool.append(world.create_item("Transporter Coordinates"))
-
+    
+    if world.options.useful_filler_only:
+        FILLER_LIST = USEFUL_FILLER_LIST
+    else:
+        FILLER_LIST = EMPTY_FILLER_LIST + USEFUL_FILLER_LIST
+    
     if world.options.miner_cap:
-        FILLER_LIST.append("Miner Cap +1")
+        FILLER_LIST += MINER_CAP_FILLER_LIST
         for _ in range(5):
             itempool.append(world.create_item("Miner Cap +5"))
 
