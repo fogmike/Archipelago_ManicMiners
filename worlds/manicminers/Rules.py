@@ -16,7 +16,7 @@ def set_all_rules(world: ManicMinersWorld) -> None:
 def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     
     rule_can_build_toolstore = HasAny("Building Unlock: Tool Store","Progressive Building Unlock: Tool Store")
-    rule_can_build_teleportpad = HasAll("Building Unlock: Teleport Pad", "Building Unlock: Power Station")
+    rule_can_build_teleportpad = HasAny("Building Unlock: Teleport Pad","Progressive Building Unlock: Teleport Pad") & HasAny("Building Unlock: Power Station","Progressive Building Unlock: Power Station")
     rule_can_build_powerstation = rule_can_build_teleportpad
     rule_can_build_docks = Has("Building Unlock: Docks") & rule_can_build_powerstation
     rule_can_build_canteen = HasAny("Building Unlock: Canteen","Progressive Building Unlock: Canteen")
