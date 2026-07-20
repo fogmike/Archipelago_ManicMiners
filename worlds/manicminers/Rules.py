@@ -120,6 +120,12 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     if world.options.level_selection_lrr_frozenfrenzy:
         entrance_lrr_frozenfrenzy = world.get_entrance("Start Level - LRR - Frozen Frenzy")
         world.set_rule(entrance_lrr_frozenfrenzy, (rule_can_blast & Has("Level Access: LRR - Frozen Frenzy") & rule_can_always_breathe))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_lrr_frozenfrenzy = world.get_location("Crystal Target: LRR - Frozen Frenzy")
+            world.set_rule(location_crystals_lrr_frozenfrenzy, rule_can_breathe)
+        if world.options.victory_condition == 2:
+            event_crystals_lrr_frozenfrenzy = world.get_location("Crystal Target Beatable: LRR - Frozen Frenzy")
+            world.set_rule(event_crystals_lrr_frozenfrenzy, rule_can_breathe)
     if world.options.level_selection_lrr_hotstuff:
         entrance_lrr_hotstuff = world.get_entrance("Start Level - LRR - Hot Stuff")
         world.set_rule(entrance_lrr_hotstuff, (rule_can_breathe & Has("Level Access: LRR - Hot Stuff")))
