@@ -111,7 +111,7 @@ The 100% crystal targets are shown, though the options only allow up to 95% to m
 | It's A Hold Up        | 1h            | 45m             | 32m           | 28m                | 2                     | 85             |
 | Lake Of Fire          | 1h            | 45m             | 30m           | 25m                | 4                     | 230            |
 | Lava Laughter         | 55m           | 40m             | 27m           | 24m                | 4                     | 106            |
-| Mine Over Matter      | 35m           | 25m             | 18m           | 16m                | 2                     | 65             |
+| Mine Over Manner      | 35m           | 25m             | 18m           | 16m                | 2                     | 65             |
 | Molten Meltdown       | 50m           | 35m             | 24m           | 21m                | 2                     | 111            |
 | Oresome               | 3h 45m        | 2h45m           | 2h            | 1h 40m             | 4                     | 229            |
 | Recruitment           | 1h            | 45m             | 28m           | 24m                | 2                     | 61             |

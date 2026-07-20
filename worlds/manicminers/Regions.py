@@ -107,7 +107,7 @@ def create_all_regions(world: ManicMinersWorld) -> None:
     region_baz_itsaholdup = Region("BAZ - It's A Hold Up", world.player, world.multiworld)
     region_baz_lakeoffire = Region("BAZ - Lake Of Fire", world.player, world.multiworld)
     region_baz_lavalaughter = Region("BAZ - Lava Laughter", world.player, world.multiworld)
-    region_baz_mineovermatter = Region("BAZ - Mine Over Matter", world.player, world.multiworld)
+    region_baz_mineovermanner = Region("BAZ - Mine Over Manner", world.player, world.multiworld)
     region_baz_moltenmeltdown = Region("BAZ - Molten Meltdown", world.player, world.multiworld)
     region_baz_oresome = Region("BAZ - Oresome", world.player, world.multiworld)
     region_baz_recruitment = Region("BAZ - Recruitment", world.player, world.multiworld)
@@ -127,7 +127,7 @@ def create_all_regions(world: ManicMinersWorld) -> None:
     regions_lrr = [region_lrr_abreathoffreshair, region_lrr_airraiders, region_lrr_backtobasics, region_lrr_breathless, region_lrr_dontpanic, region_lrr_drillernight, region_lrr_erodeworks, region_lrr_explosiveaction, region_lrr_fireandwater, region_lrr_frozenfrenzy, region_lrr_hotstuff, region_lrr_icespy, region_lrr_itsaholdup, region_lrr_lakeoffire, region_lrr_lavalaughter, region_lrr_oresome, region_lrr_rockhard, region_lrr_rockyhorror, region_lrr_rubbletrouble, region_lrr_runthegauntlet, region_lrr_searchandrescue, region_lrr_splitdownthemiddle, region_lrr_thepathtopower, region_lrr_waterlotoffun, region_lrr_waterworks]
     regions_lrrr = [region_lrrr_abreathoffreshair, region_lrrr_airraiders, region_lrrr_backtobasics, region_lrrr_breathless, region_lrrr_dontpanic, region_lrrr_drillernight, region_lrrr_erodeworks, region_lrrr_explosiveaction, region_lrrr_fireandwater, region_lrrr_frozenfrenzy, region_lrrr_hotstuff, region_lrrr_icespy, region_lrrr_itsaholdup, region_lrrr_lakeoffire, region_lrrr_lavalaughter, region_lrrr_oresome, region_lrrr_rockhard, region_lrrr_rockyhorror, region_lrrr_rubbletrouble, region_lrrr_runthegauntlet, region_lrrr_searchandrescue, region_lrrr_splitdownthemiddle, region_lrrr_thepathtopower, region_lrrr_waterlotoffun, region_lrrr_waterworks]
     regions_lrrc = [region_lrrc_abreathoffreshair, region_lrrc_airraiders, region_lrrc_backtobasics, region_lrrc_breathless, region_lrrc_dontpanic, region_lrrc_drillernight, region_lrrc_erodeworks, region_lrrc_explosiveaction, region_lrrc_fireandwater, region_lrrc_frozenfrenzy, region_lrrc_hotstuff, region_lrrc_icespy, region_lrrc_itsaholdup, region_lrrc_lakeoffire, region_lrrc_lavalaughter, region_lrrc_oresome, region_lrrc_rockhard, region_lrrc_rockyhorror, region_lrrc_rubbletrouble, region_lrrc_runthegauntlet, region_lrrc_searchandrescue, region_lrrc_splitdownthemiddle, region_lrrc_thepathtopower, region_lrrc_waterlotoffun, region_lrrc_waterworks]
-    regions_baz = [region_baz_abreathoffreshair, region_baz_airraiders, region_baz_backtobasics, region_baz_breathless, region_baz_coldcomfort, region_baz_dontpanic, region_baz_downinthedirt, region_baz_drillernight, region_baz_erodeworks, region_baz_explosiveaction, region_baz_fireandwater, region_baz_frozenfrenzy, region_baz_hotstuff, region_baz_icespy, region_baz_itsaholdup, region_baz_lakeoffire, region_baz_lavalaughter, region_baz_mineovermatter, region_baz_moltenmeltdown, region_baz_oresome, region_baz_recruitment, region_baz_rockhard, region_baz_rockyhorror, region_baz_rubbletrouble, region_baz_runthegauntlet, region_baz_seamless, region_baz_searchandrescue, region_baz_slimeysimple, region_baz_splitdownthemiddle, region_baz_thehardrocklife, region_baz_thepathtopower, region_baz_waterlotoffun, region_baz_waterworks]
+    regions_baz = [region_baz_abreathoffreshair, region_baz_airraiders, region_baz_backtobasics, region_baz_breathless, region_baz_coldcomfort, region_baz_dontpanic, region_baz_downinthedirt, region_baz_drillernight, region_baz_erodeworks, region_baz_explosiveaction, region_baz_fireandwater, region_baz_frozenfrenzy, region_baz_hotstuff, region_baz_icespy, region_baz_itsaholdup, region_baz_lakeoffire, region_baz_lavalaughter, region_baz_mineovermanner, region_baz_moltenmeltdown, region_baz_oresome, region_baz_recruitment, region_baz_rockhard, region_baz_rockyhorror, region_baz_rubbletrouble, region_baz_runthegauntlet, region_baz_seamless, region_baz_searchandrescue, region_baz_slimeysimple, region_baz_splitdownthemiddle, region_baz_thehardrocklife, region_baz_thepathtopower, region_baz_waterlotoffun, region_baz_waterworks]
     
     regions = [region_menu] + regions_lrr + regions_lrrr + regions_lrrc + regions_baz
     
@@ -231,7 +231,7 @@ def connect_regions(world: ManicMinersWorld) -> None:
     region_baz_itsaholdup = world.get_region("BAZ - It's A Hold Up")
     region_baz_lakeoffire = world.get_region("BAZ - Lake Of Fire")
     region_baz_lavalaughter = world.get_region("BAZ - Lava Laughter")
-    region_baz_mineovermatter = world.get_region("BAZ - Mine Over Matter")
+    region_baz_mineovermanner = world.get_region("BAZ - Mine Over Manner")
     region_baz_moltenmeltdown = world.get_region("BAZ - Molten Meltdown")
     region_baz_oresome = world.get_region("BAZ - Oresome")
     region_baz_recruitment = world.get_region("BAZ - Recruitment")
@@ -343,7 +343,7 @@ def connect_regions(world: ManicMinersWorld) -> None:
     region_menu.connect(region_baz_itsaholdup, "Start Level - BAZ - It's A Hold Up")
     region_menu.connect(region_baz_lakeoffire, "Start Level - BAZ - Lake Of Fire")
     region_menu.connect(region_baz_lavalaughter, "Start Level - BAZ - Lava Laughter")
-    region_menu.connect(region_baz_mineovermatter, "Start Level - BAZ - Mine Over Matter")
+    region_menu.connect(region_baz_mineovermanner, "Start Level - BAZ - Mine Over Manner")
     region_menu.connect(region_baz_moltenmeltdown, "Start Level - BAZ - Molten Meltdown")
     region_menu.connect(region_baz_oresome, "Start Level - BAZ - Oresome")
     region_menu.connect(region_baz_recruitment, "Start Level - BAZ - Recruitment")

@@ -691,15 +691,15 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     if world.options.level_selection_baz_lavalaughter:
         entrance_baz_lavalaughter = world.get_entrance("Start Level - BAZ - Lava Laughter")
         world.set_rule(entrance_baz_lavalaughter, (Has("Level Access: BAZ - Lava Laughter") & rule_can_breathe & rule_can_cheap_blast & rule_can_build_10_miners))
-    if world.options.level_selection_baz_mineovermatter:
-        entrance_baz_mineovermatter = world.get_entrance("Start Level - BAZ - Mine Over Matter")
-        world.set_rule(entrance_baz_mineovermatter, Has("Level Access: BAZ - Mine Over Matter"))
+    if world.options.level_selection_baz_mineovermanner:
+        entrance_baz_mineovermanner = world.get_entrance("Start Level - BAZ - Mine Over Manner")
+        world.set_rule(entrance_baz_mineovermanner, Has("Level Access: BAZ - Mine Over Manner"))
         if world.options.crystal_targets_are_locations:
-            location_crystals_baz_mineovermatter = world.get_location("Crystal Target: BAZ - Mine Over Matter")
-            world.set_rule(location_crystals_baz_mineovermatter, rule_can_blast)
+            location_crystals_baz_mineovermanner = world.get_location("Crystal Target: BAZ - Mine Over Manner")
+            world.set_rule(location_crystals_baz_mineovermanner, rule_can_blast)
         if world.options.victory_condition == 2:
-            event_crystals_baz_mineovermatter = world.get_location("Crystal Target Beatable: BAZ - Mine Over Matter")
-            world.set_rule(event_crystals_baz_mineovermatter, rule_can_blast)
+            event_crystals_baz_mineovermanner = world.get_location("Crystal Target Beatable: BAZ - Mine Over Manner")
+            world.set_rule(event_crystals_baz_mineovermanner, rule_can_blast)
     if world.options.level_selection_baz_moltenmeltdown:
         entrance_baz_moltenmeltdown = world.get_entrance("Start Level - BAZ - Molten Meltdown")
         world.set_rule(entrance_baz_moltenmeltdown, (Has("Level Access: BAZ - Molten Meltdown") & rule_can_blast & rule_can_fly & rule_can_build_10_miners))

@@ -184,7 +184,7 @@ class ManicMinersWorld(World):
                 self.options.level_selection_baz_itsaholdup.value = 1
                 self.options.level_selection_baz_lakeoffire.value = 1
                 self.options.level_selection_baz_lavalaughter.value = 1
-                self.options.level_selection_baz_mineovermatter.value = 1
+                self.options.level_selection_baz_mineovermanner.value = 1
                 self.options.level_selection_baz_moltenmeltdown.value = 1
                 self.options.level_selection_baz_oresome.value = 1
                 self.options.level_selection_baz_recruitment.value = 1
@@ -382,7 +382,7 @@ class ManicMinersWorld(World):
             level_list[random_index].value = 1
             level_list.clear()
             if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
-                self.options.level_selection_baz_mineovermatter.value = 1
+                self.options.level_selection_baz_mineovermanner.value = 1
             if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
                 self.options.level_selection_baz_moltenmeltdown.value = 1
             if self.options.campaign_selection_lrr:

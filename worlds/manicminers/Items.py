@@ -112,7 +112,7 @@ ITEM_NAME_TO_ID = {
     "Level Access: BAZ - It's A Hold Up": 3015,
     "Level Access: BAZ - Lake Of Fire": 3016,
     "Level Access: BAZ - Lava Laughter": 3017,
-    "Level Access: BAZ - Mine Over Matter": 3018,
+    "Level Access: BAZ - Mine Over Manner": 3018,
     "Level Access: BAZ - Molten Meltdown": 3019,
     "Level Access: BAZ - Oresome": 3020,
     "Level Access: BAZ - Recruitment": 3021,
@@ -288,7 +288,7 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "Level Access: BAZ - It's A Hold Up": ItemClassification.progression,
     "Level Access: BAZ - Lake Of Fire": ItemClassification.progression,
     "Level Access: BAZ - Lava Laughter": ItemClassification.progression,
-    "Level Access: BAZ - Mine Over Matter": ItemClassification.progression,
+    "Level Access: BAZ - Mine Over Manner": ItemClassification.progression,
     "Level Access: BAZ - Molten Meltdown": ItemClassification.progression,
     "Level Access: BAZ - Oresome": ItemClassification.progression,
     "Level Access: BAZ - Recruitment": ItemClassification.progression,
@@ -468,7 +468,7 @@ LEVEL_ACCESS_LRRC_LIST = LEVEL_ACCESS_LRRC_NOUNLOCK_LIST + LEVEL_ACCESS_LRRC_NEE
 
 LEVEL_ACCESS_BAZ_NOUNLOCK_LIST = [
     "Level Access: BAZ - A Breath Of Fresh Air",
-    "Level Access: BAZ - Mine Over Matter",
+    "Level Access: BAZ - Mine Over Manner",
     "Level Access: BAZ - Driller Night"
 ]
 
@@ -957,8 +957,8 @@ def create_all_items(world: ManicMinersWorld) -> None:
             itempool_access.append(world.create_item("Level Access: BAZ - Lake Of Fire"))
         if world.options.level_selection_baz_lavalaughter:
             itempool_access.append(world.create_item("Level Access: BAZ - Lava Laughter"))
-        if world.options.level_selection_baz_mineovermatter:
-            itempool_access.append(world.create_item("Level Access: BAZ - Mine Over Matter"))
+        if world.options.level_selection_baz_mineovermanner:
+            itempool_access.append(world.create_item("Level Access: BAZ - Mine Over Manner"))
         if world.options.level_selection_baz_moltenmeltdown:
             itempool_access.append(world.create_item("Level Access: BAZ - Molten Meltdown"))
         if world.options.level_selection_baz_oresome:
@@ -1364,8 +1364,8 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, op
             source = "\\BAZ\\lavalaughter.dat"
             target = "\\BAZ - Lava Laughter.dat"
         case 3018:
-            source = "\\BAZ\\mineovermatter.dat"
-            target = "\\BAZ - Mine Over Matter.dat"
+            source = "\\BAZ\\mineovermanner.dat"
+            target = "\\BAZ - Mine Over Manner.dat"
         case 3019:
             source = "\\BAZ\\moltenmeltdown.dat"
             target = "\\BAZ - Molten Meltdown.dat"

@@ -507,7 +507,7 @@ class LevelSelectionBAZLakeOfFire(Toggle):
 class LevelSelectionBAZLavaLaughter(Toggle):
     """ Hidden level selection option"""
     visibility = Visibility.none
-class LevelSelectionBAZMineOverMatter(Toggle):
+class LevelSelectionBAZMineOverManner(Toggle):
     """ Hidden level selection option"""
     visibility = Visibility.none
 class LevelSelectionBAZMoltenMeltdown(Toggle):
@@ -691,7 +691,7 @@ class ManicMinersOptions(PerGameCommonOptions):
     level_selection_baz_itsaholdup: LevelSelectionBAZItsAHoldUp
     level_selection_baz_lakeoffire: LevelSelectionBAZLakeOfFire
     level_selection_baz_lavalaughter: LevelSelectionBAZLavaLaughter
-    level_selection_baz_mineovermatter: LevelSelectionBAZMineOverMatter
+    level_selection_baz_mineovermanner: LevelSelectionBAZMineOverManner
     level_selection_baz_moltenmeltdown: LevelSelectionBAZMoltenMeltdown
     level_selection_baz_oresome: LevelSelectionBAZOresome
     level_selection_baz_recruitment: LevelSelectionBAZRecruitment

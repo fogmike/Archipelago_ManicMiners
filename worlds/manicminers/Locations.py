@@ -515,7 +515,7 @@ LOCATION_NAME_TO_ID = {
     "Clear: BAZ - It's A Hold Up": 30150,
     "Clear: BAZ - Lake Of Fire": 30160,
     "Clear: BAZ - Lava Laughter": 30170,
-    "Clear: BAZ - Mine Over Matter": 30180,
+    "Clear: BAZ - Mine Over Manner": 30180,
     "Clear: BAZ - Molten Meltdown": 30190,
     "Clear: BAZ - Oresome": 30200,
     "Clear: BAZ - Recruitment": 30210,
@@ -572,7 +572,7 @@ LOCATION_NAME_TO_ID = {
     "Bonus Clear 1: BAZ - Lava Laughter": 30171,
     "Bonus Clear 2: BAZ - Lava Laughter": 30172,
     "Bonus Clear 3: BAZ - Lava Laughter": 30173,
-    "Bonus Clear 1: BAZ - Mine Over Matter": 30181,
+    "Bonus Clear 1: BAZ - Mine Over Manner": 30181,
     "Bonus Clear 1: BAZ - Molten Meltdown": 30191,
     "Bonus Clear 1: BAZ - Oresome": 30201,
     "Bonus Clear 2: BAZ - Oresome": 30202,
@@ -618,7 +618,7 @@ LOCATION_NAME_TO_ID = {
     "Research Coordinates: BAZ - It's A Hold Up": 30159,
     "Research Coordinates: BAZ - Lake Of Fire": 30169,
     "Research Coordinates: BAZ - Lava Laughter": 30179,
-    "Research Coordinates: BAZ - Mine Over Matter": 30189,
+    "Research Coordinates: BAZ - Mine Over Manner": 30189,
     "Research Coordinates: BAZ - Molten Meltdown": 30199,
     "Research Coordinates: BAZ - Oresome": 30209,
     "Research Coordinates: BAZ - Recruitment": 30219,
@@ -652,7 +652,7 @@ LOCATION_NAME_TO_ID = {
     "Beat Par Time: BAZ - It's A Hold Up": 31150,
     "Beat Par Time: BAZ - Lake Of Fire": 31160,
     "Beat Par Time: BAZ - Lava Laughter": 31170,
-    "Beat Par Time: BAZ - Mine Over Matter": 31180,
+    "Beat Par Time: BAZ - Mine Over Manner": 31180,
     "Beat Par Time: BAZ - Molten Meltdown": 31190,
     "Beat Par Time: BAZ - Oresome": 31200,
     "Beat Par Time: BAZ - Recruitment": 31210,
@@ -686,7 +686,7 @@ LOCATION_NAME_TO_ID = {
     "Crystal Target: BAZ - It's A Hold Up": 32150,
     "Crystal Target: BAZ - Lake Of Fire": 32160,
     "Crystal Target: BAZ - Lava Laughter": 32170,
-    "Crystal Target: BAZ - Mine Over Matter": 32180,
+    "Crystal Target: BAZ - Mine Over Manner": 32180,
     "Crystal Target: BAZ - Molten Meltdown": 32190,
     "Crystal Target: BAZ - Oresome": 32200,
     "Crystal Target: BAZ - Recruitment": 32210,
@@ -801,7 +801,7 @@ TARGET_CLEAR_TIME_EASY = {
     "BAZ - It's A Hold Up": 3600, # 60:00
     "BAZ - Lake Of Fire": 3600, # 60:00
     "BAZ - Lava Laughter": 3300, # 55:00
-    "BAZ - Mine Over Matter": 2100, # 35:00 
+    "BAZ - Mine Over Manner": 2100, # 35:00 
     "BAZ - Molten Meltdown": 3000, # 50:00
     "BAZ - Oresome": 13500, # 225:00
     "BAZ - Recruitment": 3600, # 60:00
@@ -931,7 +931,7 @@ TARGET_CLEAR_TIME_MEDIUM = {
     "BAZ - It's A Hold Up": 2700, # 45:00
     "BAZ - Lake Of Fire": 2700, # 45:00
     "BAZ - Lava Laughter": 2400, # 40:00
-    "BAZ - Mine Over Matter": 1500, # 25:00
+    "BAZ - Mine Over Manner": 1500, # 25:00
     "BAZ - Molten Meltdown": 2100, # 35:00
     "BAZ - Oresome": 9900, # 165:00
     "BAZ - Recruitment": 2700, # 45:00
@@ -1061,7 +1061,7 @@ TARGET_CLEAR_TIME_HARD = {
     "BAZ - It's A Hold Up": 1920, # 32:00
     "BAZ - Lake Of Fire": 1800, # 30:00
     "BAZ - Lava Laughter": 1620, # 27:00
-    "BAZ - Mine Over Matter": 1080, # 18:00
+    "BAZ - Mine Over Manner": 1080, # 18:00
     "BAZ - Molten Meltdown": 1440, # 24:00
     "BAZ - Oresome": 7200, # 120:00
     "BAZ - Recruitment": 1680, # 28:00
@@ -1191,7 +1191,7 @@ TARGET_CLEAR_TIME_ROCK_HARD = {
     "BAZ - It's A Hold Up": 1680, # 28:00
     "BAZ - Lake Of Fire": 1500, # 25:00
     "BAZ - Lava Laughter": 1440, # 24:00
-    "BAZ - Mine Over Matter": 960, # 16:00
+    "BAZ - Mine Over Manner": 960, # 16:00
     "BAZ - Molten Meltdown": 1260, # 21:00
     "BAZ - Oresome": 6000, # 100:00
     "BAZ - Recruitment": 1440, # 24:00
@@ -1321,7 +1321,7 @@ TARGET_CRYSTAL_COUNT = {
     "BAZ - It's A Hold Up": 85,
     "BAZ - Lake Of Fire": 230,
     "BAZ - Lava Laughter": 106,
-    "BAZ - Mine Over Matter": 65,
+    "BAZ - Mine Over Manner": 65,
     "BAZ - Molten Meltdown": 111,
     "BAZ - Oresome": 229,
     "BAZ - Recruitment": 61,
@@ -1442,7 +1442,7 @@ def create_all_locations(world: ManicMinersWorld) -> None:
     region_baz_itsaholdup = world.get_region("BAZ - It's A Hold Up")
     region_baz_lakeoffire = world.get_region("BAZ - Lake Of Fire")
     region_baz_lavalaughter = world.get_region("BAZ - Lava Laughter")
-    region_baz_mineovermatter = world.get_region("BAZ - Mine Over Matter")
+    region_baz_mineovermanner = world.get_region("BAZ - Mine Over Manner")
     region_baz_moltenmeltdown = world.get_region("BAZ - Molten Meltdown")
     region_baz_oresome = world.get_region("BAZ - Oresome")
     region_baz_recruitment = world.get_region("BAZ - Recruitment")
@@ -3902,30 +3902,30 @@ def create_all_locations(world: ManicMinersWorld) -> None:
             if world.options.locked_coordinates:
                 locations_baz_lavalaughter = world.get_location("Research Coordinates: BAZ - Lava Laughter")
                 locations_baz_lavalaughter.place_locked_item(world.create_item("Transporter Coordinates"))
-    if world.options.level_selection_baz_mineovermatter:
-        locations_baz_mineovermatter = get_location_names_with_ids(["Clear: BAZ - Mine Over Matter"])
-        region_baz_mineovermatter.add_locations(locations_baz_mineovermatter, ManicMinersLocation)
+    if world.options.level_selection_baz_mineovermanner:
+        locations_baz_mineovermanner = get_location_names_with_ids(["Clear: BAZ - Mine Over Manner"])
+        region_baz_mineovermanner.add_locations(locations_baz_mineovermanner, ManicMinersLocation)
         if world.options.bonus_clear_locations:
-            locations_baz_mineovermatter_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Mine Over Matter"])
-            region_baz_mineovermatter.add_locations(locations_baz_mineovermatter_bonus1, ManicMinersLocation)
+            locations_baz_mineovermanner_bonus1 = get_location_names_with_ids(["Bonus Clear 1: BAZ - Mine Over Manner"])
+            region_baz_mineovermanner.add_locations(locations_baz_mineovermanner_bonus1, ManicMinersLocation)
         if world.options.target_times_are_locations:
-            locations_baz_mineovermatter = get_location_names_with_ids(["Beat Par Time: BAZ - Mine Over Matter"])
-            region_baz_mineovermatter.add_locations(locations_baz_mineovermatter, ManicMinersLocation)
+            locations_baz_mineovermanner = get_location_names_with_ids(["Beat Par Time: BAZ - Mine Over Manner"])
+            region_baz_mineovermanner.add_locations(locations_baz_mineovermanner, ManicMinersLocation)
         if world.options.crystal_targets_are_locations:
-            locations_baz_mineovermatter = get_location_names_with_ids(["Crystal Target: BAZ - Mine Over Matter"])
-            region_baz_mineovermatter.add_locations(locations_baz_mineovermatter, ManicMinersLocation)
+            locations_baz_mineovermanner = get_location_names_with_ids(["Crystal Target: BAZ - Mine Over Manner"])
+            region_baz_mineovermanner.add_locations(locations_baz_mineovermanner, ManicMinersLocation)
         if world.options.victory_condition == 0:
-            region_baz_mineovermatter.add_event("Level Completable: BAZ - Mine Over Matter", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_baz_mineovermanner.add_event("Level Completable: BAZ - Mine Over Manner", "Level Completed", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 1:
-            region_baz_mineovermatter.add_event("Par Time Beatable: BAZ - Mine Over Matter", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_baz_mineovermanner.add_event("Par Time Beatable: BAZ - Mine Over Manner", "Par Time Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 2:
-            region_baz_mineovermatter.add_event("Crystal Target Beatable: BAZ - Mine Over Matter", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
+            region_baz_mineovermanner.add_event("Crystal Target Beatable: BAZ - Mine Over Manner", "Crystal Target Beaten", location_type=ManicMinersLocation, item_type=Items.ManicMinersItem)
         elif world.options.victory_condition == 3:
-            locations_baz_mineovermatter = get_location_names_with_ids(["Research Coordinates: BAZ - Mine Over Matter"])
-            region_baz_mineovermatter.add_locations(locations_baz_mineovermatter, ManicMinersLocation)
+            locations_baz_mineovermanner = get_location_names_with_ids(["Research Coordinates: BAZ - Mine Over Manner"])
+            region_baz_mineovermanner.add_locations(locations_baz_mineovermanner, ManicMinersLocation)
             if world.options.locked_coordinates:
-                locations_baz_mineovermatter = world.get_location("Research Coordinates: BAZ - Mine Over Matter")
-                locations_baz_mineovermatter.place_locked_item(world.create_item("Transporter Coordinates"))
+                locations_baz_mineovermanner = world.get_location("Research Coordinates: BAZ - Mine Over Manner")
+                locations_baz_mineovermanner.place_locked_item(world.create_item("Transporter Coordinates"))
     if world.options.level_selection_baz_moltenmeltdown:
         locations_baz_moltenmeltdown = get_location_names_with_ids(["Clear: BAZ - Molten Meltdown"])
         region_baz_moltenmeltdown.add_locations(locations_baz_moltenmeltdown, ManicMinersLocation)
@@ -4595,7 +4595,7 @@ def location_id_from_level_name(level_name):
             return 30160
         case "Archipelago/BAZ - Lava Laughter":
             return 30170
-        case "Archipelago/BAZ - Mine Over Matter":
+        case "Archipelago/BAZ - Mine Over Manner":
             return 30180
         case "Archipelago/BAZ - Molten Meltdown":
             return 30190
