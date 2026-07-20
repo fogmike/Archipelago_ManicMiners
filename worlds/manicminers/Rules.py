@@ -21,6 +21,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     rule_can_build_docks = Has("Building Unlock: Docks") & rule_can_build_powerstation
     rule_can_build_canteen = HasAny("Building Unlock: Canteen","Progressive Building Unlock: Canteen")
     rule_can_build_supportstation = HasAny("Building Unlock: Support Station","Progressive Building Unlock: Support Station") & rule_can_build_powerstation
+    rule_can_build_2_supportstation = (Has("Building Unlock: Support Station") | Has("Progressive Building Unlock: Support Station",2) & rule_can_build_powerstation
     rule_can_build_geologicalcenter = Has("Building Unlock: Geological Center") & rule_can_build_powerstation
     rule_can_build_upgradestation = Has("Building Unlock: Upgrade Station") & rule_can_build_powerstation
     rule_can_build_orerefinery = Has("Building Unlock: Ore Refinery") & rule_can_build_powerstation
@@ -53,6 +54,9 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     rule_can_blast = rule_can_dynamite | rule_can_lase | rule_can_build_smalldigger | rule_can_build_granitegrinder
     rule_can_bazblast = rule_can_build_granitegrinder | rule_can_build_lmlc | rule_can_build_chromecrusher
     rule_can_swimblast = (rule_can_build_cargocarrier & (rule_can_build_smalldigger | rule_can_build_smlc)) | (rule_can_build_tunneltransport & (rule_can_lase | rule_can_build_smalldigger | rule_can_build_granitegrinder)) | (rule_can_swim & rule_can_blast & rule_can_build_toolstore)
+    rule_can_build_10_miners = Filtered(Has("Miner Cap +5",1), options = [OptionFilter(ManicMiners_Options.MinerCap, 1)], filtered_resolution = True)
+    rule_can_build_20_miners = rule_can_build_supportstation & Filtered(Has("Miner Cap +5",3), options = [OptionFilter(ManicMiners_Options.MinerCap, 1)], filtered_resolution = True)
+    rule_can_build_30_miners = rule_can_build_2_supportstation & Filtered(Has("Miner Cap +5",5), options = [OptionFilter(ManicMiners_Options.MinerCap, 1)], filtered_resolution = True)
 
     if world.options.level_selection_lrr_abreathoffreshair:
         entrance_lrr_abreathoffreshair = world.get_entrance("Start Level - LRR - A Breath Of Fresh Air")
@@ -783,7 +787,12 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     if world.options.level_selection_baz_waterworks:
         entrance_baz_waterworks = world.get_entrance("Start Level - BAZ - Water Works")
         world.set_rule(entrance_baz_waterworks, (Has("Level Access: BAZ - Water Works") & rule_can_breathe & rule_can_flying_lase))
-
+    
+    # Add an access rule based on miners to all par times
+    for location in world.get_locations():
+        if location.name[:14] == "Beat Par Time:":
+            world.set_rule(location, (rule_can_build_toolstore | rule_can_build_20_miners))
+        
     goal_achievable = world.get_location("Goal Conditions Achievable")
     if world.options.victory_condition == 0:
         world.set_rule(goal_achievable, Has("Level Completed", world.options.target_level_count.value))

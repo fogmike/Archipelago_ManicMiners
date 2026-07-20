@@ -1043,7 +1043,7 @@ def create_all_items(world: ManicMinersWorld) -> None:
 
     if world.options.miner_cap:
         FILLER_LIST.append("Miner Cap +1")
-        for _ in range(4):
+        for _ in range(5):
             itempool.append(world.create_item("Miner Cap +5"))
 
     number_of_items = len(itempool)
