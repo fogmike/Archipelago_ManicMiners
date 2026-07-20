@@ -1456,7 +1456,7 @@ def update_disabled_unlocks(filepath, all_items, options, disable_truck):
         autodelete_section = ""
     
     if options["miner_cap"]:
-        miner_cap = 8
+        miner_cap = 5
         miner_cap += 5 * (all_items.count(850))
         miner_cap += all_items.count(948)
         miner_limit_string = "int MinerCap=" + str(miner_cap) + "\n"
