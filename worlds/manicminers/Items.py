@@ -368,18 +368,16 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
 }
 
 LEVEL_ACCESS_LRR_NOUNLOCK_LIST = [
-    "Level Access: LRR - Air Raiders",
     "Level Access: LRR - Don't Panic",
     "Level Access: LRR - Driller Night",
     "Level Access: LRR - It's A Hold Up",
-    "Level Access: LRR - Lake Of Fire",
-    "Level Access: LRR - Oresome",
     "Level Access: LRR - Rubble Trouble",
     "Level Access: LRR - Run The Gauntlet",
     "Level Access: LRR - Split Down The Middle"
 ]
 
 LEVEL_ACCESS_LRR_NEEDSUNLOCK_LIST = [
+    "Level Access: LRR - Air Raiders",
     "Level Access: LRR - A Breath Of Fresh Air",
     "Level Access: LRR - Back To Basics",
     "Level Access: LRR - Breathless",
@@ -389,7 +387,9 @@ LEVEL_ACCESS_LRR_NEEDSUNLOCK_LIST = [
     "Level Access: LRR - Frozen Frenzy",
     "Level Access: LRR - Hot Stuff",
     "Level Access: LRR - Ice Spy",
+    "Level Access: LRR - Lake Of Fire",
     "Level Access: LRR - Lava Laughter",
+    "Level Access: LRR - Oresome",
     "Level Access: LRR - Rock Hard",
     "Level Access: LRR - Rocky Horror",
     "Level Access: LRR - Search And Rescue",
@@ -434,18 +434,16 @@ LEVEL_ACCESS_LRRR_NEEDSUNLOCK_LIST = [
 LEVEL_ACCESS_LRRR_LIST = LEVEL_ACCESS_LRRR_NOUNLOCK_LIST + LEVEL_ACCESS_LRRR_NEEDSUNLOCK_LIST
 
 LEVEL_ACCESS_LRRC_NOUNLOCK_LIST = [
-    "Level Access: LRRC - Air Raiders",
     "Level Access: LRRC - Don't Panic",
     "Level Access: LRRC - Driller Night",
     "Level Access: LRRC - It's A Hold Up",
-    "Level Access: LRRC - Lake Of Fire",
-    "Level Access: LRRC - Oresome",
     "Level Access: LRRC - Rubble Trouble",
     "Level Access: LRRC - Run The Gauntlet",
     "Level Access: LRRC - Split Down The Middle"
 ]
 
 LEVEL_ACCESS_LRRC_NEEDSUNLOCK_LIST = [
+    "Level Access: LRRC - Air Raiders",
     "Level Access: LRRC - A Breath Of Fresh Air",
     "Level Access: LRRC - Back To Basics",
     "Level Access: LRRC - Breathless",
@@ -455,7 +453,9 @@ LEVEL_ACCESS_LRRC_NEEDSUNLOCK_LIST = [
     "Level Access: LRRC - Frozen Frenzy",
     "Level Access: LRRC - Hot Stuff",
     "Level Access: LRRC - Ice Spy",
+    "Level Access: LRRC - Lake Of Fire",
     "Level Access: LRRC - Lava Laughter",
+    "Level Access: LRRC - Oresome",
     "Level Access: LRRC - Rock Hard",
     "Level Access: LRRC - Rocky Horror",
     "Level Access: LRRC - Search And Rescue",
@@ -469,8 +469,7 @@ LEVEL_ACCESS_LRRC_LIST = LEVEL_ACCESS_LRRC_NOUNLOCK_LIST + LEVEL_ACCESS_LRRC_NEE
 LEVEL_ACCESS_BAZ_NOUNLOCK_LIST = [
     "Level Access: BAZ - A Breath Of Fresh Air",
     "Level Access: BAZ - Mine Over Matter",
-    "Level Access: BAZ - Driller Night",
-    "Level Access: BAZ - Split Down The Middle"
+    "Level Access: BAZ - Driller Night"
 ]
 
 LEVEL_ACCESS_BAZ_NEEDSUNLOCK_LIST = [
@@ -499,6 +498,7 @@ LEVEL_ACCESS_BAZ_NEEDSUNLOCK_LIST = [
     "Level Access: BAZ - Seamless",
     "Level Access: BAZ - Search And Rescue",
     "Level Access: BAZ - Slimey Simple",
+    "Level Access: BAZ - Split Down The Middle",
     "Level Access: BAZ - The Hard Rock Life",
     "Level Access: BAZ - The Path To Power",
     "Level Access: BAZ - Water Lot Of Fun",
