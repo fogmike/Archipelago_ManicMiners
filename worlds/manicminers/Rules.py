@@ -732,7 +732,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_baz_rockhard, (rule_can_build_tunneltransport | (rule_can_fly & rule_can_build_toolstore)))
     if world.options.level_selection_baz_rockyhorror:
         entrance_baz_rockyhorror = world.get_entrance("Start Level - BAZ - Rocky Horror")
-        world.set_rule(entrance_baz_rockyhorror, (Has("Level Access: BAZ - Rocky Horror") & rule_can_build_30_miners & rule_can_breathe & rule_can_swimblast & rule_can_lase))
+        world.set_rule(entrance_baz_rockyhorror, (Has("Level Access: BAZ - Rocky Horror") & rule_can_build_30_miners & Has("Transporter Coordinates",world.options.target_level_count.value,options=[OptionFilter(ManicMiners_Options.BossLevelBAZRockyHorror,1)],filtered_resolution=True) & rule_can_breathe & rule_can_swimblast & rule_can_lase))
     if world.options.level_selection_baz_rubbletrouble:
         entrance_baz_rubbletrouble = world.get_entrance("Start Level - BAZ - Rubble Trouble")
         world.set_rule(entrance_baz_rubbletrouble, (Has("Level Access: BAZ - Rubble Trouble") & rule_can_cheap_blast))
