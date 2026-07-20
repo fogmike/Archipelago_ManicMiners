@@ -661,8 +661,8 @@ MINER_CAP_FILLER_LIST = [
 ]
 
 def get_random_filler_item_name(world: ManicMinersWorld) -> str:
-    random_filler_item_index = world.random.randint(0,len(FILLER_LIST)-1)
-    return FILLER_LIST[random_filler_item_index]
+    random_filler_item_index = world.random.randint(0,len(world.filler_list)-1)
+    return world.filler_list[random_filler_item_index]
     
 def create_item_with_correct_classification(world: ManicMinersWorld, name: str) -> ManicMinersItem:
     classification = DEFAULT_ITEM_CLASSIFICATIONS[name]
@@ -1049,12 +1049,12 @@ def create_all_items(world: ManicMinersWorld) -> None:
             itempool.append(world.create_item("Transporter Coordinates"))
     
     if world.options.useful_filler_only:
-        FILLER_LIST = USEFUL_FILLER_LIST
+        world.filler_list = USEFUL_FILLER_LIST
     else:
-        FILLER_LIST = EMPTY_FILLER_LIST + USEFUL_FILLER_LIST
+        world.filler_list = EMPTY_FILLER_LIST + USEFUL_FILLER_LIST
     
     if world.options.miner_cap:
-        FILLER_LIST += MINER_CAP_FILLER_LIST
+        world.filler_list += MINER_CAP_FILLER_LIST
         for _ in range(5):
             itempool.append(world.create_item("Miner Cap +5"))
 

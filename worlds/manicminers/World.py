@@ -44,6 +44,8 @@ class ManicMinersWorld(World):
     
     origin_region_name = "Menu"
     
+    filler_list = []
+    
     def generate_early(self) -> None:
         # Fix some potentially fatal option combinations
         
