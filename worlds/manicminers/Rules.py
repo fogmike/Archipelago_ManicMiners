@@ -740,7 +740,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_baz_rubbletrouble, (rule_can_swim | rule_can_fly | rule_can_lase))
     if world.options.level_selection_baz_runthegauntlet:
         entrance_baz_runthegauntlet = world.get_entrance("Start Level - BAZ - Run The Gauntlet")
-        world.set_rule(entrance_baz_runthegauntlet, Has("Level Access: BAZ - Run The Gauntlet"))
+        world.set_rule(entrance_baz_runthegauntlet, (Has("Level Access: BAZ - Run The Gauntlet") & rule_can_build_toolstore & (rule_can_build_upgradestation | rule_can_bazblast | rule_can_dynamite)))
         if world.options.crystal_targets_are_locations:
             location_crystals_baz_runthegauntlet = world.get_location("Crystal Target: BAZ - Run The Gauntlet")
             world.set_rule(location_crystals_baz_runthegauntlet, rule_can_blast)
