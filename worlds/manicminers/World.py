@@ -539,14 +539,29 @@ class ManicMinersWorld(World):
         # Identify number of Items
         number_items = 0
         number_items += number_levels # Level Unlocks
-        if self.options.buildings_are_items:
-            number_items += 11 # Building Unlocks
-        if self.options.items_are_items:
-            number_items += 2 # Item Unlocks
-        if self.options.vehicles_are_items:
-            number_items += 12 # Vehicle Unlocks
+        if self.options.buildings_are_items: # Building Unlocks
+            if self.options.progressive_items == 0:
+                number_items += 11
+            elif self.options.progressive_items == 1:
+                number_items += 16
+            else:
+                number_items += 23
+        if self.options.items_are_items: # Item Unlocks
+            if self.options.progressive_items == 0 or self.options.progressive_items == 2:
+                number_items += 2
+            else:
+                number_items += 3
+        if self.options.vehicles_are_items: # Vehicle Unlocks
+            if self.options.progressive_items == 0:
+                number_items += 12
+            elif self.options.progressive_items == 1:
+                number_items += 22
+            else:
+                number_items += 36
         if self.options.bonus_truck:
             number_items += 1 # Chief's Favourite Truck
+        if self.options.miner_cap:
+            number_items += 5 # "Miner Cap +5"s but not the filler +1s
         number_items -= self.options.available_levels_at_start
         
         # Check we haven't got more Items than Locations, handle if so
