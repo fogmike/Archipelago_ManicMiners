@@ -763,7 +763,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_baz_seamless, (Has("Level Access: BAZ - Seamless") & rule_can_dynamite & rule_can_build_10_miners))
     if world.options.level_selection_baz_searchandrescue:
         entrance_baz_searchandrescue = world.get_entrance("Start Level - BAZ - Search And Rescue")
-        world.set_rule(entrance_baz_searchandrescue, (Has("Level Access: BAZ - Search And Rescue") & rule_can_breathe & (rule_can_swimblast | rule_can_swimdrill) & rule_can_build_20_miners))
+        world.set_rule(entrance_baz_searchandrescue, (Has("Level Access: BAZ - Search And Rescue") & rule_can_breathe & rule_can_swimblast & rule_can_build_20_miners))
     if world.options.level_selection_baz_slimeysimple:
         entrance_baz_slimeysimple = world.get_entrance("Start Level - BAZ - Slimey Simple")
         world.set_rule(entrance_baz_slimeysimple, (Has("Level Access: BAZ - Slimey Simple") & rule_can_breathe & rule_can_blast & rule_can_build_10_miners))
