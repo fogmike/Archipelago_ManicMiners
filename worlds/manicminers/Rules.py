@@ -22,7 +22,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     rule_can_build_canteen = HasAny("Building Unlock: Canteen","Progressive Building Unlock: Canteen")
     rule_can_build_supportstation = HasAny("Building Unlock: Support Station","Progressive Building Unlock: Support Station") & rule_can_build_powerstation
     rule_can_build_2_supportstation = (Has("Building Unlock: Support Station") | Has("Progressive Building Unlock: Support Station",2)) & rule_can_build_powerstation
-    rule_can_build_2_supportstation = (Has("Building Unlock: Support Station") | Has("Progressive Building Unlock: Support Station",3)) & rule_can_build_powerstation
+    rule_can_build_3_supportstation = (Has("Building Unlock: Support Station") | Has("Progressive Building Unlock: Support Station",3)) & rule_can_build_powerstation
     rule_can_build_geologicalcenter = Has("Building Unlock: Geological Center") & rule_can_build_powerstation
     rule_can_build_upgradestation = Has("Building Unlock: Upgrade Station") & rule_can_build_powerstation
     rule_can_build_orerefinery = Has("Building Unlock: Ore Refinery") & rule_can_build_powerstation
