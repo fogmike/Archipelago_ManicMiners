@@ -772,10 +772,10 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_baz_splitdownthemiddle, Has("Level Access: BAZ - Split Down The Middle") & rule_can_build_20_miners)
         if world.options.crystal_targets_are_locations:
             location_crystals_baz_splitdownthemiddle = world.get_location("Crystal Target: BAZ - Split Down The Middle")
-            world.set_rule(location_crystals_baz_splitdownthemiddle, rule_can_blast)
+            world.set_rule(location_crystals_baz_splitdownthemiddle, (rule_can_dynamite | rule_can_vehicle_lase | rule_can_build_smalldigger | rule_can_build_granitegrinder))
         if world.options.victory_condition == 2:
             event_crystals_baz_splitdownthemiddle = world.get_location("Crystal Target Beatable: BAZ - Split Down The Middle")
-            world.set_rule(event_crystals_baz_splitdownthemiddle, rule_can_blast)
+            world.set_rule(event_crystals_baz_splitdownthemiddle, (rule_can_dynamite | rule_can_vehicle_lase | rule_can_build_smalldigger | rule_can_build_granitegrinder))
     if world.options.level_selection_baz_thehardrocklife:
         entrance_baz_thehardrocklife = world.get_entrance("Start Level - BAZ - The Hard Rock Life")
         world.set_rule(entrance_baz_thehardrocklife, (Has("Level Access: BAZ - The Hard Rock Life") & rule_can_cheap_blast & rule_can_fly & rule_can_bazblast & rule_can_build_10_miners))
