@@ -4362,7 +4362,7 @@ def check_for_victory(options,save_path):
                 return True
             if options["boss_level_lrrc_rockyhorror"] == 1 and level[0] == "Archipelago/LRRC - Rocky Horror":
                 return True
-            if options["boss_level_baz_rockyhorror"] == 1 and level[0] == "Archipelago/LRRC - Rocky Horror":
+            if options["boss_level_baz_rockyhorror"] == 1 and level[0] == "Archipelago/BAZ - Rocky Horror":
                 return True
         return False
     
