@@ -649,6 +649,12 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     if world.options.level_selection_baz_erodeworks:
         entrance_baz_erodeworks = world.get_entrance("Start Level - BAZ - Erode Works")
         world.set_rule(entrance_baz_erodeworks, (Has("Level Access: BAZ - Erode Works") & rule_can_breathe & rule_can_flying_lase & rule_can_build_20_miners))
+        if world.options.crystal_targets_are_locations:
+            location_crystals_baz_drillernight = world.get_location("Crystal Target: BAZ - Driller Night")
+            world.set_rule(location_crystals_baz_drillernight, rule_can_fly)
+        if world.options.victory_condition == 2:
+            event_crystals_baz_drillernight = world.get_location("Crystal Target Beatable: BAZ - Driller Night")
+            world.set_rule(event_crystals_baz_drillernight, rule_can_fly)
     if world.options.level_selection_baz_explosiveaction:
         entrance_baz_explosiveaction = world.get_entrance("Start Level - BAZ - Explosive Action")
         world.set_rule(entrance_baz_explosiveaction, (Has("Level Access: BAZ - Explosive Action") & rule_can_breathe & rule_can_cheap_blast & rule_can_build_10_miners))
