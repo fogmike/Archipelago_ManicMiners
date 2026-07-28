@@ -1514,7 +1514,7 @@ def update_disabled_unlocks(filepath, all_items, options, disable_truck):
             smalldigger_cap = all_items.count(841)
             if smalldigger_cap > 2:
                 smalldigger_cap = 999
-            smalldigger_limit_string = "int SmallDiggerCap=" + str(smalldigger_cap) + "\n"
+            smalldigger_limit_string = "int SmallDiggerCap=" + str(smalldigger_cap*2) + "\n"
             archipelago_section = archipelago_section + smalldigger_limit_string
             tick_section = tick_section + "((VehicleSmallDigger_C<SmallDiggerCap))enable:VehicleSmallDigger_C;\n((VehicleSmallDigger_C>=SmallDiggerCap))disable:VehicleSmallDigger_C;\n"
             smalltransporttruck_cap = all_items.count(840)
@@ -1526,7 +1526,7 @@ def update_disabled_unlocks(filepath, all_items, options, disable_truck):
             smlc_cap = all_items.count(839)
             if smlc_cap > 2:
                 smlc_cap = 999
-            smlc_limit_string = "int SMLCCap=" + str(smlc_cap) + "\n"
+            smlc_limit_string = "int SMLCCap=" + str(smlc_cap*2) + "\n"
             archipelago_section = archipelago_section + smlc_limit_string
             tick_section = tick_section + "((VehicleSMLC_C<SMLCCap))enable:VehicleSMLC_C;\n((VehicleSMLC_C>=SMLCCap))disable:VehicleSMLC_C;\n"
             rapidrider_cap = all_items.count(838)
