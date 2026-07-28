@@ -335,7 +335,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
             world.set_rule(event_crystals_lrrr_icespy, (rule_can_build_electricfence & rule_can_swim & rule_can_blast))
     if world.options.level_selection_lrrr_itsaholdup:
         entrance_lrrr_itsaholdup = world.get_entrance("Start Level - LRRR - It's A Hold Up")
-        world.set_rule(entrance_lrrr_itsaholdup, (rule_can_build_orerefinery & (rule_can_lase | rule_can_swim | rule_can_jump | rule_can_dynamite) & Has("Level Access: LRRR - It's A Hold Up")))
+        world.set_rule(entrance_lrrr_itsaholdup, (rule_can_build_orerefinery & (rule_can_swim | rule_can_jump | rule_can_blast) & Has("Level Access: LRRR - It's A Hold Up")))
         if world.options.crystal_targets_are_locations:
             location_crystals_lrrr_itsaholdup = world.get_location("Crystal Target: LRRR - It's A Hold Up")
             world.set_rule(location_crystals_lrrr_itsaholdup, (rule_can_blast & (rule_can_swim | rule_can_jump) & (rule_can_fly | rule_can_jump | rule_can_lase)))
