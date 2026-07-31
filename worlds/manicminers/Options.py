@@ -124,6 +124,7 @@ class ProgressiveItems(Choice):
     'Normal' puts a single unlockable copy into the itempool. Finding the unlock item allows you build as many copies of that unlockable as you like.
     'Duplicates' adds a second copy of certain unlock items, to increase the chances of finding one sooner. Receiving the second copy has no effect.
     'Progressive' adds split copies of several unlock items, where getting the first item allows you to build a single copy of the unlockable, and further copies of the unlock items increase that limit. 
+    NB: Small Digger and Small Mobile Laser Cutter instead increment by +2 each time. 
     """
     
     display_name = "Progressive Items"
