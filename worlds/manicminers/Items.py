@@ -3,6 +3,7 @@ from __future__ import annotations
 import pathlib
 import shutil
 import platform
+from .Locations import TARGET_CLEAR_TIME_EASY, TARGET_CLEAR_TIME_MEDIUM, TARGET_CLEAR_TIME_HARD, TARGET_CLEAR_TIME_ROCK_HARD, TARGET_CRYSTAL_COUNT
 
 from BaseClasses import Item, ItemClassification
 from typing import TYPE_CHECKING
@@ -1398,6 +1399,7 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, op
             target = "\\BAZ - Water Works.dat"
         case _:
             return False
+    level_name = target[1:-4]
     if platform.system() != "Windows":
         main_level_dir = main_level_dir.replace("\\","/")
         arch_level_dir = arch_level_dir.replace("\\","/")
@@ -1406,18 +1408,40 @@ def copy_level_into_archipelago(root_dir, arch_level_dir, item_id, all_items, op
     source_path = pathlib.Path(main_level_dir + source)
     target_path = pathlib.Path(arch_level_dir + target)
     shutil.copy(source_path, target_path)
-    update_disabled_unlocks(target_path, all_items, options, disable_truck)
+    update_disabled_unlocks(target_path, level_name, all_items, options, disable_truck)
     return True
 
-def update_disabled_unlocks(filepath, all_items, options, disable_truck):
+def update_disabled_unlocks(filepath, level_name, all_items, options, disable_truck):
     with open(filepath,'r') as file:
         file_contents = file.read()
         file.close()
     
-    briefing_section = ""
+    briefing_section = "\n"
     script_section = "\n"
     init_section = ";\n"
     tick_section = ";\n"
+    
+    if (options["target_times_are_locations"] or options["victory_condition"] == 1):
+        target_time = 0
+        if options["target_time_difficulty"] == 0:
+            target_time = TARGET_CLEAR_TIME_EASY[level_name]
+        elif options["target_time_difficulty"] == 1:
+            target_time = TARGET_CLEAR_TIME_MEDIUM[level_name]
+        elif options["target_time_difficulty"] == 2:
+            target_time = TARGET_CLEAR_TIME_HARD[level_name]
+        else:
+            target_time = TARGET_CLEAR_TIME_ROCK_HARD[level_name]
+        time_tuple = divmod(target_time, 60)
+        time_minutes = str(time_tuple[0])
+        time_seconds = str(time_tuple[1])
+        if time_seconds == "0":
+            time_seconds = "00"
+        briefing_section = briefing_section + "AP Par Time: " + time_minutes + ":" + time_seconds + "\n"
+    
+    if (options["crystal_targets_are_locations"] or options["victory_condition"] == 2):
+        full_crystal_count = TARGET_CRYSTAL_COUNT[level_name]
+        target_crystal_count = (full_crystal_count * options["crystal_target_percentage"]) // 100
+        briefing_section = briefing_section + "AP Target Crystal Count: " + str(target_crystal_count) + "\n" + "Remember: The total crystal count shown in-game includes any starting buildings/vehicles, but the final score does not!\n"
 
     if options["progressive_items"] == 2 and options["buildings_are_items"]:
         script_section = script_section + "building ArchipelagoBuildingToCheck\nstring LimitMessage=\"Oi, you were over your building cap! Back up to the LMS it goes! Careful when placing several foundations at once.\"\n"
@@ -1618,6 +1642,12 @@ def update_disabled_unlocks(filepath, all_items, options, disable_truck):
     
     bonus_ore = all_items.count(950)
     init_section = init_section + "ore+=" + str(bonus_ore) + ";\n"
+
+    briefing_section_start = file_contents.find("briefing{")
+    briefing_section_end = file_contents.find("}",briefing_section_start)
+    file_before = file_contents[:briefing_section_end]
+    file_after = file_contents[briefing_section_end:]
+    file_contents = file_before + briefing_section + file_after
 
     script_section_start = file_contents.find("script{")+7
     file_before = file_contents[:script_section_start]
