@@ -447,7 +447,7 @@ class ManicMinersWorld(World):
             number_items += 1 # Chief's Favourite Truck
         if self.options.miner_cap:
             number_items += 5 # "Miner Cap +5"s but not the filler +1s
-        number_items -= self.options.available_levels_at_start
+        number_items -= self.options.available_levels_at_start.value
         
         # Check we haven't got more Items than Locations, handle if so
         item_location_diffcount = number_items - number_locations
