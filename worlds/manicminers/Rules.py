@@ -533,7 +533,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
     
     # Add an access rule based on miners to all par times
     for entrance in world.get_entrances():
-        if entrance.name[:15] == "Reach Par Time:":
+        if entrance.name[:15] == "Reach Par Time ":
             world.set_rule(entrance, (Has("Can Build Tool Store") | Has("Can Build 20 Miners")))
         
     goal_achievable = world.get_location("Goal Conditions Achievable")
