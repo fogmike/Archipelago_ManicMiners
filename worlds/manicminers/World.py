@@ -1,5 +1,6 @@
 from collections.abc import Mapping
 from typing import Any
+from Options import OptionError
 
 import settings
 
@@ -55,12 +56,8 @@ class ManicMinersWorld(World):
         # Must have at least one campaign selected, default to LRR if all unticked
         if ((self.options.campaign_selection_lrr == 0) & (self.options.campaign_selection_lrrr == 0) & (self.options.campaign_selection_lrrc == 0) & (self.options.campaign_selection_baz == 0)):
             self.options.campaign_selection_lrr.value = 1
-        
-        # If only campaign is LRRR, and everything is restricted, set minimum start level count to 5 to help with fill error chance
-        if ((self.options.campaign_selection_lrr == 0) & (self.options.campaign_selection_lrrr == 1) & (self.options.campaign_selection_lrrc == 0) & (self.options.campaign_selection_baz == 0) & ((self.options.items_are_items == 1) | (self.options.buildings_are_items == 1) | (self.options.vehicles_are_items == 1))):
-            self.options.available_levels_at_start.value = max(self.options.available_levels_at_start.value,5)
-        
-        # Force reduce available levels based on campaign selection
+            
+        # Count number of actually available levels based on campaign selection
         number_levels = 0
         if self.options.campaign_selection_lrr:
             number_levels += 25
@@ -74,8 +71,16 @@ class ManicMinersWorld(World):
             number_levels = 25
             if self.options.campaign_selection_baz and self.options.include_baz_unique_levels:
                 number_levels = 33
+        
+        # Adjust selected level vs available level counts to be equal (taking the minimum)
         if self.options.available_levels > number_levels:
             self.options.available_levels.value = number_levels
+        else:
+            number_levels = self.options.available_levels.value
+        
+        # Don't try and achieve more levels than available
+        if self.options.target_level_count > self.options.available_levels:
+            self.options.target_level_count.value = self.options.available_levels.value
         
         # Create pool of possible levels, based on options
         available_sphere1_levels = []
@@ -95,6 +100,7 @@ class ManicMinersWorld(World):
         
         # Select boss level
         if self.options.victory_condition == 3:
+            self.options.available_levels.value -= 1
             rockyhorror_list = []
             rockyhorror_name = ""
             if self.options.campaign_selection_lrr:
@@ -111,10 +117,11 @@ class ManicMinersWorld(World):
                 rockyhorror_name = "Level Access: BAZ - Rocky Horror"
             random_rockyhorror = self.random.choice(rockyhorror_list)
             random_rockyhorror.value = 1
-            if world.options.no_duplicate_levels:
+            if self.options.no_duplicate_levels:
                 duplicates = Items.get_duplicate_levels(rockyhorror_name)
                 for level in duplicates:
-                    available_sphere2_levels.remove(level)
+                    if level in available_sphere2_levels:
+                        available_sphere2_levels.remove(level)
             else:
                 available_sphere2_levels.remove(rockyhorror_name)
         
@@ -124,26 +131,37 @@ class ManicMinersWorld(World):
             
         # If No Duplicate Levels, and not using the BAZ unique ones, need to remove the uniques from the pool
         if self.options.no_duplicate_levels and self.options.include_baz_unique_levels:
-            available_sphere1_levels.remove("Level Access: BAZ - Mine Over Manner")
-            available_sphere2_levels.remove("Level Access: BAZ - Cold Comfort")
-            available_sphere2_levels.remove("Level Access: BAZ - Down In The Dirt")
-            available_sphere2_levels.remove("Level Access: BAZ - Molten Meltdown")
-            available_sphere2_levels.remove("Level Access: BAZ - Recruitment")
-            available_sphere2_levels.remove("Level Access: BAZ - Seamless")
-            available_sphere2_levels.remove("Level Access: BAZ - Slimey Simple")
-            available_sphere2_levels.remove("Level Access: BAZ - The Hard Rock Life")
+            if "Level Access: BAZ - Mine Over Manner" in available_sphere1_levels:
+                available_sphere1_levels.remove("Level Access: BAZ - Mine Over Manner")
+            if "Level Access: BAZ - Cold Comfort" in available_sphere2_levels:
+                available_sphere2_levels.remove("Level Access: BAZ - Cold Comfort")
+            if "Level Access: BAZ - Down In The Dirt" in available_sphere2_levels:
+                available_sphere2_levels.remove("Level Access: BAZ - Down In The Dirt")
+            if "Level Access: BAZ - Molten Meltdown" in available_sphere2_levels:
+                available_sphere2_levels.remove("Level Access: BAZ - Molten Meltdown")
+            if "Level Access: BAZ - Recruitment" in available_sphere2_levels:
+                available_sphere2_levels.remove("Level Access: BAZ - Recruitment")
+            if "Level Access: BAZ - Seamless" in available_sphere2_levels:
+                available_sphere2_levels.remove("Level Access: BAZ - Seamless")
+            if "Level Access: BAZ - Slimey Simple" in available_sphere2_levels:
+                available_sphere2_levels.remove("Level Access: BAZ - Slimey Simple")
+            if "Level Access: BAZ - The Hard Rock Life" in available_sphere2_levels:
+                available_sphere2_levels.remove("Level Access: BAZ - The Hard Rock Life")
         
         # Select Sphere 1 levels to start with
-        while (len(self.start_sphere1_levels) < self.options.sphere1_levels_at_start):
+        while ((len(self.start_sphere1_levels) < self.options.sphere1_levels_at_start) and (len(available_sphere1_levels) > 0)):
             chosen_level = self.random.choice(available_sphere1_levels)
             self.start_sphere1_levels.append(chosen_level)
             if self.options.no_duplicate_levels:
                 duplicates = Items.get_duplicate_levels(chosen_level)
                 for level in duplicates:
-                    available_sphere1_levels.remove(level)
-                    available_sphere2_levels.remove(level)
+                    if (level in available_sphere1_levels):
+                        available_sphere1_levels.remove(level)
+                    if (level in available_sphere2_levels):
+                        available_sphere2_levels.remove(level)
             else:
-                available_sphere1_levels.remove(chosen_level)
+                if (chosen_level in available_sphere1_levels):
+                    available_sphere1_levels.remove(chosen_level)
         
         # Select other levels to start with
         available_levels = available_sphere2_levels + available_sphere1_levels
@@ -153,9 +171,11 @@ class ManicMinersWorld(World):
             if self.options.no_duplicate_levels:
                 duplicates = Items.get_duplicate_levels(chosen_level)
                 for level in duplicates:
-                    available_levels.remove(level)
+                    if (level in available_levels):
+                        available_levels.remove(level)
             else:
-                available_levels.remove(chosen_level)
+                if (chosen_level in available_levels):
+                    available_levels.remove(chosen_level)
         
         # Select remaining levels to go into the pool
         while ((len(self.start_sphere1_levels) + len(self.start_sphere2_levels) + len(self.nonstart_levels)) < self.options.available_levels):
@@ -164,9 +184,11 @@ class ManicMinersWorld(World):
             if self.options.no_duplicate_levels:
                 duplicates = Items.get_duplicate_levels(chosen_level)
                 for level in duplicates:
-                    available_levels.remove(level)
+                    if (level in available_levels):
+                        available_levels.remove(level)
             else:
-                available_levels.remove(chosen_level)
+                if (chosen_level in available_levels):
+                    available_levels.remove(chosen_level)
         
         # Finally, mark levels as selected:
         selected_levels = self.start_sphere1_levels + self.start_sphere2_levels + self.nonstart_levels
@@ -430,31 +452,7 @@ class ManicMinersWorld(World):
         # Check we haven't got more Items than Locations, handle if so
         item_location_diffcount = number_items - number_locations
         if item_location_diffcount > 0:
-            if self.options.bonus_clear_locations == 0:
-                self.options.bonus_clear_locations.value = 1
-                if self.options.no_duplicate_levels:
-                    number_locations += 56
-                    if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
-                        number_locations += 20
-                else:
-                    if self.options.campaign_selection_lrr:
-                        number_locations += 56
-                    if self.options.campaign_selection_lrrr:
-                        number_locations += 56
-                    if self.options.campaign_selection_lrrc:
-                        number_locations += 56
-                    if self.options.campaign_selection_baz:
-                        number_locations += 76
-        item_location_diffcount = number_items - number_locations
-        if item_location_diffcount > 0:
-            self.options.available_levels_at_start.value += item_location_diffcount
-
-        # If more levels are required than are available, reduce number required
-        elif self.options.target_level_count >= number_levels:
-            self.options.target_level_count.value = number_levels
-            # And -1 again if we need coordinates that were placed on the boss level
-            if self.options.victory_condition == 3 and self.options.locked_coordinates:
-                self.options.target_level_count.value -= 1
+            raise OptionError(f"You've got more Items than Locations, please change your yaml! Have you considered enabling Bonus Locations?")
     
     def create_regions(self) -> None:
         Regions.create_and_connect_regions(self)
