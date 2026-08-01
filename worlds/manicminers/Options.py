@@ -32,12 +32,25 @@ class LockedCoordinates(DefaultOnToggle):
 class TargetLevelCount(Range):
     """
     Sets the value of X for the chosen Victory Condition. 
-    If a target number higher than the number of total levels is given, target will automatically cap at 'all levels'. 
+    If a target number higher than the number of available levels is given, target will automatically cap at 'all levels'. 
     """
     
     display_name = "Target Level Count"
     
     range_start = 1
+    range_end = 108
+    
+    default = 25
+
+class AvailableLevels(Range):
+    """
+    How many levels are available to play, selected randomly from the chosen campaigns.
+    If a number higher than the number of selected campaign levels is given, all selected levels will be available.
+    """
+    
+    display_name = "Available Levels"
+    
+    range_start = 10
     range_end = 108
     
     default = 25
@@ -52,6 +65,18 @@ class AvailableLevelsAtStart(Range):
     
     range_start = 1
     range_end = 108
+    
+    default = 2
+
+class Sphere1LevelsAtStart(Range):
+    """
+    How many of your initially available levels are guaranteed to be beatable before receiving items.
+    """
+    
+    display_name = "Sphere 1 Levels At Start"
+    
+    range_start = 1
+    range_end = 18
     
     default = 2
 
@@ -575,7 +600,9 @@ class ManicMinersOptions(PerGameCommonOptions):
     victory_condition: VictoryCondition
     locked_coordinates: LockedCoordinates
     target_level_count: TargetLevelCount
+    available_levels: AvailableLevels
     available_levels_at_start: AvailableLevelsAtStart
+    sphere1_levels_at_start: Sphere1LevelsAtStart
     target_times_are_locations: TargetTimesAreLocations
     target_time_difficulty: TargetTimeDifficulty
     crystal_targets_are_locations: CrystalTargetsAreLocations
@@ -717,7 +744,7 @@ class ManicMinersOptions(PerGameCommonOptions):
 option_groups = [
     OptionGroup(
         "Campaign Selection",
-        [CampaignSelectionLRR,CampaignSelectionLRRR,CampaignSelectionLRRC,CampaignSelectionBAZ,NoDuplicateLevels,IncludeBazUniqueLevels]
+        [AvailableLevels,AvailableLevelsAtStart,Sphere1LevelsAtStart,CampaignSelectionLRR,CampaignSelectionLRRR,CampaignSelectionLRRC,CampaignSelectionBAZ,NoDuplicateLevels,IncludeBazUniqueLevels]
     ),
     OptionGroup(
         "Goal",

@@ -45,6 +45,9 @@ class ManicMinersWorld(World):
     origin_region_name = "Menu"
     
     filler_list = []
+    start_sphere1_levels = []
+    start_sphere2_levels = []
+    nonstart_levels = []
     
     def generate_early(self) -> None:
         # Fix some potentially fatal option combinations
@@ -57,469 +60,336 @@ class ManicMinersWorld(World):
         if ((self.options.campaign_selection_lrr == 0) & (self.options.campaign_selection_lrrr == 1) & (self.options.campaign_selection_lrrc == 0) & (self.options.campaign_selection_baz == 0) & ((self.options.items_are_items == 1) | (self.options.buildings_are_items == 1) | (self.options.vehicles_are_items == 1))):
             self.options.available_levels_at_start.value = max(self.options.available_levels_at_start.value,5)
         
-        # Identify number of levels and locations for clearing
+        # Force reduce available levels based on campaign selection
         number_levels = 0
-        number_locations = 0
-        
         if self.options.campaign_selection_lrr:
             number_levels += 25
-            number_locations += 25
-            if self.options.bonus_clear_locations:
-                number_locations += 56
-        
         if self.options.campaign_selection_lrrr:
             number_levels += 25
-            number_locations += 25
-            if self.options.bonus_clear_locations:
-                number_locations += 56
-
         if self.options.campaign_selection_lrrc:
             number_levels += 25
-            number_locations += 25
-            if self.options.bonus_clear_locations:
-                number_locations += 56
-
         if self.options.campaign_selection_baz:
             number_levels += 33
-            number_locations += 33
-            if self.options.bonus_clear_locations:
-                number_locations += 76
-        
-        # Select levels
-        if self.options.no_duplicate_levels == 0:
-            if self.options.campaign_selection_lrr:
-                self.options.level_selection_lrr_abreathoffreshair.value = 1
-                self.options.level_selection_lrr_airraiders.value = 1
-                self.options.level_selection_lrr_backtobasics.value = 1
-                self.options.level_selection_lrr_breathless.value = 1
-                self.options.level_selection_lrr_dontpanic.value = 1
-                self.options.level_selection_lrr_drillernight.value = 1
-                self.options.level_selection_lrr_erodeworks.value = 1
-                self.options.level_selection_lrr_explosiveaction.value = 1
-                self.options.level_selection_lrr_fireandwater.value = 1
-                self.options.level_selection_lrr_frozenfrenzy.value = 1
-                self.options.level_selection_lrr_hotstuff.value = 1
-                self.options.level_selection_lrr_icespy.value = 1
-                self.options.level_selection_lrr_itsaholdup.value = 1
-                self.options.level_selection_lrr_lakeoffire.value = 1
-                self.options.level_selection_lrr_lavalaughter.value = 1
-                self.options.level_selection_lrr_oresome.value = 1
-                self.options.level_selection_lrr_rockhard.value = 1
-                self.options.level_selection_lrr_rockyhorror.value = 1
-                self.options.level_selection_lrr_rubbletrouble.value = 1
-                self.options.level_selection_lrr_runthegauntlet.value = 1
-                self.options.level_selection_lrr_searchandrescue.value = 1
-                self.options.level_selection_lrr_splitdownthemiddle.value = 1
-                self.options.level_selection_lrr_thepathtopower.value = 1
-                self.options.level_selection_lrr_waterlotoffun.value = 1
-                self.options.level_selection_lrr_waterworks.value = 1
-
-            if self.options.campaign_selection_lrrr:
-                self.options.level_selection_lrrr_abreathoffreshair.value = 1
-                self.options.level_selection_lrrr_airraiders.value = 1
-                self.options.level_selection_lrrr_backtobasics.value = 1
-                self.options.level_selection_lrrr_breathless.value = 1
-                self.options.level_selection_lrrr_dontpanic.value = 1
-                self.options.level_selection_lrrr_drillernight.value = 1
-                self.options.level_selection_lrrr_erodeworks.value = 1
-                self.options.level_selection_lrrr_explosiveaction.value = 1
-                self.options.level_selection_lrrr_fireandwater.value = 1
-                self.options.level_selection_lrrr_frozenfrenzy.value = 1
-                self.options.level_selection_lrrr_hotstuff.value = 1
-                self.options.level_selection_lrrr_icespy.value = 1
-                self.options.level_selection_lrrr_itsaholdup.value = 1
-                self.options.level_selection_lrrr_lakeoffire.value = 1
-                self.options.level_selection_lrrr_lavalaughter.value = 1
-                self.options.level_selection_lrrr_oresome.value = 1
-                self.options.level_selection_lrrr_rockhard.value = 1
-                self.options.level_selection_lrrr_rockyhorror.value = 1
-                self.options.level_selection_lrrr_rubbletrouble.value = 1
-                self.options.level_selection_lrrr_runthegauntlet.value = 1
-                self.options.level_selection_lrrr_searchandrescue.value = 1
-                self.options.level_selection_lrrr_splitdownthemiddle.value = 1
-                self.options.level_selection_lrrr_thepathtopower.value = 1
-                self.options.level_selection_lrrr_waterlotoffun.value = 1
-                self.options.level_selection_lrrr_waterworks.value = 1
-
-            if self.options.campaign_selection_lrrc:
-                self.options.level_selection_lrrc_abreathoffreshair.value = 1
-                self.options.level_selection_lrrc_airraiders.value = 1
-                self.options.level_selection_lrrc_backtobasics.value = 1
-                self.options.level_selection_lrrc_breathless.value = 1
-                self.options.level_selection_lrrc_dontpanic.value = 1
-                self.options.level_selection_lrrc_drillernight.value = 1
-                self.options.level_selection_lrrc_erodeworks.value = 1
-                self.options.level_selection_lrrc_explosiveaction.value = 1
-                self.options.level_selection_lrrc_fireandwater.value = 1
-                self.options.level_selection_lrrc_frozenfrenzy.value = 1
-                self.options.level_selection_lrrc_hotstuff.value = 1
-                self.options.level_selection_lrrc_icespy.value = 1
-                self.options.level_selection_lrrc_itsaholdup.value = 1
-                self.options.level_selection_lrrc_lakeoffire.value = 1
-                self.options.level_selection_lrrc_lavalaughter.value = 1
-                self.options.level_selection_lrrc_oresome.value = 1
-                self.options.level_selection_lrrc_rockhard.value = 1
-                self.options.level_selection_lrrc_rockyhorror.value = 1
-                self.options.level_selection_lrrc_rubbletrouble.value = 1
-                self.options.level_selection_lrrc_runthegauntlet.value = 1
-                self.options.level_selection_lrrc_searchandrescue.value = 1
-                self.options.level_selection_lrrc_splitdownthemiddle.value = 1
-                self.options.level_selection_lrrc_thepathtopower.value = 1
-                self.options.level_selection_lrrc_waterlotoffun.value = 1
-                self.options.level_selection_lrrc_waterworks.value = 1
-            
-            if self.options.campaign_selection_baz:
-                self.options.level_selection_baz_abreathoffreshair.value = 1
-                self.options.level_selection_baz_airraiders.value = 1
-                self.options.level_selection_baz_backtobasics.value = 1
-                self.options.level_selection_baz_breathless.value = 1
-                self.options.level_selection_baz_coldcomfort.value = 1
-                self.options.level_selection_baz_dontpanic.value = 1
-                self.options.level_selection_baz_downinthedirt.value = 1
-                self.options.level_selection_baz_drillernight.value = 1
-                self.options.level_selection_baz_erodeworks.value = 1
-                self.options.level_selection_baz_explosiveaction.value = 1
-                self.options.level_selection_baz_fireandwater.value = 1
-                self.options.level_selection_baz_frozenfrenzy.value = 1
-                self.options.level_selection_baz_hotstuff.value = 1
-                self.options.level_selection_baz_icespy.value = 1
-                self.options.level_selection_baz_itsaholdup.value = 1
-                self.options.level_selection_baz_lakeoffire.value = 1
-                self.options.level_selection_baz_lavalaughter.value = 1
-                self.options.level_selection_baz_mineovermanner.value = 1
-                self.options.level_selection_baz_moltenmeltdown.value = 1
-                self.options.level_selection_baz_oresome.value = 1
-                self.options.level_selection_baz_recruitment.value = 1
-                self.options.level_selection_baz_rockhard.value = 1
-                self.options.level_selection_baz_rockyhorror.value = 1
-                self.options.level_selection_baz_rubbletrouble.value = 1
-                self.options.level_selection_baz_runthegauntlet.value = 1
-                self.options.level_selection_baz_seamless.value = 1
-                self.options.level_selection_baz_searchandrescue.value = 1
-                self.options.level_selection_baz_slimeysimple.value = 1
-                self.options.level_selection_baz_splitdownthemiddle.value = 1
-                self.options.level_selection_baz_thehardrocklife.value = 1
-                self.options.level_selection_baz_thepathtopower.value = 1
-                self.options.level_selection_baz_waterlotoffun.value = 1
-                self.options.level_selection_baz_waterworks.value = 1
-            
-        else:
+        if self.options.no_duplicate_levels:
             number_levels = 25
-            number_locations = 25
-            if self.options.bonus_clear_locations:
-                number_locations += 56
-            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
+            if self.options.campaign_selection_baz and self.options.include_baz_unique_levels:
                 number_levels = 33
-                number_locations = 33
-                if self.options.bonus_clear_locations:
-                    number_locations += 76               
-            level_list = []
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_abreathoffreshair)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_abreathoffreshair)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_abreathoffreshair)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_abreathoffreshair)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_airraiders)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_airraiders)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_airraiders)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_airraiders)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_backtobasics)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_backtobasics)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_backtobasics)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_backtobasics)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_breathless)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_breathless)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_breathless)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_breathless)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
-                self.options.level_selection_baz_coldcomfort.value = 1
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_dontpanic)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_dontpanic)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_dontpanic)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_dontpanic)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
-                self.options.level_selection_baz_downinthedirt.value = 1
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_drillernight)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_drillernight)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_drillernight)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_drillernight)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_erodeworks)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_erodeworks)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_erodeworks)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_erodeworks)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_explosiveaction)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_explosiveaction)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_explosiveaction)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_explosiveaction)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_fireandwater)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_fireandwater)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_fireandwater)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_fireandwater)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_frozenfrenzy)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_frozenfrenzy)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_frozenfrenzy)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_frozenfrenzy)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_hotstuff)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_hotstuff)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_hotstuff)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_hotstuff)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_icespy)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_icespy)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_icespy)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_icespy)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_itsaholdup)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_itsaholdup)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_itsaholdup)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_itsaholdup)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_lakeoffire)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_lakeoffire)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_lakeoffire)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_lakeoffire)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_lavalaughter)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_lavalaughter)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_lavalaughter)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_lavalaughter)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
-                self.options.level_selection_baz_mineovermanner.value = 1
-            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
-                self.options.level_selection_baz_moltenmeltdown.value = 1
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_oresome)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_oresome)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_oresome)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_oresome)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
-                self.options.level_selection_baz_recruitment.value = 1
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_rockhard)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_rockhard)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_rockhard)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_rockhard)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_rockyhorror)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_rockyhorror)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_rockyhorror)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_rockyhorror)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_rubbletrouble)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_rubbletrouble)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_rubbletrouble)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_rubbletrouble)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_runthegauntlet)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_runthegauntlet)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_runthegauntlet)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_runthegauntlet)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
-                self.options.level_selection_baz_seamless.value = 1
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_searchandrescue)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_searchandrescue)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_searchandrescue)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_searchandrescue)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
-                self.options.level_selection_baz_slimeysimple.value = 1
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_splitdownthemiddle)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_splitdownthemiddle)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_splitdownthemiddle)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_splitdownthemiddle)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_baz & self.options.include_baz_unique_levels:
-                self.options.level_selection_baz_thehardrocklife.value = 1
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_thepathtopower)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_thepathtopower)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_thepathtopower)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_thepathtopower)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_waterlotoffun)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_waterlotoffun)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_waterlotoffun)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_waterlotoffun)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
-            if self.options.campaign_selection_lrr:
-                level_list.append(self.options.level_selection_lrr_waterworks)
-            if self.options.campaign_selection_lrrr:
-                level_list.append(self.options.level_selection_lrrr_waterworks)
-            if self.options.campaign_selection_lrrc:
-                level_list.append(self.options.level_selection_lrrc_waterworks)
-            if self.options.campaign_selection_baz:
-                level_list.append(self.options.level_selection_baz_waterworks)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()  
+        if self.options.available_levels > number_levels:
+            self.options.available_levels.value = number_levels
+        
+        # Create pool of possible levels, based on options
+        available_sphere1_levels = []
+        available_sphere2_levels = []
+        if self.options.campaign_selection_lrr:
+            available_sphere1_levels = available_sphere1_levels + Items.LEVEL_ACCESS_LRR_NOUNLOCK_LIST
+            available_sphere2_levels = available_sphere2_levels + Items.LEVEL_ACCESS_LRR_NEEDSUNLOCK_LIST
+        if self.options.campaign_selection_lrrr:
+            available_sphere1_levels = available_sphere1_levels + Items.LEVEL_ACCESS_LRRR_NOUNLOCK_LIST
+            available_sphere2_levels = available_sphere2_levels + Items.LEVEL_ACCESS_LRRR_NEEDSUNLOCK_LIST
+        if self.options.campaign_selection_lrrc:
+            available_sphere1_levels = available_sphere1_levels + Items.LEVEL_ACCESS_LRRC_NOUNLOCK_LIST
+            available_sphere2_levels = available_sphere2_levels + Items.LEVEL_ACCESS_LRRC_NEEDSUNLOCK_LIST
+        if self.options.campaign_selection_baz:
+            available_sphere1_levels = available_sphere1_levels + Items.LEVEL_ACCESS_BAZ_NOUNLOCK_LIST
+            available_sphere2_levels = available_sphere2_levels + Items.LEVEL_ACCESS_BAZ_NEEDSUNLOCK_LIST
         
         # Select boss level
         if self.options.victory_condition == 3:
-            level_list = []
-            if self.options.level_selection_lrr_rockyhorror:
-                level_list.append(self.options.boss_level_lrr_rockyhorror)
-            if self.options.level_selection_lrrr_rockyhorror:
-                level_list.append(self.options.boss_level_lrrr_rockyhorror)
-            if self.options.level_selection_lrrc_rockyhorror:
-                level_list.append(self.options.boss_level_lrrc_rockyhorror)
-            if self.options.level_selection_baz_rockyhorror:
-                level_list.append(self.options.boss_level_baz_rockyhorror)
-            random_index = self.random.randint(0,len(level_list)-1)
-            level_list[random_index].value = 1
-            level_list.clear()
+            rockyhorror_list = []
+            rockyhorror_name = ""
+            if self.options.campaign_selection_lrr:
+                rockyhorror_list.append(self.options.boss_level_lrr_rockyhorror)
+                rockyhorror_name = "Level Access: LRR - Rocky Horror"
+            if self.options.campaign_selection_lrrr:
+                rockyhorror_list.append(self.options.boss_level_lrrr_rockyhorror)
+                rockyhorror_name = "Level Access: LRRR - Rocky Horror"
+            if self.options.campaign_selection_lrrc:
+                rockyhorror_list.append(self.options.boss_level_lrrc_rockyhorror)
+                rockyhorror_name = "Level Access: LRRC - Rocky Horror"
+            if self.options.campaign_selection_baz:
+                rockyhorror_list.append(self.options.boss_level_baz_rockyhorror)
+                rockyhorror_name = "Level Access: BAZ - Rocky Horror"
+            random_rockyhorror = self.random.choice(rockyhorror_list)
+            random_rockyhorror.value = 1
+            if world.options.no_duplicate_levels:
+                duplicates = Items.get_duplicate_levels(rockyhorror_name)
+                for level in duplicates:
+                    available_sphere2_levels.remove(level)
+            else:
+                available_sphere2_levels.remove(rockyhorror_name)
+        
+        # If available levels at start > available levels, reduce it
+        if self.options.available_levels_at_start > self.options.available_levels:
+            self.options.available_levels_at_start.value = self.options.available_levels
+            
+        # If No Duplicate Levels, and not using the BAZ unique ones, need to remove the uniques from the pool
+        if self.options.no_duplicate_levels and self.options.include_baz_unique_levels:
+            available_sphere1_levels.remove("Level Access: BAZ - Mine Over Manner")
+            available_sphere2_levels.remove("Level Access: BAZ - Cold Comfort")
+            available_sphere2_levels.remove("Level Access: BAZ - Down In The Dirt")
+            available_sphere2_levels.remove("Level Access: BAZ - Molten Meltdown")
+            available_sphere2_levels.remove("Level Access: BAZ - Recruitment")
+            available_sphere2_levels.remove("Level Access: BAZ - Seamless")
+            available_sphere2_levels.remove("Level Access: BAZ - Slimey Simple")
+            available_sphere2_levels.remove("Level Access: BAZ - The Hard Rock Life")
+        
+        # Select Sphere 1 levels to start with
+        while (len(self.start_sphere1_levels) < self.options.sphere1_levels_at_start):
+            chosen_level = self.random.choice(available_sphere1_levels)
+            self.start_sphere1_levels.append(chosen_level)
+            if self.options.no_duplicate_levels:
+                duplicates = Items.get_duplicate_levels(chosen_level)
+                for level in duplicates:
+                    available_sphere1_levels.remove(level)
+                    available_sphere2_levels.remove(level)
+            else:
+                available_sphere1_levels.remove(chosen_level)
+        
+        # Select other levels to start with
+        available_levels = available_sphere2_levels + available_sphere1_levels
+        while ((len(self.start_sphere1_levels) + len(self.start_sphere2_levels)) < self.options.available_levels_at_start):
+            chosen_level = self.random.choice(available_levels)
+            self.start_sphere2_levels.append(chosen_level)
+            if self.options.no_duplicate_levels:
+                duplicates = Items.get_duplicate_levels(chosen_level)
+                for level in duplicates:
+                    available_levels.remove(level)
+            else:
+                available_levels.remove(chosen_level)
+        
+        # Select remaining levels to go into the pool
+        while ((len(self.start_sphere1_levels) + len(self.start_sphere2_levels) + len(self.nonstart_levels)) < self.options.available_levels):
+            chosen_level = self.random.choice(available_levels)
+            self.nonstart_levels.append(chosen_level)
+            if self.options.no_duplicate_levels:
+                duplicates = Items.get_duplicate_levels(chosen_level)
+                for level in duplicates:
+                    available_levels.remove(level)
+            else:
+                available_levels.remove(chosen_level)
+        
+        # Finally, mark levels as selected:
+        selected_levels = self.start_sphere1_levels + self.start_sphere2_levels + self.nonstart_levels
+        for level in selected_levels:
+            match level:
+                case "Level Access: LRR - A Breath Of Fresh Air":
+                    self.options.level_selection_lrr_abreathoffreshair.value = 1
+                case "Level Access: LRR - Air Raiders":
+                    self.options.level_selection_lrr_airraiders.value = 1
+                case "Level Access: LRR - Back To Basics":
+                    self.options.level_selection_lrr_backtobasics.value = 1
+                case "Level Access: LRR - Breathless":
+                    self.options.level_selection_lrr_breathless.value = 1
+                case "Level Access: LRR - Don't Panic":
+                    self.options.level_selection_lrr_dontpanic.value = 1
+                case "Level Access: LRR - Driller Night":
+                    self.options.level_selection_lrr_drillernight.value = 1
+                case "Level Access: LRR - Erode Works":
+                    self.options.level_selection_lrr_erodeworks.value = 1
+                case "Level Access: LRR - Explosive Action":
+                    self.options.level_selection_lrr_explosiveaction.value = 1
+                case "Level Access: LRR - Fire And Water":
+                    self.options.level_selection_lrr_fireandwater.value = 1
+                case "Level Access: LRR - Frozen Frenzy":
+                    self.options.level_selection_lrr_frozenfrenzy.value = 1
+                case "Level Access: LRR - Hot Stuff":
+                    self.options.level_selection_lrr_hotstuff.value = 1
+                case "Level Access: LRR - Ice Spy":
+                    self.options.level_selection_lrr_icespy.value = 1
+                case "Level Access: LRR - It's A Hold Up":
+                    self.options.level_selection_lrr_itsaholdup.value = 1
+                case "Level Access: LRR - Lake Of Fire":
+                    self.options.level_selection_lrr_lakeoffire.value = 1
+                case "Level Access: LRR - Lava Laughter":
+                    self.options.level_selection_lrr_lavalaughter.value = 1
+                case "Level Access: LRR - Oresome":
+                    self.options.level_selection_lrr_oresome.value = 1
+                case "Level Access: LRR - Rock Hard":
+                    self.options.level_selection_lrr_rockhard.value = 1
+                case "Level Access: LRR - Rocky Horror":
+                    self.options.level_selection_lrr_rockyhorror.value = 1
+                case "Level Access: LRR - Rubble Trouble":
+                    self.options.level_selection_lrr_rubbletrouble.value = 1
+                case "Level Access: LRR - Run The Gauntlet":
+                    self.options.level_selection_lrr_runthegauntlet.value = 1
+                case "Level Access: LRR - Search And Rescue":
+                    self.options.level_selection_lrr_searchandrescue.value = 1
+                case "Level Access: LRR - Split Down The Middle":
+                    self.options.level_selection_lrr_splitdownthemiddle.value = 1
+                case "Level Access: LRR - The Path To Power":
+                    self.options.level_selection_lrr_thepathtopower.value = 1
+                case "Level Access: LRR - Water Lot Of Fun":
+                    self.options.level_selection_lrr_waterlotoffun.value = 1
+                case "Level Access: LRR - Water Works":
+                    self.options.level_selection_lrr_waterworks.value = 1
+                case "Level Access: LRRR - A Breath Of Fresh Air":
+                    self.options.level_selection_lrrr_abreathoffreshair.value = 1
+                case "Level Access: LRRR - Air Raiders":
+                    self.options.level_selection_lrrr_airraiders.value = 1
+                case "Level Access: LRRR - Back To Basics":
+                    self.options.level_selection_lrrr_backtobasics.value = 1
+                case "Level Access: LRRR - Breathless":
+                    self.options.level_selection_lrrr_breathless.value = 1
+                case "Level Access: LRRR - Don't Panic":
+                    self.options.level_selection_lrrr_dontpanic.value = 1
+                case "Level Access: LRRR - Driller Night":
+                    self.options.level_selection_lrrr_drillernight.value = 1
+                case "Level Access: LRRR - Erode Works":
+                    self.options.level_selection_lrrr_erodeworks.value = 1
+                case "Level Access: LRRR - Explosive Action":
+                    self.options.level_selection_lrrr_explosiveaction.value = 1
+                case "Level Access: LRRR - Fire And Water":
+                    self.options.level_selection_lrrr_fireandwater.value = 1
+                case "Level Access: LRRR - Frozen Frenzy":
+                    self.options.level_selection_lrrr_frozenfrenzy.value = 1
+                case "Level Access: LRRR - Hot Stuff":
+                    self.options.level_selection_lrrr_hotstuff.value = 1
+                case "Level Access: LRRR - Ice Spy":
+                    self.options.level_selection_lrrr_icespy.value = 1
+                case "Level Access: LRRR - It's A Hold Up":
+                    self.options.level_selection_lrrr_itsaholdup.value = 1
+                case "Level Access: LRRR - Lake Of Fire":
+                    self.options.level_selection_lrrr_lakeoffire.value = 1
+                case "Level Access: LRRR - Lava Laughter":
+                    self.options.level_selection_lrrr_lavalaughter.value = 1
+                case "Level Access: LRRR - Oresome":
+                    self.options.level_selection_lrrr_oresome.value = 1
+                case "Level Access: LRRR - Rock Hard":
+                    self.options.level_selection_lrrr_rockhard.value = 1
+                case "Level Access: LRRR - Rocky Horror":
+                    self.options.level_selection_lrrr_rockyhorror.value = 1
+                case "Level Access: LRRR - Rubble Trouble":
+                    self.options.level_selection_lrrr_rubbletrouble.value = 1
+                case "Level Access: LRRR - Run The Gauntlet":
+                    self.options.level_selection_lrrr_runthegauntlet.value = 1
+                case "Level Access: LRRR - Search And Rescue":
+                    self.options.level_selection_lrrr_searchandrescue.value = 1
+                case "Level Access: LRRR - Split Down The Middle":
+                    self.options.level_selection_lrrr_splitdownthemiddle.value = 1
+                case "Level Access: LRRR - The Path To Power":
+                    self.options.level_selection_lrrr_thepathtopower.value = 1
+                case "Level Access: LRRR - Water Lot Of Fun":
+                    self.options.level_selection_lrrr_waterlotoffun.value = 1
+                case "Level Access: LRRR - Water Works":
+                    self.options.level_selection_lrrr_waterworks.value = 1
+                case "Level Access: LRRC - A Breath Of Fresh Air":
+                    self.options.level_selection_lrrc_abreathoffreshair.value = 1
+                case "Level Access: LRRC - Air Raiders":
+                    self.options.level_selection_lrrc_airraiders.value = 1
+                case "Level Access: LRRC - Back To Basics":
+                    self.options.level_selection_lrrc_backtobasics.value = 1
+                case "Level Access: LRRC - Breathless":
+                    self.options.level_selection_lrrc_breathless.value = 1
+                case "Level Access: LRRC - Don't Panic":
+                    self.options.level_selection_lrrc_dontpanic.value = 1
+                case "Level Access: LRRC - Driller Night":
+                    self.options.level_selection_lrrc_drillernight.value = 1
+                case "Level Access: LRRC - Erode Works":
+                    self.options.level_selection_lrrc_erodeworks.value = 1
+                case "Level Access: LRRC - Explosive Action":
+                    self.options.level_selection_lrrc_explosiveaction.value = 1
+                case "Level Access: LRRC - Fire And Water":
+                    self.options.level_selection_lrrc_fireandwater.value = 1
+                case "Level Access: LRRC - Frozen Frenzy":
+                    self.options.level_selection_lrrc_frozenfrenzy.value = 1
+                case "Level Access: LRRC - Hot Stuff":
+                    self.options.level_selection_lrrc_hotstuff.value = 1
+                case "Level Access: LRRC - Ice Spy":
+                    self.options.level_selection_lrrc_icespy.value = 1
+                case "Level Access: LRRC - It's A Hold Up":
+                    self.options.level_selection_lrrc_itsaholdup.value = 1
+                case "Level Access: LRRC - Lake Of Fire":
+                    self.options.level_selection_lrrc_lakeoffire.value = 1
+                case "Level Access: LRRC - Lava Laughter":
+                    self.options.level_selection_lrrc_lavalaughter.value = 1
+                case "Level Access: LRRC - Oresome":
+                    self.options.level_selection_lrrc_oresome.value = 1
+                case "Level Access: LRRC - Rock Hard":
+                    self.options.level_selection_lrrc_rockhard.value = 1
+                case "Level Access: LRRC - Rocky Horror":
+                    self.options.level_selection_lrrc_rockyhorror.value = 1
+                case "Level Access: LRRC - Rubble Trouble":
+                    self.options.level_selection_lrrc_rubbletrouble.value = 1
+                case "Level Access: LRRC - Run The Gauntlet":
+                    self.options.level_selection_lrrc_runthegauntlet.value = 1
+                case "Level Access: LRRC - Search And Rescue":
+                    self.options.level_selection_lrrc_searchandrescue.value = 1
+                case "Level Access: LRRC - Split Down The Middle":
+                    self.options.level_selection_lrrc_splitdownthemiddle.value = 1
+                case "Level Access: LRRC - The Path To Power":
+                    self.options.level_selection_lrrc_thepathtopower.value = 1
+                case "Level Access: LRRC - Water Lot Of Fun":
+                    self.options.level_selection_lrrc_waterlotoffun.value = 1
+                case "Level Access: LRRC - Water Works":
+                    self.options.level_selection_lrrc_waterworks.value = 1
+                case "Level Access: BAZ - A Breath Of Fresh Air":
+                    self.options.level_selection_baz_abreathoffreshair.value = 1
+                case "Level Access: BAZ - Air Raiders":
+                    self.options.level_selection_baz_airraiders.value = 1
+                case "Level Access: BAZ - Back To Basics":
+                    self.options.level_selection_baz_backtobasics.value = 1
+                case "Level Access: BAZ - Breathless":
+                    self.options.level_selection_baz_breathless.value = 1
+                case "Level Access: BAZ - Cold Comfort":
+                    self.options.level_selection_baz_coldcomfort.value = 1
+                case "Level Access: BAZ - Don't Panic":
+                    self.options.level_selection_baz_dontpanic.value = 1
+                case "Level Access: BAZ - Down In The Dirt":
+                    self.options.level_selection_baz_downinthedirt.value = 1
+                case "Level Access: BAZ - Driller Night":
+                    self.options.level_selection_baz_drillernight.value = 1
+                case "Level Access: BAZ - Erode Works":
+                    self.options.level_selection_baz_erodeworks.value = 1
+                case "Level Access: BAZ - Explosive Action":
+                    self.options.level_selection_baz_explosiveaction.value = 1
+                case "Level Access: BAZ - Fire And Water":
+                    self.options.level_selection_baz_fireandwater.value = 1
+                case "Level Access: BAZ - Frozen Frenzy":
+                    self.options.level_selection_baz_frozenfrenzy.value = 1
+                case "Level Access: BAZ - Hot Stuff":
+                    self.options.level_selection_baz_hotstuff.value = 1
+                case "Level Access: BAZ - Ice Spy":
+                    self.options.level_selection_baz_icespy.value = 1
+                case "Level Access: BAZ - It's A Hold Up":
+                    self.options.level_selection_baz_itsaholdup.value = 1
+                case "Level Access: BAZ - Lake Of Fire":
+                    self.options.level_selection_baz_lakeoffire.value = 1
+                case "Level Access: BAZ - Lava Laughter":
+                    self.options.level_selection_baz_lavalaughter.value = 1
+                case "Level Access: BAZ - Mine Over Manner":
+                    self.options.level_selection_baz_mineovermanner.value = 1
+                case "Level Access: BAZ - Molten Meltdown":
+                    self.options.level_selection_baz_moltenmeltdown.value = 1
+                case "Level Access: BAZ - Oresome":
+                    self.options.level_selection_baz_oresome.value = 1
+                case "Level Access: BAZ - Recruitment":
+                    self.options.level_selection_baz_recruitment.value = 1
+                case "Level Access: BAZ - Rock Hard":
+                    self.options.level_selection_baz_rockhard.value = 1
+                case "Level Access: BAZ - Rocky Horror":
+                    self.options.level_selection_baz_rockyhorror.value = 1
+                case "Level Access: BAZ - Rubble Trouble":
+                    self.options.level_selection_baz_rubbletrouble.value = 1
+                case "Level Access: BAZ - Run The Gauntlet":
+                    self.options.level_selection_baz_runthegauntlet.value = 1
+                case "Level Access: BAZ - Seamless":
+                    self.options.level_selection_baz_seamless.value = 1
+                case "Level Access: BAZ - Search And Rescue":
+                    self.options.level_selection_baz_searchandrescue.value = 1
+                case "Level Access: BAZ - Slimey Simple":
+                    self.options.level_selection_baz_slimeysimple.value = 1
+                case "Level Access: BAZ - Split Down The Middle":
+                    self.options.level_selection_baz_splitdownthemiddle.value = 1
+                case "Level Access: BAZ - The Hard Rock Life":
+                    self.options.level_selection_baz_thehardrocklife.value = 1
+                case "Level Access: BAZ - The Path To Power":
+                    self.options.level_selection_baz_thepathtopower.value = 1
+                case "Level Access: BAZ - Water Lot Of Fun":
+                    self.options.level_selection_baz_waterlotoffun.value = 1
+                case "Level Access: BAZ - Water Works":
+                    self.options.level_selection_baz_waterworks.value = 1
+
+        number_locations = number_levels
 
         # Add locations for par times
         if self.options.target_times_are_locations:
@@ -528,13 +398,6 @@ class ManicMinersWorld(World):
         # Add locations for crystal targets
         if self.options.crystal_targets_are_locations:
             number_locations += number_levels
-
-        # Can't start with more levels than there are levels
-        if self.options.available_levels_at_start >= (number_levels):
-            self.options.available_levels_at_start.value = number_levels
-            # And -1 again if we get given one free boss level access item for Coordinate Hunt
-            if self.options.victory_condition == 3:
-                self.options.available_levels_at_start.value -= 1
         
         # Identify number of Items
         number_items = 0
