@@ -468,12 +468,12 @@ LEVEL_ACCESS_LRRC_NEEDSUNLOCK_LIST = [
 LEVEL_ACCESS_LRRC_LIST = LEVEL_ACCESS_LRRC_NOUNLOCK_LIST + LEVEL_ACCESS_LRRC_NEEDSUNLOCK_LIST
 
 LEVEL_ACCESS_BAZ_NOUNLOCK_LIST = [
-    "Level Access: BAZ - A Breath Of Fresh Air",
     "Level Access: BAZ - Mine Over Manner",
     "Level Access: BAZ - Driller Night"
 ]
 
 LEVEL_ACCESS_BAZ_NEEDSUNLOCK_LIST = [
+    "Level Access: BAZ - A Breath Of Fresh Air",
     "Level Access: BAZ - Air Raiders",
     "Level Access: BAZ - Back To Basics",
     "Level Access: BAZ - Breathless",
