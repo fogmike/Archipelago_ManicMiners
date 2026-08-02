@@ -1201,7 +1201,7 @@ def update_disabled_unlocks(filepath, level_name, all_items, options, disable_tr
         target_crystal_count = (full_crystal_count * options["crystal_target_percentage"]) // 100
         briefing_section = briefing_section + "AP Target Crystal Count: " + str(target_crystal_count) + ".\n" + "Remember: The total crystal count shown in-game includes any starting buildings/vehicles, but the final score does not!\n"
 
-    if options["progressive_items"] == 2 and options["buildings_are_items"]:
+    if (options["progressive_items"] == 2 or options["progressive_items"] == 3) and options["buildings_are_items"]:
         script_section = script_section + "building ArchipelagoBuildingToCheck\nstring LimitMessage=\"Oi, you were over your building cap! Back up to the LMS it goes! Careful when placing several foundations at once.\"\n"
         script_section = script_section + "when(BuildingTeleportPad_C.new)[ArchipelagoNewBuildingWhatDo_TeleportPad]\nArchipelagoNewBuildingWhatDo_TeleportPad::savebuilding:ArchBuildingToCheck;\n((BuildingTeleportPad_C<=1))return;\n((time<10))return;           # prevents any starting building from being killed\n((BuildingTeleportPad_C>TeleportPadCap))msg:LimitMessage;\n((BuildingTeleportPad_C>TeleportPadCap))kill:ArchBuildingToCheck;\n\n"
         script_section = script_section + "when(BuildingPowerStation_C.new)[ArchipelagoNewBuildingWhatDo_PowerStation]\nArchipelagoNewBuildingWhatDo_PowerStation::savebuilding:ArchBuildingToCheck;\n((BuildingPowerStation_C<=1))return;\n((time<10))return;           # prevents any starting building from being killed\n((BuildingPowerStation_C>PowerStationCap))msg:LimitMessage;\n((BuildingPowerStation_C>PowerStationCap))kill:ArchBuildingToCheck;\n\n"
@@ -1217,7 +1217,7 @@ def update_disabled_unlocks(filepath, level_name, all_items, options, disable_tr
         script_section = script_section + miner_limit_string
         tick_section = tick_section + "((miners<MinerCap))enable:miners;\n((miners>=MinerCap))disable:miners;\n"
     
-    if options["progressive_items"] == 2:
+    if options["progressive_items"] == 2 or options["progressive_items"] == 3:
         if options["buildings_are_items"]:
             toolstore_cap = all_items.count(849)
             if toolstore_cap > 2:

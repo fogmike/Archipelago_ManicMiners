@@ -177,6 +177,7 @@ class ProgressiveItems(Choice):
     'Duplicates' adds a second copy of certain unlock items, to increase the chances of finding one sooner. Receiving the second copy has no effect.
     'Progressive' adds split copies of several unlock items, where getting the first item allows you to build a single copy of the unlockable, and further copies of the unlock items increase that limit. 
     NB: Small Digger and Small Mobile Laser Cutter instead increment by +2 each time. 
+    'Progressive And Duplicate' will act like 'Progressive', but also attempt to add some duplicates of certain non-progressive items into the pool, to increase their chances of being found. This will depend on the number of items vs number of locations your other settings allow.
     """
     
     display_name = "Progressive Items"
@@ -184,6 +185,7 @@ class ProgressiveItems(Choice):
     option_normal = 0
     option_duplicates = 1
     option_progressive = 2
+    option_progressive_and_duplicate = 3
     
     default = option_normal 
     
