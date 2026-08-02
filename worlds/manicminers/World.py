@@ -6,7 +6,7 @@ import settings
 
 from worlds.AutoWorld import World
 
-from . import Items, Locations, Regions, Rules
+from . import Items, Locations, Regions, Rules, WebWorld
 from . import Options as ManicMiners_Options
 
 class ManicMinersSettings(settings.Group):
@@ -34,6 +34,8 @@ class ManicMinersWorld(World):
     """
     
     game = "Manic Miners"
+    
+    web = WebWorld.ManicMinersWebWorld()
     
     options_dataclass = ManicMiners_Options.ManicMinersOptions
     options: ManicMiners_Options.ManicMinersOptions

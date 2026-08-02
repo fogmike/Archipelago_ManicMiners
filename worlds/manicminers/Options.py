@@ -762,7 +762,7 @@ option_groups = [
     ),
     OptionGroup(
         "Items",
-        [AvailableLevelsAtStart,BuildingsAreItems,ItemsAreItems,VehiclesAreItems,ProgressiveItems,MinerCap,BonusTruck,UsefulFillerOnly]
+        [BuildingsAreItems,ItemsAreItems,VehiclesAreItems,ProgressiveItems,MinerCap,BonusTruck,UsefulFillerOnly]
     ),
     OptionGroup(
         "Logic",
