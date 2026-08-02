@@ -1445,7 +1445,27 @@ def update_disabled_unlocks(filepath, level_name, all_items, options, disable_tr
         toolstore_section = buildings_section[toolstore_section_start:toolstore_section_end]
 
         toolstore_translation = toolstore_section[toolstore_section.find("Translation:"):toolstore_section.find("Rotation:")]
-
+        toolstore_x = toolstore_translation[toolstore_translation.find("X=")+2:toolstore_translation.find(".",toolstore_translation.find("X="))]
+        toolstore_y = toolstore_translation[toolstore_translation.find("Y=")+2:toolstore_translation.find(".",toolstore_translation.find("Y="))]
+        toolstore_z = toolstore_translation[toolstore_translation.find("Z="):]
+        toolstore_rotation_section = toolstore_section[toolstore_section.find("Rotation:"):toolstore_section.find("Scale")]
+        toolstore_rotation = toolstore_rotation_section[toolstore_rotation_section.find("Y=")+2:toolstore_rotation_section.find(".",toolstore_rotation_section.find("Y="))]
+        
+        toolstore_x_int = int(toolstore_x)
+        toolstore_y_int = int(toolstore_y)
+        toolstore_rotation_int = int(toolstore_rotation)
+        
+        if (toolstore_rotation_int % 360) < 2:
+            toolstore_y_int -= 300
+        elif (toolstore_rotation_int % 360) < 92:
+            toolstore_x_int += 300
+        elif (toolstore_rotation_int % 360) < 182:
+            toolstore_y_int += 300
+        elif (toolstore_rotation_int % 360) < 272:
+            toolstore_x_int -= 300
+            
+        toolstore_translation = "Translation: X=" + str(toolstore_x_int) + ".000 Y=" + str(toolstore_y_int) + ".000 " + toolstore_z
+        
         vehicle_spawn_line = "\nVehicleSmallTransportTruck_C," + toolstore_translation + "Rotation: P=0.000000 Y=0.000000 R=0.000000 Scale X=1.000 Y=1.000 Z=1.000,Essential=true"
        
         vehicles_section_start = file_contents.find("vehicles{")+9
