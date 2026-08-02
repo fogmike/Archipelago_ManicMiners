@@ -779,9 +779,9 @@ def create_all_items(world: ManicMinersWorld) -> None:
             itempool.append(world.create_item("Transporter Coordinates"))
     
     if world.options.useful_filler_only:
-        world.filler_list = USEFUL_FILLER_LIST
+        world.filler_list = list(USEFUL_FILLER_LIST)
     else:
-        world.filler_list = EMPTY_FILLER_LIST + USEFUL_FILLER_LIST
+        world.filler_list = list(EMPTY_FILLER_LIST) + list(USEFUL_FILLER_LIST)
     
     if world.options.miner_cap:
         world.filler_list += MINER_CAP_FILLER_LIST
