@@ -749,7 +749,7 @@ class ManicMinersOptions(PerGameCommonOptions):
 
 option_groups = [
     OptionGroup(
-        "Campaign Selection",
+        "Level Selection",
         [AvailableLevels,AvailableLevelsAtStart,Sphere1LevelsAtStart,CampaignSelectionLRR,CampaignSelectionLRRR,CampaignSelectionLRRC,CampaignSelectionBAZ,NoDuplicateLevels,IncludeBazUniqueLevels]
     ),
     OptionGroup(
