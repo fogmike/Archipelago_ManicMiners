@@ -130,7 +130,7 @@ class ManicMinersWorld(World):
             self.options.available_levels_at_start.value = self.options.available_levels
             
         # If No Duplicate Levels, and not using the BAZ unique ones, need to remove the uniques from the pool
-        if self.options.no_duplicate_levels and self.options.include_baz_unique_levels:
+        if self.options.no_duplicate_levels and self.options.include_baz_unique_levels == 0:
             if "Level Access: BAZ - Mine Over Manner" in available_sphere1_levels:
                 available_sphere1_levels.remove("Level Access: BAZ - Mine Over Manner")
             if "Level Access: BAZ - Cold Comfort" in available_sphere2_levels:
