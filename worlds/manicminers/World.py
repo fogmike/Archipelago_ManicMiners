@@ -54,10 +54,10 @@ class ManicMinersWorld(World):
         # Fix some potentially fatal option combinations
         
         # Re-initialise to avoid re-using old values (e.g. when fuzzing)
-        filler_list = []
-        start_sphere1_levels = []
-        start_sphere2_levels = []
-        nonstart_levels = []
+        self.filler_list = []
+        self.start_sphere1_levels = []
+        self.start_sphere2_levels = []
+        self.nonstart_levels = []
         
         # Must have at least one campaign selected, default to LRR if all unticked
         if ((self.options.campaign_selection_lrr == 0) & (self.options.campaign_selection_lrrr == 0) & (self.options.campaign_selection_lrrc == 0) & (self.options.campaign_selection_baz == 0)):
