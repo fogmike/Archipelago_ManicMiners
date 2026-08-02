@@ -78,10 +78,6 @@ class ManicMinersWorld(World):
         else:
             number_levels = self.options.available_levels.value
         
-        # Don't try and achieve more levels than available
-        if self.options.target_level_count > self.options.available_levels:
-            self.options.target_level_count.value = self.options.available_levels.value
-        
         # Create pool of possible levels, based on options
         available_sphere1_levels = []
         available_sphere2_levels = []
@@ -124,6 +120,10 @@ class ManicMinersWorld(World):
                         available_sphere2_levels.remove(level)
             else:
                 available_sphere2_levels.remove(rockyhorror_name)
+        
+        # Don't try and achieve more levels than available
+        if self.options.target_level_count > self.options.available_levels:
+            self.options.target_level_count.value = self.options.available_levels.value
         
         # If available levels at start > available levels, reduce it
         if self.options.available_levels_at_start > self.options.available_levels:
