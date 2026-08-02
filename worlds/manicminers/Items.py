@@ -723,6 +723,9 @@ def create_item_with_correct_classification(world: ManicMinersWorld, name: str) 
             classification = ItemClassification.progression
         if name == "Progressive Vehicle Unlock: Small Transport Truck":
             classification = ItemClassification.progression
+    if world.options.electric_fences_in_logic:
+        if name == "Item Unlock: Electric Fence":
+            classification = ItemClassification.progression
     return ManicMinersItem(name, classification, ITEM_NAME_TO_ID[name], world.player)
     
 def create_all_items(world: ManicMinersWorld) -> None:

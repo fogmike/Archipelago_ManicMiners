@@ -197,6 +197,13 @@ class FasterBlastingAlwaysInLogic(DefaultOnToggle):
     
     display_name = "Faster Blasting Always In Logic"
 
+class ElectricFencesInLogic(DefaultOnToggle):
+    """
+    Puts the Electric Fence in logic for certain levels with heavy monster issues.
+    """
+    
+    display_name = "Electric Fences In Logic"
+
 class BonusClearLocations(Toggle):
     """
     When enabled, clearing a level will award 2-5 Locations instead of 1. Harder levels are worth more.
@@ -614,6 +621,7 @@ class ManicMinersOptions(PerGameCommonOptions):
     useful_filler_only: UsefulFillerOnly
     breathing_always_in_logic: BreathingAlwaysInLogic
     faster_blasting_always_in_logic: FasterBlastingAlwaysInLogic
+    electric_fences_in_logic: ElectricFencesInLogic
     bonus_clear_locations: BonusClearLocations
     campaign_selection_lrr: CampaignSelectionLRR
     campaign_selection_lrrr: CampaignSelectionLRRR
@@ -758,6 +766,6 @@ option_groups = [
     ),
     OptionGroup(
         "Logic",
-        [BreathingAlwaysInLogic,FasterBlastingAlwaysInLogic]
+        [BreathingAlwaysInLogic,FasterBlastingAlwaysInLogic,ElectricFencesInLogic]
     ),
 ]

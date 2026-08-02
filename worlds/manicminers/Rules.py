@@ -89,7 +89,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_lrr_oresome_crystaltarget, Has("Can Use Laser From Flying Vehicle"))
     if world.options.level_selection_lrr_rockhard:
         entrance_lrr_rockhard = world.get_entrance("Start Level - LRR - Rock Hard")
-        world.set_rule(entrance_lrr_rockhard, ((Has("Can Use Dynamite") | Has("Can Build Mining Laser")) & Has("Level Access: LRR - Rock Hard") & Has("Can Always Breathe") & Has("Can Build 10 Miners")))
+        world.set_rule(entrance_lrr_rockhard, ((Has("Can Use Dynamite") | Has("Can Build Mining Laser")) & Has("Level Access: LRR - Rock Hard") & Has("Can Always Breathe") & Has("Can Build 10 Miners") & Filtered(Has("Can Build Electric Fence"), options = [OptionFilter(ManicMiners_Options.ElectricFencesInLogic, 1)], filtered_resolution = True)))
         entrance_lrr_rockhard_crystaltarget = world.get_entrance("Get Crystal Target - LRR - Rock Hard")
         world.set_rule(entrance_lrr_rockhard_crystaltarget, (Has("Can Breathe") & Has("Can Build Swimming Vehicle")))
     if world.options.level_selection_lrr_rockyhorror or world.options.boss_level_lrr_rockyhorror:
@@ -139,7 +139,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_lrrr_airraiders_crystaltarget, Has("Can Mine From Swimming Vehicle"))
     if world.options.level_selection_lrrr_backtobasics:
         entrance_lrrr_backtobasics = world.get_entrance("Start Level - LRRR - Back To Basics")
-        world.set_rule(entrance_lrrr_backtobasics, (Has("Can Breathe") & Has("Can Build Tool Store") & Has("Can Build Upgrade Station") & Has("Can Build Electric Fence") & Has("Level Access: LRRR - Back To Basics") & Has("Can Build 20 Miners")))
+        world.set_rule(entrance_lrrr_backtobasics, (Has("Can Breathe") & Has("Can Build Tool Store") & Has("Can Build Upgrade Station") & Filtered(Has("Can Build Electric Fence"), options = [OptionFilter(ManicMiners_Options.ElectricFencesInLogic, 1)], filtered_resolution = True) & Has("Level Access: LRRR - Back To Basics") & Has("Can Build 20 Miners")))
         entrance_lrrr_backtobasics_crystaltarget = world.get_entrance("Get Crystal Target - LRRR - Back To Basics")
         world.set_rule(entrance_lrrr_backtobasics_crystaltarget, Has("Can Use Laser From Flying Vehicle"))
     if world.options.level_selection_lrrr_breathless:
@@ -180,7 +180,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         entrance_lrrr_icespy = world.get_entrance("Start Level - LRRR - Ice Spy")
         world.set_rule(entrance_lrrr_icespy, (Has("Can Breathe") & Has("Level Access: LRRR - Ice Spy") & Has("Can Build 10 Miners")))
         entrance_lrrr_icespy_crystaltarget = world.get_entrance("Get Crystal Target - LRRR - Ice Spy")
-        world.set_rule(entrance_lrrr_icespy_crystaltarget, (Has("Can Build Electric Fence") & Has("Can Build Swimming Vehicle") & Has("Can Mine Hard Rock")))
+        world.set_rule(entrance_lrrr_icespy_crystaltarget, (Filtered(Has("Can Build Electric Fence"), options = [OptionFilter(ManicMiners_Options.ElectricFencesInLogic, 1)], filtered_resolution = True) & Has("Can Build Swimming Vehicle") & Has("Can Mine Hard Rock")))
     if world.options.level_selection_lrrr_itsaholdup:
         entrance_lrrr_itsaholdup = world.get_entrance("Start Level - LRRR - It's A Hold Up")
         world.set_rule(entrance_lrrr_itsaholdup, (Has("Can Build Ore Refinery") & (Has("Can Build Swimming Vehicle") | Has("Can Build Jumping Vehicle") | Has("Can Mine Hard Rock")) & Has("Level Access: LRRR - It's A Hold Up")))
