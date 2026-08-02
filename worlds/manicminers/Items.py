@@ -1210,7 +1210,7 @@ def update_disabled_unlocks(filepath, level_name, all_items, options, disable_tr
         script_section = script_section + "when(BuildingMiningLaser_C.new)[ArchipelagoNewBuildingWhatDo_MiningLaser]\nArchipelagoNewBuildingWhatDo_MiningLaser::savebuilding:ArchBuildingToCheck;\n((BuildingMiningLaser_C<=1))return;\n((time<10))return;\n((BuildingMiningLaser_C>MiningLaserCap))msg:LimitMessage;\n((BuildingMiningLaser_C>MiningLaserCap))kill:ArchBuildingToCheck;\n\n"
     
     if options["miner_cap"]:
-        miner_cap = 5
+        miner_cap = int(options["miner_cap_base_level"])
         miner_cap += 5 * (all_items.count(850))
         miner_cap += all_items.count(948)
         miner_limit_string = "int MinerCap=" + str(miner_cap) + "\n"

@@ -195,6 +195,20 @@ class MinerCap(Toggle):
     """
     
     display_name = "Miner Cap"
+    
+class MinerCapBaseLevel(Range):
+    """
+    If Miner Cap is enabled, sets the base level of miners you start with. 
+    Does not affect the amount of increases in the multiworld. 
+    (For now, logic all assumes this is set to 5.)
+    """
+    
+    display_name = "Miner Cap Base Level"
+    
+    range_start = 5
+    range_end = 20
+    
+    default = 5
 
 class BonusTruck(Toggle):
     """
@@ -649,6 +663,7 @@ class ManicMinersOptions(PerGameCommonOptions):
     vehicles_are_items: VehiclesAreItems
     progressive_items: ProgressiveItems
     miner_cap: MinerCap
+    miner_cap_base_level: MinerCapBaseLevel
     bonus_truck: BonusTruck
     useful_filler_only: UsefulFillerOnly
     breathing_always_in_logic: BreathingAlwaysInLogic
