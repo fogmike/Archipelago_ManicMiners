@@ -20,18 +20,9 @@ class VictoryCondition(Choice):
     
     default = option_clear_x_levels
 
-class LockedCoordinates(DefaultOnToggle):
-    """
-    Only relevant if Victory Condition is set to "Coordinate Hunt". 
-    If true, then clearing each level unlocks one "Transporter Coordinates" item. 
-    If false, then the "Transporter Coordinates" can be anywhere in the multiworld. An extra location is still added to each level.
-    """
-    
-    display_name = "Locked Coordinate Locations"
-
 class TargetLevelCount(Range):
     """
-    Sets the value of X for the chosen Victory Condition. 
+    Sets the value of X for the chosen Victory Condition. Does not affect Coordinate Hunt. 
     If a target number higher than the number of available levels is given, target will automatically cap at 'all levels'. 
     """
     
@@ -41,6 +32,43 @@ class TargetLevelCount(Range):
     range_end = 108
     
     default = 25
+
+class LockedCoordinates(DefaultOnToggle):
+    """
+    Only relevant if Victory Condition is set to "Coordinate Hunt". 
+    If true, then clearing each level unlocks one "Transporter Coordinates" item. 
+    If false, then the "Transporter Coordinates" can be anywhere in the multiworld. An extra location is still added to each level.
+    """
+    
+    display_name = "Locked Coordinate Locations"
+
+class CoordinatesRequired(Range):
+    """
+    Sets the number of Transporter Coordinate items required for Coordinate Hunt.
+    If higher than the number in the pool, will be automatically lowered.
+    "0" is a special case that means "every".
+    """
+    
+    display_name = "Coordinates Required"
+    
+    range_start = 0
+    range_end = 108
+    
+    default = 0
+    
+class CoordinatesInPool(Range):
+    """
+    Sets the number of Transporter Coordinates items shuffled into the item pool, if Locked Coordinates are disabled. 
+    Does not have an effect otherwise - there will still be exactly one Transporter Coordinate on every level.
+    "0" is a special case that means "1 per level".
+    """
+    
+    display_name = "Coordinates In Pool"
+    
+    range_start = 0
+    range_end = 108
+    
+    default = 0
 
 class AvailableLevels(Range):
     """
@@ -603,8 +631,10 @@ class BossLevelBAZRockyHorror(Toggle):
 @dataclass
 class ManicMinersOptions(PerGameCommonOptions):
     victory_condition: VictoryCondition
-    locked_coordinates: LockedCoordinates
     target_level_count: TargetLevelCount
+    locked_coordinates: LockedCoordinates
+    coordinates_required: CoordinatesRequired
+    coordinates_in_pool: CoordinatesInPool
     available_levels: AvailableLevels
     available_levels_at_start: AvailableLevelsAtStart
     sphere1_levels_at_start: Sphere1LevelsAtStart
@@ -754,7 +784,7 @@ option_groups = [
     ),
     OptionGroup(
         "Goal",
-        [VictoryCondition,LockedCoordinates,TargetLevelCount]
+        [VictoryCondition,TargetLevelCount,LockedCoordinates,CoordinatesRequired,CoordinatesInPool]
     ),
     OptionGroup(
         "Locations",

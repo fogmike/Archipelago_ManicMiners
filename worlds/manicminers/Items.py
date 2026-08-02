@@ -777,8 +777,7 @@ def create_all_items(world: ManicMinersWorld) -> None:
         itempool.append(world.create_item("Chief's Favourite Truck"))
     
     if world.options.victory_condition == 3 and world.options.locked_coordinates == 0:
-        level_count = len(world.start_sphere1_levels) + len(world.start_sphere2_levels) + len(world.nonstart_levels)
-        for i in range(level_count):
+        for i in range(world.options.coordinates_in_pool):
             itempool.append(world.create_item("Transporter Coordinates"))
     
     if world.options.useful_filler_only:

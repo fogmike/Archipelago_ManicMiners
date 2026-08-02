@@ -129,7 +129,12 @@ class ManicMinersWorld(World):
                         available_sphere2_levels.remove(level)
             else:
                 available_sphere2_levels.remove(rockyhorror_name)
-        
+            # Adjust Coordinate values 
+            if self.options.coordinates_in_pool == 0 or self.options.locked_coordinates:
+                self.options.coordinates_in_pool.value = number_levels - 1
+            if self.options.coordinates_required == 0 or self.options.coordinates_required > self.options.coordinates_in_pool:
+                self.options.coordinates_required.value = self.options.coordinates_in_pool.value
+            
         # Don't try and achieve more levels than available
         if self.options.target_level_count > self.options.available_levels:
             self.options.target_level_count.value = self.options.available_levels.value
@@ -491,7 +496,7 @@ class ManicMinersWorld(World):
     
     def fill_slot_data(self) -> Mapping[str, Any]:
         return self.options.as_dict(
-        "victory_condition", "locked_coordinates", "target_level_count", "target_times_are_locations", "target_time_difficulty", "crystal_targets_are_locations", "crystal_target_percentage", "buildings_are_items", "items_are_items", "vehicles_are_items", "progressive_items", "miner_cap", "bonus_clear_locations", "campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc", "campaign_selection_baz", "no_duplicate_levels", "include_baz_unique_levels", "boss_level_lrr_rockyhorror", "boss_level_lrrr_rockyhorror", "boss_level_lrrc_rockyhorror", "boss_level_baz_rockyhorror"
+        "victory_condition", "locked_coordinates", "target_level_count", "coordinates_required", "target_times_are_locations", "target_time_difficulty", "crystal_targets_are_locations", "crystal_target_percentage", "buildings_are_items", "items_are_items", "vehicles_are_items", "progressive_items", "miner_cap", "bonus_clear_locations", "campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc", "campaign_selection_baz", "no_duplicate_levels", "include_baz_unique_levels", "boss_level_lrr_rockyhorror", "boss_level_lrrr_rockyhorror", "boss_level_lrrc_rockyhorror", "boss_level_baz_rockyhorror"
         )
 
 def launch_client(*args):

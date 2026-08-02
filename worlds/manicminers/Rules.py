@@ -94,7 +94,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_lrr_rockhard_crystaltarget, (Has("Can Breathe") & Has("Can Build Swimming Vehicle")))
     if world.options.level_selection_lrr_rockyhorror or world.options.boss_level_lrr_rockyhorror:
         entrance_lrr_rockyhorror = world.get_entrance("Start Level - LRR - Rocky Horror")
-        world.set_rule(entrance_lrr_rockyhorror, (Has("Can Breathe") & Has("Level Access: LRR - Rocky Horror")  & Has("Can Build 30 Miners") & Has("Transporter Coordinates",world.options.target_level_count.value,options=[OptionFilter(ManicMiners_Options.BossLevelLRRRockyHorror,1)],filtered_resolution=True)))
+        world.set_rule(entrance_lrr_rockyhorror, (Has("Can Breathe") & Has("Level Access: LRR - Rocky Horror")  & Has("Can Build 30 Miners") & Has("Transporter Coordinates",world.options.coordinates_required.value,options=[OptionFilter(ManicMiners_Options.BossLevelLRRRockyHorror,1)],filtered_resolution=True)))
         entrance_lrr_rockyhorror_crystaltarget = world.get_entrance("Get Crystal Target - LRR - Rocky Horror")
         world.set_rule(entrance_lrr_rockyhorror_crystaltarget, Has("Can Mine Hard Rock"))
     if world.options.level_selection_lrr_rubbletrouble:
@@ -208,7 +208,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_lrrr_rockhard_crystaltarget, (Has("Can Build Swimming Vehicle") & Has("Can Use Laser")))
     if world.options.level_selection_lrrr_rockyhorror or world.options.boss_level_lrrr_rockyhorror:
         entrance_lrrr_rockyhorror = world.get_entrance("Start Level - LRRR - Rocky Horror")
-        world.set_rule(entrance_lrrr_rockyhorror, (Has("Can Breathe") & Has("Can Build Tool Store") & Has("Can Build Canteen") & Has("Can Build Small Transport Truck") & Has("Level Access: LRRR - Rocky Horror") & Has("Can Build 30 Miners") & Has("Transporter Coordinates",world.options.target_level_count.value,options=[OptionFilter(ManicMiners_Options.BossLevelLRRRRockyHorror,1)],filtered_resolution=True)))
+        world.set_rule(entrance_lrrr_rockyhorror, (Has("Can Breathe") & Has("Can Build Tool Store") & Has("Can Build Canteen") & Has("Can Build Small Transport Truck") & Has("Level Access: LRRR - Rocky Horror") & Has("Can Build 30 Miners") & Has("Transporter Coordinates",world.options.coordinates_required.value,options=[OptionFilter(ManicMiners_Options.BossLevelLRRRRockyHorror,1)],filtered_resolution=True)))
         entrance_lrrr_rockyhorror_crystaltarget = world.get_entrance("Get Crystal Target - LRRR - Rocky Horror")
         world.set_rule(entrance_lrrr_rockyhorror_crystaltarget, Has("Can Use Laser From Flying Vehicle"))
     if world.options.level_selection_lrrr_rubbletrouble:
@@ -312,7 +312,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_lrrc_rockhard_crystaltarget, Has("Can Build Swimming Vehicle"))
     if world.options.level_selection_lrrc_rockyhorror or world.options.boss_level_lrrc_rockyhorror:
         entrance_lrrc_rockyhorror = world.get_entrance("Start Level - LRRC - Rocky Horror")
-        world.set_rule(entrance_lrrc_rockyhorror, (Has("Can Breathe") & Has("Level Access: LRRC - Rocky Horror") & Has("Can Build 30 Miners") & Has("Transporter Coordinates",world.options.target_level_count.value,options=[OptionFilter(ManicMiners_Options.BossLevelLRRCRockyHorror,1)],filtered_resolution=True)))
+        world.set_rule(entrance_lrrc_rockyhorror, (Has("Can Breathe") & Has("Level Access: LRRC - Rocky Horror") & Has("Can Build 30 Miners") & Has("Transporter Coordinates",world.options.coordinates_required.value,options=[OptionFilter(ManicMiners_Options.BossLevelLRRCRockyHorror,1)],filtered_resolution=True)))
         entrance_lrrc_rockyhorror_crystaltarget = world.get_entrance("Get Crystal Target - LRRC - Rocky Horror")
         world.set_rule(entrance_lrrc_rockyhorror_crystaltarget, Has("Can Mine Hard Rock"))
     if world.options.level_selection_lrrc_rubbletrouble:
@@ -439,7 +439,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         world.set_rule(entrance_baz_rockhard_crystaltarget, (Has("Can Build Tunnel Transport") | (Has("Can Build Flying Vehicle") & Has("Can Build Tool Store"))))
     if world.options.level_selection_baz_rockyhorror or world.options.boss_level_baz_rockyhorror:
         entrance_baz_rockyhorror = world.get_entrance("Start Level - BAZ - Rocky Horror")
-        world.set_rule(entrance_baz_rockyhorror, (Has("Level Access: BAZ - Rocky Horror") & Has("Can Build 30 Miners") & Has("Transporter Coordinates",world.options.target_level_count.value,options=[OptionFilter(ManicMiners_Options.BossLevelBAZRockyHorror,1)],filtered_resolution=True) & Has("Can Breathe") & Has("Can Mine Hard Rock Across Water") & Has("Can Use Laser")))
+        world.set_rule(entrance_baz_rockyhorror, (Has("Level Access: BAZ - Rocky Horror") & Has("Can Build 30 Miners") & Has("Transporter Coordinates",world.options.coordinates_required.value,options=[OptionFilter(ManicMiners_Options.BossLevelBAZRockyHorror,1)],filtered_resolution=True) & Has("Can Breathe") & Has("Can Mine Hard Rock Across Water") & Has("Can Use Laser")))
     if world.options.level_selection_baz_rubbletrouble:
         entrance_baz_rubbletrouble = world.get_entrance("Start Level - BAZ - Rubble Trouble")
         world.set_rule(entrance_baz_rubbletrouble, (Has("Level Access: BAZ - Rubble Trouble") & Has("Can Mine Hard Rock Cheaply")))
