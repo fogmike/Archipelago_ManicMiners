@@ -93,7 +93,7 @@ class AvailableLevelsAtStart(Range):
     range_start = 1
     range_end = 108
     
-    default = 2
+    default = 5
 
 class Sphere1LevelsAtStart(Range):
     """
