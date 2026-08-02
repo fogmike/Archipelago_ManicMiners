@@ -333,6 +333,216 @@ class ManicMinersClientCommandProcessor(ClientCommandProcessor):
             else:
                 self.output(f"Power levels are stable, you don't need to go beyond the regular level targets!")
     
+    def _cmd_visit_storage(self):
+        """View current Building/Item/Vehicle/Miner limits, as applicable."""
+        if not hasattr(self.ctx,"slot_data"):
+            self.output(f"Not connected to server!")
+        else:
+            self.output(f"Welcome to the Storage Bay! Any items not shown below have not been randomised.")
+            all_items = get_ids_from_networkitems(self.ctx.items_received)
+            if self.ctx.slot_data["buildings_are_items"]:
+                if self.ctx.slot_data["progressive_items"] == 0 or self.ctx.slot_data["progressive_items"] == 1:
+                    if 899 in all_items:
+                        self.output(f"Tool Store: Available")
+                    else:
+                        self.output(f"Tool Store: Unavailable")
+                    if 898 in all_items:
+                        self.output(f"Teleport Pad: Available")
+                    else:
+                        self.output(f"Teleport Pad: Unavailable")
+                    if 897 in all_items:
+                        self.output(f"Docks: Available")
+                    else:
+                        self.output(f"Docks: Unavailable")
+                    if 896 in all_items:
+                        self.output(f"Canteen: Available")
+                    else:
+                        self.output(f"Canteen: Unavailable")
+                    if 895 in all_items:
+                        self.output(f"Power Station: Available")
+                    else:
+                        self.output(f"Power Station: Unavailable")
+                    if 894 in all_items:
+                        self.output(f"Support Station: Available")
+                    else:
+                        self.output(f"Support Station: Unavailable")
+                    if 893 in all_items:
+                        self.output(f"Upgrade Station: Available")
+                    else:
+                        self.output(f"Upgrade Station: Unavailable")
+                    if 892 in all_items:
+                        self.output(f"Geological Center: Available")
+                    else:
+                        self.output(f"Geological Center: Unavailable")
+                    if 891 in all_items:
+                        self.output(f"Ore Refinery: Available")
+                    else:
+                        self.output(f"Ore Refinery: Unavailable")
+                    if 890 in all_items:
+                        self.output(f"Mining Laser: Available")
+                    else:
+                        self.output(f"Mining Laser: Unavailable")
+                    if 889 in all_items:
+                        self.output(f"Super Teleport: Available")
+                    else:
+                        self.output(f"Super Teleport: Unavailable")
+                else:
+                    self.output(f"Tool Stores Available: {all_items.count(849)}")
+                    self.output(f"Teleport Pads Available: {all_items.count(848)}")
+                    if 897 in all_items:
+                        self.output(f"Docks: Available")
+                    else:
+                        self.output(f"Docks: Unavailable")
+                    self.output(f"Canteens Available: {all_items.count(847)}")
+                    self.output(f"Power Stations Available: {all_items.count(846)}")
+                    self.output(f"Support Stations Available: {all_items.count(845)}")
+                    if 893 in all_items:
+                        self.output(f"Upgrade Station: Available")
+                    else:
+                        self.output(f"Upgrade Station: Unavailable")
+                    if 892 in all_items:
+                        self.output(f"Geological Center: Available")
+                    else:
+                        self.output(f"Geological Center: Unavailable")
+                    if 891 in all_items:
+                        self.output(f"Ore Refinery: Available")
+                    else:
+                        self.output(f"Ore Refinery: Unavailable")
+                    self.output(f"Mining Lasers Available: {all_items.count(844)}")
+                    if 889 in all_items:
+                        self.output(f"Super Teleport: Available")
+                    else:
+                        self.output(f"Super Teleport: Unavailable")
+            if self.ctx.slot_data["items_are_items"]:
+                if 888 in all_items:
+                    self.output(f"Electric Fence: Available")
+                else:
+                    self.output(f"Electric Fence: Unavailable")
+                if 887 in all_items:
+                    self.output(f"Dynamite: Available")
+                else:
+                    self.output(f"Dynamite: Unavailable")
+            if self.ctx.slot_data["vehicles_are_items"]:
+                if self.ctx.slot_data["progressive_items"] == 0 or self.ctx.slot_data["progressive_items"] == 1:
+                    if 886 in all_items:
+                        self.output(f"Hover Scout: Available")
+                    else:
+                        self.output(f"Hover Scout: Unavailable")
+                    if 885 in all_items:
+                        self.output(f"Tunnel Scout: Available")
+                    else:
+                        self.output(f"Tunnel Scout: Unavailable")
+                    if 884 in all_items:
+                        self.output(f"Small Digger: Available")
+                    else:
+                        self.output(f"Small Digger: Unavailable")
+                    if 883 in all_items:
+                        self.output(f"Small Transport Truck: Available")
+                    else:
+                        self.output(f"Small Transport Truck: Unavailable")
+                    if 882 in all_items:
+                        self.output(f"Small Mobile Laser Cutter: Available")
+                    else:
+                        self.output(f"Small Mobile Laser Cutter: Unavailable")
+                    if 881 in all_items:
+                        self.output(f"Rapid Rider: Available")
+                    else:
+                        self.output(f"Rapid Rider: Unavailable")
+                    if 880 in all_items:
+                        self.output(f"Cargo Carrier: Available")
+                    else:
+                        self.output(f"Cargo Carrier: Unavailable")
+                    if 879 in all_items:
+                        self.output(f"Loader Dozer: Available")
+                    else:
+                        self.output(f"Loader Dozer: Unavailable")
+                    if 878 in all_items:
+                        self.output(f"Granite Grinder: Available")
+                    else:
+                        self.output(f"Granite Grinder: Unavailable")
+                    if 877 in all_items:
+                        self.output(f"Large Mobile Laser Cutter: Available")
+                    else:
+                        self.output(f"Large Mobile Laser Cutter: Unavailable")
+                    if 876 in all_items:
+                        self.output(f"Chrome Crusher: Available")
+                    else:
+                        self.output(f"Chrome Crusher: Unavailable")
+                    if 875 in all_items:
+                        self.output(f"Tunnel Transport: Available")
+                    else:
+                        self.output(f"Tunnel Transport: Unavailable")
+                else:
+                    hoverscout_count = all_items.count(843)
+                    if hoverscout_count > 2:
+                        self.output(f"Hover Scouts Available: Yes")
+                    else:
+                        self.output(f"Hover Scouts Available: {hoverscout_count}")
+                    tunnelscout_count = all_items.count(842)
+                    if tunnelscout_count > 2:
+                        self.output(f"Tunnel Scouts Available: Yes")
+                    else:
+                        self.output(f"Tunnel Scouts Available: {tunnelscout_count}")
+                    smalldigger_count = all_items.count(841)
+                    if smalldigger_count > 2:
+                        self.output(f"Small Diggers Available: Yes")
+                    else:
+                        self.output(f"Small Diggers Available: {smalldigger_count}")
+                    stt_count = all_items.count(840)
+                    if stt_count > 2 and self.ctx.slot_data["no_infinite_stt"] == 0:
+                        self.output(f"Small Transport Trucks Available: Yes")
+                    else:
+                        self.output(f"Small Transport Trucks Available: {stt_count}")
+                    smlc_count = all_items.count(839)
+                    if smlc_count > 2:
+                        self.output(f"Small Mobile Laser Cutters Available: Yes")
+                    else:
+                        self.output(f"Small Mobile Laser Cutters Available: {smlc_count}")
+                    rapidrider_count = all_items.count(838)
+                    if rapidrider_count > 2:
+                        self.output(f"Rapid Riders Available: Yes")
+                    else:
+                        self.output(f"Rapid Riders Available: {rapidrider_count}")
+                    cargocarrier_count = all_items.count(837)
+                    if cargocarrier_count > 2:
+                        self.output(f"Cargo Carriers Available: Yes")
+                    else:
+                        self.output(f"Cargo Carriers Available: {cargocarrier_count}")
+                    loaderdozer_count = all_items.count(836)
+                    if loaderdozer_count > 2:
+                        self.output(f"Loader Dozers Available: Yes")
+                    else:
+                        self.output(f"Loader Dozers Available: {loaderdozer_count}")
+                    granitegrinder_count = all_items.count(835)
+                    if granitegrinder_count > 2:
+                        self.output(f"Granite Grinders Available: Yes")
+                    else:
+                        self.output(f"Granite Grinders Available: {granitegrinder_count}")
+                    lmlc_count = all_items.count(834)
+                    if lmlc_count > 2:
+                        self.output(f"Large Mobile Laser Cutters Available: Yes")
+                    else:
+                        self.output(f"Large Mobile Laser Cutters Available: {lmlc_count}")
+                    chromecrusher_count = all_items.count(833)
+                    if chromecrusher_count > 2:
+                        self.output(f"Chrome Crushers Available: Yes")
+                    else:
+                        self.output(f"Chrome Crushers Available: {chromecrusher_count}")
+                    tunneltransport_count = all_items.count(832)
+                    if tunneltransport_count > 2:
+                        self.output(f"Tunnel Transports Available: Yes")
+                    else:
+                        self.output(f"Tunnel Transports Available: {tunneltransport_count}")
+            if self.ctx.slot_data["miner_cap"]:
+                miner_cap = int(self.ctx.slot_data["miner_cap_base_level"])
+                miner_1s = all_items.count(948)
+                miner_5s = all_items.count(850)
+                miner_cap += miner_1s
+                miner_cap += (5 * miner_5s)
+                self.output(f"Miners available: {miner_cap}")
+            if self.ctx.slot_data["buildings_are_items"] == 0 and self.ctx.slot_data["items_are_items"] == 0 and self.ctx.slot_data["vehicles_are_items"] == 0 and self.ctx.slot_data["miner_cap"] == 0:
+                self.output(f"Don't worry, Cadet, we've got plenty of supplies. Except Energy Crystals. Get back out there!")
+    
     def _cmd_toggle_truck(self):
         """Toggle Chief's Favourite Truck, if applicable."""
         did_something = False
