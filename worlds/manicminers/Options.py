@@ -57,8 +57,7 @@ class AvailableLevels(Range):
 
 class AvailableLevelsAtStart(Range):
     """
-    How many levels are available initially.
-    If other setting combinations lead to more overall items than locations, or problematically restrictive starts, this setting may be automatically increased to make generation possible.
+    How many levels are available initially to the player.
     """
     
     display_name = "Available Levels At Start"
@@ -201,7 +200,6 @@ class FasterBlastingAlwaysInLogic(DefaultOnToggle):
 class BonusClearLocations(Toggle):
     """
     When enabled, clearing a level will award 2-5 Locations instead of 1. Harder levels are worth more.
-    This may be automatically enabled if your other settings lead to more items than locations. 
     """
     
     display_name = "Enable Bonus Locations For Clearing Levels"
