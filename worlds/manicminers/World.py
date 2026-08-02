@@ -480,20 +480,20 @@ class ManicMinersWorld(World):
         
         # Add bonus duplicates if there's space
         if self.options.progressive_items == 3:
-            if item_location_diffcount >= 5 and self.options.buildings_are_items:
-                self.multiworld.itempool.append(world.create_item("Building Unlock: Super Teleport"))
-                self.multiworld.itempool.append(world.create_item("Building Unlock: Upgrade Station"))
+            if item_location_diffcount <= -5 and self.options.buildings_are_items:
+                self.multiworld.itempool.append(self.create_item("Building Unlock: Super Teleport"))
+                self.multiworld.itempool.append(self.create_item("Building Unlock: Upgrade Station"))
                 number_items += 2
-            if item_location_diffcount >= 15 and self.options.buildings_are_items:
-                self.multiworld.itempool.append(world.create_item("Building Unlock: Super Teleport"))
-                self.multiworld.itempool.append(world.create_item("Building Unlock: Upgrade Station"))
+            if item_location_diffcount <= -15 and self.options.buildings_are_items:
+                self.multiworld.itempool.append(self.create_item("Building Unlock: Super Teleport"))
+                self.multiworld.itempool.append(self.create_item("Building Unlock: Upgrade Station"))
                 number_items += 2
-            if item_location_diffcount >= 15 and self.options.items_are_items:
-                self.multiworld.itempool.append(world.create_item("Item Unlock: Dynamite"))
-                self.multiworld.itempool.append(world.create_item("Item Unlock: Electric Fence"))
+            if item_location_diffcount <= -15 and self.options.items_are_items:
+                self.multiworld.itempool.append(self.create_item("Item Unlock: Dynamite"))
+                self.multiworld.itempool.append(self.create_item("Item Unlock: Electric Fence"))
                 number_items += 2
-            if item_location_diffcount >= 15 and self.options.miner_cap:
-                self.multiworld.itempool.append(world.create_item("Miner Cap +5"))
+            if item_location_diffcount <= -15 and self.options.miner_cap:
+                self.multiworld.itempool.append(self.create_item("Miner Cap +5"))
                 number_items += 1
         
     def create_regions(self) -> None:
