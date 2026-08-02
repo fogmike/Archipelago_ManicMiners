@@ -97,22 +97,23 @@ class ManicMinersWorld(World):
         # Select boss level
         if self.options.victory_condition == 3:
             self.options.available_levels.value -= 1
-            rockyhorror_list = []
-            rockyhorror_name = ""
+            boss_setting_list = []
+            boss_level_list = []
             if self.options.campaign_selection_lrr:
-                rockyhorror_list.append(self.options.boss_level_lrr_rockyhorror)
-                rockyhorror_name = "Level Access: LRR - Rocky Horror"
+                boss_setting_list.append(self.options.boss_level_lrr_rockyhorror)
+                boss_level_list.append("Level Access: LRR - Rocky Horror")
             if self.options.campaign_selection_lrrr:
-                rockyhorror_list.append(self.options.boss_level_lrrr_rockyhorror)
-                rockyhorror_name = "Level Access: LRRR - Rocky Horror"
+                boss_setting_list.append(self.options.boss_level_lrrr_rockyhorror)
+                boss_level_list.append("Level Access: LRRR - Rocky Horror")
             if self.options.campaign_selection_lrrc:
-                rockyhorror_list.append(self.options.boss_level_lrrc_rockyhorror)
-                rockyhorror_name = "Level Access: LRRC - Rocky Horror"
+                boss_setting_list.append(self.options.boss_level_lrrc_rockyhorror)
+                boss_level_list.append("Level Access: LRRC - Rocky Horror")
             if self.options.campaign_selection_baz:
-                rockyhorror_list.append(self.options.boss_level_baz_rockyhorror)
-                rockyhorror_name = "Level Access: BAZ - Rocky Horror"
-            random_rockyhorror = self.random.choice(rockyhorror_list)
-            random_rockyhorror.value = 1
+                boss_setting_list.append(self.options.boss_level_baz_rockyhorror)
+                boss_level_list.append("Level Access: BAZ - Rocky Horror")
+            random_index = self.random.randint(0,len(boss_level_list)-1)
+            boss_setting_list[random_index].value = 1
+            rockyhorror_name = boss_level_list[random_index]
             if self.options.no_duplicate_levels:
                 duplicates = Items.get_duplicate_levels(rockyhorror_name)
                 for level in duplicates:
