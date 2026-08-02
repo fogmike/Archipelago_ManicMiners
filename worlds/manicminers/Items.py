@@ -789,6 +789,13 @@ def create_all_items(world: ManicMinersWorld) -> None:
         world.filler_list += MINER_CAP_FILLER_LIST
         for _ in range(5):
             itempool.append(world.create_item("Miner Cap +5"))
+    
+    if world.options.no_infinite_stt:
+        # First make other items more common
+        world.filler_list += world.filler_list
+        world.filler_list += world.filler_list
+        # Then sneak in the lesser chance of STTs
+        world.filler_list.append("Progressive Vehicle Unlock: Small Transport Truck")
 
     number_of_items = len(itempool)
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player))
@@ -1290,7 +1297,7 @@ def update_disabled_unlocks(filepath, level_name, all_items, options, disable_tr
             script_section = script_section + smalldigger_limit_string
             tick_section = tick_section + "((VehicleSmallDigger_C<SmallDiggerCap))enable:VehicleSmallDigger_C;\n((VehicleSmallDigger_C>=SmallDiggerCap))disable:VehicleSmallDigger_C;\n"
             smalltransporttruck_cap = all_items.count(840)
-            if smalltransporttruck_cap > 2:
+            if smalltransporttruck_cap > 2 and options["no_infinite_stt"] == 0:
                 smalltransporttruck_cap = 999
             smalltransporttruck_limit_string = "int SmallTransportTruckCap=" + str(smalltransporttruck_cap) + "\n"
             script_section = script_section + smalltransporttruck_limit_string

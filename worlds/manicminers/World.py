@@ -514,7 +514,7 @@ class ManicMinersWorld(World):
     
     def fill_slot_data(self) -> Mapping[str, Any]:
         return self.options.as_dict(
-        "victory_condition", "locked_coordinates", "target_level_count", "coordinates_required", "target_times_are_locations", "target_time_difficulty", "crystal_targets_are_locations", "crystal_target_percentage", "buildings_are_items", "items_are_items", "vehicles_are_items", "progressive_items", "miner_cap", "miner_cap_base_level", "bonus_clear_locations", "campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc", "campaign_selection_baz", "no_duplicate_levels", "include_baz_unique_levels", "boss_level_lrr_rockyhorror", "boss_level_lrrr_rockyhorror", "boss_level_lrrc_rockyhorror", "boss_level_baz_rockyhorror"
+        "victory_condition", "locked_coordinates", "target_level_count", "coordinates_required", "target_times_are_locations", "target_time_difficulty", "crystal_targets_are_locations", "crystal_target_percentage", "buildings_are_items", "items_are_items", "vehicles_are_items", "progressive_items", "no_infinite_stt", "miner_cap", "miner_cap_base_level", "bonus_clear_locations", "campaign_selection_lrr", "campaign_selection_lrrr", "campaign_selection_lrrc", "campaign_selection_baz", "no_duplicate_levels", "include_baz_unique_levels", "boss_level_lrr_rockyhorror", "boss_level_lrrr_rockyhorror", "boss_level_lrrc_rockyhorror", "boss_level_baz_rockyhorror"
         )
 
 def launch_client(*args):

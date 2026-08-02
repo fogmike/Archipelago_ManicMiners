@@ -189,6 +189,13 @@ class ProgressiveItems(Choice):
     
     default = option_normal 
     
+class NoInfiniteSTT(DefaultOnToggle):
+    """
+    If using Progressive Items, this turns off the 'infinite build allowed' for Small Transport Truck, that normally comes when you have enough progressive items. 
+    Filler copies of Progressive Small Transport Truck will be added to the pool, with a low chance. 
+    """
+    
+    display_name = "No Infinite STT"
 class MinerCap(Toggle):
     """
     Adds a limit to the number of miners you can have at once, increasable by items in the multiworld. 
@@ -662,6 +669,7 @@ class ManicMinersOptions(PerGameCommonOptions):
     items_are_items: ItemsAreItems
     vehicles_are_items: VehiclesAreItems
     progressive_items: ProgressiveItems
+    no_infinite_stt: NoInfiniteSTT
     miner_cap: MinerCap
     miner_cap_base_level: MinerCapBaseLevel
     bonus_truck: BonusTruck
@@ -809,7 +817,7 @@ option_groups = [
     ),
     OptionGroup(
         "Items",
-        [BuildingsAreItems,ItemsAreItems,VehiclesAreItems,ProgressiveItems,MinerCap,BonusTruck,UsefulFillerOnly]
+        [BuildingsAreItems,ItemsAreItems,VehiclesAreItems,ProgressiveItems,MinerCap,MinerCapBaseLevel,NoInfiniteSTT,BonusTruck,UsefulFillerOnly]
     ),
     OptionGroup(
         "Logic",
