@@ -441,8 +441,12 @@ def sync_levels(self):
     item: NetworkItem
     root_dir = ManicMinersWorld.settings.manic_miners_install_dir
     arch_level_dir = ManicMinersWorld.settings.manic_miners_level_dir
+    all_items = get_ids_from_networkitems(self.items_received)
+    if self.slot_data["victory_condition"] == 3:
+        if all_items.count(874) >= self.slot_data["coordinates_required"] and self.finished_game == False:
+            logger.info(f"You have enough Transporter Coordinates to take on the final level! Good luck, Cadet!")
     for index, item in enumerate(self.items_received, 1):
-        Items.copy_level_into_archipelago(root_dir, arch_level_dir, item.item, get_ids_from_networkitems(self.items_received), self.slot_data, self.disable_truck)
+        Items.copy_level_into_archipelago(root_dir, arch_level_dir, item.item, all_items, self.slot_data, self.disable_truck)
 
 def get_ids_from_networkitems(items):
     id_list = []
