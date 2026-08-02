@@ -192,7 +192,12 @@ class ManicMinersWorld(World):
         
         # Finally, mark levels as selected:
         selected_levels = self.start_sphere1_levels + self.start_sphere2_levels + self.nonstart_levels
+        number_levels = 0
+        number_bonus_locations = 0
         for level in selected_levels:
+            number_levels += 1
+            level_name = level[14:]
+            number_bonus_locations += Locations.BONUS_LOCATIONS_CLEAR[level_name]
             match level:
                 case "Level Access: LRR - A Breath Of Fresh Air":
                     self.options.level_selection_lrr_abreathoffreshair.value = 1
@@ -410,8 +415,13 @@ class ManicMinersWorld(World):
                     self.options.level_selection_baz_waterlotoffun.value = 1
                 case "Level Access: BAZ - Water Works":
                     self.options.level_selection_baz_waterworks.value = 1
-
+        
+        # Count number of locations, starting with Clear locations
         number_locations = number_levels
+        
+        # Add bonus locations
+        if self.options.bonus_clear_locations:
+            number_locations += number_bonus_locations
 
         # Add locations for par times
         if self.options.target_times_are_locations:
