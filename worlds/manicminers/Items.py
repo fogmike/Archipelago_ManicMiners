@@ -1457,6 +1457,13 @@ def update_disabled_unlocks(filepath, level_name, all_items, options, disable_tr
         toolstore_rotation_section = toolstore_section[toolstore_section.find("Rotation:"):toolstore_section.find("Scale")]
         toolstore_rotation = toolstore_rotation_section[toolstore_rotation_section.find("Y=")+2:toolstore_rotation_section.find(".",toolstore_rotation_section.find("Y="))]
         
+        if (level_name == "LRRR - Rubble Trouble"):
+            # This is the only level with no toolstore! Needs a manual spawn location instead
+            toolstore_x = "5000"
+            toolstore_y = "4300"
+            toolstore_z = "Z=50 "
+            toolstore_rotation = "80"
+        
         toolstore_x_int = int(toolstore_x)
         toolstore_y_int = int(toolstore_y)
         toolstore_rotation_int = int(toolstore_rotation)
