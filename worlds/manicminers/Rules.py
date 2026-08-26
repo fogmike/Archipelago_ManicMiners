@@ -107,7 +107,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         entrance_lrr_searchandrescue = world.get_entrance("Start Level - LRR - Search And Rescue")
         world.set_rule(entrance_lrr_searchandrescue, (Has("Can Build Swimming Vehicle") & Has("Level Access: LRR - Search And Rescue")))
         entrance_lrr_searchandrescue_crystaltarget = world.get_entrance("Get Crystal Target - LRR - Search And Rescue")
-        world.set_rule(entrance_lrr_searchandrescue_crystaltarget, (Has("Can Mine Hard Rock") & Has("Can Mine From Swimming Vehicle")))
+        world.set_rule(entrance_lrr_searchandrescue_crystaltarget, (Has("Can Mine Hard Rock") & Has("Can Mine From Swimming Vehicle") & (Has("Can Build Rapid Rider") | Has ("Can Build Tunnel Transport"))))
     if world.options.level_selection_lrr_splitdownthemiddle:
         entrance_lrr_splitdownthemiddle = world.get_entrance("Start Level - LRR - Split Down The Middle")
         world.set_rule(entrance_lrr_splitdownthemiddle, Has("Level Access: LRR - Split Down The Middle"))
@@ -325,7 +325,7 @@ def set_all_entrance_and_location_rules(world: ManicMinersWorld) -> None:
         entrance_lrrc_searchandrescue = world.get_entrance("Start Level - LRRC - Search And Rescue")
         world.set_rule(entrance_lrrc_searchandrescue, (Has("Can Build Swimming Vehicle") & Has("Level Access: LRRC - Search And Rescue")))
         entrance_lrrc_searchandrescue_crystaltarget = world.get_entrance("Get Crystal Target - LRRC - Search And Rescue")
-        world.set_rule(entrance_lrrc_searchandrescue_crystaltarget, (Has("Can Mine From Swimming Vehicle") & Has("Can Mine Hard Rock")))
+        world.set_rule(entrance_lrrc_searchandrescue_crystaltarget, (Has("Can Mine From Swimming Vehicle") & Has("Can Mine Hard Rock") & (Has("Can Build Rapid Rider") | Has("Can Build Tunnel Transport"))))
     if world.options.level_selection_lrrc_splitdownthemiddle:
         entrance_lrrc_splitdownthemiddle = world.get_entrance("Start Level - LRRC - Split Down The Middle")
         world.set_rule(entrance_lrrc_splitdownthemiddle, Has("Level Access: LRRC - Split Down The Middle"))
