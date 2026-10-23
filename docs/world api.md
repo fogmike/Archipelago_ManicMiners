@@ -320,6 +320,10 @@ You **must** use `multiworld.register_indirect_condition` if you perform this ki
 Alternatively, you can set [world.explicit_indirect_conditions = False](https://github.com/ArchipelagoMW/Archipelago/blob/main/worlds/AutoWorld.py#L301-L304),
 avoiding the need for indirect conditions at the expense of performance.
 
+### Completion Condition
+
+There is additionally one special rule that you must set which is `multiworld.completion_condition[player]`, which defines the logical state required to achieve the goal of your game. 
+
 ### Item Rules
 
 An item rule is a function that returns `True` or `False` for a `Location` based on a single item. It can be used to
