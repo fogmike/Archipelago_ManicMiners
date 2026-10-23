@@ -141,6 +141,9 @@ def set_completion_condition(world: APQuestWorld) -> None:
     # So lets undo what we just did, and instead set the completion condition to:
     world.set_completion_rule(Has("Victory"))
 
+    # Note that, like all other access rules, this is only used for generation logic, and has no effect while playing.
+    # When you have goaled your game, your client needs to actively send a message to the server containing this information.
+
 
 # One final comment about rules:
 # If your world exclusively uses Rule Builder rules (like APQuest), it's worth trying CachedRuleBuilderWorld.
