@@ -179,7 +179,13 @@ def validate_seed(self):
         else:
             self.output(f"Connecting to existing seed: validated!")
     else:
-        self.output(f"No seed found, clearing level data and saving seed. Not touching save data.")
+        self.output(f"No seed found, clearing level data and saving seed.")
+        savepath = pathlib.Path(save_location)
+        if savepath.exists():
+            self.output(f"Existing save found, not touching.")
+        else:
+            self.output(f"No existing save file found. Creating new save file.")
+            initialise_ap_save(self)
         cleanup_levels(self)
         initialise_levels_dir(self)
         initialise_auxiliary_data(self)
