@@ -2,12 +2,8 @@
 
 import os
 import platform
-import pathlib
-
-from kivy.clock import Clock
 
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.image import Image
 from kivy.uix.label import Label
 from kivy.uix.scrollview import ScrollView
 

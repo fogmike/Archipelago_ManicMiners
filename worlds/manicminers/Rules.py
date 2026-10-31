@@ -1,8 +1,6 @@
 from __future__ import annotations
 
-from worlds.generic.Rules import set_rule, add_rule
 from rule_builder.rules import Has, HasAll, HasAny, OptionFilter, Filtered, CanReachRegion
-from . import Items,Locations
 from . import Options as ManicMiners_Options
 
 from typing import TYPE_CHECKING

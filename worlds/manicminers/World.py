@@ -126,7 +126,6 @@ class ManicMinersWorld(World):
         # Select boss level
         if self.options.victory_condition == 3:
             self.options.available_levels.value -= 1
-            boss_setting_list = []
             boss_level_list = []
             if self.options.campaign_selection_lrr:
                 boss_level_list.append("Level Access: LRR - Rocky Horror")
