@@ -11,6 +11,7 @@ from kivy.uix.image import Image
 from kivy.uix.label import Label
 from kivy.uix.scrollview import ScrollView
 
+from ..World import ManicMinersWorld
 from ..Client import ManicMinersContext
 from ..Items import ITEM_NAME_TO_ID
 from ..Locations import LOCATION_NAME_TO_ID, TARGET_CLEAR_TIME_EASY, TARGET_CLEAR_TIME_MEDIUM, TARGET_CLEAR_TIME_HARD, TARGET_CLEAR_TIME_ROCK_HARD, TARGET_CRYSTAL_COUNT, get_locations_from_save_data
